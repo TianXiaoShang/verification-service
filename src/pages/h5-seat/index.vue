@@ -2,9 +2,6 @@
     <div class="page-box bg-white box-border" v-if="webViewUrl">
         <web-view :src="webViewUrl"></web-view>
     </div>
-    <!-- <div class="page-box bg-white box-border" v-if="webViewUrl">
-        <web-view src="https://www.baidu.com"></web-view>
-    </div> -->
 </template>
 
 <script>
@@ -15,11 +12,9 @@ import store from "@/store";
 export default {
     data() {
         return {
-            path: '/addons/webseat/#/center',   // h5访问路径
             webViewUrl: '',   // h5访问全路径
 
             id: '',
-            is_tiktoksop: '',
             currentPartId: '',
 
             domain: '',
@@ -27,7 +22,6 @@ export default {
             baseHttpUrl: '',
 
             isLoad: false,
-            goods_id: '',
         }
     },
     onShow() {
@@ -42,9 +36,7 @@ export default {
         // 确保已经登录完成
         this.waitLogin().then(() => {
             // 获取基础参数
-            this.goods_id = options.goods_id;
             this.id = options.id || '';
-            this.is_tiktoksop = options.is_tiktoksop || '';
             this.currentPartId = options.activePartId || '';
             if (!this.id) {
                 this.myMessage('id未找到，请返回重试')
@@ -78,7 +70,7 @@ export default {
         getWebViewFullUrl() {
             this.webViewUrl = '';
             // 加上携带参数
-            const query = `?token=${encodeURIComponent(getToken())}&openid=${this.userInfo.openid}&env=${this.isWx ? 'wx' : 'tiktok'}&id=${this.id}&is_tiktoksop=${this.is_tiktoksop}&currentPartId=${this.currentPartId}&needAuth=${!this.getCurAuth()}&domain=${encodeURIComponent(this.domain)}&basePath=${encodeURIComponent('/' + this.h5ReqBasePath)}&needVerify=${this.cinema.is_captcha == '1' ? 'true' : 'false'}&part_discount_mode=${this.setting.part_discount_mode}&goods_id=${this.goods_id}&partner_id=${store.state.sales_partner_id}`;
+            const query = `?token=${encodeURIComponent(getToken())}&id=${this.id}&currentPartId=${this.currentPartId}&needAuth=${!this.getCurAuth()}&domain=${encodeURIComponent(this.domain)}&basePath=${encodeURIComponent('/' + this.h5ReqBasePath)}`;
             setTimeout(() => {
                 // 打开webview
                 this.webViewUrl = this.baseHttpUrl + query;

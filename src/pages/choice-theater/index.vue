@@ -33,9 +33,7 @@
 		<template v-else>
 			<template v-if='((dateList && dateList.length) || (sessionList && sessionList.length))'>
 				<!-- 选票信息 -->
-				<div :style="{
-					'padding-bottom': curPb
-				}" class="bg-white overflow-hidden px-20px pt-10px box-border w-full">
+				<div class="bg-white overflow-hidden px-20px pt-10px box-border w-full pb-130px">
 					<!-- 日期 -->
 					<div class="text-12px mb-12px">
 						<span class="text-gray-333 font-semibold">日期</span>
@@ -85,9 +83,10 @@
 							<div v-for="(item, index) in partList" :key="index" @click="choisePart(item)" :class="{
 								active: curPart.id === item.id,
 								'mr-10px': index !== partList.length - 1,
+								'pr-20px': item.residue,
 								'pr-38px': !item.residue,
 								disabled: !item.residue
-							}" style="background-color: #F8F8F8; border-color: #ddd"
+							}" :style="{ 'background': '#f8f8f8', 'border-color': '#ddd' }"
 								class="mb-10px pl-20px h-40px flex rounded-5px overflow-hidden border border-solid bg-bg inline-flex  items-center relative">
 								<!-- 名称 -->
 								<div class="">
@@ -116,11 +115,10 @@
 
 		<!-- 底部数量选择，按钮， 不选座模式 -->
 		<div class="fixed bottom-0 h-130px left-0 w-full box-border bg-white"
-			style="box-shadow: 0px -2px 6px 0px rgba(51,51,51,0.05);" v-if="curSession.seat_random == 1">
+			style="box-shadow: 0px -2px 6px 0px rgba(51,51,51,0.05);">
 			<div class="flex px-20px justify-between items-center h-60px" v-if="is_timing != 1">
 				<div class="text-12px">
 					<span class="text-gray-333">数量</span>
-					<span class="text-gray-999 ml-4px">每笔订单限购{{ maxSelectSet }}张</span>
 					<span class="text-gray-999 ml-4px">
 						{{ ' (余票:' + ((curPart.residue || curPart.residue === 0) ?
 							curPart.residue :
@@ -129,15 +127,13 @@
 					</span>
 				</div>
 				<div style="background: #F4F4F4;" class="h-32px rounded-16px px-3px flex items-center">
-					<image class="w-22px h-22px" src="@/static/detail/reduce.png" @click="reduce" />
-					<div class="text-333 font-semibold text-14px mx-12px">{{ number }}张</div>
-					<image class="w-22px h-22px" src="@/static/detail/add.png" @click="add" />
+					<div class="text-333 font-semibold text-14px mx-12px">{{ maxSelectSet }}张</div>
 				</div>
 			</div>
 			<div v-else
 				class="h-60px flex justify-center items-center w-full box-border bg-white text-16px text-red font-semibold"
 				style="background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); border-radius: 15px 15px 0 0;">
-				{{ moment(sell_timing * 1000).format('MM月DD日 HH:mm:ss') }}开售
+				{{ moment(sell_timing * 1000).format('MM月DD日 HH:mm:ss') }}开抢
 			</div>
 			<div
 				class="h-60px px-20px border-t border-b-0 pb-9px border-l-0 border-r-0 border-gray-100 border-solid justify-between flex items-center">
@@ -159,37 +155,6 @@
 				</div>
 				<u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '140px', margin: 0 }"
 					color="#FF545C" :text="getBtnStatusText()" @click="toSelectFilm(true)">
-				</u-button>
-			</div>
-		</div>
-
-		<!-- 底部数量选择，按钮  选座模式 -->
-		<div class="fixed bottom-0 h-70px left-0 w-full box-border bg-white"
-			style="box-shadow: 0px -2px 6px 0px rgba(51,51,51,0.05);"
-			v-if="curSession.seat_random != 1 && curSession.is_selection != 1">
-			<div
-				class="h-60px px-10px border-t border-b-0 pb-9px border-l-0 border-r-0 border-gray-100 border-solid justify-between flex items-center">
-				<div class="flex" v-if="is_timing != 1">
-					<div class="text-gray-666 text-12 flex items-center ml-5px">
-						<span>
-							{{ curDate.title_y ? curDate.title_y + ' |' : '' }}
-							{{
-								curSession.id ? moment(Number(curSession.entrance_time) * 1000).format('HH:mm') :
-								'未选择场次'
-							}}
-							{{ curPart.name ? ' | ' + curPart.name : '' }}
-							{{ ' | 余票:' + ((curPart.residue || curPart.residue === 0) ?
-								curPart.residue :
-								(curSessionResidue || curSessionResidue === 0) ? curSessionResidue
-									: '-') }}
-						</span>
-					</div>
-				</div>
-				<div v-else class="text-14px text-red font-semibold">
-					{{ moment(sell_timing * 1000).format('MM月DD日 HH:mm:ss') }}开售
-				</div>
-				<u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '140px', margin: 0 }"
-					:color="'#FF545C'" :text="getBtnStatusText()" @click="toSelectFilm(false)">
 				</u-button>
 			</div>
 		</div>
@@ -216,15 +181,10 @@ export default {
 			is_timing: 0,
 			sell_timing: 0,
 			scrollLeft: 0, // 控制日期行的滚动距离
-			curSessionResidue: 1,
+			curSessionResidue: 1,  // 默认一张余票
 		}
 	},
 	components: { NavBar },
-	computed: {
-		curPb() {
-			return this.curSession.seat_random == 1 ? '130px' : '70px'
-		},
-	},
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
 		options = { account_id: '7222240432728573964', order_id: '1014561279398427295' }; // 排期票档限制
@@ -269,7 +229,7 @@ export default {
 				this.partList = [];
 				this.curPart = {};
 				// 根据场次获取分区数据
-				this.request("partition.index", { cinema_id: this.orderData.cinema_id, film_id: this.orderData.film_id, row_id: this.curSession.id }, 'GET').then(res => {
+				this.request("partition.index", { cinema_id: this.orderData.cinema_id, film_id: this.orderData.film_id, row_id: this.curSession.id, part_id: this.orderData.part_id }, 'GET').then(res => {
 					// 场次余票
 					this.curSessionResidue = res.row.residue;
 					this.is_timing = res.row.is_timing;
@@ -289,9 +249,9 @@ export default {
 				return '请选择场次';
 			}
 			if (this.is_timing == 1) {
-				return '即将开售'
+				return '即将开抢'
 			}
-			return (this.curSession.sell == 1 ? (this.curSession.seat_random == 1 ? '去下单' : '去选座') : '未开售')
+			return (this.curSession.sell == 1 ? (this.curSession.seat_random == 1 ? '去下单' : '去选座') : '未开抢')
 		},
 		toSelectFilm() {
 			if (!this.isLoad || this.disabledBtn) {
@@ -310,7 +270,7 @@ export default {
 				return;
 			}
 			if (this.curSession.sell != 1) {
-				this.myMessage('未开售');
+				this.myMessage('未开抢');
 				return;
 			}
 			if ((this.curPart.id && !this.curPart.residue) || (this.curSession.id && !this.curSession.residue)) {
@@ -363,21 +323,6 @@ export default {
 			}
 			this.curPart = item;
 		},
-		reduce() {
-			if (this.number >= 1) {
-				this.number--;
-			}
-		},
-		add() {
-			if (this.number < this.maxSelectSet) {
-				this.number++;
-			} else {
-				uni.showToast({
-					title: '达到最大可选座位数',
-					icon: 'none'
-				})
-			}
-		}
 	}
 };
 </script>
