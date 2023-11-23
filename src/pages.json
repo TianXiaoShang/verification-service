@@ -1,0 +1,158 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "mp-weixin": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        },
+        "mp-toutiao": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        }
+      }
+    },
+    {
+      "path": "pages/ticket/index",
+      "style": {
+        "navigationBarTitleText": "票夹"
+      }
+    },
+    {
+      "path": "pages/auth/index",
+      "style": {
+        "navigationBarTitleText": "授权登录",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/auth-user-info/index",
+      "style": {
+        "navigationBarTitleText": "用户授权",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/choice-theater/index",
+      "style": {
+        "navigationBarTitleText": "选票",
+        "mp-weixin": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        },
+        "mp-toutiao": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        }
+      }
+    },
+    {
+      "path": "pages/h5-seat/index",
+      "style": {
+        "navigationBarTitleText": "选择座位",
+        "disableScroll": true
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "order",
+      "pages": [
+        {
+          "path": "pay/index",
+          "style": {
+            "navigationBarTitleText": "订单支付"
+          }
+        },
+        {
+          "path": "detail/index",
+          "style": {
+            "navigationBarTitleText": "订单状态"
+          }
+        },
+        {
+          "path": "ticket/index",
+          "style": {
+            "navigationBarTitleText": "订单详情"
+          }
+        },
+        {
+          "path": "list/index",
+          "style": {
+            "navigationBarTitleText": "订单列表"
+          }
+        },
+        {
+          "path": "address/add",
+          "style": {
+            "navigationBarTitleText": "新增地址"
+          }
+        },
+        {
+          "path": "address/list",
+          "style": {
+            "navigationBarTitleText": "地址列表"
+          }
+        },
+        {
+          "path": "idcard/add",
+          "style": {
+            "navigationBarTitleText": "新增实名观演人"
+          }
+        },
+        {
+          "path": "idcard/list",
+          "style": {
+            "navigationBarTitleText": "实名观演人列表"
+          }
+        }
+      ]
+    },
+    {
+      "root": "other",
+      "pages": [
+        {
+          "path": "update/index",
+          "style": {
+            "navigationBarTitleText": "更新中"
+          }
+        }
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "门票预约小程序",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+    }
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#FF545C",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/common/nav-home-nor.png",
+        "selectedIconPath": "static/common/nav-home-sel.png",
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/ticket/index",
+        "iconPath": "static/common/nav-tickets-nor.png",
+        "selectedIconPath": "static/common/nav-tickets-sel.png",
+        "text": "票夹"
+      }
+    ]
+  }
+}

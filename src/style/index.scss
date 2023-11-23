@@ -1,0 +1,62 @@
+.page-box {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.line-ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.line-2-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.line-3-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.special-text {
+  transform: scale(1, 1.1);
+  transform-origin: 0 0;
+}
+
+// 改写输入框样式
+.is-input {
+  .u-border {
+    border: none !important;
+    border-radius: 10px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .u-input {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+.live-tag-bg {
+  background: linear-gradient(270deg, #ba87fc 0%, #0c79ff 100%);
+}
+
+.live-tag-bg-img {
+  background-image: url("@/static/common/hualihushao.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #6881fe;
+  font-size: 10px;
+  height: 16px;
+  width: 35px;
+  text-align: center;
+  line-height: 16px;
+}
