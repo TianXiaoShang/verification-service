@@ -7,7 +7,6 @@
 <script>
 import { getToken } from "@/util";
 import { getBaseUrl } from "@/util/base";
-import store from "@/store";
 
 export default {
     data() {
@@ -22,6 +21,7 @@ export default {
             baseHttpUrl: '',
 
             isLoad: false,
+            orderData: {},
         }
     },
     onShow() {
@@ -33,16 +33,12 @@ export default {
 
     },
     onLoad(options) {
+        console.log(options, 'ht-seat-options');
+        this.orderData = options;
         // 确保已经登录完成
         this.waitLogin().then(() => {
             // 获取基础参数
-            this.id = options.id || '';
             this.currentPartId = options.activePartId || '';
-            if (!this.id) {
-                this.myMessage('id未找到，请返回重试')
-                return;
-            }
-
             // 通过getBaseUrl拿到当前请求路径url。
             const baseUrl = getBaseUrl();   // 如： https://6test.djlnet.com.cn/app/theater_new_api.php?i=1&cinemaid=4&r=  || https://movie.djlcom.net/app/theater_new_api.php?i=1&cinemaid=4&r=
 
@@ -50,31 +46,24 @@ export default {
             const paths = baseUrl.split('/');
             this.domain = paths.slice(0, 3).join('/');   // 域名  https://6test.djlnet.com.cn
             this.h5ReqBasePath = paths.splice(3, paths.length - 1).join('/');   // 比如:  /app/theater_new_api.php?i=1&cinemaid=4&r=
-            this.request('seat.webseat').then((res) => {
+            this.request('seat.version').then((res) => {
                 // 最终的基础路径
-                this.baseHttpUrl = `${this.domain}/addons/${res.name}/#/center`;
+                this.baseHttpUrl = `${this.domain}/addons/${res.version}/#/center`;
                 // 开始生成url
                 this.getWebViewFullUrl();
                 this.isLoad = true;
             });
-            // setTimeout(()=>{
-            //     // 最终的基础路径
-            //     this.baseHttpUrl = `${this.domain}/addons/test-yundun/#/center`;
-            //     // 开始生成url
-            //     this.getWebViewFullUrl();
-            //     this.isLoad = true;
-            // }, 500)
         })
     },
     methods: {
         getWebViewFullUrl() {
             this.webViewUrl = '';
             // 加上携带参数
-            const query = `?token=${encodeURIComponent(getToken())}&id=${this.id}&currentPartId=${this.currentPartId}&needAuth=${!this.getCurAuth()}&domain=${encodeURIComponent(this.domain)}&basePath=${encodeURIComponent('/' + this.h5ReqBasePath)}`;
+            const query = `?token=${encodeURIComponent(getToken())}&order_id=${this.orderData.order_id}&cinema_id=${this.orderData.cinema_id}&film_id=${this.orderData.film_id}&curDate=${this.orderData.curDate}&row_id=${this.orderData.row_id}&part_id=${this.orderData.part_id}&seatNum=${this.orderData.seatNum}&needAuth=${false}&domain=${encodeURIComponent(this.domain)}&basePath=${encodeURIComponent('/' + this.h5ReqBasePath)}`;
             setTimeout(() => {
                 // 打开webview
                 this.webViewUrl = this.baseHttpUrl + query;
-                console.log(this.webViewUrl, '------------------------baseUrl------------------------');
+                console.log(this.webViewUrl, this.h5ReqBasePath, '------------------------baseUrl------------------------');
             }, 100)
         }
     }

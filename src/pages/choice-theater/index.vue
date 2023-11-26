@@ -127,7 +127,7 @@
 					</span>
 				</div>
 				<div style="background: #F4F4F4;" class="h-32px rounded-16px px-3px flex items-center">
-					<div class="text-333 font-semibold text-14px mx-12px">{{ maxSelectSet }}张</div>
+					<div class="text-333 font-semibold text-14px mx-12px">{{ seatNum }}张</div>
 				</div>
 			</div>
 			<div v-else
@@ -175,23 +175,25 @@ export default {
 			curPart: {},
 			dateList: [],
 			sessionList: [],
-			maxSelectSet: 0,
+			seatNum: 0,
 			partList: [],
 			number: 0,
 			is_timing: 0,
 			sell_timing: 0,
 			scrollLeft: 0, // 控制日期行的滚动距离
 			curSessionResidue: 1,  // 默认一张余票
+			order_id: ''
 		}
 	},
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
 		options = { account_id: '7222240432728573964', order_id: '1014561279398427295' }; // 排期票档限制
+		this.order_id = options.order_id;
 		this.waitLogin().then(() => {
 			this.request('certificate.index', { order_id: options.order_id, account_id: options.account_id }, 'POST').then(res => {
 				this.orderData = res;
-				this.maxSelectSet = res.quantity;
+				this.seatNum = res.quantity;
 				this.request('row.index', { cinema_id: res.cinema_id, film_id: res.film_id }).then(res => {
 					// 影片标题等信息
 					this.filmData = res.film;
@@ -238,6 +240,7 @@ export default {
 					this.partList = res.partition || [];
 					const curIndex = this.partList.findIndex(el => el.residue);
 					this.curPart = this.partList[curIndex || 0] || {};
+					console.log('curPart', this.curPart)
 				});
 			},
 			deep: true
@@ -257,10 +260,6 @@ export default {
 			if (!this.isLoad || this.disabledBtn) {
 				return;
 			}
-			if (!this.number) {
-				this.myMessage('请选择数量');
-				return;
-			}
 			if (!this.curDate.title) {
 				this.myMessage('请选择日期');
 				return;
@@ -273,13 +272,15 @@ export default {
 				this.myMessage('未开抢');
 				return;
 			}
-			if ((this.curPart.id && !this.curPart.residue) || (this.curSession.id && !this.curSession.residue)) {
+			// 没有curPart的情况下，再检查是否场次没余票
+			console.log(this.curSession, '=curSession=')
+			if ((this.curPart.id && !this.curPart.residue) || !this.curSessionResidue) {
 				this.myMessage('暂无余票');
 				return;
 			}
 			this.disabledBtn = true;
 			if (this.curSession.seat_random == 0) {
-				this.toPath('/film-detail/h5-seat/index?id=' + this.curSession.id + (this.curPart.id ? '&activePartId=' + this.curPart.id : ''));
+				this.toPath(`/pages/h5-seat/index?order_id=${this.order_id}=&cinema_id=${this.orderData.cinema_id}&film_id=${this.orderData.film_id}&curDate=${this.curDate.title_y}&row_id=${this.curSession.id}&part_id=${this.curPart.part_id}&seatNum=${this.seatNum}`);
 				this.disabledBtn = false;
 			} else {
 				this.createOrder();

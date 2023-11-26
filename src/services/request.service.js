@@ -22,7 +22,7 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
       store.commit("SHOW_LOADING", "");
     }
     // 新版分销：如果存在父级id，那么所有接口都带过去
-    if(store.state.sales_partner_id){
+    if (store.state.sales_partner_id) {
       data.partner_id = store.state.sales_partner_id;
     }
     // 开始请求
@@ -33,37 +33,18 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
       timeout: 20000,
       header: {
         source: "tiktok",
-        "Authorization": token,
+        Authorization: token,
         encrypt: getEncryptStr(), // 加密
         "content-type": "application/json",
       },
       success: (res) => {
         if (res.statusCode == 200) {
-          if (res.data.code === -1) {
-            uni.showModal({
-              title: "提示",
-              content: res.data.message,
-              showCancel: false,
-              success: () => {
-                if (!noDirect) {
-                  res.data.url
-                    ? uni.redirectTo({
-                        url: res.data.url,
-                        fail: () => {
-                          uni.switchTab({
-                            url: res.data.url,
-                          });
-                        },
-                      })
-                    : uni.navigateBack();
-                  reject(res.data);
-                } else {
-                  reject(res.data);
-                }
-              },
-            });
-          } else if (res.data.code === 303) {
+          if (res.data.code === 401 || res.data.code === 403) {
             // 登录失效
+            uni.showToast({
+              title: "登陆失效",
+              icon: "none",
+            });
             store.commit("LOGOUT");
             getCurrentPages().length > 1
               ? uni.redirectTo({
@@ -73,9 +54,14 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
                   url: "/pages/auth/index",
                 });
             reject(res.data);
-          } else if (res.data.code === 404) {
+          } else if (
+            res.data.code === 404 ||
+            res.data.code === 500 ||
+            res.data.code === 405 ||
+            res.data.code === 410
+          ) {
             uni.showToast({
-              title: res.data.message || "请求错误",
+              title: res.data.message || "请求失败",
               icon: "none",
             });
             reject(res.data);
@@ -88,10 +74,6 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
               });
             }
             resolve(res.data.data);
-          } else if (res.data.code === 666) {
-            uni.reLaunch({
-              url: `/other/update/index?version=${res.data.data.upgrade_versions}&desc=${res.data.data.upgrade_desc}`,
-            });
           } else {
             reject(res.data);
           }

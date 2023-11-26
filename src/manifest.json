@@ -43,7 +43,8 @@
     "usingComponents": true,
     "optimization": {
       "subPackages": true
-    }
+    },
+    "industrySDK": true
   },
   "app-plus": {
     "usingComponents": true,
