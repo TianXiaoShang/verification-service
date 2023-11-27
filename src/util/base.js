@@ -25,8 +25,9 @@ const login = (onlyGetCode = false) => {
         }
         request("login.index", { code: loginRes.code }, "POST").then(
           (loginRes) => {
+            setToken(loginRes.token_tik);
             request("member.index").then((res) => {
-              setInfo({...res.member, ...loginRes});
+              setInfo({...res.member});
               store.commit("LOGIN", true);
               resolve(loginRes);
             });
