@@ -278,7 +278,7 @@ export default {
         this.timer && clearInterval(this.timer)
     },
     onLoad(options) {
-        options = { order_id: '1376682', cinema_id: '4' };
+        options = { order_id: '1376702', cinema_id: '4' };
         this.order_id = options.order_id;
         this.cinema_id = options.cinema_id;
         this.waitLogin().then(() => {
