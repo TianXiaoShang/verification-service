@@ -54,6 +54,13 @@
         "navigationBarTitleText": "选择座位",
         "disableScroll": true
       }
+    },
+    {
+      "path": "pages/coupon-detail/index",
+      "style": {
+        "navigationBarTitleText": "兑换券详情",
+        "enablePullDownRefresh": true
+      }
     }
   ],
   "subPackages": [

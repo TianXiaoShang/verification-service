@@ -73,11 +73,11 @@ export default {
         }
     },
     onLoad() {
-        this.waitLogin().then(() => {
-            this.waitInitConfig().then(() => {
-                this.login_explain = this.setting.login_explain ? parseRichText(this.setting.login_explain) : '';
-            });
-        });
+        // this.waitLogin().then(() => {
+        //     this.waitInitConfig().then(() => {
+        //         this.login_explain = this.setting.login_explain ? parseRichText(this.setting.login_explain) : '';
+        //     });
+        // });
     },
     methods: {
         onRead(val) {

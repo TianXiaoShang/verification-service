@@ -24,7 +24,7 @@
             'pb-90px': order.status == 1,
             'pb-90px': is_comment == 1 && !isWx && order.is_evaluate == 0,
             'pb-20px': order.status != 1 && !(is_comment == 1 && !isWx && order.is_evaluate == 0)
-        }" v-if="order.id">
+        }" v-if="order.order_id">
             <!-- 待支付-订单信息 -->
             <div class="bg-white p-20px mb-20px rounded-10px" v-if="order.status == 1">
                 <div class="font-semibold text-gray-333 text-16">{{ order.order_no }}</div>
@@ -285,7 +285,7 @@ import moment from 'moment';
 export default {
     data() {
         return {
-            id: '',
+            order_id: '',
             order: {},
             ticket_explain: null,
             extra: {},
@@ -302,7 +302,8 @@ export default {
         }
     },
     onLoad(options) {
-        this.id = options.id;
+        this.order_id = options.order_id;
+        console.log(this.order_id, 'order_idorder_idorder_idorder_id')
         // 确保已经登录完成
         this.waitLogin().then(() => {
             this.getData();
@@ -330,16 +331,16 @@ export default {
             return this.moment(this.order.entrance_time * 1000).format('YYYY/MM/DD HH:mm') + ' - ' + this.moment(this.order.end_time * 1000).format('YYYY/MM/DD HH:mm');
         },
         toEditAddress() {
-            this.toPath(`/order/address/add?isEdit=true&orderId=${this.id}&id=${this.order.address_id}`)
+            this.toPath(`/order/address/add?isEdit=true&orderId=${this.order_id}&id=${this.order.address_id}`)
         },
         toRefund() {
-            this.toPath('/order/refund/index?id=' + this.id)
+            this.toPath('/order/refund/index?id=' + this.order_id)
         },
         handleInit(e) {
             console.log(e, 'handleInit')
         },
         handleSuccess(e) {
-            this.request('order.evaluate', { order_id: this.id }, 'POST').then(res => {
+            this.request('order.evaluate', { order_id: this.order_id }, 'POST').then(res => {
                 this.getData();
             })
             console.log(e, 'handleSuccess')
@@ -371,7 +372,7 @@ export default {
                         this.btnLoading = true;
                         this.checkStatus().then(() => {
                             this.request("order.cancel", {
-                                order_id: this.id
+                                order_id: this.order_id
                             }, 'POST').then(res => {
                                 uni.showToast({ title: res.message, icon: 'none' });
                                 setTimeout(() => {
@@ -391,19 +392,19 @@ export default {
         },
         toPay() {
             this.checkStatus().then(() => {
-                this.toPath('/order/pay/index?id=' + this.id)
+                this.toPath('/order/pay/index?id=' + this.order_id)
             })
         },
         toTicket() {
             if (this.order.is_live == 1) {
-                this.toPath('/order/ticket-live/index?id=' + this.id)
+                this.toPath('/order/ticket-live/index?id=' + this.order_id)
             } else {
-                this.toPath('/order/ticket/index?id=' + this.id)
+                this.toPath('/order/ticket/index?id=' + this.order_id)
             }
         },
         getData() {
             return this.request("order.detail", {
-                order_id: this.id
+                order_id: this.order_id
             }).then(res => {
                 this.order = res.order;
                 this.ticket_explain = res.ticket_explain;

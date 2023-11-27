@@ -81,7 +81,7 @@
 						</div>
 						<div class="mb-20px text-gray-999 flex flex-wrap">
 							<div v-for="(item, index) in partList" :key="index" @click="choisePart(item)" :class="{
-								active: curPart.id === item.id,
+								active: curPart.part_id === item.part_id,
 								'mr-10px': index !== partList.length - 1,
 								'pr-20px': item.residue,
 								'pr-38px': !item.residue,
@@ -177,18 +177,24 @@ export default {
 			sessionList: [],
 			seatNum: 0,
 			partList: [],
-			number: 0,
 			is_timing: 0,
 			sell_timing: 0,
 			scrollLeft: 0, // 控制日期行的滚动距离
 			curSessionResidue: 1,  // 默认一张余票
-			order_id: ''
+			order_id: '',
+			is_selection: null,
 		}
 	},
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
-		options = { account_id: '7222240432728573964', order_id: '1014561279398427295' }; // 排期票档限制
+		// options = { account_id: '7222240432728573964', order_id: '1014561279398427295' }; // 排期票档限制
+		// options = { account_id: '7222240432728573964', order_id: '1014990025432667295' }; // 排期票档限制
+		// options = { account_id: '7222240432728573964', order_id: '1014990371976347295' }; // 排期票档限制
+		// options = { account_id: '7222240432728573964', order_id: '1014990180107867295' }; // 排期票档限制
+		if (!options.order_id) {
+			this.myMessage('未找到订单id');
+		}
 		this.order_id = options.order_id;
 		this.waitLogin().then(() => {
 			this.request('certificate.index', { order_id: options.order_id, account_id: options.account_id }, 'POST').then(res => {
@@ -236,6 +242,7 @@ export default {
 					this.curSessionResidue = res.row.residue;
 					this.is_timing = res.row.is_timing;
 					this.sell_timing = res.row.sell_timing;
+					this.is_selection = res.row.is_selection;
 					// 票档
 					this.partList = res.partition || [];
 					const curIndex = this.partList.findIndex(el => el.residue);
@@ -254,7 +261,7 @@ export default {
 			if (this.is_timing == 1) {
 				return '即将开抢'
 			}
-			return (this.curSession.sell == 1 ? (this.curSession.seat_random == 1 ? '去下单' : '去选座') : '未开抢')
+			return (this.curSession.sell == 1 ? (this.curSession.seat_random == 1 || this.is_selection == 1 ? '去下单' : '去选座') : '未开抢')
 		},
 		toSelectFilm() {
 			if (!this.isLoad || this.disabledBtn) {
@@ -274,12 +281,12 @@ export default {
 			}
 			// 没有curPart的情况下，再检查是否场次没余票
 			console.log(this.curSession, '=curSession=')
-			if ((this.curPart.id && !this.curPart.residue) || !this.curSessionResidue) {
+			if ((this.curPart.part_id && !this.curPart.residue) || !this.curSessionResidue) {
 				this.myMessage('暂无余票');
 				return;
 			}
 			this.disabledBtn = true;
-			if (this.curSession.seat_random == 0) {
+			if (this.curSession.seat_random == 0 && this.is_selection == 0) {
 				this.toPath(`/pages/h5-seat/index?order_id=${this.order_id}=&cinema_id=${this.orderData.cinema_id}&film_id=${this.orderData.film_id}&curDate=${this.curDate.title_y}&row_id=${this.curSession.id}&part_id=${this.curPart.part_id}&seatNum=${this.seatNum}`);
 				this.disabledBtn = false;
 			} else {
@@ -287,16 +294,16 @@ export default {
 			}
 		},
 		createOrder() {
-			this.request("tiktok.order.un_create", {
+			this.request("create.other" + '&cinema_id=' + this.orderData.cinema_id, {
+				tiktok_order_id: this.order_id,
 				row_id: this.curSession.id,
-				openid: this.userInfo.openid,
-				part_id: this.curPart.id,
-				number: this.number,
+				part_id: Number(this.curPart.part_id),
+				number: this.seatNum,
 			}, 'POST').then(res => {
+				this.disabledBtn = false;
 				if (res.order_id) {
-					this.disabledBtn = false;
 					uni.redirectTo({
-						url: '/order/pay/index?id=' + res.order_id,
+						url: '/order/pay/index?order_id=' + res.order_id + '&cinema_id=' + this.orderData.cinema_id,
 					})
 				} else {
 					uni.showToast({

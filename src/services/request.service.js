@@ -55,6 +55,7 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
                 });
             reject(res.data);
           } else if (
+            res.data.code === 400 ||
             res.data.code === 404 ||
             res.data.code === 500 ||
             res.data.code === 405 ||

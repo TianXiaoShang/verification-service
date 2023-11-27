@@ -209,7 +209,8 @@
                     </span>
                 </div>
                 <scroll-view scroll-y="true" class="text-gray-666 max-h-50vh px-15px box-border mt-15px">
-                    <u-parse :lazyLoad="true" :selectable="true" :scrollTable="true" :content="setting.buy_text"></u-parse>
+                    <u-parse :lazyLoad="true" :selectable="true" :scrollTable="true"
+                        :content="mySetting.buy_text"></u-parse>
                 </scroll-view>
                 <div class="py-10px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '200px' }"
@@ -236,6 +237,54 @@
                 </div>
             </div>
         </u-popup>
+
+
+        <!-- 确认预约 -->
+        <u-modal :show="showConfirmBookModal" width="580rpx" :title="'确认预约'" :confirmColor="'#FF545C'">
+            <div class="flex flex-col w-full">
+                <div class="text-red text-12px flex justify-center mb-5px">出票后不可修改</div>
+                <div class="w-full max-h-60vh overflow-y-auto">
+                    <div class="text-gray-333 py-6px flex mb-4px">
+                        <u-icon class="mr-4px relative top-2px" size="18px" color="#3eaf7c"
+                            name="checkmark-circle"></u-icon>
+                        <div>
+                            时间：{{ moment(order.create_time * 1000).format('YYYY-MM-DD HH:mm') }}
+                        </div>
+                    </div>
+                    <div class="text-gray-333 py-6px flex mb-4px">
+                        <u-icon class="mr-4px relative top-2px" size="18px" color="#3eaf7c"
+                            name="checkmark-circle"></u-icon>
+                        <div>
+                            座位：{{ order.ext ? order.ext.seats.map(el => el.name).join('、') : '' }}
+                        </div>
+                    </div>
+                    <div class="text-gray-333 py-6px flex mb-4px">
+                        <u-icon class="mr-4px relative top-2px" size="18px" color="#3eaf7c"
+                            name="checkmark-circle"></u-icon>
+                        <div>
+                            姓名：{{ (curIdacrds && curIdacrds.length ? curIdacrds.map(el =>
+                                el.realname).join('、') :
+                                user.name) }}
+                        </div>
+                    </div>
+                    <div class="text-gray-333 py-6px flex">
+                        <u-icon class="mr-4px relative top-2px" size="18px" color="#3eaf7c"
+                            name="checkmark-circle"></u-icon>
+                        <div>
+                            电话：{{ user.phone }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div slot="confirmButton" class="flex justify-between w-full">
+                <u-button shape="circle" size="normal" plain :customStyle="{ height: '44px', width: '28vw', margin: 0 }"
+                    color="#999" text="再想想" @click="cancelConfirmBook">
+                </u-button>
+                <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '28vw', margin: 0 }"
+                    color="#FF545C" text="确认预约" @click="handleConfirmBook">
+                </u-button>
+            </div>
+        </u-modal>
     </div>
 </template>
 
@@ -249,6 +298,7 @@ export default {
     components: { AddressList, IdcardList, MyPhoneButton },
     data() {
         return {
+            showConfirmBookModal: false,
             showIdcardPopup: false,
             curIdacrds: [],
             user: {
@@ -270,15 +320,16 @@ export default {
             order_id: '',
             rule: {},
             navigation: {},
-            setting: {},
+            mySetting: {},
             pay: {},
+            _diyFormData: {},
+            isBooking: false,
         }
     },
     onUnload() {
         this.timer && clearInterval(this.timer)
     },
     onLoad(options) {
-        options = { order_id: '1376682', cinema_id: '4' };
         this.order_id = options.order_id;
         this.cinema_id = options.cinema_id;
         this.waitLogin().then(() => {
@@ -311,18 +362,17 @@ export default {
         },
         async getData() {
             this.request('pay.index', { order_id: this.order_id, cinema_id: this.cinema_id }).then(res => {
-                console.log(res, 'rrr')
                 this.pageLoad = true;
                 this.order = res.order;
                 this.pay = res.pay;
                 this.navigation = res.navigation;
                 this.rule = res.rule;
-                this.setting = res.setting;
+                this.mySetting = res.setting;
                 this.diyform = res.diy_form;
                 this.maxSelectIdcard = Number(res.order.number) || 0;
                 // 服务条款
-                if (this.setting.buy_text) {
-                    this.setting.buy_text = parseRichText(this.setting.buy_text)
+                if (this.mySetting.buy_text) {
+                    this.mySetting.buy_text = this.mySetting ? parseRichText(this.mySetting.buy_text) : '';
                 }
                 if (this.timePassed) {
                     return; // 时间过了就不倒计时了
@@ -377,10 +427,10 @@ export default {
                 uni.showToast({ title: "请选择票务配送地址", icon: 'none' })
                 return;
             }
-            // if (this.order.is_autonym == 1 && this.curIdacrds.length != this.maxSelectIdcard) {
-            //     uni.showToast({ title: `请选择${this.maxSelectIdcard}位观演人`, icon: 'none' })
-            //     return;
-            // }
+            if (this.order.is_autonym == 1 && this.curIdacrds.length != this.maxSelectIdcard) {
+                uni.showToast({ title: `请选择${this.maxSelectIdcard}位观演人`, icon: 'none' })
+                return;
+            }
             // 快递模式不需要手机号信姓名
             if (this.order.ticket_mode == '0' && !this.user.name) {
                 uni.showToast({ title: "请填写姓名", icon: 'none' })
@@ -395,34 +445,43 @@ export default {
                 uni.showToast({ title: "支付操作频繁，请稍后重试", icon: 'none' })
                 return;
             }
-            this.paying = true;
-            this.startPay();
-        },
-        startPay() {
-            // 整理自定义表单数据
-            const _diyFormData = { ...this.diyformData };
-            for (const key in _diyFormData) {
-                if (Object.hasOwnProperty.call(_diyFormData, key)) {
-                    let ele = _diyFormData[key];
-                    const curDiy = this.diyform.fields.find(el => el.diy_type === key);
-                    if (curDiy.data_type == 2) {
-                        _diyFormData[key] = [ele + '', curDiy.tp_text[ele]];
-                    }
-
-                    if (curDiy.tp_must == 1 && !_diyFormData[key]) {
-                        uni.showToast({ title: curDiy.placeholder, icon: 'none' });
-                        this.paying = false;
+            if (this.diyform.diyform_set && this.diyform.fields && this.diyform.fields.length) {
+                // 检查自定义表单必填
+                for (let index = 0; index < this.diyform.fields.length; index++) {
+                    const el = this.diyform.fields[index];
+                    if (el.tp_must == 1 && !this.diyformData[el.diy_type]) {
+                        uni.showToast({ title: el.placeholder, icon: 'none' });
                         return;
                     }
                 }
+                // 整理自定义表单数据
+                this._diyFormData = { ...this.diyformData };
+                for (const key in this._diyFormData) {
+                    if (Object.hasOwnProperty.call(this._diyFormData, key)) {
+                        let ele = this._diyFormData[key];
+                        const curDiy = this.diyform.fields.find(el => el.diy_type === key);
+                        if (curDiy.data_type == 2) {
+                            this._diyFormData[key] = [ele + '', curDiy.tp_text[ele]];
+                        }
+                    }
+                }
             }
+            this.paying = true;
+            this.showConfirmBookModal = true;
+        },
+
+        cancelConfirmBook() {
+            this.paying = false;
+            this.showConfirmBookModal = false;
+        },
+        handleConfirmBook() {
             const params = {
                 order_id: this.order_id,
                 realname: this.user.name,
                 mobile: this.user.phone,
                 form_id: this.diyform.form_id,
                 address_id: '',
-                diydata: encodeURIComponent(JSON.stringify(_diyFormData)),
+                diydata: encodeURIComponent(JSON.stringify(this._diyFormData)),
             }
             if (this.order.ticket_mode == 1) {
                 params.address_id = this.curAddress.id;
@@ -436,22 +495,47 @@ export default {
                 params.autonym_ids = this.curIdacrds.map(el => el.id).join(',');
             }
             uni.setStorageSync('payName', this.user.name);
-
             this.request('pay.payment' + '&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
-                console.log(res, this.order_id, 'rrrr')
-                tt.booking({
-                    orderId: res.orderId,
-                    bookInfo: res.bookInfo,
-                    scene: 2,
-                    success: (res) => {
-                        console.log(res, 'resresresresres')
-                        this.paying = false;
-                    },
-                    fail: (err) => {
-                        console.log(err, 'e-e-e-e--')
-                        this.paying = false;
-                    }
-                })
+                console.log(res, 'pay.payment')
+                this.showConfirmBookModal = false;
+                // 说明已经走过tt.booking了
+                if (this.order.pre_create == 1 || this.isBooking) {
+                    this.confirmVerification();
+                } else {
+                    // 代表已经走过booking了
+                    this.isBooking = true;
+                    tt.booking({
+                        orderId: res.orderId,
+                        bookInfo: res.bookInfo,
+                        scene: 2,
+                        success: (res) => {
+                            console.log('booking: success-res', res);
+                            if (res.bookId) {
+                                this.confirmVerification();
+                            } else {
+                                this.paying = false;
+                                uni.showToast({ title: res.errMsg || 'booking-fail', icon: 'none' });
+                            }
+                        },
+                        fail: (err) => {
+                            console.log('booking: fail-err', err);
+                            uni.showToast({ title: err.errMsg, icon: 'none' });
+                            this.paying = false;
+                            this.showConfirmBookModal = false;
+                        }
+                    })
+                }
+            })
+        },
+        confirmVerification() {
+            this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id }, 'POST').then(payRes => {
+                console.log('booking.index', payRes)
+                uni.redirectTo({
+                    url: '/order/detail/index?id=' + this.order_id,
+                });
+                this.paying = false;
+            }, () => {
+                this.paying = false;
             })
         },
         handlerPayFail() {

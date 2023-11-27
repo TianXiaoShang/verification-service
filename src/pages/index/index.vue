@@ -106,7 +106,8 @@ export default {
 	onShow() {
 		store.commit("SET_CAN_FETCH_TICKET", true);
 	},
-	onLoad() {
+	onLoad(options) {
+		console.log(options, 'options')
 		// // 确保已经登录完成，再去检查是否有授权
 		// this.waitLogin().then(() => {
 		// 	// 检查授权用户信息，在没有授权的情况下引导授权，但不阻塞购买业务
