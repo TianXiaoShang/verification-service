@@ -24,59 +24,36 @@
             'pb-90px': order.status == 1,
             'pb-90px': is_comment == 1 && !isWx && order.is_evaluate == 0,
             'pb-20px': order.status != 1 && !(is_comment == 1 && !isWx && order.is_evaluate == 0)
-        }" v-if="order.order_id">
+        }" v-if="order.order_no">
             <!-- 待支付-订单信息 -->
             <div class="bg-white p-20px mb-20px rounded-10px" v-if="order.status == 1">
                 <div class="font-semibold text-gray-333 text-16">{{ order.order_no }}</div>
-                <!-- <div class="mt-10px font-normal text-gray-999 text-14">{{ moment(order.entrance_time *
-                        1000).format('YYYY-MM-DD HH:mm')
-                }}</div> -->
                 <div class="mt-10px font-normal text-gray-999 text-14">{{ order.cinema_title }}</div>
                 <u-divider></u-divider>
                 <div class="font-semibold text-gray-333 text-16 mt-20px flex items-center">{{ order.film_title }}
-                    <div v-if="order.is_live == 1" class="inline-block live-tag-bg-img ml-6px">
-                        直播
-                    </div>
                 </div>
-                <template v-if="order.is_live == 1">
-                    <div class="mt-10px font-normal text-gray-999 text-14">
-                        直播时间：{{ moment(order.entrance_time * 1000).format('YYYY-MM-DD HH:mm') }}
-                    </div>
-                </template>
-                <template v-else>
-                    <div class="mt-10px font-normal text-gray-999 text-14">
-                        {{ order.hall_title }} | {{ moment(order.entrance_time * 1000).format('YYYY-MM-DD HH:mm') }}
-                    </div>
-                    <div class="mt-5px font-normal text-gray-999 text-14">
-                        {{ order.seats.map(el => el.name).join('、') }}
-                    </div>
-                </template>
+                <div class="mt-10px font-normal text-gray-999 text-14">
+                    {{ order.hall_title }} | {{ moment(order.entrance_time * 1000).format('YYYY-MM-DD HH:mm') }}
+                </div>
+                <div class="mt-5px font-normal text-gray-999 text-14">
+                    {{ order.seats.map(el => el.name).join('、') }}
+                </div>
             </div>
 
             <!-- 非待支付-订单信息 -->
             <div class="bg-white p-20px mb-20px rounded-10px" v-if="order.status != 1">
                 <div class="font-semibold text-gray-333 text-16 flex items-center">
                     {{ order.film_title }}
-                    <div v-if="order.is_live == 1" class="inline-block live-tag-bg-img ml-6px">
-                        直播
-                    </div>
                 </div>
-                <template v-if="order.is_live == 1">
-                    <div class="mt-10px font-normal text-gray-999 text-14">
-                        直播时间：{{ moment(order.entrance_time * 1000).format('YYYY-MM-DD HH:mm') }}
-                    </div>
-                </template>
-                <template v-else>
-                    <div class="font-normal mt-5px text-gray-999 text-14">
-                        {{ order.hall_title }} 
-                    </div>
-                    <div class="font-normal mt-5px text-gray-999 text-14">
-                        {{ getDateTime() }}
-                    </div>
-                    <div class="mt-5px font-normal text-gray-999 text-14">
-                        {{ order.seats.map(el => el.name).join('、') }}
-                    </div>
-                </template>
+                <div class="font-normal mt-5px text-gray-999 text-14">
+                    {{ order.hall_title }}
+                </div>
+                <div class="font-normal mt-5px text-gray-999 text-14">
+                    {{ getDateTime() }}
+                </div>
+                <div class="mt-5px font-normal text-gray-999 text-14">
+                    {{ order.seats.map(el => el.name).join('、') }}
+                </div>
                 <u-divider></u-divider>
                 <!-- 购票信息 -->
                 <div class="font-semibold text-gray-333 text-16">购票人</div>
@@ -164,22 +141,6 @@
                     <span class="font-semibold">套票折扣</span>
                     <span class="font-normal">-{{ order.part_discount }}元</span>
                 </div>
-                <div v-if="order.part_limit_discount && order.part_limit_discount !== '0.00' && order.part_limit_discount !== '0'"
-                    class="flex justify-between py-15px items-center text-gray-33 text-14"
-                    style="border-bottom: 1px solid #eee;">
-                    <span class="font-semibold">限时折扣</span>
-                    <span class="font-normal">-{{ order.part_limit_discount }}元</span>
-                </div>
-                <div v-if="order.is_level == 2" class="flex justify-between py-15px items-center text-gray-33 text-14"
-                    style="border-bottom: 1px solid #eee;">
-                    <span class="font-semibold">半价日</span>
-                    <span class="font-normal text-red">{{ order.level_discounts }}折</span>
-                </div>
-                <div v-if="order.discount > 0" class="flex justify-between py-15px items-center text-gray-33 text-14"
-                    style="border-bottom: 1px solid #eee;">
-                    <span class="font-semibold">订单折扣</span>
-                    <span class="font-normal">{{ order.discount }}</span>
-                </div>
                 <div v-if="order.is_pay > 0" class="flex justify-between py-15px items-center text-gray-33 text-14"
                     style="border-bottom: 1px solid #eee;">
                     <span class="font-semibold">实际支付</span>
@@ -213,10 +174,6 @@
                 }}</div>
 
                 <div class="flex justify-between items-center">
-                    <!-- <div class="h-26px mt-15px w-100px inline-block text-white rounded-13px text-14px font-semibold flex justify-center items-center px-10px"
-                        v-if="order.status == 2" style="background: linear-gradient(180deg, #FF545C 0%, #FF545C 100%);"
-                        @click="toTicket">
-                        查看门票信息</div> -->
                     <div class="h-26px mt-15px w-100px inline-block text-white rounded-13px text-14px flex justify-center items-center px-10px relative"
                         v-if="!isWx && order.tiktoksop_order_id" style="border: 1px solid #7e5e49; color: #7e5e49;">
                         IM客服
@@ -224,13 +181,6 @@
                             data-im-type="order" @error="onimError" data-biz-line="1" :data-im-id="setting.service_order"
                             :data-order-id="order.tiktoksop_order_id">
                         </button>
-                    </div>
-
-                    <div v-if="((member_refund == 1 && isWx) || (!isWx && tiktok_refund == 1))"
-                        @click="toRefund"
-                        class="h-26px mt-15px w-100px inline-block text-white rounded-13px text-14px flex justify-center items-center px-10px relative"
-                        style="border: 1px solid #7e5e49; color: #7e5e49;">
-                        申请退款
                     </div>
                 </div>
             </div>
@@ -248,34 +198,16 @@
 
         <!-- 底部按钮 -->
         <div v-if="order.status == 1"
-            class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-between px-20px left-0 w-full box-border">
+            class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal"
-                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0, border: '1px solid #FF545C', color: '#FF545C' }"
+                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', marginRight: '8px', border: '1px solid #FF545C', color: '#FF545C' }"
                 color="#fff" text="取消订单" :disabled="btnLoading" @click="cancelOrder">
             </u-button>
             <u-button shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }"
-                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="继续支付" @click="toPay">
+                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="去预约" @click="toPay">
             </u-button>
         </div>
-
-        <!-- #ifdef MP-TOUTIAO -->
-        <!-- <div v-if="(order.status == 2 || order.status == 3 || order.status == 4) && Number(order.channel) === 3 && !isWx && no_refund != 1"
-            class="fixed z-998 pb-20px bottom-0 bg-white h-70px flex items-center justify-around px-20px left-0 w-full box-border">
-            <zijie-pay-button
-                v-if="order.status == 2 && (order.is_refund == 0 || (order.is_refund >= 1 && (refund.status == 3 || refund.status == 4)))"
-                :order-status="1" :order-id="order.order_no" :extra="extra || {}" @refund="handleRefund" @error="error"
-                :refund-total-amount="Number(order.pay_price * 100)" />
-            <zijie-pay-button v-if="(order.status == 3 || refund.status == 2)" :order-status="2"
-                :refund-id="refund.refund_no" />
-            <zijie-pay-button v-if="(order.status == 4 || refund.status == 3)" :order-status="3"
-                :refund-id="refund.refund_no" />
-        </div> -->
-        <div v-if="is_comment == 1 && !isWx && order.is_evaluate == 0"
-            class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-center px-20px left-0 w-full box-border">
-            <rate-button :order-id="order.order_no" @init="handleInit" @success="handleSuccess" />
-        </div>
-        <!-- #endif -->
     </div>
 </template>
 
@@ -307,7 +239,7 @@ export default {
         // 确保已经登录完成
         this.waitLogin().then(() => {
             this.getData();
-            setTimeout(()=>{
+            setTimeout(() => {
                 this.loadFlag = true;
             }, 100)
         });
@@ -321,11 +253,11 @@ export default {
         }
     },
     methods: {
-        getDateTime(){
+        getDateTime() {
             const start = this.moment(this.order.entrance_time * 1000).format('YYYY-MM-DD');
             const end = this.moment(this.order.end_time * 1000).format('YYYY-MM-DD');
             // 同一天直接展示entrance_time，否则展示时间段
-            if(start === end){
+            if (start === end) {
                 return this.moment(this.order.entrance_time * 1000).format('YYYY/MM/DD HH:mm');
             }
             return this.moment(this.order.entrance_time * 1000).format('YYYY/MM/DD HH:mm') + ' - ' + this.moment(this.order.end_time * 1000).format('YYYY/MM/DD HH:mm');
@@ -333,25 +265,6 @@ export default {
         toEditAddress() {
             this.toPath(`/order/address/add?isEdit=true&orderId=${this.order_id}&id=${this.order.address_id}`)
         },
-        toRefund() {
-            this.toPath('/order/refund/index?id=' + this.order_id)
-        },
-        handleInit(e) {
-            console.log(e, 'handleInit')
-        },
-        handleSuccess(e) {
-            this.request('order.evaluate', { order_id: this.order_id }, 'POST').then(res => {
-                this.getData();
-            })
-            console.log(e, 'handleSuccess')
-        },
-        // error(e) {
-        //     console.log(e, 'error')
-        // },
-        // handleRefund(e) {
-        //     console.log(e, 'handleRefund')
-        //     this.getData();
-        // },
         checkStatus() {
             return new Promise((resolve, reject) => {
                 this.getData().then(() => {
@@ -371,18 +284,18 @@ export default {
                     if (result.confirm) {
                         this.btnLoading = true;
                         this.checkStatus().then(() => {
-                            this.request("order.cancel", {
-                                order_id: this.order_id
-                            }, 'POST').then(res => {
-                                uni.showToast({ title: res.message, icon: 'none' });
-                                setTimeout(() => {
-                                    this.getData().then(() => {
-                                        this.btnLoading = false;
-                                    })
-                                }, 800);
-                            }, () => {
-                                this.btnLoading = false;
-                            })
+                            // this.request("order.cancel", {
+                            //     order_id: this.order_id
+                            // }, 'POST').then(res => {
+                            //     uni.showToast({ title: res.message, icon: 'none' });
+                            //     setTimeout(() => {
+                            //         this.getData().then(() => {
+                            //             this.btnLoading = false;
+                            //         })
+                            //     }, 800);
+                            // }, () => {
+                            //     this.btnLoading = false;
+                            // })
                         })
                     }
                 },
@@ -392,29 +305,18 @@ export default {
         },
         toPay() {
             this.checkStatus().then(() => {
-                this.toPath('/order/pay/index?id=' + this.order_id)
+                this.toPath('/order/pay/index?order_id=' + this.order_id + '&cinema_id=' + this.order.cinema_id)
             })
         },
         toTicket() {
-            if (this.order.is_live == 1) {
-                this.toPath('/order/ticket-live/index?id=' + this.order_id)
-            } else {
-                this.toPath('/order/ticket/index?id=' + this.order_id)
-            }
+            this.toPath('/order/ticket/index?order_id=' + this.order_id)
         },
         getData() {
-            return this.request("order.detail", {
+            return this.request("order.show", {
                 order_id: this.order_id
             }).then(res => {
                 this.order = res.order;
-                this.ticket_explain = res.ticket_explain;
                 this.refund = res.refund;
-                this.extra = res.extra || {};
-                this.no_refund = res.no_refund;
-                this.is_comment = res.is_comment;
-                this.member_refund = res.member_refund;
-                this.tiktok_refund = res.tiktok_refund;
-                // 倒计时
                 const time = res.order.expire_time;
                 if (time && this.order.status == 1) {
                     this.getExpireTime(time);

@@ -7,22 +7,18 @@
 			<div @click="toSelect(item)" class="bg-white rounded box-border mt-20px p-20px relative overflow-hidden"
 				v-for="(item, index) in ticketList" :key="index">
 				<template v-if="item.id">
-					<div class="text-14 font-semibold flex items-center">{{ item.film_title }}
-						<div v-if="item.is_live == 1" class="inline-block live-tag-bg-img ml-6px">
-							直播
-						</div>
-					</div>
+					<div class="text-14 font-semibold flex items-center">{{ item.ext.film_title }}</div>
 
 					<div class="text-12px text-gray-999 my-10px font-normal flex justify-between items-center">
-						<span>{{ item.cinema_title }}</span>
+						<span>{{ item.ext.cinema_title }}</span>
 						<span class="text-red text-14">{{
-							moment(item.entrance_time *
+							moment(item.ext.entrance_time *
 								1000).format('YYYY-MM-DD HH:mm')
 						}}</span>
 					</div>
 
 					<div class="text-14 font-normal flex justify-between items-center">
-						<span class="text-gray-333">{{ item.hall_title }}</span>
+						<span class="text-gray-333">{{ item.ext.hall_title }}</span>
 						<span class="text-12px text-blue">查看详情</span>
 					</div>
 
@@ -49,28 +45,24 @@ export default {
 	data() {
 		return {
 			ticketList: new Array(8).fill({}),
-			statusSign: ['', this.isMovieMode ? '待观影' : '待观看', '已取票', '已结束', '已退款'],
+			statusSign: ['', '待观看', '已取票', '已结束', '已退款'],
 			statusBgColor: ['', '#FF545C', '#EEEEEE', '#EEEEEE', '#EEEEEE'],
 			statusTextColor: ['', '#fff', '#333', '#333', '#333'],
 		}
 	},
 	methods: {
 		toSelect(item) {
-			if (item.is_live == 1) {
-				this.toPath('/order/ticket-live/index?id=' + item.id)
-			} else {
-				this.toPath('/order/ticket/index?id=' + item.id)
-			}
+			this.toPath('/order/ticket/index?order_id=' + item.id)
 		},
 		getData() {
-			this.request("ticket.lists", {
+			this.request("ticket.index", {
 				page: this.myCurrentPage,
 			}).then(res => {
-				const { total, list } = res;
+				const { total, data } = res;
 				if (this.ticketList[0] && !this.ticketList[0].id) {
 					this.ticketList = [];
 				}
-				this.ticketList = [...this.ticketList, ...(list || [])];
+				this.ticketList = [...this.ticketList, ...(data || [])];
 				this.myCurrentPage++;
 				this.pageFinish = this.ticketList.length >= Number(total);
 			}, () => {

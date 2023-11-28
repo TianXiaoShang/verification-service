@@ -181,7 +181,7 @@ import store from "@/store";
 export default {
     data() {
         return {
-            id: '',
+            order_id: '',
             order: {},
             film: {},
             myCinema: {},
@@ -202,7 +202,7 @@ export default {
     components: { tkiQrcode },
     onLoad(options) {
         store.commit("SET_CAN_FETCH_TICKET", false);
-        this.id = options.id;
+        this.order_id = options.order_id;
         // 确保已经登录完成
         this.waitLogin().then(() => {
             this.getData();
@@ -231,12 +231,13 @@ export default {
             this.tabIndex = e.index;
         },
         toDetail() {
-            this.toPath('/order/detail/index?id=' + this.id)
+            this.toPath('/order/detail/index?id=' + this.order_id)
         },
         getData() {
-            this.request("ticket.detail", {
-                order_id: this.id
+            this.request("ticket.show", {
+                order_id: this.order_id
             }).then(res => {
+                console.log(res, '=d=d=d=d');
                 if (res.watch_film) {
                     this.richText = parseRichText(res.watch_film).replace(/width: 1086.8px;/g, "");;
                 }
