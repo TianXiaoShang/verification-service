@@ -44,9 +44,16 @@
                     </span>
                 </div>
                 <scroll-view scroll-y="true" class="text-gray-666 max-h-50vh px-15px box-border mt-15px">
-                    <u-parse v-if="login_explain" :lazyLoad="true" :selectable="true" :scrollTable="true"
-                        :content="login_explain"></u-parse>
-                    <span v-else>暂无服务条款内容</span>
+                    <div>本指引是为处理你的个人信息而制定。</div>
+                    <div>1.开发者处理的信息</div>
+                    <div>根据法律规定，开发者仅处理实现本小程序功能所必要的信息。</div>
+                    <div>*为了导航到活动地点，开发者将在获取你的明示同意后，收集你的位置信息。</div>
+                    <div>*为了售后联系沟通，开发者将在获取你的明示同意后，收集你的手机号。</div>
+                    <div>*为了售后上传凭证，开发者将在获取你的明示同意后，使用你的相册（仅写入）权限。</div>
+                    <div>*开发者 收集你选中的文件，用于售后上传凭证。</div>
+                    <div>*开发者 收集你的身份证号码，用于会员发放积分礼品。</div>
+                    <div>2.你的权益</div>
+                    <div>关于你的个人信息，你可以通过系统客服入口与开发者联系，行使查阅、复制、更正、删除等法定权利。</div>
                 </scroll-view>
                 <div class="py-10px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '200px' }"
@@ -62,7 +69,6 @@
 <script>
 // 注意： 该页面仅用于授权过期重新登录（极端情况才会到这个页面，这里仅做登陆token处理），授权用户信息走auth-user-info。
 import { login } from '@/util/base';
-import { parseRichText } from '@/util';
 
 export default {
     data() {
@@ -73,11 +79,6 @@ export default {
         }
     },
     onLoad() {
-        // this.waitLogin().then(() => {
-        //     this.waitInitConfig().then(() => {
-        //         this.login_explain = this.setting.login_explain ? parseRichText(this.setting.login_explain) : '';
-        //     });
-        // });
     },
     methods: {
         onRead(val) {
@@ -88,10 +89,6 @@ export default {
             if (this.read) {
                 login().then(() => {
                     getCurrentPages().length ? this.back(800) : this.goHome(800);
-                    // const fistPage = (getCurrentPages() && getCurrentPages()[0] && getCurrentPages()[0].$page && getCurrentPages().$page.fullPath) || '';
-                    // getCurrentPages().length > 1 ? this.back(800) : fistPage ? uni.redirectTo({
-                    //     url: fistPage,
-                    // }) : this.goHome();
                 });
             } else {
                 uni.showToast({

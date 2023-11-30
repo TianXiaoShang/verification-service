@@ -235,7 +235,8 @@ export default {
     },
     onLoad(options) {
         this.order_id = options.order_id;
-        console.log(this.order_id, 'order_idorder_idorder_idorder_id')
+        this.cinema_id = options.cinema_id;
+        console.log(options, 'order_idorder_idorder_idorder_id')
         // 确保已经登录完成
         this.waitLogin().then(() => {
             this.getData();
@@ -313,7 +314,8 @@ export default {
         },
         getData() {
             return this.request("order.show", {
-                order_id: this.order_id
+                order_id: this.order_id,
+                cinema_id: this.cinema_id
             }).then(res => {
                 this.order = res.order;
                 this.refund = res.refund;

@@ -64,7 +64,7 @@ const getPhoneNumber = (res, hideToast = false) => {
     };
     request("member.phone", tiktokParams, "POST").then(
       (res) => {
-        console.log(res, 'r=r==r=r=r=')
+        console.log(res, 'member.phone');
         if (!res.mobile) {
           uni.showToast({
             title: "获取手机号失败",
@@ -113,11 +113,11 @@ const initCinemaConfig = async () => {
 
 const updateUserInfo = (userInfo) => {
   return new Promise((resolve, reject) => {
-    request("member.update", userInfo).then(
+    request("member.authorize", userInfo, 'POST').then(
       (res) => {
-        if (res.member) {
-          setInfo(res.member);
-          resolve(res.member);
+        if (res) {
+          setInfo(userInfo);
+          resolve();
         }
       },
       () => {

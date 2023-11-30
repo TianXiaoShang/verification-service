@@ -79,10 +79,10 @@
                         <div class="text-14px text-red">点击选择地址</div>
                         <u-icon color="#FF545C" name="arrow-right"></u-icon>
                     </div>
-                    <div class="mt-15px flex justify-between items-center">
+                    <!-- <div class="mt-15px flex justify-between items-center">
                         <div class=text-gray-333>运费</div>
                         <div class="text-14px text-gray-666">¥{{ rule.ticket_rule.express_fee }}</div>
-                    </div>
+                    </div> -->
                 </template>
                 <template v-else>
                     <div class="mt-10px">{{ rule.ticket_explain.title }}</div>
@@ -431,7 +431,7 @@ export default {
                 uni.showToast({ title: `请选择${this.maxSelectIdcard}位观演人`, icon: 'none' })
                 return;
             }
-            // 快递模式不需要手机号信姓名
+            // 快递模式不需要姓名
             if (this.order.ticket_mode == '0' && !this.user.name) {
                 uni.showToast({ title: "请填写姓名", icon: 'none' })
                 return;

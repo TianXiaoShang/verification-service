@@ -52,7 +52,7 @@ export default {
 	},
 	methods: {
 		toSelect(item) {
-			this.toPath('/order/ticket/index?order_id=' + item.id)
+			this.toPath('/order/ticket/index?order_id=' + item.id + '&cinema_id=' + item.cinema_id)
 		},
 		getData() {
 			this.request("ticket.index", {

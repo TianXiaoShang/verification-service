@@ -57,7 +57,7 @@
 					</div>
 
 					<!-- 功能卡片 -->
-					<div class="bar-wrap">
+					<!-- <div class="bar-wrap">
 						<div @click="toPath('/order/address/list')"
 							class="h-56px mt-10px px-20px box-border py-18px flex items-center justify-between bg-white rounded">
 							<div class="flex items-center">
@@ -74,7 +74,7 @@
 							</div>
 							<u-icon name="arrow-right" class="ml-4px" size="16px" color="#999"></u-icon>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="pt-15px pb-10px text-center text-gray-999 text-12px">大激梨提供技术支持
 				</div>

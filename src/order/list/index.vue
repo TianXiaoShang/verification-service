@@ -49,7 +49,7 @@ export default {
     },
     methods: {
         toOrderDetail(item) {
-            this.toPath('/order/detail/index?order_id=' + item.id)
+            this.toPath('/order/detail/index?order_id=' + item.id + '&cinema_id=' + item.cinema_id)
         },
         getData() {
             this.request("order.index", {

@@ -21,10 +21,10 @@
                     <div class="text-gray-666 text-14px mr-10px">手机</div>
                     <div class="flex-1 relative h-full flex items-center">
                         <div class="w-full h-23px text-14px flex items-center"
-                            :class="{ 'text-black': user.phone, 'text-gray-999': !user.phone }">
-                            {{ user.phone || '授权手机号' }}
+                            :class="{ 'text-black': user.mobile, 'text-gray-999': !user.mobile }">
+                            {{ user.mobile || '授权手机号' }}
                         </div>
-                        <my-phone-button v-model="user.phone"></my-phone-button>
+                        <!-- <my-phone-button v-model="user.mobile"></my-phone-button> -->
                     </div>
                 </div>
 
@@ -34,8 +34,9 @@
                     class="w-full h-50px bg-white rounded py-10px px-15px box-border mt-10px flex items-center">
                     <div class="text-gray-666 text-14px mr-10px">头像</div>
                     <div class="flex-1 relative text-0px h-full flex items-center">
-                        <image v-if="user.avatarUrl" class="w-35px h-35px rounded-full overflow-hidden"
-                            :src="user.avatarUrl"></image>
+                        <image v-if="user.avatar" class="w-35px h-35px rounded-full overflow-hidden" :src="user.avatar">
+                        </image>
+                        </image>
                         <span v-else class="text-14px text-gray-999">点击授权头像昵称</span>
                     </div>
                 </div>
@@ -44,12 +45,11 @@
                     <div class="text-gray-666 text-14px mr-10px">昵称</div>
                     <div class="flex-1 relative h-full flex items-center">
                         <div class="w-full h-23px text-14px flex items-center"
-                            :class="{ 'text-black': user.name, 'text-gray-999': !user.name }">
-                            {{ user.name || '点击授权头像昵称' }}
+                            :class="{ 'text-black': user.nickname, 'text-gray-999': !user.nickname }">
+                            {{ user.nickname || '点击授权头像昵称' }}
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="flex w-full flex-col items-center justify-center">
                 <div class="w-3/5">
@@ -79,9 +79,16 @@
                     </span>
                 </div>
                 <scroll-view scroll-y="true" class="text-gray-666 max-h-50vh px-15px box-border mt-15px">
-                    <u-parse v-if="login_explain" :lazyLoad="true" :selectable="true" :scrollTable="true"
-                        :content="login_explain"></u-parse>
-                    <span v-else>内容为空</span>
+                    <div>本指引是为处理你的个人信息而制定。</div>
+                    <div>1.开发者处理的信息</div>
+                    <div>根据法律规定，开发者仅处理实现本小程序功能所必要的信息。</div>
+                    <div>*为了导航到活动地点，开发者将在获取你的明示同意后，收集你的位置信息。</div>
+                    <div>*为了售后联系沟通，开发者将在获取你的明示同意后，收集你的手机号。</div>
+                    <div>*为了售后上传凭证，开发者将在获取你的明示同意后，使用你的相册（仅写入）权限。</div>
+                    <div>*开发者 收集你选中的文件，用于售后上传凭证。</div>
+                    <div>*开发者 收集你的身份证号码，用于会员发放积分礼品。</div>
+                    <div>2.你的权益</div>
+                    <div>关于你的个人信息，你可以通过系统客服入口与开发者联系，行使查阅、复制、更正、删除等法定权利。</div>
                 </scroll-view>
                 <div class="py-10px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '200px' }"
@@ -95,8 +102,7 @@
 </template>
 
 <script>
-import { updateUserInfo, getBaseUrl } from '@/util/base';
-import { parseRichText } from '@/util';
+import { updateUserInfo } from '@/util/base';
 import MyPhoneButton from '@/components/my-phone-button/index.vue';
 
 export default {
@@ -106,32 +112,26 @@ export default {
             read: false,
             showPopup: false,
             user: {
-                avatarUrl: '',
-                name: '',
-                phone: '',
+                avatar: '',
+                nickname: '',
+                mobile: '',
             },
             disabled: false,
-            login_explain: '',
-            loginCode: '',
         }
     },
     onLoad() {
         this.waitLogin().then(() => {
-            // this.waitInitConfig().then(() => {
-            //     this.updateSettingInit();
-            //     this.login_explain = this.setting.login_explain ? parseRichText(this.setting.login_explain) : '';
-            //     this.user.avatarUrl = this.userInfo.avatar;
-            //     this.user.name = this.userInfo.nickname;
-            //     this.user.phone = this.userInfo.mobile;
-            // })
+            this.user.avatar = this.userInfo.avatar;
+            this.user.nickname = this.userInfo.nickname;
+            this.user.mobile = this.userInfo.mobile;
         })
     },
     methods: {
         getUserProfile() {
             tt.getUserProfile({
                 success: (res) => {
-                    this.user.name = res.userInfo.nickName;
-                    this.user.avatarUrl = res.userInfo.avatarUrl;
+                    this.user.nickname = res.userInfo.nickName;
+                    this.user.avatar = res.userInfo.avatarUrl;
                     uni.showToast({
                         title: "授权成功",
                         icon: 'none'
@@ -153,15 +153,15 @@ export default {
         },
         onSubmit() {
             if (this.read) {
-                if (!this.user.name) {
+                if (!this.user.nickname) {
                     uni.showToast({
                         title: "请授权头像昵称",
                         icon: 'none'
                     })
                     return;
                 };
-                this.user.name = this.user.name.trim();
-                if (!this.user.phone) {
+                this.user.nickname = this.user.nickname.trim();
+                if (!this.user.mobile) {
                     uni.showToast({
                         title: '请授权手机号',
                         icon: 'none'
@@ -169,11 +169,12 @@ export default {
                     return;
                 };
                 this.disabled = true;
-                updateUserInfo({ ...this.userInfo, avatarUrl: this.user.avatarUrl, nickName: this.user.name, mobile: this.user.phone }).then(() => {
+                updateUserInfo({ ...this.userInfo, avatar: this.user.avatar, nickname: this.user.nickname, mobile: this.user.mobile }).then((res) => {
                     uni.showToast({
                         title: "授权成功",
                         icon: "none",
                     });
+                    this.disabled = false;
                     getCurrentPages().length ? this.back(800) : this.goHome(800);
                 }, () => {
                     this.disabled = false;

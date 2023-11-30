@@ -280,7 +280,6 @@ export default {
 				return;
 			}
 			// 没有curPart的情况下，再检查是否场次没余票
-			console.log(this.curSession, '=curSession=')
 			if ((this.curPart.part_id && !this.curPart.residue) || !this.curSessionResidue) {
 				this.myMessage('暂无余票');
 				return;

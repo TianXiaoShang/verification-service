@@ -182,6 +182,7 @@ export default {
     data() {
         return {
             order_id: '',
+            cinema_id: '',
             order: {},
             film: {},
             myCinema: {},
@@ -197,12 +198,14 @@ export default {
             statusSign: ['', '', 'yiqupiao', 'yijieshu', 'yituikuan'],
             statusSignText: ['', '', '已取票', '已结束', '已退款'],
             ticket_explain: null,
+            navigation: {}
         }
     },
     components: { tkiQrcode },
     onLoad(options) {
         store.commit("SET_CAN_FETCH_TICKET", false);
         this.order_id = options.order_id;
+        this.cinema_id = options.cinema_id;
         // 确保已经登录完成
         this.waitLogin().then(() => {
             this.getData();
@@ -235,9 +238,11 @@ export default {
         },
         getData() {
             this.request("ticket.show", {
-                order_id: this.order_id
+                order_id: this.order_id,
+                cinema_id: this.cinema_id
             }).then(res => {
                 console.log(res, '=d=d=d=d');
+                this.navigation = res.navigation;
                 if (res.watch_film) {
                     this.richText = parseRichText(res.watch_film).replace(/width: 1086.8px;/g, "");;
                 }
