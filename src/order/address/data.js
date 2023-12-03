@@ -1,0 +1,29762 @@
+const data =[
+	{
+	"code": "110000",
+	"name": "\u5317\u4eac\u5e02",
+	"pinyin": "beijingshi",
+	"zip_code": "100000",
+	"type": 0,
+	"first_letter": "B"
+}, {
+	"code": "110100",
+	"name": "\u5317\u4eac\u5e02",
+	"pinyin": "beijingshi",
+	"zip_code": "100000",
+	"parent_code": "110000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "110101",
+	"name": "\u4e1c\u57ce\u533a",
+	"pinyin": "dongchengqu",
+	"zip_code": "100010",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "110102",
+	"name": "\u897f\u57ce\u533a",
+	"pinyin": "xichengqu",
+	"zip_code": "100032",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "110105",
+	"name": "\u671d\u9633\u533a",
+	"pinyin": "chaoyangqu",
+	"zip_code": "100020",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "110106",
+	"name": "\u4e30\u53f0\u533a",
+	"pinyin": "fengtaiqu",
+	"zip_code": "100071",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "110107",
+	"name": "\u77f3\u666f\u5c71\u533a",
+	"pinyin": "shijingshanqu",
+	"zip_code": "100043",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "110108",
+	"name": "\u6d77\u6dc0\u533a",
+	"pinyin": "haidianqu",
+	"zip_code": "100089",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "110109",
+	"name": "\u95e8\u5934\u6c9f\u533a",
+	"pinyin": "mentougouqu",
+	"zip_code": "102300",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "110111",
+	"name": "\u623f\u5c71\u533a",
+	"pinyin": "fangshanqu",
+	"zip_code": "102488",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "110112",
+	"name": "\u901a\u5dde\u533a",
+	"pinyin": "tongzhouqu",
+	"zip_code": "101100",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "110113",
+	"name": "\u987a\u4e49\u533a",
+	"pinyin": "shunyiqu",
+	"zip_code": "101300",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "110114",
+	"name": "\u660c\u5e73\u533a",
+	"pinyin": "changpingqu",
+	"zip_code": "102200",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "110115",
+	"name": "\u5927\u5174\u533a",
+	"pinyin": "daxingqu",
+	"zip_code": "102600",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "110116",
+	"name": "\u6000\u67d4\u533a",
+	"pinyin": "huairouqu",
+	"zip_code": "101400",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "110117",
+	"name": "\u5e73\u8c37\u533a",
+	"pinyin": "pingguqu",
+	"zip_code": "101200",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "110118",
+	"name": "\u5bc6\u4e91\u533a",
+	"pinyin": "miyunqu",
+	"zip_code": "101500",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "110119",
+	"name": "\u5ef6\u5e86\u533a",
+	"pinyin": "yanqingqu",
+	"zip_code": "102100",
+	"parent_code": "110100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "120000",
+	"name": "\u5929\u6d25\u5e02",
+	"pinyin": "tianjinshi",
+	"zip_code": "300000",
+	"type": 0,
+	"first_letter": "T"
+}, {
+	"code": "120100",
+	"name": "\u5929\u6d25\u5e02",
+	"pinyin": "tianjinshi",
+	"zip_code": "300000",
+	"parent_code": "120000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "120101",
+	"name": "\u548c\u5e73\u533a",
+	"pinyin": "hepingqu",
+	"zip_code": "300041",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "120102",
+	"name": "\u6cb3\u4e1c\u533a",
+	"pinyin": "hedongqu",
+	"zip_code": "300171",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "120103",
+	"name": "\u6cb3\u897f\u533a",
+	"pinyin": "hexiqu",
+	"zip_code": "572000",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "120104",
+	"name": "\u5357\u5f00\u533a",
+	"pinyin": "nankaiqu",
+	"zip_code": "300100",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "120105",
+	"name": "\u6cb3\u5317\u533a",
+	"pinyin": "hebeiqu",
+	"zip_code": "300143",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "120106",
+	"name": "\u7ea2\u6865\u533a",
+	"pinyin": "hongqiaoqu",
+	"zip_code": "300131",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "120110",
+	"name": "\u4e1c\u4e3d\u533a",
+	"pinyin": "dongliqu",
+	"zip_code": "300300",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "120111",
+	"name": "\u897f\u9752\u533a",
+	"pinyin": "xiqingqu",
+	"zip_code": "300380",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "120112",
+	"name": "\u6d25\u5357\u533a",
+	"pinyin": "jinnanqu",
+	"zip_code": "300350",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "120113",
+	"name": "\u5317\u8fb0\u533a",
+	"pinyin": "beichenqu",
+	"zip_code": "300400",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "120114",
+	"name": "\u6b66\u6e05\u533a",
+	"pinyin": "wuqingqu",
+	"zip_code": "301700",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "120115",
+	"name": "\u5b9d\u577b\u533a",
+	"pinyin": "baodiqu",
+	"zip_code": "301800",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "120116",
+	"name": "\u6ee8\u6d77\u65b0\u533a",
+	"pinyin": "binhaixinqu",
+	"zip_code": "300457",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "120117",
+	"name": "\u5b81\u6cb3\u533a",
+	"pinyin": "ninghequ",
+	"zip_code": "300000",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "120118",
+	"name": "\u9759\u6d77\u533a",
+	"pinyin": "jinghaiqu",
+	"zip_code": "301600",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "120119",
+	"name": "\u84df\u5dde\u533a",
+	"pinyin": "jizhouqu",
+	"zip_code": "301900",
+	"parent_code": "120100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "130000",
+	"name": "\u6cb3\u5317\u7701",
+	"pinyin": "hebeisheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "H"
+}, {
+	"code": "130100",
+	"name": "\u77f3\u5bb6\u5e84\u5e02",
+	"pinyin": "shijiazhuangshi",
+	"zip_code": "050000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "130102",
+	"name": "\u957f\u5b89\u533a",
+	"pinyin": "changanqu",
+	"zip_code": "050011",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130104",
+	"name": "\u6865\u897f\u533a",
+	"pinyin": "qiaoxiqu",
+	"zip_code": "050051",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130105",
+	"name": "\u65b0\u534e\u533a",
+	"pinyin": "xinhuaqu",
+	"zip_code": "050051",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130107",
+	"name": "\u4e95\u9649\u77ff\u533a",
+	"pinyin": "jingxingkuangqu",
+	"zip_code": "050100",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "130108",
+	"name": "\u88d5\u534e\u533a",
+	"pinyin": "yuhuaqu",
+	"zip_code": "050081",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130109",
+	"name": "\u85c1\u57ce\u533a",
+	"pinyin": "gaochengqu",
+	"zip_code": "052160",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130110",
+	"name": "\u9e7f\u6cc9\u533a",
+	"pinyin": "luquanqu",
+	"zip_code": "050200",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130111",
+	"name": "\u683e\u57ce\u533a",
+	"pinyin": "luanchengqu",
+	"zip_code": "051430",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130121",
+	"name": "\u4e95\u9649\u53bf",
+	"pinyin": "jingxingxian",
+	"zip_code": "050000",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "130123",
+	"name": "\u6b63\u5b9a\u53bf",
+	"pinyin": "zhengdingxian",
+	"zip_code": "050800",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "130125",
+	"name": "\u884c\u5510\u53bf",
+	"pinyin": "xingtangxian",
+	"zip_code": "050600",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130126",
+	"name": "\u7075\u5bff\u53bf",
+	"pinyin": "lingshouxian",
+	"zip_code": "050500",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130127",
+	"name": "\u9ad8\u9091\u53bf",
+	"pinyin": "gaoyixian",
+	"zip_code": "051330",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130128",
+	"name": "\u6df1\u6cfd\u53bf",
+	"pinyin": "shenzexian",
+	"zip_code": "052560",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130129",
+	"name": "\u8d5e\u7687\u53bf",
+	"pinyin": "zanhuangxian",
+	"zip_code": "051230",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "130130",
+	"name": "\u65e0\u6781\u53bf",
+	"pinyin": "wujixian",
+	"zip_code": "052400",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130131",
+	"name": "\u5e73\u5c71\u53bf",
+	"pinyin": "pingshanxian",
+	"zip_code": "050400",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "130132",
+	"name": "\u5143\u6c0f\u53bf",
+	"pinyin": "yuanshixian",
+	"zip_code": "051130",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130133",
+	"name": "\u8d75\u53bf",
+	"pinyin": "zhaoxian",
+	"zip_code": "051530",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "130181",
+	"name": "\u8f9b\u96c6\u5e02",
+	"pinyin": "xinjishi",
+	"zip_code": "053800",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130183",
+	"name": "\u664b\u5dde\u5e02",
+	"pinyin": "jinzhoushi",
+	"zip_code": "052200",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "130184",
+	"name": "\u65b0\u4e50\u5e02",
+	"pinyin": "xinleshi",
+	"zip_code": "050700",
+	"parent_code": "130100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130200",
+	"name": "\u5510\u5c71\u5e02",
+	"pinyin": "tangshanshi",
+	"zip_code": "063000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "130202",
+	"name": "\u8def\u5357\u533a",
+	"pinyin": "lunanqu",
+	"zip_code": "063017",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130203",
+	"name": "\u8def\u5317\u533a",
+	"pinyin": "lubeiqu",
+	"zip_code": "063015",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130204",
+	"name": "\u53e4\u51b6\u533a",
+	"pinyin": "guyequ",
+	"zip_code": "063104",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130205",
+	"name": "\u5f00\u5e73\u533a",
+	"pinyin": "kaipingqu",
+	"zip_code": "063021",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "130207",
+	"name": "\u4e30\u5357\u533a",
+	"pinyin": "fengnanqu",
+	"zip_code": "063300",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130208",
+	"name": "\u4e30\u6da6\u533a",
+	"pinyin": "fengrunqu",
+	"zip_code": "064000",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130209",
+	"name": "\u66f9\u5983\u7538\u533a",
+	"pinyin": "caofeidianqu",
+	"zip_code": "064000",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130223",
+	"name": "\u6ee6\u53bf",
+	"pinyin": "luanxian",
+	"zip_code": "063700",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130224",
+	"name": "\u6ee6\u5357\u53bf",
+	"pinyin": "luannanxian",
+	"zip_code": "063500",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130225",
+	"name": "\u4e50\u4ead\u53bf",
+	"pinyin": "letingxian",
+	"zip_code": "063600",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130227",
+	"name": "\u8fc1\u897f\u53bf",
+	"pinyin": "qianxixian",
+	"zip_code": "064300",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130229",
+	"name": "\u7389\u7530\u53bf",
+	"pinyin": "yutianxian",
+	"zip_code": "064100",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130281",
+	"name": "\u9075\u5316\u5e02",
+	"pinyin": "zunhuashi",
+	"zip_code": "064200",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "130283",
+	"name": "\u8fc1\u5b89\u5e02",
+	"pinyin": "qiananshi",
+	"zip_code": "064400",
+	"parent_code": "130200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130300",
+	"name": "\u79e6\u7687\u5c9b\u5e02",
+	"pinyin": "qinhuangdaoshi",
+	"zip_code": "066000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "130302",
+	"name": "\u6d77\u6e2f\u533a",
+	"pinyin": "haigangqu",
+	"zip_code": "066000",
+	"parent_code": "130300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "130303",
+	"name": "\u5c71\u6d77\u5173\u533a",
+	"pinyin": "shanhaiguanqu",
+	"zip_code": "066200",
+	"parent_code": "130300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130304",
+	"name": "\u5317\u6234\u6cb3\u533a",
+	"pinyin": "beidaihequ",
+	"zip_code": "066100",
+	"parent_code": "130300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "130306",
+	"name": "\u629a\u5b81\u533a",
+	"pinyin": "funingqu",
+	"zip_code": "066300",
+	"parent_code": "130300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130321",
+	"name": "\u9752\u9f99\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "qinglongmanzuzizhixian",
+	"zip_code": "066500",
+	"parent_code": "130300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130322",
+	"name": "\u660c\u9ece\u53bf",
+	"pinyin": "changlixian",
+	"zip_code": "066600",
+	"parent_code": "130300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130324",
+	"name": "\u5362\u9f99\u53bf",
+	"pinyin": "lulongxian",
+	"zip_code": "066400",
+	"parent_code": "130300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130400",
+	"name": "\u90af\u90f8\u5e02",
+	"pinyin": "handanshi",
+	"zip_code": "056000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "130402",
+	"name": "\u90af\u5c71\u533a",
+	"pinyin": "hanshanqu",
+	"zip_code": "056001",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "130403",
+	"name": "\u4e1b\u53f0\u533a",
+	"pinyin": "congtaiqu",
+	"zip_code": "056004",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130404",
+	"name": "\u590d\u5174\u533a",
+	"pinyin": "fuxingqu",
+	"zip_code": "056003",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130406",
+	"name": "\u5cf0\u5cf0\u77ff\u533a",
+	"pinyin": "fengfengkuangqu",
+	"zip_code": "056200",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130407",
+	"name": "\u80a5\u4e61\u533a",
+	"pinyin": "feixiangqu",
+	"zip_code": "057550",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130408",
+	"name": "\u6c38\u5e74\u533a",
+	"pinyin": "yongnianqu",
+	"zip_code": "057151",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130423",
+	"name": "\u4e34\u6f33\u53bf",
+	"pinyin": "linzhangxian",
+	"zip_code": "056600",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130424",
+	"name": "\u6210\u5b89\u53bf",
+	"pinyin": "chenganxian",
+	"zip_code": "056700",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130425",
+	"name": "\u5927\u540d\u53bf",
+	"pinyin": "damingxian",
+	"zip_code": "056900",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "130426",
+	"name": "\u6d89\u53bf",
+	"pinyin": "shexian",
+	"zip_code": "056400",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130427",
+	"name": "\u78c1\u53bf",
+	"pinyin": "cixian",
+	"zip_code": "056500",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130430",
+	"name": "\u90b1\u53bf",
+	"pinyin": "qiuxian",
+	"zip_code": "057450",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130431",
+	"name": "\u9e21\u6cfd\u53bf",
+	"pinyin": "jizexian",
+	"zip_code": "057350",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "130432",
+	"name": "\u5e7f\u5e73\u53bf",
+	"pinyin": "guangpingxian",
+	"zip_code": "057650",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130433",
+	"name": "\u9986\u9676\u53bf",
+	"pinyin": "guantaoxian",
+	"zip_code": "057750",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130434",
+	"name": "\u9b4f\u53bf",
+	"pinyin": "weixian",
+	"zip_code": "056800",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130435",
+	"name": "\u66f2\u5468\u53bf",
+	"pinyin": "quzhouxian",
+	"zip_code": "057250",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130481",
+	"name": "\u6b66\u5b89\u5e02",
+	"pinyin": "wuanshi",
+	"zip_code": "056300",
+	"parent_code": "130400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130500",
+	"name": "\u90a2\u53f0\u5e02",
+	"pinyin": "xingtaishi",
+	"zip_code": "054000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "130502",
+	"name": "\u6865\u4e1c\u533a",
+	"pinyin": "qiaodongqu",
+	"zip_code": "054001",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130503",
+	"name": "\u6865\u897f\u533a",
+	"pinyin": "qiaoxiqu",
+	"zip_code": "054000",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130521",
+	"name": "\u90a2\u53f0\u53bf",
+	"pinyin": "xingtaixian",
+	"zip_code": "054001",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130522",
+	"name": "\u4e34\u57ce\u53bf",
+	"pinyin": "linchengxian",
+	"zip_code": "054300",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130523",
+	"name": "\u5185\u4e18\u53bf",
+	"pinyin": "neiqiuxian",
+	"zip_code": "054200",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "130524",
+	"name": "\u67cf\u4e61\u53bf",
+	"pinyin": "baixiangxian",
+	"zip_code": "055450",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "130525",
+	"name": "\u9686\u5c27\u53bf",
+	"pinyin": "longyaoxian",
+	"zip_code": "055350",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130526",
+	"name": "\u4efb\u53bf",
+	"pinyin": "renxian",
+	"zip_code": "055150",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "130527",
+	"name": "\u5357\u548c\u53bf",
+	"pinyin": "nanhexian",
+	"zip_code": "054400",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "130528",
+	"name": "\u5b81\u664b\u53bf",
+	"pinyin": "ningjinxian",
+	"zip_code": "055550",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "130529",
+	"name": "\u5de8\u9e7f\u53bf",
+	"pinyin": "juluxian",
+	"zip_code": "055250",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "130530",
+	"name": "\u65b0\u6cb3\u53bf",
+	"pinyin": "xinhexian",
+	"zip_code": "051730",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130531",
+	"name": "\u5e7f\u5b97\u53bf",
+	"pinyin": "guangzongxian",
+	"zip_code": "054600",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130532",
+	"name": "\u5e73\u4e61\u53bf",
+	"pinyin": "pingxiangxian",
+	"zip_code": "054500",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "130533",
+	"name": "\u5a01\u53bf",
+	"pinyin": "weixian",
+	"zip_code": "054700",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130534",
+	"name": "\u6e05\u6cb3\u53bf",
+	"pinyin": "qinghexian",
+	"zip_code": "054800",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130535",
+	"name": "\u4e34\u897f\u53bf",
+	"pinyin": "linxixian",
+	"zip_code": "054900",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130581",
+	"name": "\u5357\u5bab\u5e02",
+	"pinyin": "nangongshi",
+	"zip_code": "055750",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "130582",
+	"name": "\u6c99\u6cb3\u5e02",
+	"pinyin": "shaheshi",
+	"zip_code": "054100",
+	"parent_code": "130500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130600",
+	"name": "\u4fdd\u5b9a\u5e02",
+	"pinyin": "baodingshi",
+	"zip_code": "071000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "130602",
+	"name": "\u7ade\u79c0\u533a",
+	"pinyin": "jingxiuqu",
+	"zip_code": "071052",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "130606",
+	"name": "\u83b2\u6c60\u533a",
+	"pinyin": "lianchiqu",
+	"zip_code": "071000",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130607",
+	"name": "\u6ee1\u57ce\u533a",
+	"pinyin": "manchengqu",
+	"zip_code": "071000",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "130608",
+	"name": "\u6e05\u82d1\u533a",
+	"pinyin": "qingyuanqu",
+	"zip_code": "072150",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130609",
+	"name": "\u5f90\u6c34\u533a",
+	"pinyin": "xushuiqu",
+	"zip_code": "071100",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130623",
+	"name": "\u6d9e\u6c34\u53bf",
+	"pinyin": "laishuixian",
+	"zip_code": "074100",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130624",
+	"name": "\u961c\u5e73\u53bf",
+	"pinyin": "fupingxian",
+	"zip_code": "073200",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130626",
+	"name": "\u5b9a\u5174\u53bf",
+	"pinyin": "dingxingxian",
+	"zip_code": "072650",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "130627",
+	"name": "\u5510\u53bf",
+	"pinyin": "tangxian",
+	"zip_code": "072350",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "130628",
+	"name": "\u9ad8\u9633\u53bf",
+	"pinyin": "gaoyangxian",
+	"zip_code": "071500",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130629",
+	"name": "\u5bb9\u57ce\u53bf",
+	"pinyin": "rongchengxian",
+	"zip_code": "071700",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "130630",
+	"name": "\u6d9e\u6e90\u53bf",
+	"pinyin": "laiyuanxian",
+	"zip_code": "074300",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130631",
+	"name": "\u671b\u90fd\u53bf",
+	"pinyin": "wangduxian",
+	"zip_code": "072450",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130632",
+	"name": "\u5b89\u65b0\u53bf",
+	"pinyin": "anxinxian",
+	"zip_code": "071600",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "130633",
+	"name": "\u6613\u53bf",
+	"pinyin": "yixian",
+	"zip_code": "074200",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130634",
+	"name": "\u66f2\u9633\u53bf",
+	"pinyin": "quyangxian",
+	"zip_code": "073100",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130635",
+	"name": "\u8821\u53bf",
+	"pinyin": "lixian",
+	"zip_code": "071400",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130636",
+	"name": "\u987a\u5e73\u53bf",
+	"pinyin": "shunpingxian",
+	"zip_code": "072250",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130637",
+	"name": "\u535a\u91ce\u53bf",
+	"pinyin": "boyexian",
+	"zip_code": "071300",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "130638",
+	"name": "\u96c4\u53bf",
+	"pinyin": "xiongxian",
+	"zip_code": "071800",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130681",
+	"name": "\u6dbf\u5dde\u5e02",
+	"pinyin": "zhuozhoushi",
+	"zip_code": "072750",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "130682",
+	"name": "\u5b9a\u5dde\u5e02",
+	"pinyin": "dingzhoushi",
+	"zip_code": "053800",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "130683",
+	"name": "\u5b89\u56fd\u5e02",
+	"pinyin": "anguoshi",
+	"zip_code": "071200",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "130684",
+	"name": "\u9ad8\u7891\u5e97\u5e02",
+	"pinyin": "gaobeidianshi",
+	"zip_code": "074000",
+	"parent_code": "130600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130700",
+	"name": "\u5f20\u5bb6\u53e3\u5e02",
+	"pinyin": "zhangjiakoushi",
+	"zip_code": "075000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "130702",
+	"name": "\u6865\u4e1c\u533a",
+	"pinyin": "qiaodongqu",
+	"zip_code": "075000",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130703",
+	"name": "\u6865\u897f\u533a",
+	"pinyin": "qiaoxiqu",
+	"zip_code": "075061",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130705",
+	"name": "\u5ba3\u5316\u533a",
+	"pinyin": "xuanhuaqu",
+	"zip_code": "075100",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130706",
+	"name": "\u4e0b\u82b1\u56ed\u533a",
+	"pinyin": "xiahuayuanqu",
+	"zip_code": "075300",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130708",
+	"name": "\u4e07\u5168\u533a",
+	"pinyin": "wanquanqu",
+	"zip_code": "075100",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130709",
+	"name": "\u5d07\u793c\u533a",
+	"pinyin": "chongliqu",
+	"zip_code": "075100",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130722",
+	"name": "\u5f20\u5317\u53bf",
+	"pinyin": "zhangbeixian",
+	"zip_code": "076450",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "130723",
+	"name": "\u5eb7\u4fdd\u53bf",
+	"pinyin": "kangbaoxian",
+	"zip_code": "076650",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "130724",
+	"name": "\u6cbd\u6e90\u53bf",
+	"pinyin": "guyuanxian",
+	"zip_code": "076550",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "130725",
+	"name": "\u5c1a\u4e49\u53bf",
+	"pinyin": "shangyixian",
+	"zip_code": "076750",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130726",
+	"name": "\u851a\u53bf",
+	"pinyin": "weixian",
+	"zip_code": "075700",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130727",
+	"name": "\u9633\u539f\u53bf",
+	"pinyin": "yangyuanxian",
+	"zip_code": "075800",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130728",
+	"name": "\u6000\u5b89\u53bf",
+	"pinyin": "huaianxian",
+	"zip_code": "076150",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "130730",
+	"name": "\u6000\u6765\u53bf",
+	"pinyin": "huailaixian",
+	"zip_code": "075400",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "130731",
+	"name": "\u6dbf\u9e7f\u53bf",
+	"pinyin": "zhuoluxian",
+	"zip_code": "075600",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "130732",
+	"name": "\u8d64\u57ce\u53bf",
+	"pinyin": "chichengxian",
+	"zip_code": "075500",
+	"parent_code": "130700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130800",
+	"name": "\u627f\u5fb7\u5e02",
+	"pinyin": "chengdeshi",
+	"zip_code": "067000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "130802",
+	"name": "\u53cc\u6865\u533a",
+	"pinyin": "shuangqiaoqu",
+	"zip_code": "400900",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130803",
+	"name": "\u53cc\u6ee6\u533a",
+	"pinyin": "shuangluanqu",
+	"zip_code": "067000",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130804",
+	"name": "\u9e70\u624b\u8425\u5b50\u77ff\u533a",
+	"pinyin": "yingshouyingzikuangqu",
+	"zip_code": "067200",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130821",
+	"name": "\u627f\u5fb7\u53bf",
+	"pinyin": "chengdexian",
+	"zip_code": "067400",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130822",
+	"name": "\u5174\u9686\u53bf",
+	"pinyin": "xinglongxian",
+	"zip_code": "067300",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130824",
+	"name": "\u6ee6\u5e73\u53bf",
+	"pinyin": "luanpingxian",
+	"zip_code": "068250",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130825",
+	"name": "\u9686\u5316\u53bf",
+	"pinyin": "longhuaxian",
+	"zip_code": "068150",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "130826",
+	"name": "\u4e30\u5b81\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "fengningmanzuzizhixian",
+	"zip_code": "068350",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "130827",
+	"name": "\u5bbd\u57ce\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "kuanchengmanzuzizhixian",
+	"zip_code": "067600",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "130828",
+	"name": "\u56f4\u573a\u6ee1\u65cf\u8499\u53e4\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "weichangmanzumengguzuzizhixian",
+	"zip_code": "068450",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130881",
+	"name": "\u5e73\u6cc9\u5e02",
+	"pinyin": "pingquanshi",
+	"zip_code": "067500",
+	"parent_code": "130800",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "130900",
+	"name": "\u6ca7\u5dde\u5e02",
+	"pinyin": "cangzhoushi",
+	"zip_code": "061000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "130902",
+	"name": "\u65b0\u534e\u533a",
+	"pinyin": "xinhuaqu",
+	"zip_code": "061000",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130903",
+	"name": "\u8fd0\u6cb3\u533a",
+	"pinyin": "yunhequ",
+	"zip_code": "061000",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130921",
+	"name": "\u6ca7\u53bf",
+	"pinyin": "cangxian",
+	"zip_code": "061000",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "130922",
+	"name": "\u9752\u53bf",
+	"pinyin": "qingxian",
+	"zip_code": "062650",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "130923",
+	"name": "\u4e1c\u5149\u53bf",
+	"pinyin": "dongguangxian",
+	"zip_code": "061600",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "130924",
+	"name": "\u6d77\u5174\u53bf",
+	"pinyin": "haixingxian",
+	"zip_code": "061200",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "130925",
+	"name": "\u76d0\u5c71\u53bf",
+	"pinyin": "yanshanxian",
+	"zip_code": "061300",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "130926",
+	"name": "\u8083\u5b81\u53bf",
+	"pinyin": "suningxian",
+	"zip_code": "062350",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "130927",
+	"name": "\u5357\u76ae\u53bf",
+	"pinyin": "nanpixian",
+	"zip_code": "061500",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "130928",
+	"name": "\u5434\u6865\u53bf",
+	"pinyin": "wuqiaoxian",
+	"zip_code": "061800",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "130929",
+	"name": "\u732e\u53bf",
+	"pinyin": "xianxian",
+	"zip_code": "062250",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "130930",
+	"name": "\u5b5f\u6751\u56de\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "mengcunhuizuzizhixian",
+	"zip_code": "061400",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "130981",
+	"name": "\u6cca\u5934\u5e02",
+	"pinyin": "botoushi",
+	"zip_code": "062150",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "130982",
+	"name": "\u4efb\u4e18\u5e02",
+	"pinyin": "renqiushi",
+	"zip_code": "062550",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "130983",
+	"name": "\u9ec4\u9a85\u5e02",
+	"pinyin": "huanghuashi",
+	"zip_code": "061100",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "130984",
+	"name": "\u6cb3\u95f4\u5e02",
+	"pinyin": "hejianshi",
+	"zip_code": "062450",
+	"parent_code": "130900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "131000",
+	"name": "\u5eca\u574a\u5e02",
+	"pinyin": "langfangshi",
+	"zip_code": "065000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "131002",
+	"name": "\u5b89\u6b21\u533a",
+	"pinyin": "anciqu",
+	"zip_code": "065000",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "131003",
+	"name": "\u5e7f\u9633\u533a",
+	"pinyin": "guangyangqu",
+	"zip_code": "065000",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "131022",
+	"name": "\u56fa\u5b89\u53bf",
+	"pinyin": "guanxian",
+	"zip_code": "065500",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "131023",
+	"name": "\u6c38\u6e05\u53bf",
+	"pinyin": "yongqingxian",
+	"zip_code": "065600",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "131024",
+	"name": "\u9999\u6cb3\u53bf",
+	"pinyin": "xianghexian",
+	"zip_code": "065400",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "131025",
+	"name": "\u5927\u57ce\u53bf",
+	"pinyin": "dachengxian",
+	"zip_code": "065900",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "131026",
+	"name": "\u6587\u5b89\u53bf",
+	"pinyin": "wenanxian",
+	"zip_code": "065800",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "131028",
+	"name": "\u5927\u5382\u56de\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "dachanghuizuzizhixian",
+	"zip_code": "065300",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "131081",
+	"name": "\u9738\u5dde\u5e02",
+	"pinyin": "bazhoushi",
+	"zip_code": "065700",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "131082",
+	"name": "\u4e09\u6cb3\u5e02",
+	"pinyin": "sanheshi",
+	"zip_code": "065200",
+	"parent_code": "131000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "131100",
+	"name": "\u8861\u6c34\u5e02",
+	"pinyin": "hengshuishi",
+	"zip_code": "053000",
+	"parent_code": "130000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "131102",
+	"name": "\u6843\u57ce\u533a",
+	"pinyin": "taochengqu",
+	"zip_code": "053000",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "131103",
+	"name": "\u5180\u5dde\u533a",
+	"pinyin": "jizhouqu",
+	"zip_code": "053000",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "131121",
+	"name": "\u67a3\u5f3a\u53bf",
+	"pinyin": "zaoqiangxian",
+	"zip_code": "053100",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "131122",
+	"name": "\u6b66\u9091\u53bf",
+	"pinyin": "wuyixian",
+	"zip_code": "053400",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "131123",
+	"name": "\u6b66\u5f3a\u53bf",
+	"pinyin": "wuqiangxian",
+	"zip_code": "053300",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "131124",
+	"name": "\u9976\u9633\u53bf",
+	"pinyin": "raoyangxian",
+	"zip_code": "053900",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "131125",
+	"name": "\u5b89\u5e73\u53bf",
+	"pinyin": "anpingxian",
+	"zip_code": "053600",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "131126",
+	"name": "\u6545\u57ce\u53bf",
+	"pinyin": "guchengxian",
+	"zip_code": "253800",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "131127",
+	"name": "\u666f\u53bf",
+	"pinyin": "jingxian",
+	"zip_code": "053500",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "131128",
+	"name": "\u961c\u57ce\u53bf",
+	"pinyin": "fuchengxian",
+	"zip_code": "053700",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "131182",
+	"name": "\u6df1\u5dde\u5e02",
+	"pinyin": "shenzhoushi",
+	"zip_code": "053800",
+	"parent_code": "131100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "140000",
+	"name": "\u5c71\u897f\u7701",
+	"pinyin": "shanxisheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "S"
+}, {
+	"code": "140100",
+	"name": "\u592a\u539f\u5e02",
+	"pinyin": "taiyuanshi",
+	"zip_code": "030000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "140105",
+	"name": "\u5c0f\u5e97\u533a",
+	"pinyin": "xiaodianqu",
+	"zip_code": "030032",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140106",
+	"name": "\u8fce\u6cfd\u533a",
+	"pinyin": "yingzequ",
+	"zip_code": "030024",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140107",
+	"name": "\u674f\u82b1\u5cad\u533a",
+	"pinyin": "xinghualingqu",
+	"zip_code": "030001",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140108",
+	"name": "\u5c16\u8349\u576a\u533a",
+	"pinyin": "jiancaopingqu",
+	"zip_code": "030003",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140109",
+	"name": "\u4e07\u67cf\u6797\u533a",
+	"pinyin": "wanbailinqu",
+	"zip_code": "030027",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "140110",
+	"name": "\u664b\u6e90\u533a",
+	"pinyin": "jinyuanqu",
+	"zip_code": "030025",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140121",
+	"name": "\u6e05\u5f90\u53bf",
+	"pinyin": "qingxuxian",
+	"zip_code": "030400",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "140122",
+	"name": "\u9633\u66f2\u53bf",
+	"pinyin": "yangquxian",
+	"zip_code": "030100",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140123",
+	"name": "\u5a04\u70e6\u53bf",
+	"pinyin": "loufanxian",
+	"zip_code": "030300",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "140181",
+	"name": "\u53e4\u4ea4\u5e02",
+	"pinyin": "gujiaoshi",
+	"zip_code": "030200",
+	"parent_code": "140100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "140200",
+	"name": "\u5927\u540c\u5e02",
+	"pinyin": "datongshi",
+	"zip_code": "037000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "140202",
+	"name": "\u57ce\u533a",
+	"pinyin": "chengqu",
+	"zip_code": "037008",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "140203",
+	"name": "\u77ff\u533a",
+	"pinyin": "kuangqu",
+	"zip_code": "037001",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "140211",
+	"name": "\u5357\u90ca\u533a",
+	"pinyin": "nanjiaoqu",
+	"zip_code": "037001",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "140212",
+	"name": "\u65b0\u8363\u533a",
+	"pinyin": "xinrongqu",
+	"zip_code": "037002",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140221",
+	"name": "\u9633\u9ad8\u53bf",
+	"pinyin": "yanggaoxian",
+	"zip_code": "038100",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140222",
+	"name": "\u5929\u9547\u53bf",
+	"pinyin": "tianzhenxian",
+	"zip_code": "038200",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "140223",
+	"name": "\u5e7f\u7075\u53bf",
+	"pinyin": "guanglingxian",
+	"zip_code": "037500",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "140224",
+	"name": "\u7075\u4e18\u53bf",
+	"pinyin": "lingqiuxian",
+	"zip_code": "034400",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "140225",
+	"name": "\u6d51\u6e90\u53bf",
+	"pinyin": "hunyuanxian",
+	"zip_code": "037400",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "140226",
+	"name": "\u5de6\u4e91\u53bf",
+	"pinyin": "zuoyunxian",
+	"zip_code": "037100",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "140227",
+	"name": "\u5927\u540c\u53bf",
+	"pinyin": "datongxian",
+	"zip_code": "037300",
+	"parent_code": "140200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "140300",
+	"name": "\u9633\u6cc9\u5e02",
+	"pinyin": "yangquanshi",
+	"zip_code": "045000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "140302",
+	"name": "\u57ce\u533a",
+	"pinyin": "chengqu",
+	"zip_code": "045000",
+	"parent_code": "140300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "140303",
+	"name": "\u77ff\u533a",
+	"pinyin": "kuangqu",
+	"zip_code": "045000",
+	"parent_code": "140300",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "140311",
+	"name": "\u90ca\u533a",
+	"pinyin": "jiaoqu",
+	"zip_code": "045011",
+	"parent_code": "140300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140321",
+	"name": "\u5e73\u5b9a\u53bf",
+	"pinyin": "pingdingxian",
+	"zip_code": "045200",
+	"parent_code": "140300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "140322",
+	"name": "\u76c2\u53bf",
+	"pinyin": "yuxian",
+	"zip_code": "045100",
+	"parent_code": "140300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140400",
+	"name": "\u957f\u6cbb\u5e02",
+	"pinyin": "changzhishi",
+	"zip_code": "046000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "140402",
+	"name": "\u57ce\u533a",
+	"pinyin": "chengqu",
+	"zip_code": "046011",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "140411",
+	"name": "\u90ca\u533a",
+	"pinyin": "jiaoqu",
+	"zip_code": "046011",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140421",
+	"name": "\u957f\u6cbb\u53bf",
+	"pinyin": "changzhixian",
+	"zip_code": "047100",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "140423",
+	"name": "\u8944\u57a3\u53bf",
+	"pinyin": "xiangyuanxian",
+	"zip_code": "046200",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140424",
+	"name": "\u5c6f\u7559\u53bf",
+	"pinyin": "tunliuxian",
+	"zip_code": "046100",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "140425",
+	"name": "\u5e73\u987a\u53bf",
+	"pinyin": "pingshunxian",
+	"zip_code": "047400",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "140426",
+	"name": "\u9ece\u57ce\u53bf",
+	"pinyin": "lichengxian",
+	"zip_code": "047600",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "140427",
+	"name": "\u58f6\u5173\u53bf",
+	"pinyin": "huguanxian",
+	"zip_code": "047300",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "140428",
+	"name": "\u957f\u5b50\u53bf",
+	"pinyin": "changzixian",
+	"zip_code": "046600",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "140429",
+	"name": "\u6b66\u4e61\u53bf",
+	"pinyin": "wuxiangxian",
+	"zip_code": "046300",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "140430",
+	"name": "\u6c81\u53bf",
+	"pinyin": "qinxian",
+	"zip_code": "046400",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "140431",
+	"name": "\u6c81\u6e90\u53bf",
+	"pinyin": "qinyuanxian",
+	"zip_code": "046500",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "140481",
+	"name": "\u6f5e\u57ce\u5e02",
+	"pinyin": "luchengshi",
+	"zip_code": "047500",
+	"parent_code": "140400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "140500",
+	"name": "\u664b\u57ce\u5e02",
+	"pinyin": "jinchengshi",
+	"zip_code": "048000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "140502",
+	"name": "\u57ce\u533a",
+	"pinyin": "chengqu",
+	"zip_code": "048000",
+	"parent_code": "140500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "140521",
+	"name": "\u6c81\u6c34\u53bf",
+	"pinyin": "qinshuixian",
+	"zip_code": "048200",
+	"parent_code": "140500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "140522",
+	"name": "\u9633\u57ce\u53bf",
+	"pinyin": "yangchengxian",
+	"zip_code": "048100",
+	"parent_code": "140500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140524",
+	"name": "\u9675\u5ddd\u53bf",
+	"pinyin": "lingchuanxian",
+	"zip_code": "048300",
+	"parent_code": "140500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "140525",
+	"name": "\u6cfd\u5dde\u53bf",
+	"pinyin": "zezhouxian",
+	"zip_code": "048012",
+	"parent_code": "140500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "140581",
+	"name": "\u9ad8\u5e73\u5e02",
+	"pinyin": "gaopingshi",
+	"zip_code": "048400",
+	"parent_code": "140500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "140600",
+	"name": "\u6714\u5dde\u5e02",
+	"pinyin": "shuozhoushi",
+	"zip_code": "038500",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "140602",
+	"name": "\u6714\u57ce\u533a",
+	"pinyin": "shuochengqu",
+	"zip_code": "038500",
+	"parent_code": "140600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "140603",
+	"name": "\u5e73\u9c81\u533a",
+	"pinyin": "pingluqu",
+	"zip_code": "038600",
+	"parent_code": "140600",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "140621",
+	"name": "\u5c71\u9634\u53bf",
+	"pinyin": "shanyinxian",
+	"zip_code": "036900",
+	"parent_code": "140600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "140622",
+	"name": "\u5e94\u53bf",
+	"pinyin": "yingxian",
+	"zip_code": "037600",
+	"parent_code": "140600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140623",
+	"name": "\u53f3\u7389\u53bf",
+	"pinyin": "youyuxian",
+	"zip_code": "037200",
+	"parent_code": "140600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140624",
+	"name": "\u6000\u4ec1\u53bf",
+	"pinyin": "huairenxian",
+	"zip_code": "038300",
+	"parent_code": "140600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "140700",
+	"name": "\u664b\u4e2d\u5e02",
+	"pinyin": "jinzhongshi",
+	"zip_code": "038300",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "140702",
+	"name": "\u6986\u6b21\u533a",
+	"pinyin": "yuciqu",
+	"zip_code": "030600",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140721",
+	"name": "\u6986\u793e\u53bf",
+	"pinyin": "yushexian",
+	"zip_code": "031800",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140722",
+	"name": "\u5de6\u6743\u53bf",
+	"pinyin": "zuoquanxian",
+	"zip_code": "032600",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "140723",
+	"name": "\u548c\u987a\u53bf",
+	"pinyin": "heshunxian",
+	"zip_code": "032700",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "140724",
+	"name": "\u6614\u9633\u53bf",
+	"pinyin": "xiyangxian",
+	"zip_code": "045300",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140725",
+	"name": "\u5bff\u9633\u53bf",
+	"pinyin": "shouyangxian",
+	"zip_code": "045400",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "140726",
+	"name": "\u592a\u8c37\u53bf",
+	"pinyin": "taiguxian",
+	"zip_code": "030800",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "140727",
+	"name": "\u7941\u53bf",
+	"pinyin": "qixian",
+	"zip_code": "030900",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "140728",
+	"name": "\u5e73\u9065\u53bf",
+	"pinyin": "pingyaoxian",
+	"zip_code": "031100",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "140729",
+	"name": "\u7075\u77f3\u53bf",
+	"pinyin": "lingshixian",
+	"zip_code": "031300",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "140781",
+	"name": "\u4ecb\u4f11\u5e02",
+	"pinyin": "jiexiushi",
+	"zip_code": "031200",
+	"parent_code": "140700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140800",
+	"name": "\u8fd0\u57ce\u5e02",
+	"pinyin": "yunchengshi",
+	"zip_code": "044000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "140802",
+	"name": "\u76d0\u6e56\u533a",
+	"pinyin": "yanhuqu",
+	"zip_code": "044000",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140821",
+	"name": "\u4e34\u7317\u53bf",
+	"pinyin": "linyixian",
+	"zip_code": "044100",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "140822",
+	"name": "\u4e07\u8363\u53bf",
+	"pinyin": "wanrongxian",
+	"zip_code": "044200",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "140823",
+	"name": "\u95fb\u559c\u53bf",
+	"pinyin": "wenxixian",
+	"zip_code": "043800",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "140824",
+	"name": "\u7a37\u5c71\u53bf",
+	"pinyin": "jishanxian",
+	"zip_code": "043200",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140825",
+	"name": "\u65b0\u7edb\u53bf",
+	"pinyin": "xinjiangxian",
+	"zip_code": "043100",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140826",
+	"name": "\u7edb\u53bf",
+	"pinyin": "jiangxian",
+	"zip_code": "043600",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140827",
+	"name": "\u57a3\u66f2\u53bf",
+	"pinyin": "yuanquxian",
+	"zip_code": "043700",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140828",
+	"name": "\u590f\u53bf",
+	"pinyin": "xiaxian",
+	"zip_code": "044400",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140829",
+	"name": "\u5e73\u9646\u53bf",
+	"pinyin": "pingluxian",
+	"zip_code": "044300",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "140830",
+	"name": "\u82ae\u57ce\u53bf",
+	"pinyin": "ruichengxian",
+	"zip_code": "044600",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "140881",
+	"name": "\u6c38\u6d4e\u5e02",
+	"pinyin": "yongjishi",
+	"zip_code": "044500",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "140882",
+	"name": "\u6cb3\u6d25\u5e02",
+	"pinyin": "hejinshi",
+	"zip_code": "043300",
+	"parent_code": "140800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "140900",
+	"name": "\u5ffb\u5dde\u5e02",
+	"pinyin": "xinzhoushi",
+	"zip_code": "034000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "140902",
+	"name": "\u5ffb\u5e9c\u533a",
+	"pinyin": "xinfuqu",
+	"zip_code": "034000",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "140921",
+	"name": "\u5b9a\u8944\u53bf",
+	"pinyin": "dingxiangxian",
+	"zip_code": "035400",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "140922",
+	"name": "\u4e94\u53f0\u53bf",
+	"pinyin": "wutaixian",
+	"zip_code": "035500",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "140923",
+	"name": "\u4ee3\u53bf",
+	"pinyin": "daixian",
+	"zip_code": "034200",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "140924",
+	"name": "\u7e41\u5cd9\u53bf",
+	"pinyin": "fanshixian",
+	"zip_code": "034300",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "140925",
+	"name": "\u5b81\u6b66\u53bf",
+	"pinyin": "ningwuxian",
+	"zip_code": "036700",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "140926",
+	"name": "\u9759\u4e50\u53bf",
+	"pinyin": "jinglexian",
+	"zip_code": "035100",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "140927",
+	"name": "\u795e\u6c60\u53bf",
+	"pinyin": "shenchixian",
+	"zip_code": "036100",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "140928",
+	"name": "\u4e94\u5be8\u53bf",
+	"pinyin": "wuzhaixian",
+	"zip_code": "036200",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "140929",
+	"name": "\u5ca2\u5c9a\u53bf",
+	"pinyin": "kelanxian",
+	"zip_code": "036300",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "140930",
+	"name": "\u6cb3\u66f2\u53bf",
+	"pinyin": "hequxian",
+	"zip_code": "036500",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "140931",
+	"name": "\u4fdd\u5fb7\u53bf",
+	"pinyin": "baodexian",
+	"zip_code": "036600",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "140932",
+	"name": "\u504f\u5173\u53bf",
+	"pinyin": "pianguanxian",
+	"zip_code": "036400",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "140981",
+	"name": "\u539f\u5e73\u5e02",
+	"pinyin": "yuanpingshi",
+	"zip_code": "034100",
+	"parent_code": "140900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "141000",
+	"name": "\u4e34\u6c7e\u5e02",
+	"pinyin": "linfenshi",
+	"zip_code": "041000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "141002",
+	"name": "\u5c27\u90fd\u533a",
+	"pinyin": "yaoduqu",
+	"zip_code": "041000",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "141021",
+	"name": "\u66f2\u6c83\u53bf",
+	"pinyin": "quwoxian",
+	"zip_code": "043400",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "141022",
+	"name": "\u7ffc\u57ce\u53bf",
+	"pinyin": "yichengxian",
+	"zip_code": "043500",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "141023",
+	"name": "\u8944\u6c7e\u53bf",
+	"pinyin": "xiangfenxian",
+	"zip_code": "041500",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "141024",
+	"name": "\u6d2a\u6d1e\u53bf",
+	"pinyin": "hongdongxian",
+	"zip_code": "031600",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "141025",
+	"name": "\u53e4\u53bf",
+	"pinyin": "guxian",
+	"zip_code": "042400",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "141026",
+	"name": "\u5b89\u6cfd\u53bf",
+	"pinyin": "anzexian",
+	"zip_code": "042500",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "141027",
+	"name": "\u6d6e\u5c71\u53bf",
+	"pinyin": "fushanxian",
+	"zip_code": "042600",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "141028",
+	"name": "\u5409\u53bf",
+	"pinyin": "jixian",
+	"zip_code": "042200",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "141029",
+	"name": "\u4e61\u5b81\u53bf",
+	"pinyin": "xiangningxian",
+	"zip_code": "042100",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "141030",
+	"name": "\u5927\u5b81\u53bf",
+	"pinyin": "daningxian",
+	"zip_code": "042300",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "141031",
+	"name": "\u96b0\u53bf",
+	"pinyin": "xixian",
+	"zip_code": "041300",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "141032",
+	"name": "\u6c38\u548c\u53bf",
+	"pinyin": "yonghexian",
+	"zip_code": "041400",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "141033",
+	"name": "\u84b2\u53bf",
+	"pinyin": "puxian",
+	"zip_code": "041200",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "141034",
+	"name": "\u6c7e\u897f\u53bf",
+	"pinyin": "fenxixian",
+	"zip_code": "031500",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "141081",
+	"name": "\u4faf\u9a6c\u5e02",
+	"pinyin": "houmashi",
+	"zip_code": "043007",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "141082",
+	"name": "\u970d\u5dde\u5e02",
+	"pinyin": "huozhoushi",
+	"zip_code": "031400",
+	"parent_code": "141000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "141100",
+	"name": "\u5415\u6881\u5e02",
+	"pinyin": "lvliangshi",
+	"zip_code": "033000",
+	"parent_code": "140000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "141102",
+	"name": "\u79bb\u77f3\u533a",
+	"pinyin": "lishiqu",
+	"zip_code": "033000",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "141121",
+	"name": "\u6587\u6c34\u53bf",
+	"pinyin": "wenshuixian",
+	"zip_code": "032100",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "141122",
+	"name": "\u4ea4\u57ce\u53bf",
+	"pinyin": "jiaochengxian",
+	"zip_code": "030500",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "141123",
+	"name": "\u5174\u53bf",
+	"pinyin": "xingxian",
+	"zip_code": "033600",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "141124",
+	"name": "\u4e34\u53bf",
+	"pinyin": "linxian",
+	"zip_code": "033200",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "141125",
+	"name": "\u67f3\u6797\u53bf",
+	"pinyin": "liulinxian",
+	"zip_code": "033300",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "141126",
+	"name": "\u77f3\u697c\u53bf",
+	"pinyin": "shilouxian",
+	"zip_code": "032500",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "141127",
+	"name": "\u5c9a\u53bf",
+	"pinyin": "lanxian",
+	"zip_code": "033500",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "141128",
+	"name": "\u65b9\u5c71\u53bf",
+	"pinyin": "fangshanxian",
+	"zip_code": "033100",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "141129",
+	"name": "\u4e2d\u9633\u53bf",
+	"pinyin": "zhongyangxian",
+	"zip_code": "033400",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "141130",
+	"name": "\u4ea4\u53e3\u53bf",
+	"pinyin": "jiaokouxian",
+	"zip_code": "032400",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "141181",
+	"name": "\u5b5d\u4e49\u5e02",
+	"pinyin": "xiaoyishi",
+	"zip_code": "032300",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "141182",
+	"name": "\u6c7e\u9633\u5e02",
+	"pinyin": "fenyangshi",
+	"zip_code": "032200",
+	"parent_code": "141100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "150000",
+	"name": "\u5185\u8499\u53e4\u81ea\u6cbb\u533a",
+	"pinyin": "neimengguzizhiqu",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "N"
+}, {
+	"code": "150100",
+	"name": "\u547c\u548c\u6d69\u7279\u5e02",
+	"pinyin": "huhehaoteshi",
+	"zip_code": "010000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "150102",
+	"name": "\u65b0\u57ce\u533a",
+	"pinyin": "xinchengqu",
+	"zip_code": "010030",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "150103",
+	"name": "\u56de\u6c11\u533a",
+	"pinyin": "huiminqu",
+	"zip_code": "010030",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150104",
+	"name": "\u7389\u6cc9\u533a",
+	"pinyin": "yuquanqu",
+	"zip_code": "010020",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "150105",
+	"name": "\u8d5b\u7f55\u533a",
+	"pinyin": "saihanqu",
+	"zip_code": "010020",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "150121",
+	"name": "\u571f\u9ed8\u7279\u5de6\u65d7",
+	"pinyin": "tumotezuoqi",
+	"zip_code": "010100",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "150122",
+	"name": "\u6258\u514b\u6258\u53bf",
+	"pinyin": "tuoketuoxian",
+	"zip_code": "010200",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "150123",
+	"name": "\u548c\u6797\u683c\u5c14\u53bf",
+	"pinyin": "helingeerxian",
+	"zip_code": "011500",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150124",
+	"name": "\u6e05\u6c34\u6cb3\u53bf",
+	"pinyin": "qingshuihexian",
+	"zip_code": "011600",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "150125",
+	"name": "\u6b66\u5ddd\u53bf",
+	"pinyin": "wuchuanxian",
+	"zip_code": "011700",
+	"parent_code": "150100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150200",
+	"name": "\u5305\u5934\u5e02",
+	"pinyin": "baotoushi",
+	"zip_code": "014000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "150202",
+	"name": "\u4e1c\u6cb3\u533a",
+	"pinyin": "donghequ",
+	"zip_code": "014040",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "150203",
+	"name": "\u6606\u90fd\u4ed1\u533a",
+	"pinyin": "kundulunqu",
+	"zip_code": "014010",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150204",
+	"name": "\u9752\u5c71\u533a",
+	"pinyin": "qingshanqu",
+	"zip_code": "014030",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "150205",
+	"name": "\u77f3\u62d0\u533a",
+	"pinyin": "shiguaiqu",
+	"zip_code": "014070",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "150206",
+	"name": "\u767d\u4e91\u9102\u535a\u77ff\u533a",
+	"pinyin": "baiyunebokuangqu",
+	"zip_code": "0",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "150207",
+	"name": "\u4e5d\u539f\u533a",
+	"pinyin": "jiuyuanqu",
+	"zip_code": "014060",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "150221",
+	"name": "\u571f\u9ed8\u7279\u53f3\u65d7",
+	"pinyin": "tumoteyouqi",
+	"zip_code": "014100",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "150222",
+	"name": "\u56fa\u9633\u53bf",
+	"pinyin": "guyangxian",
+	"zip_code": "014200",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "150223",
+	"name": "\u8fbe\u5c14\u7f55\u8302\u660e\u5b89\u8054\u5408\u65d7",
+	"pinyin": "daerhanmaominganlianheqi",
+	"zip_code": "014500",
+	"parent_code": "150200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "150300",
+	"name": "\u4e4c\u6d77\u5e02",
+	"pinyin": "wuhaishi",
+	"zip_code": "016000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "150302",
+	"name": "\u6d77\u52c3\u6e7e\u533a",
+	"pinyin": "haibowanqu",
+	"zip_code": "016000",
+	"parent_code": "150300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150303",
+	"name": "\u6d77\u5357\u533a",
+	"pinyin": "hainanqu",
+	"zip_code": "016030",
+	"parent_code": "150300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150304",
+	"name": "\u4e4c\u8fbe\u533a",
+	"pinyin": "wudaqu",
+	"zip_code": "016040",
+	"parent_code": "150300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150400",
+	"name": "\u8d64\u5cf0\u5e02",
+	"pinyin": "chifengshi",
+	"zip_code": "024000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "150402",
+	"name": "\u7ea2\u5c71\u533a",
+	"pinyin": "hongshanqu",
+	"zip_code": "024020",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150403",
+	"name": "\u5143\u5b9d\u5c71\u533a",
+	"pinyin": "yuanbaoshanqu",
+	"zip_code": "024076",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "150404",
+	"name": "\u677e\u5c71\u533a",
+	"pinyin": "songshanqu",
+	"zip_code": "024005",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "150421",
+	"name": "\u963f\u9c81\u79d1\u5c14\u6c81\u65d7",
+	"pinyin": "alukeerqinqi",
+	"zip_code": "025550",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "150422",
+	"name": "\u5df4\u6797\u5de6\u65d7",
+	"pinyin": "balinzuoqi",
+	"zip_code": "025450",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "150423",
+	"name": "\u5df4\u6797\u53f3\u65d7",
+	"pinyin": "balinyouqi",
+	"zip_code": "025150",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "150424",
+	"name": "\u6797\u897f\u53bf",
+	"pinyin": "linxixian",
+	"zip_code": "025250",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "150425",
+	"name": "\u514b\u4ec0\u514b\u817e\u65d7",
+	"pinyin": "keshiketengqi",
+	"zip_code": "025350",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150426",
+	"name": "\u7fc1\u725b\u7279\u65d7",
+	"pinyin": "wengniuteqi",
+	"zip_code": "024500",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150428",
+	"name": "\u5580\u5587\u6c81\u65d7",
+	"pinyin": "kalaqinqi",
+	"zip_code": "024400",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150429",
+	"name": "\u5b81\u57ce\u53bf",
+	"pinyin": "ningchengxian",
+	"zip_code": "024200",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "150430",
+	"name": "\u6556\u6c49\u65d7",
+	"pinyin": "aohanqi",
+	"zip_code": "024300",
+	"parent_code": "150400",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "150500",
+	"name": "\u901a\u8fbd\u5e02",
+	"pinyin": "tongliaoshi",
+	"zip_code": "028000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "150502",
+	"name": "\u79d1\u5c14\u6c81\u533a",
+	"pinyin": "keerqinqu",
+	"zip_code": "028000",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150521",
+	"name": "\u79d1\u5c14\u6c81\u5de6\u7ffc\u4e2d\u65d7",
+	"pinyin": "keerqinzuoyizhongqi",
+	"zip_code": "029300",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150522",
+	"name": "\u79d1\u5c14\u6c81\u5de6\u7ffc\u540e\u65d7",
+	"pinyin": "keerqinzuoyihouqi",
+	"zip_code": "028100",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150523",
+	"name": "\u5f00\u9c81\u53bf",
+	"pinyin": "kailuxian",
+	"zip_code": "028400",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150524",
+	"name": "\u5e93\u4f26\u65d7",
+	"pinyin": "kulunqi",
+	"zip_code": "028200",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150525",
+	"name": "\u5948\u66fc\u65d7",
+	"pinyin": "naimanqi",
+	"zip_code": "028300",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "150526",
+	"name": "\u624e\u9c81\u7279\u65d7",
+	"pinyin": "zhaluteqi",
+	"zip_code": "029100",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "150581",
+	"name": "\u970d\u6797\u90ed\u52d2\u5e02",
+	"pinyin": "huolinguoleshi",
+	"zip_code": "029200",
+	"parent_code": "150500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150600",
+	"name": "\u9102\u5c14\u591a\u65af\u5e02",
+	"pinyin": "eerduosishi",
+	"zip_code": "017000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "E"
+}, {
+	"code": "150602",
+	"name": "\u4e1c\u80dc\u533a",
+	"pinyin": "dongshengqu",
+	"zip_code": "017000",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "150603",
+	"name": "\u5eb7\u5df4\u4ec0\u533a",
+	"pinyin": "kangbashiqu",
+	"zip_code": "017010",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "150621",
+	"name": "\u8fbe\u62c9\u7279\u65d7",
+	"pinyin": "dalateqi",
+	"zip_code": "014300",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "150622",
+	"name": "\u51c6\u683c\u5c14\u65d7",
+	"pinyin": "zhungeerqi",
+	"zip_code": "017100",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "150623",
+	"name": "\u9102\u6258\u514b\u524d\u65d7",
+	"pinyin": "etuokeqianqi",
+	"zip_code": "016200",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "150624",
+	"name": "\u9102\u6258\u514b\u65d7",
+	"pinyin": "etuokeqi",
+	"zip_code": "016100",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "150625",
+	"name": "\u676d\u9526\u65d7",
+	"pinyin": "hangjinqi",
+	"zip_code": "017400",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150626",
+	"name": "\u4e4c\u5ba1\u65d7",
+	"pinyin": "wushenqi",
+	"zip_code": "017300",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150627",
+	"name": "\u4f0a\u91d1\u970d\u6d1b\u65d7",
+	"pinyin": "yijinhuoluoqi",
+	"zip_code": "017200",
+	"parent_code": "150600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "150700",
+	"name": "\u547c\u4f26\u8d1d\u5c14\u5e02",
+	"pinyin": "hulunbeiershi",
+	"zip_code": "021000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "150702",
+	"name": "\u6d77\u62c9\u5c14\u533a",
+	"pinyin": "hailaerqu",
+	"zip_code": "021000",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150703",
+	"name": "\u624e\u8d49\u8bfa\u5c14\u533a",
+	"pinyin": "zhalainuoerqu",
+	"zip_code": "021000",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "150721",
+	"name": "\u963f\u8363\u65d7",
+	"pinyin": "arongqi",
+	"zip_code": "162750",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "150722",
+	"name": "\u83ab\u529b\u8fbe\u74e6\u8fbe\u65a1\u5c14\u65cf\u81ea\u6cbb\u65d7",
+	"pinyin": "molidawadawoerzuzizhiqi",
+	"zip_code": "162850",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "150723",
+	"name": "\u9102\u4f26\u6625\u81ea\u6cbb\u65d7",
+	"pinyin": "elunchunzizhiqi",
+	"zip_code": "165450",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "150724",
+	"name": "\u9102\u6e29\u514b\u65cf\u81ea\u6cbb\u65d7",
+	"pinyin": "ewenkezuzizhiqi",
+	"zip_code": "021100",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "150725",
+	"name": "\u9648\u5df4\u5c14\u864e\u65d7",
+	"pinyin": "chenbaerhuqi",
+	"zip_code": "021500",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "150726",
+	"name": "\u65b0\u5df4\u5c14\u864e\u5de6\u65d7",
+	"pinyin": "xinbaerhuzuoqi",
+	"zip_code": "021200",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "150727",
+	"name": "\u65b0\u5df4\u5c14\u864e\u53f3\u65d7",
+	"pinyin": "xinbaerhuyouqi",
+	"zip_code": "021300",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "150781",
+	"name": "\u6ee1\u6d32\u91cc\u5e02",
+	"pinyin": "manzhoulishi",
+	"zip_code": "021400",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "150782",
+	"name": "\u7259\u514b\u77f3\u5e02",
+	"pinyin": "yakeshishi",
+	"zip_code": "022150",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "150783",
+	"name": "\u624e\u5170\u5c6f\u5e02",
+	"pinyin": "zhalantunshi",
+	"zip_code": "162650",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "150784",
+	"name": "\u989d\u5c14\u53e4\u7eb3\u5e02",
+	"pinyin": "eergunashi",
+	"zip_code": "022250",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "150785",
+	"name": "\u6839\u6cb3\u5e02",
+	"pinyin": "genheshi",
+	"zip_code": "022350",
+	"parent_code": "150700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "150800",
+	"name": "\u5df4\u5f66\u6dd6\u5c14\u5e02",
+	"pinyin": "bayannaoershi",
+	"zip_code": "015000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "150802",
+	"name": "\u4e34\u6cb3\u533a",
+	"pinyin": "linhequ",
+	"zip_code": "015001",
+	"parent_code": "150800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "150821",
+	"name": "\u4e94\u539f\u53bf",
+	"pinyin": "wuyuanxian",
+	"zip_code": "015100",
+	"parent_code": "150800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150822",
+	"name": "\u78f4\u53e3\u53bf",
+	"pinyin": "dengkouxian",
+	"zip_code": "015200",
+	"parent_code": "150800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "150823",
+	"name": "\u4e4c\u62c9\u7279\u524d\u65d7",
+	"pinyin": "wulateqianqi",
+	"zip_code": "014400",
+	"parent_code": "150800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150824",
+	"name": "\u4e4c\u62c9\u7279\u4e2d\u65d7",
+	"pinyin": "wulatezhongqi",
+	"zip_code": "015300",
+	"parent_code": "150800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150825",
+	"name": "\u4e4c\u62c9\u7279\u540e\u65d7",
+	"pinyin": "wulatehouqi",
+	"zip_code": "015500",
+	"parent_code": "150800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "150826",
+	"name": "\u676d\u9526\u540e\u65d7",
+	"pinyin": "hangjinhouqi",
+	"zip_code": "015400",
+	"parent_code": "150800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150900",
+	"name": "\u4e4c\u5170\u5bdf\u5e03\u5e02",
+	"pinyin": "wulanchabushi",
+	"zip_code": "0",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "150902",
+	"name": "\u96c6\u5b81\u533a",
+	"pinyin": "jiningqu",
+	"zip_code": "012000",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "150921",
+	"name": "\u5353\u8d44\u53bf",
+	"pinyin": "zhuozixian",
+	"zip_code": "012300",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "150922",
+	"name": "\u5316\u5fb7\u53bf",
+	"pinyin": "huadexian",
+	"zip_code": "013350",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "150923",
+	"name": "\u5546\u90fd\u53bf",
+	"pinyin": "shangduxian",
+	"zip_code": "013450",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "150924",
+	"name": "\u5174\u548c\u53bf",
+	"pinyin": "xinghexian",
+	"zip_code": "013650",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "150925",
+	"name": "\u51c9\u57ce\u53bf",
+	"pinyin": "liangchengxian",
+	"zip_code": "013750",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "150926",
+	"name": "\u5bdf\u54c8\u5c14\u53f3\u7ffc\u524d\u65d7",
+	"pinyin": "chahaeryouyiqianqi",
+	"zip_code": "012200",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "150927",
+	"name": "\u5bdf\u54c8\u5c14\u53f3\u7ffc\u4e2d\u65d7",
+	"pinyin": "chahaeryouyizhongqi",
+	"zip_code": "013550",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "150928",
+	"name": "\u5bdf\u54c8\u5c14\u53f3\u7ffc\u540e\u65d7",
+	"pinyin": "chahaeryouyihouqi",
+	"zip_code": "012400",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "150929",
+	"name": "\u56db\u5b50\u738b\u65d7",
+	"pinyin": "siziwangqi",
+	"zip_code": "011800",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "150981",
+	"name": "\u4e30\u9547\u5e02",
+	"pinyin": "fengzhenshi",
+	"zip_code": "012100",
+	"parent_code": "150900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "152200",
+	"name": "\u5174\u5b89\u76df",
+	"pinyin": "xinganmeng",
+	"zip_code": "0",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "152201",
+	"name": "\u4e4c\u5170\u6d69\u7279\u5e02",
+	"pinyin": "wulanhaoteshi",
+	"zip_code": "137400",
+	"parent_code": "152200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "152202",
+	"name": "\u963f\u5c14\u5c71\u5e02",
+	"pinyin": "aershanshi",
+	"zip_code": "137400",
+	"parent_code": "152200",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "152221",
+	"name": "\u79d1\u5c14\u6c81\u53f3\u7ffc\u524d\u65d7",
+	"pinyin": "keerqinyouyiqianqi",
+	"zip_code": "137400",
+	"parent_code": "152200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "152222",
+	"name": "\u79d1\u5c14\u6c81\u53f3\u7ffc\u4e2d\u65d7",
+	"pinyin": "keerqinyouyizhongqi",
+	"zip_code": "029400",
+	"parent_code": "152200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "152223",
+	"name": "\u624e\u8d49\u7279\u65d7",
+	"pinyin": "zhalaiteqi",
+	"zip_code": "137600",
+	"parent_code": "152200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "152224",
+	"name": "\u7a81\u6cc9\u53bf",
+	"pinyin": "tuquanxian",
+	"zip_code": "137500",
+	"parent_code": "152200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "152500",
+	"name": "\u9521\u6797\u90ed\u52d2\u76df",
+	"pinyin": "xilinguoleimeng",
+	"zip_code": "026000",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "152501",
+	"name": "\u4e8c\u8fde\u6d69\u7279\u5e02",
+	"pinyin": "erlianhaoteshi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "152502",
+	"name": "\u9521\u6797\u6d69\u7279\u5e02",
+	"pinyin": "xilinhaoteshi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "152522",
+	"name": "\u963f\u5df4\u560e\u65d7",
+	"pinyin": "abagaqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "152523",
+	"name": "\u82cf\u5c3c\u7279\u5de6\u65d7",
+	"pinyin": "sunitezuoqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "152524",
+	"name": "\u82cf\u5c3c\u7279\u53f3\u65d7",
+	"pinyin": "suniteyouqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "152525",
+	"name": "\u4e1c\u4e4c\u73e0\u7a46\u6c81\u65d7",
+	"pinyin": "dongwuzhumuqinqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "152526",
+	"name": "\u897f\u4e4c\u73e0\u7a46\u6c81\u65d7",
+	"pinyin": "xiwuzhumuqinqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "152527",
+	"name": "\u592a\u4ec6\u5bfa\u65d7",
+	"pinyin": "taipusiqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "152528",
+	"name": "\u9576\u9ec4\u65d7",
+	"pinyin": "xianghuangqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "152529",
+	"name": "\u6b63\u9576\u767d\u65d7",
+	"pinyin": "zhengxiangbaiqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "152530",
+	"name": "\u6b63\u84dd\u65d7",
+	"pinyin": "zhenglanqi",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "152531",
+	"name": "\u591a\u4f26\u53bf",
+	"pinyin": "duolunxian",
+	"zip_code": "012100",
+	"parent_code": "152500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "152900",
+	"name": "\u963f\u62c9\u5584\u76df",
+	"pinyin": "alashanmeng",
+	"zip_code": "0",
+	"parent_code": "150000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "152921",
+	"name": "\u963f\u62c9\u5584\u5de6\u65d7",
+	"pinyin": "alashanzuoqi",
+	"zip_code": "750300",
+	"parent_code": "152900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "152922",
+	"name": "\u963f\u62c9\u5584\u53f3\u65d7",
+	"pinyin": "alashanyouqi",
+	"zip_code": "737300",
+	"parent_code": "152900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "152923",
+	"name": "\u989d\u6d4e\u7eb3\u65d7",
+	"pinyin": "ejinaqi",
+	"zip_code": "735400",
+	"parent_code": "152900",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "210000",
+	"name": "\u8fbd\u5b81\u7701",
+	"pinyin": "liaoningsheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "L"
+}, {
+	"code": "210100",
+	"name": "\u6c88\u9633\u5e02",
+	"pinyin": "shenyangshi",
+	"zip_code": "110000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "210102",
+	"name": "\u548c\u5e73\u533a",
+	"pinyin": "hepingqu",
+	"zip_code": "110001",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "210103",
+	"name": "\u6c88\u6cb3\u533a",
+	"pinyin": "shenhequ",
+	"zip_code": "110013",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "210104",
+	"name": "\u5927\u4e1c\u533a",
+	"pinyin": "dadongqu",
+	"zip_code": "110041",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "210105",
+	"name": "\u7687\u59d1\u533a",
+	"pinyin": "huangguqu",
+	"zip_code": "110031",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "210106",
+	"name": "\u94c1\u897f\u533a",
+	"pinyin": "tiexiqu",
+	"zip_code": "114013",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "210111",
+	"name": "\u82cf\u5bb6\u5c6f\u533a",
+	"pinyin": "sujiatunqu",
+	"zip_code": "110101",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "210112",
+	"name": "\u6d51\u5357\u533a",
+	"pinyin": "hunnanqu",
+	"zip_code": "110101",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "210113",
+	"name": "\u6c88\u5317\u65b0\u533a",
+	"pinyin": "shenbeixinqu",
+	"zip_code": "110121",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "210114",
+	"name": "\u4e8e\u6d2a\u533a",
+	"pinyin": "yuhongqu",
+	"zip_code": "110141",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "210115",
+	"name": "\u8fbd\u4e2d\u533a",
+	"pinyin": "liaozhongqu",
+	"zip_code": "110200",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "210123",
+	"name": "\u5eb7\u5e73\u53bf",
+	"pinyin": "kangpingxian",
+	"zip_code": "110500",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "210124",
+	"name": "\u6cd5\u5e93\u53bf",
+	"pinyin": "fakuxian",
+	"zip_code": "110400",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "210181",
+	"name": "\u65b0\u6c11\u5e02",
+	"pinyin": "xinminshi",
+	"zip_code": "110300",
+	"parent_code": "210100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210200",
+	"name": "\u5927\u8fde\u5e02",
+	"pinyin": "dalianshi",
+	"zip_code": "116000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "210202",
+	"name": "\u4e2d\u5c71\u533a",
+	"pinyin": "zhongshanqu",
+	"zip_code": "116001",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "210203",
+	"name": "\u897f\u5c97\u533a",
+	"pinyin": "xigangqu",
+	"zip_code": "116011",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210204",
+	"name": "\u6c99\u6cb3\u53e3\u533a",
+	"pinyin": "shahekouqu",
+	"zip_code": "116021",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "210211",
+	"name": "\u7518\u4e95\u5b50\u533a",
+	"pinyin": "ganjingziqu",
+	"zip_code": "116033",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "210212",
+	"name": "\u65c5\u987a\u53e3\u533a",
+	"pinyin": "lvshunkouqu",
+	"zip_code": "116041",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "210213",
+	"name": "\u91d1\u5dde\u533a",
+	"pinyin": "jinzhouqu",
+	"zip_code": "116100",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "210214",
+	"name": "\u666e\u5170\u5e97\u533a",
+	"pinyin": "pulandianqu",
+	"zip_code": "116200",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "210224",
+	"name": "\u957f\u6d77\u53bf",
+	"pinyin": "changhaixian",
+	"zip_code": "116500",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "210281",
+	"name": "\u74e6\u623f\u5e97\u5e02",
+	"pinyin": "wafangdianshi",
+	"zip_code": "116300",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "210283",
+	"name": "\u5e84\u6cb3\u5e02",
+	"pinyin": "zhuangheshi",
+	"zip_code": "116400",
+	"parent_code": "210200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "210300",
+	"name": "\u978d\u5c71\u5e02",
+	"pinyin": "anshanshi",
+	"zip_code": "114000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "210302",
+	"name": "\u94c1\u4e1c\u533a",
+	"pinyin": "tiedongqu",
+	"zip_code": "114001",
+	"parent_code": "210300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "210303",
+	"name": "\u94c1\u897f\u533a",
+	"pinyin": "tiexiqu",
+	"zip_code": "136000",
+	"parent_code": "210300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "210304",
+	"name": "\u7acb\u5c71\u533a",
+	"pinyin": "lishanqu",
+	"zip_code": "114031",
+	"parent_code": "210300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "210311",
+	"name": "\u5343\u5c71\u533a",
+	"pinyin": "qianshanqu",
+	"zip_code": "114041",
+	"parent_code": "210300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "210321",
+	"name": "\u53f0\u5b89\u53bf",
+	"pinyin": "taianxian",
+	"zip_code": "114100",
+	"parent_code": "210300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "210323",
+	"name": "\u5cab\u5ca9\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "xiuyanmanzuzizhixian",
+	"zip_code": "114300",
+	"parent_code": "210300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210381",
+	"name": "\u6d77\u57ce\u5e02",
+	"pinyin": "haichengshi",
+	"zip_code": "114200",
+	"parent_code": "210300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "210400",
+	"name": "\u629a\u987a\u5e02",
+	"pinyin": "fushunshi",
+	"zip_code": "113000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "F"
+}, {
+	"code": "210402",
+	"name": "\u65b0\u629a\u533a",
+	"pinyin": "xinfuqu",
+	"zip_code": "113008",
+	"parent_code": "210400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210403",
+	"name": "\u4e1c\u6d32\u533a",
+	"pinyin": "dongzhouqu",
+	"zip_code": "113003",
+	"parent_code": "210400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "210404",
+	"name": "\u671b\u82b1\u533a",
+	"pinyin": "wanghuaqu",
+	"zip_code": "113001",
+	"parent_code": "210400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "210411",
+	"name": "\u987a\u57ce\u533a",
+	"pinyin": "shunchengqu",
+	"zip_code": "113006",
+	"parent_code": "210400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "210421",
+	"name": "\u629a\u987a\u53bf",
+	"pinyin": "fushunxian",
+	"zip_code": "113006",
+	"parent_code": "210400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "210422",
+	"name": "\u65b0\u5bbe\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "xinbinmanzuzizhixian",
+	"zip_code": "113200",
+	"parent_code": "210400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210423",
+	"name": "\u6e05\u539f\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "qingyuanmanzuzizhixian",
+	"zip_code": "113300",
+	"parent_code": "210400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "210500",
+	"name": "\u672c\u6eaa\u5e02",
+	"pinyin": "benxishi",
+	"zip_code": "117000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "210502",
+	"name": "\u5e73\u5c71\u533a",
+	"pinyin": "pingshanqu",
+	"zip_code": "117000",
+	"parent_code": "210500",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "210503",
+	"name": "\u6eaa\u6e56\u533a",
+	"pinyin": "xihuqu",
+	"zip_code": "117002",
+	"parent_code": "210500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210504",
+	"name": "\u660e\u5c71\u533a",
+	"pinyin": "mingshanqu",
+	"zip_code": "117021",
+	"parent_code": "210500",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "210505",
+	"name": "\u5357\u82ac\u533a",
+	"pinyin": "nanfenqu",
+	"zip_code": "117014",
+	"parent_code": "210500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "210521",
+	"name": "\u672c\u6eaa\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "benximanzuzizhixian",
+	"zip_code": "117100",
+	"parent_code": "210500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "210522",
+	"name": "\u6853\u4ec1\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "huanrenmanzuzizhixian",
+	"zip_code": "117200",
+	"parent_code": "210500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "210600",
+	"name": "\u4e39\u4e1c\u5e02",
+	"pinyin": "dandongshi",
+	"zip_code": "118000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "210602",
+	"name": "\u5143\u5b9d\u533a",
+	"pinyin": "yuanbaoqu",
+	"zip_code": "118000",
+	"parent_code": "210600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "210603",
+	"name": "\u632f\u5174\u533a",
+	"pinyin": "zhenxingqu",
+	"zip_code": "118002",
+	"parent_code": "210600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "210604",
+	"name": "\u632f\u5b89\u533a",
+	"pinyin": "zhenanqu",
+	"zip_code": "118001",
+	"parent_code": "210600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "210624",
+	"name": "\u5bbd\u7538\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "kuandianmanzuzizhixian",
+	"zip_code": "118200",
+	"parent_code": "210600",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "210681",
+	"name": "\u4e1c\u6e2f\u5e02",
+	"pinyin": "donggangshi",
+	"zip_code": "118300",
+	"parent_code": "210600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "210682",
+	"name": "\u51e4\u57ce\u5e02",
+	"pinyin": "fengchengshi",
+	"zip_code": "118100",
+	"parent_code": "210600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "210700",
+	"name": "\u9526\u5dde\u5e02",
+	"pinyin": "jinzhoushi",
+	"zip_code": "121000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "210702",
+	"name": "\u53e4\u5854\u533a",
+	"pinyin": "gutaqu",
+	"zip_code": "121001",
+	"parent_code": "210700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "210703",
+	"name": "\u51cc\u6cb3\u533a",
+	"pinyin": "linghequ",
+	"zip_code": "121000",
+	"parent_code": "210700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "210711",
+	"name": "\u592a\u548c\u533a",
+	"pinyin": "taihequ",
+	"zip_code": "121011",
+	"parent_code": "210700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "210726",
+	"name": "\u9ed1\u5c71\u53bf",
+	"pinyin": "heishanxian",
+	"zip_code": "121400",
+	"parent_code": "210700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "210727",
+	"name": "\u4e49\u53bf",
+	"pinyin": "yixian",
+	"zip_code": "121100",
+	"parent_code": "210700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "210781",
+	"name": "\u51cc\u6d77\u5e02",
+	"pinyin": "linghaishi",
+	"zip_code": "121200",
+	"parent_code": "210700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "210782",
+	"name": "\u5317\u9547\u5e02",
+	"pinyin": "beizhenshi",
+	"zip_code": "0",
+	"parent_code": "210700",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "210800",
+	"name": "\u8425\u53e3\u5e02",
+	"pinyin": "yingkoushi",
+	"zip_code": "115000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "210802",
+	"name": "\u7ad9\u524d\u533a",
+	"pinyin": "zhanqianqu",
+	"zip_code": "115002",
+	"parent_code": "210800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "210803",
+	"name": "\u897f\u5e02\u533a",
+	"pinyin": "xishiqu",
+	"zip_code": "115004",
+	"parent_code": "210800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210804",
+	"name": "\u9c85\u9c7c\u5708\u533a",
+	"pinyin": "bayuquanqu",
+	"zip_code": "115004",
+	"parent_code": "210800",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "210811",
+	"name": "\u8001\u8fb9\u533a",
+	"pinyin": "laobianqu",
+	"zip_code": "115005",
+	"parent_code": "210800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "210881",
+	"name": "\u76d6\u5dde\u5e02",
+	"pinyin": "gaizhoushi",
+	"zip_code": "115200",
+	"parent_code": "210800",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "210882",
+	"name": "\u5927\u77f3\u6865\u5e02",
+	"pinyin": "dashiqiaoshi",
+	"zip_code": "115100",
+	"parent_code": "210800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "210900",
+	"name": "\u961c\u65b0\u5e02",
+	"pinyin": "fuxinshi",
+	"zip_code": "123000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "F"
+}, {
+	"code": "210902",
+	"name": "\u6d77\u5dde\u533a",
+	"pinyin": "haizhouqu",
+	"zip_code": "123000",
+	"parent_code": "210900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "210903",
+	"name": "\u65b0\u90b1\u533a",
+	"pinyin": "xinqiuqu",
+	"zip_code": "123005",
+	"parent_code": "210900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210904",
+	"name": "\u592a\u5e73\u533a",
+	"pinyin": "taipingqu",
+	"zip_code": "123003",
+	"parent_code": "210900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "210905",
+	"name": "\u6e05\u6cb3\u95e8\u533a",
+	"pinyin": "qinghemenqu",
+	"zip_code": "123006",
+	"parent_code": "210900",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "210911",
+	"name": "\u7ec6\u6cb3\u533a",
+	"pinyin": "xihequ",
+	"zip_code": "123000",
+	"parent_code": "210900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "210921",
+	"name": "\u961c\u65b0\u8499\u53e4\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "fuxinmengguzuzizhixian",
+	"zip_code": "123100",
+	"parent_code": "210900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "210922",
+	"name": "\u5f70\u6b66\u53bf",
+	"pinyin": "zhangwuxian",
+	"zip_code": "123200",
+	"parent_code": "210900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "211000",
+	"name": "\u8fbd\u9633\u5e02",
+	"pinyin": "liaoyangshi",
+	"zip_code": "111000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "211002",
+	"name": "\u767d\u5854\u533a",
+	"pinyin": "baitaqu",
+	"zip_code": "111000",
+	"parent_code": "211000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "211003",
+	"name": "\u6587\u5723\u533a",
+	"pinyin": "wenshengqu",
+	"zip_code": "111000",
+	"parent_code": "211000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "211004",
+	"name": "\u5b8f\u4f1f\u533a",
+	"pinyin": "hongweiqu",
+	"zip_code": "111003",
+	"parent_code": "211000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "211005",
+	"name": "\u5f13\u957f\u5cad\u533a",
+	"pinyin": "gongchanglingqu",
+	"zip_code": "111008",
+	"parent_code": "211000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "211011",
+	"name": "\u592a\u5b50\u6cb3\u533a",
+	"pinyin": "taizihequ",
+	"zip_code": "111000",
+	"parent_code": "211000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "211021",
+	"name": "\u8fbd\u9633\u53bf",
+	"pinyin": "liaoyangxian",
+	"zip_code": "111200",
+	"parent_code": "211000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "211081",
+	"name": "\u706f\u5854\u5e02",
+	"pinyin": "dengtashi",
+	"zip_code": "111300",
+	"parent_code": "211000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "211100",
+	"name": "\u76d8\u9526\u5e02",
+	"pinyin": "panjinshi",
+	"zip_code": "124000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "211102",
+	"name": "\u53cc\u53f0\u5b50\u533a",
+	"pinyin": "shuangtaiziqu",
+	"zip_code": "124000",
+	"parent_code": "211100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "211103",
+	"name": "\u5174\u9686\u53f0\u533a",
+	"pinyin": "xinglongtaiqu",
+	"zip_code": "124010",
+	"parent_code": "211100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "211104",
+	"name": "\u5927\u6d3c\u533a",
+	"pinyin": "dawaqu",
+	"zip_code": "124200",
+	"parent_code": "211100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "211122",
+	"name": "\u76d8\u5c71\u53bf",
+	"pinyin": "panshanxian",
+	"zip_code": "124000",
+	"parent_code": "211100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "211200",
+	"name": "\u94c1\u5cad\u5e02",
+	"pinyin": "tielingshi",
+	"zip_code": "112000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "211202",
+	"name": "\u94f6\u5dde\u533a",
+	"pinyin": "yinzhouqu",
+	"zip_code": "112000",
+	"parent_code": "211200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "211204",
+	"name": "\u6e05\u6cb3\u533a",
+	"pinyin": "qinghequ",
+	"zip_code": "112003",
+	"parent_code": "211200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "211221",
+	"name": "\u94c1\u5cad\u53bf",
+	"pinyin": "tielingxian",
+	"zip_code": "112000",
+	"parent_code": "211200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "211223",
+	"name": "\u897f\u4e30\u53bf",
+	"pinyin": "xifengxian",
+	"zip_code": "112400",
+	"parent_code": "211200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "211224",
+	"name": "\u660c\u56fe\u53bf",
+	"pinyin": "changtuxian",
+	"zip_code": "112500",
+	"parent_code": "211200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "211281",
+	"name": "\u8c03\u5175\u5c71\u5e02",
+	"pinyin": "diaobingshanshi",
+	"zip_code": "112700",
+	"parent_code": "211200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "211282",
+	"name": "\u5f00\u539f\u5e02",
+	"pinyin": "kaiyuanshi",
+	"zip_code": "112300",
+	"parent_code": "211200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "211300",
+	"name": "\u671d\u9633\u5e02",
+	"pinyin": "chaoyangshi",
+	"zip_code": "122000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "211302",
+	"name": "\u53cc\u5854\u533a",
+	"pinyin": "shuangtaqu",
+	"zip_code": "122000",
+	"parent_code": "211300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "211303",
+	"name": "\u9f99\u57ce\u533a",
+	"pinyin": "longchengqu",
+	"zip_code": "122000",
+	"parent_code": "211300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "211321",
+	"name": "\u671d\u9633\u53bf",
+	"pinyin": "chaoyangxian",
+	"zip_code": "122000",
+	"parent_code": "211300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "211322",
+	"name": "\u5efa\u5e73\u53bf",
+	"pinyin": "jianpingxian",
+	"zip_code": "122400",
+	"parent_code": "211300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "211324",
+	"name": "\u5580\u5587\u6c81\u5de6\u7ffc\u8499\u53e4\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "kalaqinzuoyimengguzuzizhixian",
+	"zip_code": "122300",
+	"parent_code": "211300",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "211381",
+	"name": "\u5317\u7968\u5e02",
+	"pinyin": "beipiaoshi",
+	"zip_code": "122100",
+	"parent_code": "211300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "211382",
+	"name": "\u51cc\u6e90\u5e02",
+	"pinyin": "lingyuanshi",
+	"zip_code": "122500",
+	"parent_code": "211300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "211400",
+	"name": "\u846b\u82a6\u5c9b\u5e02",
+	"pinyin": "huludaoshi",
+	"zip_code": "125000",
+	"parent_code": "210000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "211402",
+	"name": "\u8fde\u5c71\u533a",
+	"pinyin": "lianshanqu",
+	"zip_code": "125001",
+	"parent_code": "211400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "211403",
+	"name": "\u9f99\u6e2f\u533a",
+	"pinyin": "longgangqu",
+	"zip_code": "125003",
+	"parent_code": "211400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "211404",
+	"name": "\u5357\u7968\u533a",
+	"pinyin": "nanpiaoqu",
+	"zip_code": "125027",
+	"parent_code": "211400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "211421",
+	"name": "\u7ee5\u4e2d\u53bf",
+	"pinyin": "suizhongxian",
+	"zip_code": "125200",
+	"parent_code": "211400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "211422",
+	"name": "\u5efa\u660c\u53bf",
+	"pinyin": "jianchangxian",
+	"zip_code": "125300",
+	"parent_code": "211400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "211481",
+	"name": "\u5174\u57ce\u5e02",
+	"pinyin": "xingchengshi",
+	"zip_code": "125100",
+	"parent_code": "211400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "220000",
+	"name": "\u5409\u6797\u7701",
+	"pinyin": "jilinsheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "J"
+}, {
+	"code": "220100",
+	"name": "\u957f\u6625\u5e02",
+	"pinyin": "changchunshi",
+	"zip_code": "130000",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "220102",
+	"name": "\u5357\u5173\u533a",
+	"pinyin": "nanguanqu",
+	"zip_code": "130022",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "220103",
+	"name": "\u5bbd\u57ce\u533a",
+	"pinyin": "kuanchengqu",
+	"zip_code": "130051",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "220104",
+	"name": "\u671d\u9633\u533a",
+	"pinyin": "chaoyangqu",
+	"zip_code": "130012",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "220105",
+	"name": "\u4e8c\u9053\u533a",
+	"pinyin": "erdaoqu",
+	"zip_code": "130031",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "220106",
+	"name": "\u7eff\u56ed\u533a",
+	"pinyin": "lvyuanqu",
+	"zip_code": "130062",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "220112",
+	"name": "\u53cc\u9633\u533a",
+	"pinyin": "shuangyangqu",
+	"zip_code": "130600",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "220113",
+	"name": "\u4e5d\u53f0\u533a",
+	"pinyin": "jiutaiqu",
+	"zip_code": "130500",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "220122",
+	"name": "\u519c\u5b89\u53bf",
+	"pinyin": "nonganxian",
+	"zip_code": "130200",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "220182",
+	"name": "\u6986\u6811\u5e02",
+	"pinyin": "yushushi",
+	"zip_code": "130400",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "220183",
+	"name": "\u5fb7\u60e0\u5e02",
+	"pinyin": "dehuishi",
+	"zip_code": "130300",
+	"parent_code": "220100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "220200",
+	"name": "\u5409\u6797\u5e02",
+	"pinyin": "jilinshi",
+	"zip_code": "132000",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "220202",
+	"name": "\u660c\u9091\u533a",
+	"pinyin": "changyiqu",
+	"zip_code": "132002",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "220203",
+	"name": "\u9f99\u6f6d\u533a",
+	"pinyin": "longtanqu",
+	"zip_code": "132021",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "220204",
+	"name": "\u8239\u8425\u533a",
+	"pinyin": "chuanyingqu",
+	"zip_code": "132011",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "220211",
+	"name": "\u4e30\u6ee1\u533a",
+	"pinyin": "fengmanqu",
+	"zip_code": "132013",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "220221",
+	"name": "\u6c38\u5409\u53bf",
+	"pinyin": "yongjixian",
+	"zip_code": "132200",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "220281",
+	"name": "\u86df\u6cb3\u5e02",
+	"pinyin": "jiaoheshi",
+	"zip_code": "132500",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "220282",
+	"name": "\u6866\u7538\u5e02",
+	"pinyin": "huadianshi",
+	"zip_code": "132400",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "220283",
+	"name": "\u8212\u5170\u5e02",
+	"pinyin": "shulanshi",
+	"zip_code": "132600",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "220284",
+	"name": "\u78d0\u77f3\u5e02",
+	"pinyin": "panshishi",
+	"zip_code": "132300",
+	"parent_code": "220200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "220300",
+	"name": "\u56db\u5e73\u5e02",
+	"pinyin": "sipingshi",
+	"zip_code": "136000",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "220302",
+	"name": "\u94c1\u897f\u533a",
+	"pinyin": "tiexiqu",
+	"zip_code": "136000",
+	"parent_code": "220300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "220303",
+	"name": "\u94c1\u4e1c\u533a",
+	"pinyin": "tiedongqu",
+	"zip_code": "136001",
+	"parent_code": "220300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "220322",
+	"name": "\u68a8\u6811\u53bf",
+	"pinyin": "lishuxian",
+	"zip_code": "136500",
+	"parent_code": "220300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "220323",
+	"name": "\u4f0a\u901a\u6ee1\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yitongmanzuzizhixian",
+	"zip_code": "130700",
+	"parent_code": "220300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "220381",
+	"name": "\u516c\u4e3b\u5cad\u5e02",
+	"pinyin": "gongzhulingshi",
+	"zip_code": "136100",
+	"parent_code": "220300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "220382",
+	"name": "\u53cc\u8fbd\u5e02",
+	"pinyin": "shuangliaoshi",
+	"zip_code": "136400",
+	"parent_code": "220300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "220400",
+	"name": "\u8fbd\u6e90\u5e02",
+	"pinyin": "liaoyuanshi",
+	"zip_code": "136200",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "220402",
+	"name": "\u9f99\u5c71\u533a",
+	"pinyin": "longshanqu",
+	"zip_code": "136200",
+	"parent_code": "220400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "220403",
+	"name": "\u897f\u5b89\u533a",
+	"pinyin": "xianqu",
+	"zip_code": "136201",
+	"parent_code": "220400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "220421",
+	"name": "\u4e1c\u4e30\u53bf",
+	"pinyin": "dongfengxian",
+	"zip_code": "136300",
+	"parent_code": "220400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "220422",
+	"name": "\u4e1c\u8fbd\u53bf",
+	"pinyin": "dongliaoxian",
+	"zip_code": "136600",
+	"parent_code": "220400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "220500",
+	"name": "\u901a\u5316\u5e02",
+	"pinyin": "tonghuashi",
+	"zip_code": "134000",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "220502",
+	"name": "\u4e1c\u660c\u533a",
+	"pinyin": "dongchangqu",
+	"zip_code": "134001",
+	"parent_code": "220500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "220503",
+	"name": "\u4e8c\u9053\u6c5f\u533a",
+	"pinyin": "erdaojiangqu",
+	"zip_code": "134003",
+	"parent_code": "220500",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "220521",
+	"name": "\u901a\u5316\u53bf",
+	"pinyin": "tonghuaxian",
+	"zip_code": "134100",
+	"parent_code": "220500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "220523",
+	"name": "\u8f89\u5357\u53bf",
+	"pinyin": "huinanxian",
+	"zip_code": "135100",
+	"parent_code": "220500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "220524",
+	"name": "\u67f3\u6cb3\u53bf",
+	"pinyin": "liuhexian",
+	"zip_code": "135300",
+	"parent_code": "220500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "220581",
+	"name": "\u6885\u6cb3\u53e3\u5e02",
+	"pinyin": "meihekoushi",
+	"zip_code": "135000",
+	"parent_code": "220500",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "220582",
+	"name": "\u96c6\u5b89\u5e02",
+	"pinyin": "jianshi",
+	"zip_code": "134200",
+	"parent_code": "220500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "220600",
+	"name": "\u767d\u5c71\u5e02",
+	"pinyin": "baishanshi",
+	"zip_code": "134300",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "220602",
+	"name": "\u6d51\u6c5f\u533a",
+	"pinyin": "hunjiangqu",
+	"zip_code": "134300",
+	"parent_code": "220600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "220605",
+	"name": "\u6c5f\u6e90\u533a",
+	"pinyin": "jiangyuanqu",
+	"zip_code": "134300",
+	"parent_code": "220600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "220621",
+	"name": "\u629a\u677e\u53bf",
+	"pinyin": "fusongxian",
+	"zip_code": "134500",
+	"parent_code": "220600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "220622",
+	"name": "\u9756\u5b87\u53bf",
+	"pinyin": "jingyuxian",
+	"zip_code": "135200",
+	"parent_code": "220600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "220623",
+	"name": "\u957f\u767d\u671d\u9c9c\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "changbaichaoxianzuzizhixian",
+	"zip_code": "134400",
+	"parent_code": "220600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "220681",
+	"name": "\u4e34\u6c5f\u5e02",
+	"pinyin": "linjiangshi",
+	"zip_code": "134600",
+	"parent_code": "220600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "220700",
+	"name": "\u677e\u539f\u5e02",
+	"pinyin": "songyuanshi",
+	"zip_code": "138000",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "220702",
+	"name": "\u5b81\u6c5f\u533a",
+	"pinyin": "ningjiangqu",
+	"zip_code": "138000",
+	"parent_code": "220700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "220721",
+	"name": "\u524d\u90ed\u5c14\u7f57\u65af\u8499\u53e4\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "qianguoerluosimengguzuzizhixian",
+	"zip_code": "138000",
+	"parent_code": "220700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "220722",
+	"name": "\u957f\u5cad\u53bf",
+	"pinyin": "changlingxian",
+	"zip_code": "131500",
+	"parent_code": "220700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "220723",
+	"name": "\u4e7e\u5b89\u53bf",
+	"pinyin": "qiananxian",
+	"zip_code": "131400",
+	"parent_code": "220700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "220781",
+	"name": "\u6276\u4f59\u5e02",
+	"pinyin": "fuyushi",
+	"zip_code": "131200",
+	"parent_code": "220700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "220800",
+	"name": "\u767d\u57ce\u5e02",
+	"pinyin": "baichengshi",
+	"zip_code": "137000",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "220802",
+	"name": "\u6d2e\u5317\u533a",
+	"pinyin": "taobeiqu",
+	"zip_code": "137000",
+	"parent_code": "220800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "220821",
+	"name": "\u9547\u8d49\u53bf",
+	"pinyin": "zhenlaixian",
+	"zip_code": "137300",
+	"parent_code": "220800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "220822",
+	"name": "\u901a\u6986\u53bf",
+	"pinyin": "tongyuxian",
+	"zip_code": "137200",
+	"parent_code": "220800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "220881",
+	"name": "\u6d2e\u5357\u5e02",
+	"pinyin": "taonanshi",
+	"zip_code": "137100",
+	"parent_code": "220800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "220882",
+	"name": "\u5927\u5b89\u5e02",
+	"pinyin": "daanshi",
+	"zip_code": "131300",
+	"parent_code": "220800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "222400",
+	"name": "\u5ef6\u8fb9\u671d\u9c9c\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "yanbianchaoxianzuzizhizhou",
+	"zip_code": "133000",
+	"parent_code": "220000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "222401",
+	"name": "\u5ef6\u5409\u5e02",
+	"pinyin": "yanjishi",
+	"zip_code": "133000",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "222402",
+	"name": "\u56fe\u4eec\u5e02",
+	"pinyin": "tumenshi",
+	"zip_code": "133100",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "222403",
+	"name": "\u6566\u5316\u5e02",
+	"pinyin": "dunhuashi",
+	"zip_code": "133700",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "222404",
+	"name": "\u73f2\u6625\u5e02",
+	"pinyin": "huichunshi",
+	"zip_code": "133300",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "222405",
+	"name": "\u9f99\u4e95\u5e02",
+	"pinyin": "longjingshi",
+	"zip_code": "133400",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "222406",
+	"name": "\u548c\u9f99\u5e02",
+	"pinyin": "helongshi",
+	"zip_code": "133500",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "222424",
+	"name": "\u6c6a\u6e05\u53bf",
+	"pinyin": "wangqingxian",
+	"zip_code": "133200",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "222426",
+	"name": "\u5b89\u56fe\u53bf",
+	"pinyin": "antuxian",
+	"zip_code": "133600",
+	"parent_code": "222400",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "230000",
+	"name": "\u9ed1\u9f99\u6c5f\u7701",
+	"pinyin": "heilongjiangsheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "H"
+}, {
+	"code": "230100",
+	"name": "\u54c8\u5c14\u6ee8\u5e02",
+	"pinyin": "haerbinshi",
+	"zip_code": "150000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "230102",
+	"name": "\u9053\u91cc\u533a",
+	"pinyin": "daoliqu",
+	"zip_code": "150010",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230103",
+	"name": "\u5357\u5c97\u533a",
+	"pinyin": "nangangqu",
+	"zip_code": "150006",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "230104",
+	"name": "\u9053\u5916\u533a",
+	"pinyin": "daowaiqu",
+	"zip_code": "150020",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230108",
+	"name": "\u5e73\u623f\u533a",
+	"pinyin": "pingfangqu",
+	"zip_code": "150060",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "230109",
+	"name": "\u677e\u5317\u533a",
+	"pinyin": "songbeiqu",
+	"zip_code": "150028",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "230110",
+	"name": "\u9999\u574a\u533a",
+	"pinyin": "xiangfangqu",
+	"zip_code": "150036",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230111",
+	"name": "\u547c\u5170\u533a",
+	"pinyin": "hulanqu",
+	"zip_code": "150500",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "230112",
+	"name": "\u963f\u57ce\u533a",
+	"pinyin": "achengqu",
+	"zip_code": "150300",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "230113",
+	"name": "\u53cc\u57ce\u533a",
+	"pinyin": "shuangchengqu",
+	"zip_code": "150100",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "230123",
+	"name": "\u4f9d\u5170\u53bf",
+	"pinyin": "yilanxian",
+	"zip_code": "154800",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "230124",
+	"name": "\u65b9\u6b63\u53bf",
+	"pinyin": "fangzhengxian",
+	"zip_code": "150800",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "230125",
+	"name": "\u5bbe\u53bf",
+	"pinyin": "binxian",
+	"zip_code": "150400",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "230126",
+	"name": "\u5df4\u5f66\u53bf",
+	"pinyin": "bayanxian",
+	"zip_code": "151800",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "230127",
+	"name": "\u6728\u5170\u53bf",
+	"pinyin": "mulanxian",
+	"zip_code": "151900",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "230128",
+	"name": "\u901a\u6cb3\u53bf",
+	"pinyin": "tonghexian",
+	"zip_code": "150900",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230129",
+	"name": "\u5ef6\u5bff\u53bf",
+	"pinyin": "yanshouxian",
+	"zip_code": "150700",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "230183",
+	"name": "\u5c1a\u5fd7\u5e02",
+	"pinyin": "shangzhishi",
+	"zip_code": "150600",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "230184",
+	"name": "\u4e94\u5e38\u5e02",
+	"pinyin": "wuchangshi",
+	"zip_code": "150200",
+	"parent_code": "230100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "230200",
+	"name": "\u9f50\u9f50\u54c8\u5c14\u5e02",
+	"pinyin": "qiqihaershi",
+	"zip_code": "161000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "230202",
+	"name": "\u9f99\u6c99\u533a",
+	"pinyin": "longshaqu",
+	"zip_code": "161000",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "230203",
+	"name": "\u5efa\u534e\u533a",
+	"pinyin": "jianhuaqu",
+	"zip_code": "161006",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230204",
+	"name": "\u94c1\u950b\u533a",
+	"pinyin": "tiefengqu",
+	"zip_code": "161000",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230205",
+	"name": "\u6602\u6602\u6eaa\u533a",
+	"pinyin": "angangxiqu",
+	"zip_code": "161000",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "230206",
+	"name": "\u5bcc\u62c9\u5c14\u57fa\u533a",
+	"pinyin": "fulaerjiqu",
+	"zip_code": "161041",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "230207",
+	"name": "\u78be\u5b50\u5c71\u533a",
+	"pinyin": "nianzishanqu",
+	"zip_code": "161046",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "230208",
+	"name": "\u6885\u91cc\u65af\u8fbe\u65a1\u5c14\u65cf\u533a",
+	"pinyin": "meilisidawoerzuqu",
+	"zip_code": "161021",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "230221",
+	"name": "\u9f99\u6c5f\u53bf",
+	"pinyin": "longjiangxian",
+	"zip_code": "161100",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "230223",
+	"name": "\u4f9d\u5b89\u53bf",
+	"pinyin": "yianxian",
+	"zip_code": "161500",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "230224",
+	"name": "\u6cf0\u6765\u53bf",
+	"pinyin": "tailaixian",
+	"zip_code": "162400",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230225",
+	"name": "\u7518\u5357\u53bf",
+	"pinyin": "gannanxian",
+	"zip_code": "162100",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "230227",
+	"name": "\u5bcc\u88d5\u53bf",
+	"pinyin": "fuyuxian",
+	"zip_code": "161200",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "230229",
+	"name": "\u514b\u5c71\u53bf",
+	"pinyin": "keshanxian",
+	"zip_code": "161600",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "230230",
+	"name": "\u514b\u4e1c\u53bf",
+	"pinyin": "kedongxian",
+	"zip_code": "164800",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "230231",
+	"name": "\u62dc\u6cc9\u53bf",
+	"pinyin": "baiquanxian",
+	"zip_code": "164700",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "230281",
+	"name": "\u8bb7\u6cb3\u5e02",
+	"pinyin": "neheshi",
+	"zip_code": "161300",
+	"parent_code": "230200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "230300",
+	"name": "\u9e21\u897f\u5e02",
+	"pinyin": "jixishi",
+	"zip_code": "158100",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "230302",
+	"name": "\u9e21\u51a0\u533a",
+	"pinyin": "jiguanqu",
+	"zip_code": "158100",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230303",
+	"name": "\u6052\u5c71\u533a",
+	"pinyin": "hengshanqu",
+	"zip_code": "158130",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "230304",
+	"name": "\u6ef4\u9053\u533a",
+	"pinyin": "didaoqu",
+	"zip_code": "158150",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230305",
+	"name": "\u68a8\u6811\u533a",
+	"pinyin": "lishuqu",
+	"zip_code": "158160",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "230306",
+	"name": "\u57ce\u5b50\u6cb3\u533a",
+	"pinyin": "chengzihequ",
+	"zip_code": "158170",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "230307",
+	"name": "\u9ebb\u5c71\u533a",
+	"pinyin": "mashanqu",
+	"zip_code": "158180",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "230321",
+	"name": "\u9e21\u4e1c\u53bf",
+	"pinyin": "jidongxian",
+	"zip_code": "158200",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230381",
+	"name": "\u864e\u6797\u5e02",
+	"pinyin": "hulinshi",
+	"zip_code": "158400",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "230382",
+	"name": "\u5bc6\u5c71\u5e02",
+	"pinyin": "mishanshi",
+	"zip_code": "158300",
+	"parent_code": "230300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "230400",
+	"name": "\u9e64\u5c97\u5e02",
+	"pinyin": "hegangshi",
+	"zip_code": "154100",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "230402",
+	"name": "\u5411\u9633\u533a",
+	"pinyin": "xiangyangqu",
+	"zip_code": "154100",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230403",
+	"name": "\u5de5\u519c\u533a",
+	"pinyin": "gongnongqu",
+	"zip_code": "154101",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "230404",
+	"name": "\u5357\u5c71\u533a",
+	"pinyin": "nanshanqu",
+	"zip_code": "154104",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "230405",
+	"name": "\u5174\u5b89\u533a",
+	"pinyin": "xinganqu",
+	"zip_code": "154102",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230406",
+	"name": "\u4e1c\u5c71\u533a",
+	"pinyin": "dongshanqu",
+	"zip_code": "522031",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230407",
+	"name": "\u5174\u5c71\u533a",
+	"pinyin": "xingshanqu",
+	"zip_code": "154105",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230421",
+	"name": "\u841d\u5317\u53bf",
+	"pinyin": "luobeixian",
+	"zip_code": "154200",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "230422",
+	"name": "\u7ee5\u6ee8\u53bf",
+	"pinyin": "suibinxian",
+	"zip_code": "156200",
+	"parent_code": "230400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "230500",
+	"name": "\u53cc\u9e2d\u5c71\u5e02",
+	"pinyin": "shuangyashanshi",
+	"zip_code": "155100",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "230502",
+	"name": "\u5c16\u5c71\u533a",
+	"pinyin": "jianshanqu",
+	"zip_code": "155100",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230503",
+	"name": "\u5cad\u4e1c\u533a",
+	"pinyin": "lingdongqu",
+	"zip_code": "155120",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "230505",
+	"name": "\u56db\u65b9\u53f0\u533a",
+	"pinyin": "sifangtaiqu",
+	"zip_code": "155130",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "230506",
+	"name": "\u5b9d\u5c71\u533a",
+	"pinyin": "baoshanqu",
+	"zip_code": "155131",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "230521",
+	"name": "\u96c6\u8d24\u53bf",
+	"pinyin": "jixianxian",
+	"zip_code": "155900",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230522",
+	"name": "\u53cb\u8c0a\u53bf",
+	"pinyin": "youyixian",
+	"zip_code": "155800",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "230523",
+	"name": "\u5b9d\u6e05\u53bf",
+	"pinyin": "baoqingxian",
+	"zip_code": "155600",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "230524",
+	"name": "\u9976\u6cb3\u53bf",
+	"pinyin": "raohexian",
+	"zip_code": "155700",
+	"parent_code": "230500",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "230600",
+	"name": "\u5927\u5e86\u5e02",
+	"pinyin": "daqingshi",
+	"zip_code": "163000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "230602",
+	"name": "\u8428\u5c14\u56fe\u533a",
+	"pinyin": "saertuqu",
+	"zip_code": "163001",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "230603",
+	"name": "\u9f99\u51e4\u533a",
+	"pinyin": "longfengqu",
+	"zip_code": "163711",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "230604",
+	"name": "\u8ba9\u80e1\u8def\u533a",
+	"pinyin": "ranghuluqu",
+	"zip_code": "163712",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "230605",
+	"name": "\u7ea2\u5c97\u533a",
+	"pinyin": "honggangqu",
+	"zip_code": "163511",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "230606",
+	"name": "\u5927\u540c\u533a",
+	"pinyin": "datongqu",
+	"zip_code": "163515",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230621",
+	"name": "\u8087\u5dde\u53bf",
+	"pinyin": "zhaozhouxian",
+	"zip_code": "166400",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "230622",
+	"name": "\u8087\u6e90\u53bf",
+	"pinyin": "zhaoyuanxian",
+	"zip_code": "166500",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "230623",
+	"name": "\u6797\u7538\u53bf",
+	"pinyin": "lindianxian",
+	"zip_code": "166300",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "230624",
+	"name": "\u675c\u5c14\u4f2f\u7279\u8499\u53e4\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "duerbaitemengguzuzizhixian",
+	"zip_code": "166200",
+	"parent_code": "230600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230700",
+	"name": "\u4f0a\u6625\u5e02",
+	"pinyin": "yichunshi",
+	"zip_code": "153000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "230702",
+	"name": "\u4f0a\u6625\u533a",
+	"pinyin": "yichunqu",
+	"zip_code": "153000",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "230703",
+	"name": "\u5357\u5c94\u533a",
+	"pinyin": "nanchaqu",
+	"zip_code": "153100",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "230704",
+	"name": "\u53cb\u597d\u533a",
+	"pinyin": "youhaoqu",
+	"zip_code": "153031",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "230705",
+	"name": "\u897f\u6797\u533a",
+	"pinyin": "xilinqu",
+	"zip_code": "153025",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230706",
+	"name": "\u7fe0\u5ce6\u533a",
+	"pinyin": "cuiluanqu",
+	"zip_code": "153013",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "230707",
+	"name": "\u65b0\u9752\u533a",
+	"pinyin": "xinqingqu",
+	"zip_code": "153036",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230708",
+	"name": "\u7f8e\u6eaa\u533a",
+	"pinyin": "meixiqu",
+	"zip_code": "153021",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "230709",
+	"name": "\u91d1\u5c71\u5c6f\u533a",
+	"pinyin": "jinshantunqu",
+	"zip_code": "153026",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230710",
+	"name": "\u4e94\u8425\u533a",
+	"pinyin": "wuyingqu",
+	"zip_code": "153033",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "230711",
+	"name": "\u4e4c\u9a6c\u6cb3\u533a",
+	"pinyin": "wumahequ",
+	"zip_code": "153011",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "230712",
+	"name": "\u6c64\u65fa\u6cb3\u533a",
+	"pinyin": "tangwanghequ",
+	"zip_code": "153037",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230713",
+	"name": "\u5e26\u5cad\u533a",
+	"pinyin": "dailingqu",
+	"zip_code": "153106",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230714",
+	"name": "\u4e4c\u4f0a\u5cad\u533a",
+	"pinyin": "wuyilingqu",
+	"zip_code": "153038",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "230715",
+	"name": "\u7ea2\u661f\u533a",
+	"pinyin": "hongxingqu",
+	"zip_code": "153035",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "230716",
+	"name": "\u4e0a\u7518\u5cad\u533a",
+	"pinyin": "shangganlingqu",
+	"zip_code": "153032",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "230722",
+	"name": "\u5609\u836b\u53bf",
+	"pinyin": "jiayinxian",
+	"zip_code": "153200",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230781",
+	"name": "\u94c1\u529b\u5e02",
+	"pinyin": "tielishi",
+	"zip_code": "152500",
+	"parent_code": "230700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230800",
+	"name": "\u4f73\u6728\u65af\u5e02",
+	"pinyin": "jiamusishi",
+	"zip_code": "154000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "230803",
+	"name": "\u5411\u9633\u533a",
+	"pinyin": "xiangyangqu",
+	"zip_code": "154002",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230804",
+	"name": "\u524d\u8fdb\u533a",
+	"pinyin": "qianjinqu",
+	"zip_code": "154002",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "230805",
+	"name": "\u4e1c\u98ce\u533a",
+	"pinyin": "dongfengqu",
+	"zip_code": "154005",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "230811",
+	"name": "\u90ca\u533a",
+	"pinyin": "jiaoqu",
+	"zip_code": "244000",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "230822",
+	"name": "\u6866\u5357\u53bf",
+	"pinyin": "huananxian",
+	"zip_code": "154400",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "230826",
+	"name": "\u6866\u5ddd\u53bf",
+	"pinyin": "huachuanxian",
+	"zip_code": "154300",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "230828",
+	"name": "\u6c64\u539f\u53bf",
+	"pinyin": "tangyuanxian",
+	"zip_code": "154700",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230881",
+	"name": "\u540c\u6c5f\u5e02",
+	"pinyin": "tongjiangshi",
+	"zip_code": "156400",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230882",
+	"name": "\u5bcc\u9526\u5e02",
+	"pinyin": "fujinshi",
+	"zip_code": "156100",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "230883",
+	"name": "\u629a\u8fdc\u5e02",
+	"pinyin": "fuyuanshi",
+	"zip_code": "156500",
+	"parent_code": "230800",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "230900",
+	"name": "\u4e03\u53f0\u6cb3\u5e02",
+	"pinyin": "qitaiheshi",
+	"zip_code": "154600",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "230902",
+	"name": "\u65b0\u5174\u533a",
+	"pinyin": "xinxingqu",
+	"zip_code": "154604",
+	"parent_code": "230900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "230903",
+	"name": "\u6843\u5c71\u533a",
+	"pinyin": "taoshanqu",
+	"zip_code": "154600",
+	"parent_code": "230900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "230904",
+	"name": "\u8304\u5b50\u6cb3\u533a",
+	"pinyin": "qiezihequ",
+	"zip_code": "154622",
+	"parent_code": "230900",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "230921",
+	"name": "\u52c3\u5229\u53bf",
+	"pinyin": "bolixian",
+	"zip_code": "154500",
+	"parent_code": "230900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "231000",
+	"name": "\u7261\u4e39\u6c5f\u5e02",
+	"pinyin": "mudanjiangshi",
+	"zip_code": "157000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "M"
+}, {
+	"code": "231002",
+	"name": "\u4e1c\u5b89\u533a",
+	"pinyin": "donganqu",
+	"zip_code": "157000",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "231003",
+	"name": "\u9633\u660e\u533a",
+	"pinyin": "yangmingqu",
+	"zip_code": "157013",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "231004",
+	"name": "\u7231\u6c11\u533a",
+	"pinyin": "aiminqu",
+	"zip_code": "157009",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "231005",
+	"name": "\u897f\u5b89\u533a",
+	"pinyin": "xianqu",
+	"zip_code": "157000",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "231025",
+	"name": "\u6797\u53e3\u53bf",
+	"pinyin": "linkouxian",
+	"zip_code": "157600",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "231081",
+	"name": "\u7ee5\u82ac\u6cb3\u5e02",
+	"pinyin": "suifenheshi",
+	"zip_code": "157300",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "231083",
+	"name": "\u6d77\u6797\u5e02",
+	"pinyin": "hailinshi",
+	"zip_code": "157100",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "231084",
+	"name": "\u5b81\u5b89\u5e02",
+	"pinyin": "ninganshi",
+	"zip_code": "157400",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "231085",
+	"name": "\u7a46\u68f1\u5e02",
+	"pinyin": "mulingshi",
+	"zip_code": "157500",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "231086",
+	"name": "\u4e1c\u5b81\u5e02",
+	"pinyin": "dongningshi",
+	"zip_code": "157200",
+	"parent_code": "231000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "231100",
+	"name": "\u9ed1\u6cb3\u5e02",
+	"pinyin": "heiheshi",
+	"zip_code": "164300",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "231102",
+	"name": "\u7231\u8f89\u533a",
+	"pinyin": "aihuiqu",
+	"zip_code": "164300",
+	"parent_code": "231100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "231121",
+	"name": "\u5ae9\u6c5f\u53bf",
+	"pinyin": "nenjiangxian",
+	"zip_code": "161400",
+	"parent_code": "231100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "231123",
+	"name": "\u900a\u514b\u53bf",
+	"pinyin": "xunkexian",
+	"zip_code": "164400",
+	"parent_code": "231100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "231124",
+	"name": "\u5b59\u5434\u53bf",
+	"pinyin": "sunwuxian",
+	"zip_code": "164200",
+	"parent_code": "231100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "231181",
+	"name": "\u5317\u5b89\u5e02",
+	"pinyin": "beianshi",
+	"zip_code": "164000",
+	"parent_code": "231100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "231182",
+	"name": "\u4e94\u5927\u8fde\u6c60\u5e02",
+	"pinyin": "wudalianchishi",
+	"zip_code": "164100",
+	"parent_code": "231100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "231200",
+	"name": "\u7ee5\u5316\u5e02",
+	"pinyin": "suihuashi",
+	"zip_code": "152000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "231202",
+	"name": "\u5317\u6797\u533a",
+	"pinyin": "beilinqu",
+	"zip_code": "152000",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "231221",
+	"name": "\u671b\u594e\u53bf",
+	"pinyin": "wangkuixian",
+	"zip_code": "152100",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "231222",
+	"name": "\u5170\u897f\u53bf",
+	"pinyin": "lanxixian",
+	"zip_code": "151500",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "231223",
+	"name": "\u9752\u5188\u53bf",
+	"pinyin": "qinggangxian",
+	"zip_code": "151600",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "231224",
+	"name": "\u5e86\u5b89\u53bf",
+	"pinyin": "qinganxian",
+	"zip_code": "152400",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "231225",
+	"name": "\u660e\u6c34\u53bf",
+	"pinyin": "mingshuixian",
+	"zip_code": "151700",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "231226",
+	"name": "\u7ee5\u68f1\u53bf",
+	"pinyin": "suilingxian",
+	"zip_code": "152200",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "231281",
+	"name": "\u5b89\u8fbe\u5e02",
+	"pinyin": "andashi",
+	"zip_code": "151400",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "231282",
+	"name": "\u8087\u4e1c\u5e02",
+	"pinyin": "zhaodongshi",
+	"zip_code": "151100",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "231283",
+	"name": "\u6d77\u4f26\u5e02",
+	"pinyin": "hailunshi",
+	"zip_code": "152300",
+	"parent_code": "231200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "232700",
+	"name": "\u5927\u5174\u5b89\u5cad\u5730\u533a",
+	"pinyin": "daxinganlingdiqu",
+	"zip_code": "165000",
+	"parent_code": "230000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "232701",
+	"name": "\u52a0\u683c\u8fbe\u5947\u533a",
+	"pinyin": "jiagedaqiqu",
+	"zip_code": "165000",
+	"parent_code": "232700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "232702",
+	"name": "\u677e\u5cad\u533a",
+	"pinyin": "songlingqu",
+	"zip_code": "165010",
+	"parent_code": "232700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "232703",
+	"name": "\u65b0\u6797\u533a",
+	"pinyin": "xinlinqu",
+	"zip_code": "165000",
+	"parent_code": "232700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "232704",
+	"name": "\u547c\u4e2d\u533a",
+	"pinyin": "huzhongqu",
+	"zip_code": "165036",
+	"parent_code": "232700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "232721",
+	"name": "\u547c\u739b\u53bf",
+	"pinyin": "humaxian",
+	"zip_code": "165100",
+	"parent_code": "232700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "232722",
+	"name": "\u5854\u6cb3\u53bf",
+	"pinyin": "tahexian",
+	"zip_code": "165200",
+	"parent_code": "232700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "232723",
+	"name": "\u6f20\u6cb3\u53bf",
+	"pinyin": "mohexian",
+	"zip_code": "165300",
+	"parent_code": "232700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "310000",
+	"name": "\u4e0a\u6d77\u5e02",
+	"pinyin": "shanghaishi",
+	"zip_code": "200000",
+	"type": 0,
+	"first_letter": "S"
+}, {
+	"code": "310100",
+	"name": "\u4e0a\u6d77\u5e02",
+	"pinyin": "shanghaishi",
+	"zip_code": "200000",
+	"parent_code": "310000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "310101",
+	"name": "\u9ec4\u6d66\u533a",
+	"pinyin": "huangpuqu",
+	"zip_code": "200001",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "310104",
+	"name": "\u5f90\u6c47\u533a",
+	"pinyin": "xuhuiqu",
+	"zip_code": "200030",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "310105",
+	"name": "\u957f\u5b81\u533a",
+	"pinyin": "changningqu",
+	"zip_code": "200050",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "310106",
+	"name": "\u9759\u5b89\u533a",
+	"pinyin": "jinganqu",
+	"zip_code": "200050",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "310107",
+	"name": "\u666e\u9640\u533a",
+	"pinyin": "putuoqu",
+	"zip_code": "200333",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "310109",
+	"name": "\u8679\u53e3\u533a",
+	"pinyin": "hongkouqu",
+	"zip_code": "200080",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "310110",
+	"name": "\u6768\u6d66\u533a",
+	"pinyin": "yangpuqu",
+	"zip_code": "200082",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "310112",
+	"name": "\u95f5\u884c\u533a",
+	"pinyin": "minxingqu",
+	"zip_code": "201100",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "310113",
+	"name": "\u5b9d\u5c71\u533a",
+	"pinyin": "baoshanqu",
+	"zip_code": "201900",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "310114",
+	"name": "\u5609\u5b9a\u533a",
+	"pinyin": "jiadingqu",
+	"zip_code": "201800",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "310115",
+	"name": "\u6d66\u4e1c\u65b0\u533a",
+	"pinyin": "pudongxinqu",
+	"zip_code": "200135",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "310116",
+	"name": "\u91d1\u5c71\u533a",
+	"pinyin": "jinshanqu",
+	"zip_code": "200540",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "310117",
+	"name": "\u677e\u6c5f\u533a",
+	"pinyin": "songjiangqu",
+	"zip_code": "201600",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "310118",
+	"name": "\u9752\u6d66\u533a",
+	"pinyin": "qingpuqu",
+	"zip_code": "201700",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "310120",
+	"name": "\u5949\u8d24\u533a",
+	"pinyin": "fengxianqu",
+	"zip_code": "201400",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "310151",
+	"name": "\u5d07\u660e\u533a",
+	"pinyin": "chongmingqu",
+	"zip_code": "202150",
+	"parent_code": "310100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "320000",
+	"name": "\u6c5f\u82cf\u7701",
+	"pinyin": "jiangsusheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "J"
+}, {
+	"code": "320100",
+	"name": "\u5357\u4eac\u5e02",
+	"pinyin": "nanjingshi",
+	"zip_code": "210000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "320102",
+	"name": "\u7384\u6b66\u533a",
+	"pinyin": "xuanwuqu",
+	"zip_code": "210018",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320104",
+	"name": "\u79e6\u6dee\u533a",
+	"pinyin": "qinhuaiqu",
+	"zip_code": "210001",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "320105",
+	"name": "\u5efa\u90ba\u533a",
+	"pinyin": "jianyequ",
+	"zip_code": "210004",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "320106",
+	"name": "\u9f13\u697c\u533a",
+	"pinyin": "gulouqu",
+	"zip_code": "210009",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320111",
+	"name": "\u6d66\u53e3\u533a",
+	"pinyin": "pukouqu",
+	"zip_code": "211800",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "320113",
+	"name": "\u6816\u971e\u533a",
+	"pinyin": "qixiaqu",
+	"zip_code": "210046",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "320114",
+	"name": "\u96e8\u82b1\u53f0\u533a",
+	"pinyin": "yuhuataiqu",
+	"zip_code": "210012",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "320115",
+	"name": "\u6c5f\u5b81\u533a",
+	"pinyin": "jiangningqu",
+	"zip_code": "211100",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "320116",
+	"name": "\u516d\u5408\u533a",
+	"pinyin": "liuhequ",
+	"zip_code": "211500",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "320117",
+	"name": "\u6ea7\u6c34\u533a",
+	"pinyin": "lishuiqu",
+	"zip_code": "211200",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "320118",
+	"name": "\u9ad8\u6df3\u533a",
+	"pinyin": "gaochunqu",
+	"zip_code": "211300",
+	"parent_code": "320100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320200",
+	"name": "\u65e0\u9521\u5e02",
+	"pinyin": "wuxishi",
+	"zip_code": "214000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "320205",
+	"name": "\u9521\u5c71\u533a",
+	"pinyin": "xishanqu",
+	"zip_code": "214021",
+	"parent_code": "320200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320206",
+	"name": "\u60e0\u5c71\u533a",
+	"pinyin": "huishanqu",
+	"zip_code": "214021",
+	"parent_code": "320200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320211",
+	"name": "\u6ee8\u6e56\u533a",
+	"pinyin": "binhuqu",
+	"zip_code": "214062",
+	"parent_code": "320200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "320213",
+	"name": "\u6881\u6eaa\u533a",
+	"pinyin": "liangxiqu",
+	"zip_code": "214400",
+	"parent_code": "320200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "320214",
+	"name": "\u65b0\u5434\u533a",
+	"pinyin": "xinwuqu",
+	"zip_code": "214200",
+	"parent_code": "320200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320281",
+	"name": "\u6c5f\u9634\u5e02",
+	"pinyin": "jiangyinshi",
+	"zip_code": "214400",
+	"parent_code": "320200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "320282",
+	"name": "\u5b9c\u5174\u5e02",
+	"pinyin": "yixingshi",
+	"zip_code": "214200",
+	"parent_code": "320200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "320300",
+	"name": "\u5f90\u5dde\u5e02",
+	"pinyin": "xuzhoushi",
+	"zip_code": "221000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "320302",
+	"name": "\u9f13\u697c\u533a",
+	"pinyin": "gulouqu",
+	"zip_code": "221005",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320303",
+	"name": "\u4e91\u9f99\u533a",
+	"pinyin": "yunlongqu",
+	"zip_code": "221009",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "320305",
+	"name": "\u8d3e\u6c6a\u533a",
+	"pinyin": "jiawangqu",
+	"zip_code": "221011",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "320311",
+	"name": "\u6cc9\u5c71\u533a",
+	"pinyin": "quanshanqu",
+	"zip_code": "221006",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "320312",
+	"name": "\u94dc\u5c71\u533a",
+	"pinyin": "tongshanqu",
+	"zip_code": "221000",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "320321",
+	"name": "\u4e30\u53bf",
+	"pinyin": "fengxian",
+	"zip_code": "221700",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "320322",
+	"name": "\u6c9b\u53bf",
+	"pinyin": "peixian",
+	"zip_code": "221600",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "320324",
+	"name": "\u7762\u5b81\u53bf",
+	"pinyin": "suiningxian",
+	"zip_code": "221200",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "320381",
+	"name": "\u65b0\u6c82\u5e02",
+	"pinyin": "xinyishi",
+	"zip_code": "221400",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320382",
+	"name": "\u90b3\u5dde\u5e02",
+	"pinyin": "pizhoushi",
+	"zip_code": "221300",
+	"parent_code": "320300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "320400",
+	"name": "\u5e38\u5dde\u5e02",
+	"pinyin": "changzhoushi",
+	"zip_code": "213000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "320402",
+	"name": "\u5929\u5b81\u533a",
+	"pinyin": "tianningqu",
+	"zip_code": "213003",
+	"parent_code": "320400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "320404",
+	"name": "\u949f\u697c\u533a",
+	"pinyin": "zhonglouqu",
+	"zip_code": "213002",
+	"parent_code": "320400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "320411",
+	"name": "\u65b0\u5317\u533a",
+	"pinyin": "xinbeiqu",
+	"zip_code": "213001",
+	"parent_code": "320400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320412",
+	"name": "\u6b66\u8fdb\u533a",
+	"pinyin": "wujinqu",
+	"zip_code": "213161",
+	"parent_code": "320400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "320413",
+	"name": "\u91d1\u575b\u533a",
+	"pinyin": "jintanqu",
+	"zip_code": "213200",
+	"parent_code": "320400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "320481",
+	"name": "\u6ea7\u9633\u5e02",
+	"pinyin": "liyangshi",
+	"zip_code": "213300",
+	"parent_code": "320400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "320500",
+	"name": "\u82cf\u5dde\u5e02",
+	"pinyin": "suzhoushi",
+	"zip_code": "215000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "320505",
+	"name": "\u864e\u4e18\u533a",
+	"pinyin": "huqiuqu",
+	"zip_code": "215004",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320506",
+	"name": "\u5434\u4e2d\u533a",
+	"pinyin": "wuzhongqu",
+	"zip_code": "215128",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "320507",
+	"name": "\u76f8\u57ce\u533a",
+	"pinyin": "xiangchengqu",
+	"zip_code": "215131",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320508",
+	"name": "\u59d1\u82cf\u533a",
+	"pinyin": "gusuqu",
+	"zip_code": "215000",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320509",
+	"name": "\u5434\u6c5f\u533a",
+	"pinyin": "wujiangqu",
+	"zip_code": "215000",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "320581",
+	"name": "\u5e38\u719f\u5e02",
+	"pinyin": "changshushi",
+	"zip_code": "215500",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "320582",
+	"name": "\u5f20\u5bb6\u6e2f\u5e02",
+	"pinyin": "zhangjiagangshi",
+	"zip_code": "215600",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "320583",
+	"name": "\u6606\u5c71\u5e02",
+	"pinyin": "kunshanshi",
+	"zip_code": "215300",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "320585",
+	"name": "\u592a\u4ed3\u5e02",
+	"pinyin": "taicangshi",
+	"zip_code": "215400",
+	"parent_code": "320500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "320600",
+	"name": "\u5357\u901a\u5e02",
+	"pinyin": "nantongshi",
+	"zip_code": "226000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "320602",
+	"name": "\u5d07\u5ddd\u533a",
+	"pinyin": "chongchuanqu",
+	"zip_code": "226001",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "320611",
+	"name": "\u6e2f\u95f8\u533a",
+	"pinyin": "gangzhaqu",
+	"zip_code": "226001",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320612",
+	"name": "\u901a\u5dde\u533a",
+	"pinyin": "tongzhouqu",
+	"zip_code": "226300",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "320621",
+	"name": "\u6d77\u5b89\u53bf",
+	"pinyin": "haianxian",
+	"zip_code": "226600",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320623",
+	"name": "\u5982\u4e1c\u53bf",
+	"pinyin": "rudongxian",
+	"zip_code": "226400",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "320681",
+	"name": "\u542f\u4e1c\u5e02",
+	"pinyin": "qidongshi",
+	"zip_code": "226200",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "320682",
+	"name": "\u5982\u768b\u5e02",
+	"pinyin": "rugaoshi",
+	"zip_code": "226500",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "320684",
+	"name": "\u6d77\u95e8\u5e02",
+	"pinyin": "haimenshi",
+	"zip_code": "226100",
+	"parent_code": "320600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320700",
+	"name": "\u8fde\u4e91\u6e2f\u5e02",
+	"pinyin": "lianyungangshi",
+	"zip_code": "222000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "320703",
+	"name": "\u8fde\u4e91\u533a",
+	"pinyin": "lianyunqu",
+	"zip_code": "222042",
+	"parent_code": "320700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "320706",
+	"name": "\u6d77\u5dde\u533a",
+	"pinyin": "haizhouqu",
+	"zip_code": "222023",
+	"parent_code": "320700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320707",
+	"name": "\u8d63\u6986\u533a",
+	"pinyin": "ganyuqu",
+	"zip_code": "222100",
+	"parent_code": "320700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320722",
+	"name": "\u4e1c\u6d77\u53bf",
+	"pinyin": "donghaixian",
+	"zip_code": "222300",
+	"parent_code": "320700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "320723",
+	"name": "\u704c\u4e91\u53bf",
+	"pinyin": "guanyunxian",
+	"zip_code": "222200",
+	"parent_code": "320700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320724",
+	"name": "\u704c\u5357\u53bf",
+	"pinyin": "guannanxian",
+	"zip_code": "223500",
+	"parent_code": "320700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "320800",
+	"name": "\u6dee\u5b89\u5e02",
+	"pinyin": "huaianshi",
+	"zip_code": "223001",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "320803",
+	"name": "\u6dee\u5b89\u533a",
+	"pinyin": "huaianqu",
+	"zip_code": "223001",
+	"parent_code": "320800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320804",
+	"name": "\u6dee\u9634\u533a",
+	"pinyin": "huaiyinqu",
+	"zip_code": "223300",
+	"parent_code": "320800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320812",
+	"name": "\u6e05\u6c5f\u6d66\u533a",
+	"pinyin": "qingjiangpuqu",
+	"zip_code": "223002",
+	"parent_code": "320800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "320813",
+	"name": "\u6d2a\u6cfd\u533a",
+	"pinyin": "hongzequ",
+	"zip_code": "223100",
+	"parent_code": "320800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "320826",
+	"name": "\u6d9f\u6c34\u53bf",
+	"pinyin": "lianshuixian",
+	"zip_code": "223400",
+	"parent_code": "320800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "320830",
+	"name": "\u76f1\u7719\u53bf",
+	"pinyin": "xuyixian",
+	"zip_code": "211700",
+	"parent_code": "320800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320831",
+	"name": "\u91d1\u6e56\u53bf",
+	"pinyin": "jinhuxian",
+	"zip_code": "211600",
+	"parent_code": "320800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "320900",
+	"name": "\u76d0\u57ce\u5e02",
+	"pinyin": "yanchengshi",
+	"zip_code": "224000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "320902",
+	"name": "\u4ead\u6e56\u533a",
+	"pinyin": "tinghuqu",
+	"zip_code": "224005",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "320903",
+	"name": "\u76d0\u90fd\u533a",
+	"pinyin": "yanduqu",
+	"zip_code": "224055",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "320904",
+	"name": "\u5927\u4e30\u533a",
+	"pinyin": "dafengqu",
+	"zip_code": "224100",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "320921",
+	"name": "\u54cd\u6c34\u53bf",
+	"pinyin": "xiangshuixian",
+	"zip_code": "224600",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "320922",
+	"name": "\u6ee8\u6d77\u53bf",
+	"pinyin": "binhaixian",
+	"zip_code": "224500",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "320923",
+	"name": "\u961c\u5b81\u53bf",
+	"pinyin": "funingxian",
+	"zip_code": "224400",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "320924",
+	"name": "\u5c04\u9633\u53bf",
+	"pinyin": "sheyangxian",
+	"zip_code": "224300",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "320925",
+	"name": "\u5efa\u6e56\u53bf",
+	"pinyin": "jianhuxian",
+	"zip_code": "224700",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "320981",
+	"name": "\u4e1c\u53f0\u5e02",
+	"pinyin": "dongtaishi",
+	"zip_code": "224200",
+	"parent_code": "320900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "321000",
+	"name": "\u626c\u5dde\u5e02",
+	"pinyin": "yangzhoushi",
+	"zip_code": "225000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "321002",
+	"name": "\u5e7f\u9675\u533a",
+	"pinyin": "guanglingqu",
+	"zip_code": "225002",
+	"parent_code": "321000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "321003",
+	"name": "\u9097\u6c5f\u533a",
+	"pinyin": "hanjiangqu",
+	"zip_code": "225002",
+	"parent_code": "321000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "321012",
+	"name": "\u6c5f\u90fd\u533a",
+	"pinyin": "jiangduqu",
+	"zip_code": "0",
+	"parent_code": "321000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "321023",
+	"name": "\u5b9d\u5e94\u53bf",
+	"pinyin": "baoyingxian",
+	"zip_code": "225800",
+	"parent_code": "321000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "321081",
+	"name": "\u4eea\u5f81\u5e02",
+	"pinyin": "yizhengshi",
+	"zip_code": "211400",
+	"parent_code": "321000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "321084",
+	"name": "\u9ad8\u90ae\u5e02",
+	"pinyin": "gaoyoushi",
+	"zip_code": "225600",
+	"parent_code": "321000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "321100",
+	"name": "\u9547\u6c5f\u5e02",
+	"pinyin": "zhenjiangshi",
+	"zip_code": "212000",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "321102",
+	"name": "\u4eac\u53e3\u533a",
+	"pinyin": "jingkouqu",
+	"zip_code": "212001",
+	"parent_code": "321100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "321111",
+	"name": "\u6da6\u5dde\u533a",
+	"pinyin": "runzhouqu",
+	"zip_code": "212004",
+	"parent_code": "321100",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "321112",
+	"name": "\u4e39\u5f92\u533a",
+	"pinyin": "dantuqu",
+	"zip_code": "212001",
+	"parent_code": "321100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "321181",
+	"name": "\u4e39\u9633\u5e02",
+	"pinyin": "danyangshi",
+	"zip_code": "212300",
+	"parent_code": "321100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "321182",
+	"name": "\u626c\u4e2d\u5e02",
+	"pinyin": "yangzhongshi",
+	"zip_code": "212200",
+	"parent_code": "321100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "321183",
+	"name": "\u53e5\u5bb9\u5e02",
+	"pinyin": "jurongshi",
+	"zip_code": "212400",
+	"parent_code": "321100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "321200",
+	"name": "\u6cf0\u5dde\u5e02",
+	"pinyin": "taizhoushi",
+	"zip_code": "225300",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "321202",
+	"name": "\u6d77\u9675\u533a",
+	"pinyin": "hailingqu",
+	"zip_code": "225300",
+	"parent_code": "321200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "321203",
+	"name": "\u9ad8\u6e2f\u533a",
+	"pinyin": "gaogangqu",
+	"zip_code": "225321",
+	"parent_code": "321200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "321204",
+	"name": "\u59dc\u5830\u533a",
+	"pinyin": "jiangyanqu",
+	"zip_code": "225500",
+	"parent_code": "321200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "321281",
+	"name": "\u5174\u5316\u5e02",
+	"pinyin": "xinghuashi",
+	"zip_code": "225700",
+	"parent_code": "321200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "321282",
+	"name": "\u9756\u6c5f\u5e02",
+	"pinyin": "jingjiangshi",
+	"zip_code": "214500",
+	"parent_code": "321200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "321283",
+	"name": "\u6cf0\u5174\u5e02",
+	"pinyin": "taixingshi",
+	"zip_code": "225400",
+	"parent_code": "321200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "321300",
+	"name": "\u5bbf\u8fc1\u5e02",
+	"pinyin": "suqianshi",
+	"zip_code": "223800",
+	"parent_code": "320000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "321302",
+	"name": "\u5bbf\u57ce\u533a",
+	"pinyin": "suchengqu",
+	"zip_code": "223800",
+	"parent_code": "321300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "321311",
+	"name": "\u5bbf\u8c6b\u533a",
+	"pinyin": "suyuqu",
+	"zip_code": "223800",
+	"parent_code": "321300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "321322",
+	"name": "\u6cad\u9633\u53bf",
+	"pinyin": "shuyangxian",
+	"zip_code": "223600",
+	"parent_code": "321300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "321323",
+	"name": "\u6cd7\u9633\u53bf",
+	"pinyin": "siyangxian",
+	"zip_code": "223700",
+	"parent_code": "321300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "321324",
+	"name": "\u6cd7\u6d2a\u53bf",
+	"pinyin": "sihongxian",
+	"zip_code": "223900",
+	"parent_code": "321300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "330000",
+	"name": "\u6d59\u6c5f\u7701",
+	"pinyin": "zhejiangsheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "Z"
+}, {
+	"code": "330100",
+	"name": "\u676d\u5dde\u5e02",
+	"pinyin": "hangzhoushi",
+	"zip_code": "310000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "330102",
+	"name": "\u4e0a\u57ce\u533a",
+	"pinyin": "shangchengqu",
+	"zip_code": "310002",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "330105",
+	"name": "\u62f1\u5885\u533a",
+	"pinyin": "gongshuqu",
+	"zip_code": "310011",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "330106",
+	"name": "\u897f\u6e56\u533a",
+	"pinyin": "xihuqu",
+	"zip_code": "310013",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "330108",
+	"name": "\u6ee8\u6c5f\u533a",
+	"pinyin": "binjiangqu",
+	"zip_code": "310051",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "330109",
+	"name": "\u8427\u5c71\u533a",
+	"pinyin": "xiaoshanqu",
+	"zip_code": "311200",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "330110",
+	"name": "\u4f59\u676d\u533a",
+	"pinyin": "yuhangqu",
+	"zip_code": "311100",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "330111",
+	"name": "\u5bcc\u9633\u533a",
+	"pinyin": "fuyangqu",
+	"zip_code": "311400",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "330112",
+	"name": "\u4e34\u5b89\u533a",
+	"pinyin": "linanqu",
+	"zip_code": "311300",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "330113",
+	"name": "\u4e34\u5e73\u533a",
+	"pinyin": "linpingqu",
+	"zip_code": "311100",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "330114",
+	"name": "\u94b1\u5858\u533a",
+	"pinyin": "qiantangqu",
+	"zip_code": "311100",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "330122",
+	"name": "\u6850\u5e90\u53bf",
+	"pinyin": "tongluxian",
+	"zip_code": "311500",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "330127",
+	"name": "\u6df3\u5b89\u53bf",
+	"pinyin": "chunanxian",
+	"zip_code": "311700",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "330182",
+	"name": "\u5efa\u5fb7\u5e02",
+	"pinyin": "jiandeshi",
+	"zip_code": "311600",
+	"parent_code": "330100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "330200",
+	"name": "\u5b81\u6ce2\u5e02",
+	"pinyin": "ningboshi",
+	"zip_code": "315000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "330203",
+	"name": "\u6d77\u66d9\u533a",
+	"pinyin": "haishuqu",
+	"zip_code": "315000",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "330205",
+	"name": "\u6c5f\u5317\u533a",
+	"pinyin": "jiangbeiqu",
+	"zip_code": "315040",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "330206",
+	"name": "\u5317\u4ed1\u533a",
+	"pinyin": "beilunqu",
+	"zip_code": "315800",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "330211",
+	"name": "\u9547\u6d77\u533a",
+	"pinyin": "zhenhaiqu",
+	"zip_code": "315200",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "330212",
+	"name": "\u911e\u5dde\u533a",
+	"pinyin": "yinzhouqu",
+	"zip_code": "315100",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "330213",
+	"name": "\u5949\u5316\u533a",
+	"pinyin": "fenghuaqu",
+	"zip_code": "315500",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "330225",
+	"name": "\u8c61\u5c71\u53bf",
+	"pinyin": "xiangshanxian",
+	"zip_code": "315700",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "330226",
+	"name": "\u5b81\u6d77\u53bf",
+	"pinyin": "ninghaixian",
+	"zip_code": "315600",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "330281",
+	"name": "\u4f59\u59da\u5e02",
+	"pinyin": "yuyaoshi",
+	"zip_code": "315400",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "330282",
+	"name": "\u6148\u6eaa\u5e02",
+	"pinyin": "cixishi",
+	"zip_code": "315300",
+	"parent_code": "330200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "330300",
+	"name": "\u6e29\u5dde\u5e02",
+	"pinyin": "wenzhoushi",
+	"zip_code": "325000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "330302",
+	"name": "\u9e7f\u57ce\u533a",
+	"pinyin": "luchengqu",
+	"zip_code": "325000",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "330303",
+	"name": "\u9f99\u6e7e\u533a",
+	"pinyin": "longwanqu",
+	"zip_code": "325013",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "330304",
+	"name": "\u74ef\u6d77\u533a",
+	"pinyin": "ouhaiqu",
+	"zip_code": "325005",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "O"
+}, {
+	"code": "330305",
+	"name": "\u6d1e\u5934\u533a",
+	"pinyin": "dongtouqu",
+	"zip_code": "325700",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "330324",
+	"name": "\u6c38\u5609\u53bf",
+	"pinyin": "yongjiaxian",
+	"zip_code": "315100",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "330326",
+	"name": "\u5e73\u9633\u53bf",
+	"pinyin": "pingyangxian",
+	"zip_code": "325400",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "330327",
+	"name": "\u82cd\u5357\u53bf",
+	"pinyin": "cangnanxian",
+	"zip_code": "325800",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "330328",
+	"name": "\u6587\u6210\u53bf",
+	"pinyin": "wenchengxian",
+	"zip_code": "325300",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "330329",
+	"name": "\u6cf0\u987a\u53bf",
+	"pinyin": "taishunxian",
+	"zip_code": "325500",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "330381",
+	"name": "\u745e\u5b89\u5e02",
+	"pinyin": "ruianshi",
+	"zip_code": "325200",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "330382",
+	"name": "\u4e50\u6e05\u5e02",
+	"pinyin": "leqingshi",
+	"zip_code": "325600",
+	"parent_code": "330300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "330400",
+	"name": "\u5609\u5174\u5e02",
+	"pinyin": "jiaxingshi",
+	"zip_code": "314000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "330402",
+	"name": "\u5357\u6e56\u533a",
+	"pinyin": "nanhuqu",
+	"zip_code": "314001",
+	"parent_code": "330400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "330411",
+	"name": "\u79c0\u6d32\u533a",
+	"pinyin": "xiuzhouqu",
+	"zip_code": "314001",
+	"parent_code": "330400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "330421",
+	"name": "\u5609\u5584\u53bf",
+	"pinyin": "jiashanxian",
+	"zip_code": "314100",
+	"parent_code": "330400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "330424",
+	"name": "\u6d77\u76d0\u53bf",
+	"pinyin": "haiyanxian",
+	"zip_code": "314300",
+	"parent_code": "330400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "330481",
+	"name": "\u6d77\u5b81\u5e02",
+	"pinyin": "hainingshi",
+	"zip_code": "314400",
+	"parent_code": "330400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "330482",
+	"name": "\u5e73\u6e56\u5e02",
+	"pinyin": "pinghushi",
+	"zip_code": "314200",
+	"parent_code": "330400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "330483",
+	"name": "\u6850\u4e61\u5e02",
+	"pinyin": "tongxiangshi",
+	"zip_code": "314500",
+	"parent_code": "330400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "330500",
+	"name": "\u6e56\u5dde\u5e02",
+	"pinyin": "huzhoushi",
+	"zip_code": "313000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "330502",
+	"name": "\u5434\u5174\u533a",
+	"pinyin": "wuxingqu",
+	"zip_code": "313000",
+	"parent_code": "330500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "330503",
+	"name": "\u5357\u6d54\u533a",
+	"pinyin": "nanxunqu",
+	"zip_code": "313009",
+	"parent_code": "330500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "330521",
+	"name": "\u5fb7\u6e05\u53bf",
+	"pinyin": "deqingxian",
+	"zip_code": "313200",
+	"parent_code": "330500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "330522",
+	"name": "\u957f\u5174\u53bf",
+	"pinyin": "changxingxian",
+	"zip_code": "313100",
+	"parent_code": "330500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "330523",
+	"name": "\u5b89\u5409\u53bf",
+	"pinyin": "anjixian",
+	"zip_code": "313300",
+	"parent_code": "330500",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "330600",
+	"name": "\u7ecd\u5174\u5e02",
+	"pinyin": "shaoxingshi",
+	"zip_code": "312000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "330602",
+	"name": "\u8d8a\u57ce\u533a",
+	"pinyin": "yuechengqu",
+	"zip_code": "312000",
+	"parent_code": "330600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "330603",
+	"name": "\u67ef\u6865\u533a",
+	"pinyin": "keqiaoqu",
+	"zip_code": "312000",
+	"parent_code": "330600",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "330604",
+	"name": "\u4e0a\u865e\u533a",
+	"pinyin": "shangyuqu",
+	"zip_code": "312300",
+	"parent_code": "330600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "330624",
+	"name": "\u65b0\u660c\u53bf",
+	"pinyin": "xinchangxian",
+	"zip_code": "312500",
+	"parent_code": "330600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "330681",
+	"name": "\u8bf8\u66a8\u5e02",
+	"pinyin": "zhujishi",
+	"zip_code": "311800",
+	"parent_code": "330600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "330683",
+	"name": "\u5d4a\u5dde\u5e02",
+	"pinyin": "shengzhoushi",
+	"zip_code": "312400",
+	"parent_code": "330600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "330700",
+	"name": "\u91d1\u534e\u5e02",
+	"pinyin": "jinhuashi",
+	"zip_code": "321000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "330702",
+	"name": "\u5a7a\u57ce\u533a",
+	"pinyin": "wuchengqu",
+	"zip_code": "321000",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "330703",
+	"name": "\u91d1\u4e1c\u533a",
+	"pinyin": "jindongqu",
+	"zip_code": "321000",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "330723",
+	"name": "\u6b66\u4e49\u53bf",
+	"pinyin": "wuyixian",
+	"zip_code": "321200",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "330726",
+	"name": "\u6d66\u6c5f\u53bf",
+	"pinyin": "pujiangxian",
+	"zip_code": "322200",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "330727",
+	"name": "\u78d0\u5b89\u53bf",
+	"pinyin": "pananxian",
+	"zip_code": "322300",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "330781",
+	"name": "\u5170\u6eaa\u5e02",
+	"pinyin": "lanxishi",
+	"zip_code": "321100",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "330782",
+	"name": "\u4e49\u4e4c\u5e02",
+	"pinyin": "yiwushi",
+	"zip_code": "322000",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "330783",
+	"name": "\u4e1c\u9633\u5e02",
+	"pinyin": "dongyangshi",
+	"zip_code": "322100",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "330784",
+	"name": "\u6c38\u5eb7\u5e02",
+	"pinyin": "yongkangshi",
+	"zip_code": "321300",
+	"parent_code": "330700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "330800",
+	"name": "\u8862\u5dde\u5e02",
+	"pinyin": "quzhoushi",
+	"zip_code": "324000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "330802",
+	"name": "\u67ef\u57ce\u533a",
+	"pinyin": "kechengqu",
+	"zip_code": "324100",
+	"parent_code": "330800",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "330803",
+	"name": "\u8862\u6c5f\u533a",
+	"pinyin": "qujiangqu",
+	"zip_code": "324022",
+	"parent_code": "330800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "330822",
+	"name": "\u5e38\u5c71\u53bf",
+	"pinyin": "changshanxian",
+	"zip_code": "324200",
+	"parent_code": "330800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "330824",
+	"name": "\u5f00\u5316\u53bf",
+	"pinyin": "kaihuaxian",
+	"zip_code": "324300",
+	"parent_code": "330800",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "330825",
+	"name": "\u9f99\u6e38\u53bf",
+	"pinyin": "longyouxian",
+	"zip_code": "324400",
+	"parent_code": "330800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "330881",
+	"name": "\u6c5f\u5c71\u5e02",
+	"pinyin": "jiangshanshi",
+	"zip_code": "324100",
+	"parent_code": "330800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "330900",
+	"name": "\u821f\u5c71\u5e02",
+	"pinyin": "zhoushanshi",
+	"zip_code": "316000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "330902",
+	"name": "\u5b9a\u6d77\u533a",
+	"pinyin": "dinghaiqu",
+	"zip_code": "316000",
+	"parent_code": "330900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "330903",
+	"name": "\u666e\u9640\u533a",
+	"pinyin": "putuoqu",
+	"zip_code": "316100",
+	"parent_code": "330900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "330921",
+	"name": "\u5cb1\u5c71\u53bf",
+	"pinyin": "daishanxian",
+	"zip_code": "316200",
+	"parent_code": "330900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "330922",
+	"name": "\u5d4a\u6cd7\u53bf",
+	"pinyin": "shengsixian",
+	"zip_code": "202450",
+	"parent_code": "330900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "331000",
+	"name": "\u53f0\u5dde\u5e02",
+	"pinyin": "taizhoushi",
+	"zip_code": "318000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "331002",
+	"name": "\u6912\u6c5f\u533a",
+	"pinyin": "jiaojiangqu",
+	"zip_code": "318000",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "331003",
+	"name": "\u9ec4\u5ca9\u533a",
+	"pinyin": "huangyanqu",
+	"zip_code": "318020",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "331004",
+	"name": "\u8def\u6865\u533a",
+	"pinyin": "luqiaoqu",
+	"zip_code": "318050",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "331022",
+	"name": "\u4e09\u95e8\u53bf",
+	"pinyin": "sanmenxian",
+	"zip_code": "317100",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "331023",
+	"name": "\u5929\u53f0\u53bf",
+	"pinyin": "tiantaixian",
+	"zip_code": "317200",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "331024",
+	"name": "\u4ed9\u5c45\u53bf",
+	"pinyin": "xianjuxian",
+	"zip_code": "317300",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "331081",
+	"name": "\u6e29\u5cad\u5e02",
+	"pinyin": "wenlingshi",
+	"zip_code": "317500",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "331082",
+	"name": "\u4e34\u6d77\u5e02",
+	"pinyin": "linhaishi",
+	"zip_code": "317000",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "331083",
+	"name": "\u7389\u73af\u5e02",
+	"pinyin": "yuhuanshi",
+	"zip_code": "317600",
+	"parent_code": "331000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "331100",
+	"name": "\u4e3d\u6c34\u5e02",
+	"pinyin": "lishuishi",
+	"zip_code": "323000",
+	"parent_code": "330000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "331102",
+	"name": "\u83b2\u90fd\u533a",
+	"pinyin": "lianduqu",
+	"zip_code": "323000",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "331121",
+	"name": "\u9752\u7530\u53bf",
+	"pinyin": "qingtianxian",
+	"zip_code": "323900",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "331122",
+	"name": "\u7f19\u4e91\u53bf",
+	"pinyin": "jinyunxian",
+	"zip_code": "321400",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "331123",
+	"name": "\u9042\u660c\u53bf",
+	"pinyin": "suichangxian",
+	"zip_code": "323300",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "331124",
+	"name": "\u677e\u9633\u53bf",
+	"pinyin": "songyangxian",
+	"zip_code": "323400",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "331125",
+	"name": "\u4e91\u548c\u53bf",
+	"pinyin": "yunhexian",
+	"zip_code": "323600",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "331126",
+	"name": "\u5e86\u5143\u53bf",
+	"pinyin": "qingyuanxian",
+	"zip_code": "323800",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "331127",
+	"name": "\u666f\u5b81\u7572\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jingningshezuzizhixian",
+	"zip_code": "323500",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "331181",
+	"name": "\u9f99\u6cc9\u5e02",
+	"pinyin": "longquanshi",
+	"zip_code": "323700",
+	"parent_code": "331100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "340000",
+	"name": "\u5b89\u5fbd\u7701",
+	"pinyin": "anhuisheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "A"
+}, {
+	"code": "340100",
+	"name": "\u5408\u80a5\u5e02",
+	"pinyin": "hefeishi",
+	"zip_code": "230000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "340102",
+	"name": "\u7476\u6d77\u533a",
+	"pinyin": "yaohaiqu",
+	"zip_code": "230011",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340103",
+	"name": "\u5e90\u9633\u533a",
+	"pinyin": "luyangqu",
+	"zip_code": "230001",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "340104",
+	"name": "\u8700\u5c71\u533a",
+	"pinyin": "shushanqu",
+	"zip_code": "230031",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "340111",
+	"name": "\u5305\u6cb3\u533a",
+	"pinyin": "baohequ",
+	"zip_code": "230041",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "340121",
+	"name": "\u957f\u4e30\u53bf",
+	"pinyin": "changfengxian",
+	"zip_code": "231100",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "340122",
+	"name": "\u80a5\u4e1c\u53bf",
+	"pinyin": "feidongxian",
+	"zip_code": "231600",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "340123",
+	"name": "\u80a5\u897f\u53bf",
+	"pinyin": "feixixian",
+	"zip_code": "231200",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "340124",
+	"name": "\u5e90\u6c5f\u53bf",
+	"pinyin": "lujiangxian",
+	"zip_code": "231500",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "340181",
+	"name": "\u5de2\u6e56\u5e02",
+	"pinyin": "chaohushi",
+	"zip_code": "238000",
+	"parent_code": "340100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "340200",
+	"name": "\u829c\u6e56\u5e02",
+	"pinyin": "wuhushi",
+	"zip_code": "241000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "340202",
+	"name": "\u955c\u6e56\u533a",
+	"pinyin": "jinghuqu",
+	"zip_code": "241000",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "340203",
+	"name": "\u5f0b\u6c5f\u533a",
+	"pinyin": "yijiangqu",
+	"zip_code": "241000",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340207",
+	"name": "\u9e20\u6c5f\u533a",
+	"pinyin": "jiujiangqu",
+	"zip_code": "241000",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "340208",
+	"name": "\u4e09\u5c71\u533a",
+	"pinyin": "sanshanqu",
+	"zip_code": "241000",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "340221",
+	"name": "\u829c\u6e56\u53bf",
+	"pinyin": "wuhuxian",
+	"zip_code": "241100",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "340222",
+	"name": "\u7e41\u660c\u53bf",
+	"pinyin": "fanchangxian",
+	"zip_code": "241200",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "340223",
+	"name": "\u5357\u9675\u53bf",
+	"pinyin": "nanlingxian",
+	"zip_code": "242400",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "340225",
+	"name": "\u65e0\u4e3a\u53bf",
+	"pinyin": "wuweixian",
+	"zip_code": "238300",
+	"parent_code": "340200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "340300",
+	"name": "\u868c\u57e0\u5e02",
+	"pinyin": "bengbushi",
+	"zip_code": "233000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "340302",
+	"name": "\u9f99\u5b50\u6e56\u533a",
+	"pinyin": "longzihuqu",
+	"zip_code": "233000",
+	"parent_code": "340300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "340303",
+	"name": "\u868c\u5c71\u533a",
+	"pinyin": "bengshanqu",
+	"zip_code": "233000",
+	"parent_code": "340300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "340304",
+	"name": "\u79b9\u4f1a\u533a",
+	"pinyin": "yuhuiqu",
+	"zip_code": "233000",
+	"parent_code": "340300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340311",
+	"name": "\u6dee\u4e0a\u533a",
+	"pinyin": "huaishangqu",
+	"zip_code": "233000",
+	"parent_code": "340300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "340321",
+	"name": "\u6000\u8fdc\u53bf",
+	"pinyin": "huaiyuanxian",
+	"zip_code": "233400",
+	"parent_code": "340300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "340322",
+	"name": "\u4e94\u6cb3\u53bf",
+	"pinyin": "wuhexian",
+	"zip_code": "233300",
+	"parent_code": "340300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "340323",
+	"name": "\u56fa\u9547\u53bf",
+	"pinyin": "guzhenxian",
+	"zip_code": "233700",
+	"parent_code": "340300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "340400",
+	"name": "\u6dee\u5357\u5e02",
+	"pinyin": "huainanshi",
+	"zip_code": "232000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "340402",
+	"name": "\u5927\u901a\u533a",
+	"pinyin": "datongqu",
+	"zip_code": "232033",
+	"parent_code": "340400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "340403",
+	"name": "\u7530\u5bb6\u5eb5\u533a",
+	"pinyin": "tianjiaanqu",
+	"zip_code": "232000",
+	"parent_code": "340400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "340404",
+	"name": "\u8c22\u5bb6\u96c6\u533a",
+	"pinyin": "xiejiajiqu",
+	"zip_code": "232052",
+	"parent_code": "340400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "340405",
+	"name": "\u516b\u516c\u5c71\u533a",
+	"pinyin": "bagongshanqu",
+	"zip_code": "232072",
+	"parent_code": "340400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "340406",
+	"name": "\u6f58\u96c6\u533a",
+	"pinyin": "panjiqu",
+	"zip_code": "232082",
+	"parent_code": "340400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "340421",
+	"name": "\u51e4\u53f0\u53bf",
+	"pinyin": "fengtaixian",
+	"zip_code": "232100",
+	"parent_code": "340400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "340422",
+	"name": "\u5bff\u53bf",
+	"pinyin": "shouxian",
+	"zip_code": "232100",
+	"parent_code": "340400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "340500",
+	"name": "\u9a6c\u978d\u5c71\u5e02",
+	"pinyin": "maanshanshi",
+	"zip_code": "243000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "M"
+}, {
+	"code": "340503",
+	"name": "\u82b1\u5c71\u533a",
+	"pinyin": "huashanqu",
+	"zip_code": "243000",
+	"parent_code": "340500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "340504",
+	"name": "\u96e8\u5c71\u533a",
+	"pinyin": "yushanqu",
+	"zip_code": "243071",
+	"parent_code": "340500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340506",
+	"name": "\u535a\u671b\u533a",
+	"pinyin": "bowangqu",
+	"zip_code": "243000",
+	"parent_code": "340500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "340521",
+	"name": "\u5f53\u6d82\u53bf",
+	"pinyin": "dangtuxian",
+	"zip_code": "243100",
+	"parent_code": "340500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "340522",
+	"name": "\u542b\u5c71\u53bf",
+	"pinyin": "hanshanxian",
+	"zip_code": "238100",
+	"parent_code": "340500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "340523",
+	"name": "\u548c\u53bf",
+	"pinyin": "hexian",
+	"zip_code": "238200",
+	"parent_code": "340500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "340600",
+	"name": "\u6dee\u5317\u5e02",
+	"pinyin": "huaibeishi",
+	"zip_code": "235000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "340602",
+	"name": "\u675c\u96c6\u533a",
+	"pinyin": "dujiqu",
+	"zip_code": "235000",
+	"parent_code": "340600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "340603",
+	"name": "\u76f8\u5c71\u533a",
+	"pinyin": "xiangshanqu",
+	"zip_code": "235000",
+	"parent_code": "340600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "340604",
+	"name": "\u70c8\u5c71\u533a",
+	"pinyin": "lieshanqu",
+	"zip_code": "235000",
+	"parent_code": "340600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "340621",
+	"name": "\u6fc9\u6eaa\u53bf",
+	"pinyin": "suixixian",
+	"zip_code": "235100",
+	"parent_code": "340600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "340700",
+	"name": "\u94dc\u9675\u5e02",
+	"pinyin": "tonglingshi",
+	"zip_code": "244000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "340705",
+	"name": "\u94dc\u5b98\u533a",
+	"pinyin": "tongguanqu",
+	"zip_code": "244000",
+	"parent_code": "340700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "340706",
+	"name": "\u4e49\u5b89\u533a",
+	"pinyin": "yianqu",
+	"zip_code": "244000",
+	"parent_code": "340700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340711",
+	"name": "\u90ca\u533a",
+	"pinyin": "jiaoqu",
+	"zip_code": "244000",
+	"parent_code": "340700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "340722",
+	"name": "\u679e\u9633\u53bf",
+	"pinyin": "congyangxian",
+	"zip_code": "244100",
+	"parent_code": "340700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "340800",
+	"name": "\u5b89\u5e86\u5e02",
+	"pinyin": "anqingshi",
+	"zip_code": "246000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "340802",
+	"name": "\u8fce\u6c5f\u533a",
+	"pinyin": "yingjiangqu",
+	"zip_code": "246001",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340803",
+	"name": "\u5927\u89c2\u533a",
+	"pinyin": "daguanqu",
+	"zip_code": "246002",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "340811",
+	"name": "\u5b9c\u79c0\u533a",
+	"pinyin": "yixiuqu",
+	"zip_code": "246003",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340822",
+	"name": "\u6000\u5b81\u53bf",
+	"pinyin": "huainingxian",
+	"zip_code": "246100",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "340824",
+	"name": "\u6f5c\u5c71\u53bf",
+	"pinyin": "qianshanxian",
+	"zip_code": "246300",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "340825",
+	"name": "\u592a\u6e56\u53bf",
+	"pinyin": "taihuxian",
+	"zip_code": "246400",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "340826",
+	"name": "\u5bbf\u677e\u53bf",
+	"pinyin": "susongxian",
+	"zip_code": "246500",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "340827",
+	"name": "\u671b\u6c5f\u53bf",
+	"pinyin": "wangjiangxian",
+	"zip_code": "246200",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "340828",
+	"name": "\u5cb3\u897f\u53bf",
+	"pinyin": "yuexixian",
+	"zip_code": "246600",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "340881",
+	"name": "\u6850\u57ce\u5e02",
+	"pinyin": "tongchengshi",
+	"zip_code": "231400",
+	"parent_code": "340800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "341000",
+	"name": "\u9ec4\u5c71\u5e02",
+	"pinyin": "huangshanshi",
+	"zip_code": "245000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "341002",
+	"name": "\u5c6f\u6eaa\u533a",
+	"pinyin": "tunxiqu",
+	"zip_code": "245000",
+	"parent_code": "341000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "341003",
+	"name": "\u9ec4\u5c71\u533a",
+	"pinyin": "huangshanqu",
+	"zip_code": "242700",
+	"parent_code": "341000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "341004",
+	"name": "\u5fbd\u5dde\u533a",
+	"pinyin": "huizhouqu",
+	"zip_code": "245061",
+	"parent_code": "341000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "341021",
+	"name": "\u6b59\u53bf",
+	"pinyin": "shexian",
+	"zip_code": "245200",
+	"parent_code": "341000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "341022",
+	"name": "\u4f11\u5b81\u53bf",
+	"pinyin": "xiuningxian",
+	"zip_code": "245400",
+	"parent_code": "341000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "341023",
+	"name": "\u9edf\u53bf",
+	"pinyin": "yixian",
+	"zip_code": "245500",
+	"parent_code": "341000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "341024",
+	"name": "\u7941\u95e8\u53bf",
+	"pinyin": "qimenxian",
+	"zip_code": "245600",
+	"parent_code": "341000",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "341100",
+	"name": "\u6ec1\u5dde\u5e02",
+	"pinyin": "chuzhoushi",
+	"zip_code": "239000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "341102",
+	"name": "\u7405\u740a\u533a",
+	"pinyin": "langyaqu",
+	"zip_code": "239000",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "341103",
+	"name": "\u5357\u8c2f\u533a",
+	"pinyin": "nanqiaoqu",
+	"zip_code": "239000",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "341122",
+	"name": "\u6765\u5b89\u53bf",
+	"pinyin": "laianxian",
+	"zip_code": "239200",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "341124",
+	"name": "\u5168\u6912\u53bf",
+	"pinyin": "quanjiaoxian",
+	"zip_code": "239500",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "341125",
+	"name": "\u5b9a\u8fdc\u53bf",
+	"pinyin": "dingyuanxian",
+	"zip_code": "233200",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "341126",
+	"name": "\u51e4\u9633\u53bf",
+	"pinyin": "fengyangxian",
+	"zip_code": "233100",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "341181",
+	"name": "\u5929\u957f\u5e02",
+	"pinyin": "tianchangshi",
+	"zip_code": "239300",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "341182",
+	"name": "\u660e\u5149\u5e02",
+	"pinyin": "mingguangshi",
+	"zip_code": "239400",
+	"parent_code": "341100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "341200",
+	"name": "\u961c\u9633\u5e02",
+	"pinyin": "fuyangshi",
+	"zip_code": "236000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "F"
+}, {
+	"code": "341202",
+	"name": "\u988d\u5dde\u533a",
+	"pinyin": "yingzhouqu",
+	"zip_code": "236001",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "341203",
+	"name": "\u988d\u4e1c\u533a",
+	"pinyin": "yingdongqu",
+	"zip_code": "236058",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "341204",
+	"name": "\u988d\u6cc9\u533a",
+	"pinyin": "yingquanqu",
+	"zip_code": "236045",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "341221",
+	"name": "\u4e34\u6cc9\u53bf",
+	"pinyin": "linquanxian",
+	"zip_code": "236400",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "341222",
+	"name": "\u592a\u548c\u53bf",
+	"pinyin": "taihexian",
+	"zip_code": "236600",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "341225",
+	"name": "\u961c\u5357\u53bf",
+	"pinyin": "funanxian",
+	"zip_code": "236300",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "341226",
+	"name": "\u988d\u4e0a\u53bf",
+	"pinyin": "yingshangxian",
+	"zip_code": "236200",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "341282",
+	"name": "\u754c\u9996\u5e02",
+	"pinyin": "jieshoushi",
+	"zip_code": "236500",
+	"parent_code": "341200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "341300",
+	"name": "\u5bbf\u5dde\u5e02",
+	"pinyin": "suzhoushi",
+	"zip_code": "234000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "341302",
+	"name": "\u57c7\u6865\u533a",
+	"pinyin": "yongqiaoqu",
+	"zip_code": "234000",
+	"parent_code": "341300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "341321",
+	"name": "\u7800\u5c71\u53bf",
+	"pinyin": "dangshanxian",
+	"zip_code": "235300",
+	"parent_code": "341300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "341322",
+	"name": "\u8427\u53bf",
+	"pinyin": "xiaoxian",
+	"zip_code": "235200",
+	"parent_code": "341300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "341323",
+	"name": "\u7075\u74a7\u53bf",
+	"pinyin": "lingbixian",
+	"zip_code": "234200",
+	"parent_code": "341300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "341324",
+	"name": "\u6cd7\u53bf",
+	"pinyin": "sixian",
+	"zip_code": "234300",
+	"parent_code": "341300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "341500",
+	"name": "\u516d\u5b89\u5e02",
+	"pinyin": "liuanshi",
+	"zip_code": "237000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "341502",
+	"name": "\u91d1\u5b89\u533a",
+	"pinyin": "jinanqu",
+	"zip_code": "237000",
+	"parent_code": "341500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "341503",
+	"name": "\u88d5\u5b89\u533a",
+	"pinyin": "yuanqu",
+	"zip_code": "237010",
+	"parent_code": "341500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "341504",
+	"name": "\u53f6\u96c6\u533a",
+	"pinyin": "xejiqu",
+	"zip_code": "237431",
+	"parent_code": "341500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "341522",
+	"name": "\u970d\u90b1\u53bf",
+	"pinyin": "huoqiuxian",
+	"zip_code": "237400",
+	"parent_code": "341500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "341523",
+	"name": "\u8212\u57ce\u53bf",
+	"pinyin": "shuchengxian",
+	"zip_code": "231300",
+	"parent_code": "341500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "341524",
+	"name": "\u91d1\u5be8\u53bf",
+	"pinyin": "jinzhaixian",
+	"zip_code": "237300",
+	"parent_code": "341500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "341525",
+	"name": "\u970d\u5c71\u53bf",
+	"pinyin": "huoshanxian",
+	"zip_code": "237200",
+	"parent_code": "341500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "341600",
+	"name": "\u4eb3\u5dde\u5e02",
+	"pinyin": "bozhoushi",
+	"zip_code": "236000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "341602",
+	"name": "\u8c2f\u57ce\u533a",
+	"pinyin": "qiaochengqu",
+	"zip_code": "236800",
+	"parent_code": "341600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "341621",
+	"name": "\u6da1\u9633\u53bf",
+	"pinyin": "guoyangxian",
+	"zip_code": "233600",
+	"parent_code": "341600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "341622",
+	"name": "\u8499\u57ce\u53bf",
+	"pinyin": "mengchengxian",
+	"zip_code": "233500",
+	"parent_code": "341600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "341623",
+	"name": "\u5229\u8f9b\u53bf",
+	"pinyin": "lixinxian",
+	"zip_code": "236700",
+	"parent_code": "341600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "341700",
+	"name": "\u6c60\u5dde\u5e02",
+	"pinyin": "chizhoushi",
+	"zip_code": "247100",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "341702",
+	"name": "\u8d35\u6c60\u533a",
+	"pinyin": "guichiqu",
+	"zip_code": "247100",
+	"parent_code": "341700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "341721",
+	"name": "\u4e1c\u81f3\u53bf",
+	"pinyin": "dongzhixian",
+	"zip_code": "247200",
+	"parent_code": "341700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "341722",
+	"name": "\u77f3\u53f0\u53bf",
+	"pinyin": "shitaixian",
+	"zip_code": "245100",
+	"parent_code": "341700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "341723",
+	"name": "\u9752\u9633\u53bf",
+	"pinyin": "qingyangxian",
+	"zip_code": "242800",
+	"parent_code": "341700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "341800",
+	"name": "\u5ba3\u57ce\u5e02",
+	"pinyin": "xuanchengshi",
+	"zip_code": "242000",
+	"parent_code": "340000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "341802",
+	"name": "\u5ba3\u5dde\u533a",
+	"pinyin": "xuanzhouqu",
+	"zip_code": "242000",
+	"parent_code": "341800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "341821",
+	"name": "\u90ce\u6eaa\u53bf",
+	"pinyin": "langxixian",
+	"zip_code": "242100",
+	"parent_code": "341800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "341822",
+	"name": "\u5e7f\u5fb7\u53bf",
+	"pinyin": "guangdexian",
+	"zip_code": "242200",
+	"parent_code": "341800",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "341823",
+	"name": "\u6cfe\u53bf",
+	"pinyin": "jingxian",
+	"zip_code": "242500",
+	"parent_code": "341800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "341824",
+	"name": "\u7ee9\u6eaa\u53bf",
+	"pinyin": "jixixian",
+	"zip_code": "245300",
+	"parent_code": "341800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "341825",
+	"name": "\u65cc\u5fb7\u53bf",
+	"pinyin": "jingdexian",
+	"zip_code": "242600",
+	"parent_code": "341800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "341881",
+	"name": "\u5b81\u56fd\u5e02",
+	"pinyin": "ningguoshi",
+	"zip_code": "242300",
+	"parent_code": "341800",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "350000",
+	"name": "\u798f\u5efa\u7701",
+	"pinyin": "fujiansheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "F"
+}, {
+	"code": "350100",
+	"name": "\u798f\u5dde\u5e02",
+	"pinyin": "fuzhoushi",
+	"zip_code": "350000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "F"
+}, {
+	"code": "350102",
+	"name": "\u9f13\u697c\u533a",
+	"pinyin": "gulouqu",
+	"zip_code": "350001",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "350103",
+	"name": "\u53f0\u6c5f\u533a",
+	"pinyin": "taijiangqu",
+	"zip_code": "350004",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "350104",
+	"name": "\u4ed3\u5c71\u533a",
+	"pinyin": "cangshanqu",
+	"zip_code": "350007",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "350105",
+	"name": "\u9a6c\u5c3e\u533a",
+	"pinyin": "maweiqu",
+	"zip_code": "350015",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "350111",
+	"name": "\u664b\u5b89\u533a",
+	"pinyin": "jinanqu",
+	"zip_code": "350011",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350112",
+	"name": "\u957f\u4e50\u533a",
+	"pinyin": "changlequ",
+	"zip_code": "350200",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "350121",
+	"name": "\u95fd\u4faf\u53bf",
+	"pinyin": "minhouxian",
+	"zip_code": "350100",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "350122",
+	"name": "\u8fde\u6c5f\u53bf",
+	"pinyin": "lianjiangxian",
+	"zip_code": "350500",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350123",
+	"name": "\u7f57\u6e90\u53bf",
+	"pinyin": "luoyuanxian",
+	"zip_code": "350600",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350124",
+	"name": "\u95fd\u6e05\u53bf",
+	"pinyin": "minqingxian",
+	"zip_code": "350800",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "350125",
+	"name": "\u6c38\u6cf0\u53bf",
+	"pinyin": "yongtaixian",
+	"zip_code": "350700",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "350128",
+	"name": "\u5e73\u6f6d\u53bf",
+	"pinyin": "pingtanxian",
+	"zip_code": "350400",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "350181",
+	"name": "\u798f\u6e05\u5e02",
+	"pinyin": "fuqingshi",
+	"zip_code": "350300",
+	"parent_code": "350100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "350200",
+	"name": "\u53a6\u95e8\u5e02",
+	"pinyin": "xiamenshi",
+	"zip_code": "361000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "350203",
+	"name": "\u601d\u660e\u533a",
+	"pinyin": "simingqu",
+	"zip_code": "361001",
+	"parent_code": "350200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350205",
+	"name": "\u6d77\u6ca7\u533a",
+	"pinyin": "haicangqu",
+	"zip_code": "361026",
+	"parent_code": "350200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "350206",
+	"name": "\u6e56\u91cc\u533a",
+	"pinyin": "huliqu",
+	"zip_code": "361006",
+	"parent_code": "350200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "350211",
+	"name": "\u96c6\u7f8e\u533a",
+	"pinyin": "jimeiqu",
+	"zip_code": "361021",
+	"parent_code": "350200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350212",
+	"name": "\u540c\u5b89\u533a",
+	"pinyin": "tonganqu",
+	"zip_code": "361100",
+	"parent_code": "350200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "350213",
+	"name": "\u7fd4\u5b89\u533a",
+	"pinyin": "xianganqu",
+	"zip_code": "361101",
+	"parent_code": "350200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "350300",
+	"name": "\u8386\u7530\u5e02",
+	"pinyin": "putianshi",
+	"zip_code": "351100",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "350302",
+	"name": "\u57ce\u53a2\u533a",
+	"pinyin": "chengxiangqu",
+	"zip_code": "351100",
+	"parent_code": "350300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "350303",
+	"name": "\u6db5\u6c5f\u533a",
+	"pinyin": "hanjiangqu",
+	"zip_code": "351111",
+	"parent_code": "350300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "350304",
+	"name": "\u8354\u57ce\u533a",
+	"pinyin": "lichengqu",
+	"zip_code": "351100",
+	"parent_code": "350300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350305",
+	"name": "\u79c0\u5c7f\u533a",
+	"pinyin": "xiuyuqu",
+	"zip_code": "351152",
+	"parent_code": "350300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "350322",
+	"name": "\u4ed9\u6e38\u53bf",
+	"pinyin": "xianyouxian",
+	"zip_code": "351200",
+	"parent_code": "350300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "350400",
+	"name": "\u4e09\u660e\u5e02",
+	"pinyin": "sanmingshi",
+	"zip_code": "365000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "350404",
+	"name": "\u4e09\u5143\u533a",
+	"pinyin": "sanyuanqu",
+	"zip_code": "365001",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350405",
+	"name": "\u6c99\u53bf\u533a",
+	"pinyin": "shaxianqu",
+	"zip_code": "365500",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350421",
+	"name": "\u660e\u6eaa\u53bf",
+	"pinyin": "mingxixian",
+	"zip_code": "365200",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "350423",
+	"name": "\u6e05\u6d41\u53bf",
+	"pinyin": "qingliuxian",
+	"zip_code": "365300",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "350424",
+	"name": "\u5b81\u5316\u53bf",
+	"pinyin": "ninghuaxian",
+	"zip_code": "365400",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "350425",
+	"name": "\u5927\u7530\u53bf",
+	"pinyin": "datianxian",
+	"zip_code": "366100",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "350426",
+	"name": "\u5c24\u6eaa\u53bf",
+	"pinyin": "youxixian",
+	"zip_code": "365100",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "350428",
+	"name": "\u5c06\u4e50\u53bf",
+	"pinyin": "jianglexian",
+	"zip_code": "353300",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350429",
+	"name": "\u6cf0\u5b81\u53bf",
+	"pinyin": "tainingxian",
+	"zip_code": "354400",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "350430",
+	"name": "\u5efa\u5b81\u53bf",
+	"pinyin": "jianningxian",
+	"zip_code": "354500",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350481",
+	"name": "\u6c38\u5b89\u5e02",
+	"pinyin": "yonganshi",
+	"zip_code": "366000",
+	"parent_code": "350400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "350500",
+	"name": "\u6cc9\u5dde\u5e02",
+	"pinyin": "quanzhoushi",
+	"zip_code": "362000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "350502",
+	"name": "\u9ca4\u57ce\u533a",
+	"pinyin": "lichengqu",
+	"zip_code": "362000",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350503",
+	"name": "\u4e30\u6cfd\u533a",
+	"pinyin": "fengzequ",
+	"zip_code": "362000",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "350504",
+	"name": "\u6d1b\u6c5f\u533a",
+	"pinyin": "luojiangqu",
+	"zip_code": "362011",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350505",
+	"name": "\u6cc9\u6e2f\u533a",
+	"pinyin": "quangangqu",
+	"zip_code": "362114",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "350521",
+	"name": "\u60e0\u5b89\u53bf",
+	"pinyin": "huianxian",
+	"zip_code": "362100",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "350524",
+	"name": "\u5b89\u6eaa\u53bf",
+	"pinyin": "anxixian",
+	"zip_code": "362400",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "350525",
+	"name": "\u6c38\u6625\u53bf",
+	"pinyin": "yongchunxian",
+	"zip_code": "362600",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "350526",
+	"name": "\u5fb7\u5316\u53bf",
+	"pinyin": "dehuaxian",
+	"zip_code": "362500",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "350527",
+	"name": "\u91d1\u95e8\u53bf",
+	"pinyin": "jinmenxian",
+	"zip_code": "362000",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350581",
+	"name": "\u77f3\u72ee\u5e02",
+	"pinyin": "shishishi",
+	"zip_code": "362700",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350582",
+	"name": "\u664b\u6c5f\u5e02",
+	"pinyin": "jinjiangshi",
+	"zip_code": "362200",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350583",
+	"name": "\u5357\u5b89\u5e02",
+	"pinyin": "nananshi",
+	"zip_code": "362300",
+	"parent_code": "350500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "350600",
+	"name": "\u6f33\u5dde\u5e02",
+	"pinyin": "zhangzhoushi",
+	"zip_code": "363000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "350602",
+	"name": "\u8297\u57ce\u533a",
+	"pinyin": "xiangchengqu",
+	"zip_code": "363000",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "350603",
+	"name": "\u9f99\u6587\u533a",
+	"pinyin": "longwenqu",
+	"zip_code": "363005",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350604",
+	"name": "\u9f99\u6d77\u533a",
+	"pinyin": "longhaiqu",
+	"zip_code": "363100",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350605",
+	"name": "\u957f\u6cf0\u533a",
+	"pinyin": "changtaiqu",
+	"zip_code": "363900",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "350622",
+	"name": "\u4e91\u9704\u53bf",
+	"pinyin": "yunxiaoxian",
+	"zip_code": "363300",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "350623",
+	"name": "\u6f33\u6d66\u53bf",
+	"pinyin": "zhangpuxian",
+	"zip_code": "363200",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "350624",
+	"name": "\u8bcf\u5b89\u53bf",
+	"pinyin": "zhaoanxian",
+	"zip_code": "363500",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "350626",
+	"name": "\u4e1c\u5c71\u53bf",
+	"pinyin": "dongshanxian",
+	"zip_code": "363400",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "350627",
+	"name": "\u5357\u9756\u53bf",
+	"pinyin": "nanjingxian",
+	"zip_code": "363600",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "350628",
+	"name": "\u5e73\u548c\u53bf",
+	"pinyin": "pinghexian",
+	"zip_code": "363700",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "350629",
+	"name": "\u534e\u5b89\u53bf",
+	"pinyin": "huaanxian",
+	"zip_code": "363800",
+	"parent_code": "350600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "350700",
+	"name": "\u5357\u5e73\u5e02",
+	"pinyin": "nanpingshi",
+	"zip_code": "353000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "350702",
+	"name": "\u5ef6\u5e73\u533a",
+	"pinyin": "yanpingqu",
+	"zip_code": "353000",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "350703",
+	"name": "\u5efa\u9633\u533a",
+	"pinyin": "jianyangqu",
+	"zip_code": "354200",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350721",
+	"name": "\u987a\u660c\u53bf",
+	"pinyin": "shunchangxian",
+	"zip_code": "353200",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350722",
+	"name": "\u6d66\u57ce\u53bf",
+	"pinyin": "puchengxian",
+	"zip_code": "353400",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "350723",
+	"name": "\u5149\u6cfd\u53bf",
+	"pinyin": "guangzexian",
+	"zip_code": "354100",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "350724",
+	"name": "\u677e\u6eaa\u53bf",
+	"pinyin": "songxixian",
+	"zip_code": "353500",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350725",
+	"name": "\u653f\u548c\u53bf",
+	"pinyin": "zhenghexian",
+	"zip_code": "353600",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "350781",
+	"name": "\u90b5\u6b66\u5e02",
+	"pinyin": "shaowushi",
+	"zip_code": "354000",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350782",
+	"name": "\u6b66\u5937\u5c71\u5e02",
+	"pinyin": "wuyishanshi",
+	"zip_code": "354300",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "350783",
+	"name": "\u5efa\u74ef\u5e02",
+	"pinyin": "jianoushi",
+	"zip_code": "353100",
+	"parent_code": "350700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350800",
+	"name": "\u9f99\u5ca9\u5e02",
+	"pinyin": "longyanshi",
+	"zip_code": "364000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "350802",
+	"name": "\u65b0\u7f57\u533a",
+	"pinyin": "xinluoqu",
+	"zip_code": "364000",
+	"parent_code": "350800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "350803",
+	"name": "\u6c38\u5b9a\u533a",
+	"pinyin": "yongdingqu",
+	"zip_code": "427000",
+	"parent_code": "350800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "350821",
+	"name": "\u957f\u6c40\u53bf",
+	"pinyin": "changtingxian",
+	"zip_code": "366300",
+	"parent_code": "350800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "350823",
+	"name": "\u4e0a\u676d\u53bf",
+	"pinyin": "shanghangxian",
+	"zip_code": "364200",
+	"parent_code": "350800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350824",
+	"name": "\u6b66\u5e73\u53bf",
+	"pinyin": "wupingxian",
+	"zip_code": "364300",
+	"parent_code": "350800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "350825",
+	"name": "\u8fde\u57ce\u53bf",
+	"pinyin": "lianchengxian",
+	"zip_code": "366200",
+	"parent_code": "350800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "350881",
+	"name": "\u6f33\u5e73\u5e02",
+	"pinyin": "zhangpingshi",
+	"zip_code": "364400",
+	"parent_code": "350800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "350900",
+	"name": "\u5b81\u5fb7\u5e02",
+	"pinyin": "ningdeshi",
+	"zip_code": "352000",
+	"parent_code": "350000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "350902",
+	"name": "\u8549\u57ce\u533a",
+	"pinyin": "jiaochengqu",
+	"zip_code": "352100",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "350921",
+	"name": "\u971e\u6d66\u53bf",
+	"pinyin": "xiapuxian",
+	"zip_code": "355100",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "350922",
+	"name": "\u53e4\u7530\u53bf",
+	"pinyin": "gutianxian",
+	"zip_code": "352200",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "350923",
+	"name": "\u5c4f\u5357\u53bf",
+	"pinyin": "pingnanxian",
+	"zip_code": "352300",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "350924",
+	"name": "\u5bff\u5b81\u53bf",
+	"pinyin": "shouningxian",
+	"zip_code": "355500",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "350925",
+	"name": "\u5468\u5b81\u53bf",
+	"pinyin": "zhouningxian",
+	"zip_code": "355400",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "350926",
+	"name": "\u67d8\u8363\u53bf",
+	"pinyin": "zherongxian",
+	"zip_code": "355300",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "350981",
+	"name": "\u798f\u5b89\u5e02",
+	"pinyin": "fuanshi",
+	"zip_code": "355000",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "350982",
+	"name": "\u798f\u9f0e\u5e02",
+	"pinyin": "fudingshi",
+	"zip_code": "355200",
+	"parent_code": "350900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "360000",
+	"name": "\u6c5f\u897f\u7701",
+	"pinyin": "jiangxisheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "J"
+}, {
+	"code": "360100",
+	"name": "\u5357\u660c\u5e02",
+	"pinyin": "nanchangshi",
+	"zip_code": "330000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "360102",
+	"name": "\u4e1c\u6e56\u533a",
+	"pinyin": "donghuqu",
+	"zip_code": "330006",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "360103",
+	"name": "\u897f\u6e56\u533a",
+	"pinyin": "xihuqu",
+	"zip_code": "330009",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360104",
+	"name": "\u9752\u4e91\u8c31\u533a",
+	"pinyin": "qingyunpuqu",
+	"zip_code": "330001",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "360105",
+	"name": "\u6e7e\u91cc\u533a",
+	"pinyin": "wanliqu",
+	"zip_code": "330004",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "360111",
+	"name": "\u9752\u5c71\u6e56\u533a",
+	"pinyin": "qingshanhuqu",
+	"zip_code": "330029",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "360112",
+	"name": "\u65b0\u5efa\u533a",
+	"pinyin": "xinjianqu",
+	"zip_code": "330100",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360121",
+	"name": "\u5357\u660c\u53bf",
+	"pinyin": "nanchangxian",
+	"zip_code": "330200",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "360123",
+	"name": "\u5b89\u4e49\u53bf",
+	"pinyin": "anyixian",
+	"zip_code": "330500",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "360124",
+	"name": "\u8fdb\u8d24\u53bf",
+	"pinyin": "jinxianxian",
+	"zip_code": "331700",
+	"parent_code": "360100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "360200",
+	"name": "\u666f\u5fb7\u9547\u5e02",
+	"pinyin": "jingdezhenshi",
+	"zip_code": "333000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "360202",
+	"name": "\u660c\u6c5f\u533a",
+	"pinyin": "changjiangqu",
+	"zip_code": "333000",
+	"parent_code": "360200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "360203",
+	"name": "\u73e0\u5c71\u533a",
+	"pinyin": "zhushanqu",
+	"zip_code": "333000",
+	"parent_code": "360200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "360222",
+	"name": "\u6d6e\u6881\u53bf",
+	"pinyin": "fuliangxian",
+	"zip_code": "333400",
+	"parent_code": "360200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "360281",
+	"name": "\u4e50\u5e73\u5e02",
+	"pinyin": "lepingshi",
+	"zip_code": "333300",
+	"parent_code": "360200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "360300",
+	"name": "\u840d\u4e61\u5e02",
+	"pinyin": "pingxiangshi",
+	"zip_code": "337000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "360302",
+	"name": "\u5b89\u6e90\u533a",
+	"pinyin": "anyuanqu",
+	"zip_code": "337000",
+	"parent_code": "360300",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "360313",
+	"name": "\u6e58\u4e1c\u533a",
+	"pinyin": "xiangdongqu",
+	"zip_code": "337016",
+	"parent_code": "360300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360321",
+	"name": "\u83b2\u82b1\u53bf",
+	"pinyin": "lianhuaxian",
+	"zip_code": "337100",
+	"parent_code": "360300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "360322",
+	"name": "\u4e0a\u6817\u53bf",
+	"pinyin": "shanglixian",
+	"zip_code": "337009",
+	"parent_code": "360300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "360323",
+	"name": "\u82a6\u6eaa\u53bf",
+	"pinyin": "luxixian",
+	"zip_code": "337053",
+	"parent_code": "360300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "360400",
+	"name": "\u4e5d\u6c5f\u5e02",
+	"pinyin": "jiujiangshi",
+	"zip_code": "332000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "360402",
+	"name": "\u6fc2\u6eaa\u533a",
+	"pinyin": "lianxiqu",
+	"zip_code": "332005",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "360403",
+	"name": "\u6d54\u9633\u533a",
+	"pinyin": "xunyangqu",
+	"zip_code": "332000",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360404",
+	"name": "\u67f4\u6851\u533a",
+	"pinyin": "chaisangqu",
+	"zip_code": "332100",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "360423",
+	"name": "\u6b66\u5b81\u53bf",
+	"pinyin": "wuningxian",
+	"zip_code": "332300",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "360424",
+	"name": "\u4fee\u6c34\u53bf",
+	"pinyin": "xiushuixian",
+	"zip_code": "332400",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360425",
+	"name": "\u6c38\u4fee\u53bf",
+	"pinyin": "yongxiuxian",
+	"zip_code": "330300",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360426",
+	"name": "\u5fb7\u5b89\u53bf",
+	"pinyin": "deanxian",
+	"zip_code": "330400",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "360428",
+	"name": "\u90fd\u660c\u53bf",
+	"pinyin": "duchangxian",
+	"zip_code": "332600",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "360429",
+	"name": "\u6e56\u53e3\u53bf",
+	"pinyin": "hukouxian",
+	"zip_code": "332500",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "360430",
+	"name": "\u5f6d\u6cfd\u53bf",
+	"pinyin": "pengzexian",
+	"zip_code": "332700",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "360481",
+	"name": "\u745e\u660c\u5e02",
+	"pinyin": "ruichangshi",
+	"zip_code": "332200",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "360482",
+	"name": "\u5171\u9752\u57ce\u5e02",
+	"pinyin": "gongqingchengshi",
+	"zip_code": "332020",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "360483",
+	"name": "\u5e90\u5c71\u5e02",
+	"pinyin": "lushanshi",
+	"zip_code": "332020",
+	"parent_code": "360400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "360500",
+	"name": "\u65b0\u4f59\u5e02",
+	"pinyin": "xinyushi",
+	"zip_code": "336500",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "360502",
+	"name": "\u6e1d\u6c34\u533a",
+	"pinyin": "yushuiqu",
+	"zip_code": "338025",
+	"parent_code": "360500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360521",
+	"name": "\u5206\u5b9c\u53bf",
+	"pinyin": "fenyixian",
+	"zip_code": "336600",
+	"parent_code": "360500",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "360600",
+	"name": "\u9e70\u6f6d\u5e02",
+	"pinyin": "yingtanshi",
+	"zip_code": "335000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "360602",
+	"name": "\u6708\u6e56\u533a",
+	"pinyin": "yuehuqu",
+	"zip_code": "335000",
+	"parent_code": "360600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360622",
+	"name": "\u4f59\u6c5f\u533a",
+	"pinyin": "yujiangqu",
+	"zip_code": "335200",
+	"parent_code": "360600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360681",
+	"name": "\u8d35\u6eaa\u5e02",
+	"pinyin": "guixishi",
+	"zip_code": "335400",
+	"parent_code": "360600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "360700",
+	"name": "\u8d63\u5dde\u5e02",
+	"pinyin": "ganzhoushi",
+	"zip_code": "341000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "360702",
+	"name": "\u7ae0\u8d21\u533a",
+	"pinyin": "zhanggongqu",
+	"zip_code": "341000",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "360703",
+	"name": "\u5357\u5eb7\u533a",
+	"pinyin": "nankangqu",
+	"zip_code": "341400",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "360704",
+	"name": "\u8d63\u53bf\u533a",
+	"pinyin": "ganxianqu",
+	"zip_code": "341100",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "360722",
+	"name": "\u4fe1\u4e30\u53bf",
+	"pinyin": "xinfengxian",
+	"zip_code": "341600",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360723",
+	"name": "\u5927\u4f59\u53bf",
+	"pinyin": "dayuxian",
+	"zip_code": "341500",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "360724",
+	"name": "\u4e0a\u72b9\u53bf",
+	"pinyin": "shangyouxian",
+	"zip_code": "341200",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "360725",
+	"name": "\u5d07\u4e49\u53bf",
+	"pinyin": "chongyixian",
+	"zip_code": "341300",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "360726",
+	"name": "\u5b89\u8fdc\u53bf",
+	"pinyin": "anyuanxian",
+	"zip_code": "342100",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "360727",
+	"name": "\u9f99\u5357\u53bf",
+	"pinyin": "longnanxian",
+	"zip_code": "341700",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "360728",
+	"name": "\u5b9a\u5357\u53bf",
+	"pinyin": "dingnanxian",
+	"zip_code": "341900",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "360729",
+	"name": "\u5168\u5357\u53bf",
+	"pinyin": "quannanxian",
+	"zip_code": "341800",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "360730",
+	"name": "\u5b81\u90fd\u53bf",
+	"pinyin": "ningduxian",
+	"zip_code": "342800",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "360731",
+	"name": "\u4e8e\u90fd\u53bf",
+	"pinyin": "yuduxian",
+	"zip_code": "342300",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360732",
+	"name": "\u5174\u56fd\u53bf",
+	"pinyin": "xingguoxian",
+	"zip_code": "342400",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360733",
+	"name": "\u4f1a\u660c\u53bf",
+	"pinyin": "huichangxian",
+	"zip_code": "342600",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "360734",
+	"name": "\u5bfb\u4e4c\u53bf",
+	"pinyin": "xunwuxian",
+	"zip_code": "342200",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360735",
+	"name": "\u77f3\u57ce\u53bf",
+	"pinyin": "shichengxian",
+	"zip_code": "342700",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "360781",
+	"name": "\u745e\u91d1\u5e02",
+	"pinyin": "ruijinshi",
+	"zip_code": "342500",
+	"parent_code": "360700",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "360800",
+	"name": "\u5409\u5b89\u5e02",
+	"pinyin": "jianshi",
+	"zip_code": "343000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "360802",
+	"name": "\u5409\u5dde\u533a",
+	"pinyin": "jizhouqu",
+	"zip_code": "343000",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "360803",
+	"name": "\u9752\u539f\u533a",
+	"pinyin": "qingyuanqu",
+	"zip_code": "343009",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "360821",
+	"name": "\u5409\u5b89\u53bf",
+	"pinyin": "jianxian",
+	"zip_code": "343100",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "360822",
+	"name": "\u5409\u6c34\u53bf",
+	"pinyin": "jishuixian",
+	"zip_code": "331600",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "360823",
+	"name": "\u5ce1\u6c5f\u53bf",
+	"pinyin": "xiajiangxian",
+	"zip_code": "331400",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360824",
+	"name": "\u65b0\u5e72\u53bf",
+	"pinyin": "xinganxian",
+	"zip_code": "331300",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "360825",
+	"name": "\u6c38\u4e30\u53bf",
+	"pinyin": "yongfengxian",
+	"zip_code": "331500",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360826",
+	"name": "\u6cf0\u548c\u53bf",
+	"pinyin": "taihexian",
+	"zip_code": "343700",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "360827",
+	"name": "\u9042\u5ddd\u53bf",
+	"pinyin": "suichuanxian",
+	"zip_code": "343900",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "360828",
+	"name": "\u4e07\u5b89\u53bf",
+	"pinyin": "wananxian",
+	"zip_code": "343800",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "360829",
+	"name": "\u5b89\u798f\u53bf",
+	"pinyin": "anfuxian",
+	"zip_code": "343200",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "360830",
+	"name": "\u6c38\u65b0\u53bf",
+	"pinyin": "yongxinxian",
+	"zip_code": "343400",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360881",
+	"name": "\u4e95\u5188\u5c71\u5e02",
+	"pinyin": "jinggangshanshi",
+	"zip_code": "343600",
+	"parent_code": "360800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "360900",
+	"name": "\u5b9c\u6625\u5e02",
+	"pinyin": "yichunshi",
+	"zip_code": "336000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "360902",
+	"name": "\u8881\u5dde\u533a",
+	"pinyin": "yuanzhouqu",
+	"zip_code": "336000",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360921",
+	"name": "\u5949\u65b0\u53bf",
+	"pinyin": "fengxinxian",
+	"zip_code": "330700",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "360922",
+	"name": "\u4e07\u8f7d\u53bf",
+	"pinyin": "wanzaixian",
+	"zip_code": "336100",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "360923",
+	"name": "\u4e0a\u9ad8\u53bf",
+	"pinyin": "shanggaoxian",
+	"zip_code": "336400",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "360924",
+	"name": "\u5b9c\u4e30\u53bf",
+	"pinyin": "yifengxian",
+	"zip_code": "336300",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "360925",
+	"name": "\u9756\u5b89\u53bf",
+	"pinyin": "jinganxian",
+	"zip_code": "330600",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "360926",
+	"name": "\u94dc\u9f13\u53bf",
+	"pinyin": "tongguxian",
+	"zip_code": "336200",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "360981",
+	"name": "\u4e30\u57ce\u5e02",
+	"pinyin": "fengchengshi",
+	"zip_code": "331100",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "360982",
+	"name": "\u6a1f\u6811\u5e02",
+	"pinyin": "zhangshushi",
+	"zip_code": "331200",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "360983",
+	"name": "\u9ad8\u5b89\u5e02",
+	"pinyin": "gaoanshi",
+	"zip_code": "330800",
+	"parent_code": "360900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "361000",
+	"name": "\u629a\u5dde\u5e02",
+	"pinyin": "fuzhoushi",
+	"zip_code": "344000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "F"
+}, {
+	"code": "361002",
+	"name": "\u4e34\u5ddd\u533a",
+	"pinyin": "linchuanqu",
+	"zip_code": "344100",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "361003",
+	"name": "\u4e1c\u4e61\u533a",
+	"pinyin": "dongxiangqu",
+	"zip_code": "331800",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "361021",
+	"name": "\u5357\u57ce\u53bf",
+	"pinyin": "nanchengxian",
+	"zip_code": "344700",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "361022",
+	"name": "\u9ece\u5ddd\u53bf",
+	"pinyin": "lichuanxian",
+	"zip_code": "344600",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "361023",
+	"name": "\u5357\u4e30\u53bf",
+	"pinyin": "nanfengxian",
+	"zip_code": "344500",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "361024",
+	"name": "\u5d07\u4ec1\u53bf",
+	"pinyin": "chongrenxian",
+	"zip_code": "344200",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "361025",
+	"name": "\u4e50\u5b89\u53bf",
+	"pinyin": "leanxian",
+	"zip_code": "344300",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "361026",
+	"name": "\u5b9c\u9ec4\u53bf",
+	"pinyin": "yihuangxian",
+	"zip_code": "344400",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "361027",
+	"name": "\u91d1\u6eaa\u53bf",
+	"pinyin": "jinxixian",
+	"zip_code": "344800",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "361028",
+	"name": "\u8d44\u6eaa\u53bf",
+	"pinyin": "zixixian",
+	"zip_code": "335300",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "361030",
+	"name": "\u5e7f\u660c\u53bf",
+	"pinyin": "guangchangxian",
+	"zip_code": "344900",
+	"parent_code": "361000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "361100",
+	"name": "\u4e0a\u9976\u5e02",
+	"pinyin": "shangraoshi",
+	"zip_code": "334000",
+	"parent_code": "360000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "361102",
+	"name": "\u4fe1\u5dde\u533a",
+	"pinyin": "xinzhouqu",
+	"zip_code": "334000",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "361103",
+	"name": "\u5e7f\u4e30\u533a",
+	"pinyin": "guangfengqu",
+	"zip_code": "334600",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "361121",
+	"name": "\u4e0a\u9976\u53bf",
+	"pinyin": "shangraoxian",
+	"zip_code": "334100",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "361123",
+	"name": "\u7389\u5c71\u53bf",
+	"pinyin": "yushanxian",
+	"zip_code": "334700",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "361124",
+	"name": "\u94c5\u5c71\u53bf",
+	"pinyin": "qianshanxian",
+	"zip_code": "334500",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "361125",
+	"name": "\u6a2a\u5cf0\u53bf",
+	"pinyin": "hengfengxian",
+	"zip_code": "334300",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "361126",
+	"name": "\u5f0b\u9633\u53bf",
+	"pinyin": "yiyangxian",
+	"zip_code": "334400",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "361127",
+	"name": "\u4f59\u5e72\u53bf",
+	"pinyin": "yuganxian",
+	"zip_code": "335100",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "361128",
+	"name": "\u9131\u9633\u53bf",
+	"pinyin": "poyangxian",
+	"zip_code": "333100",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "361129",
+	"name": "\u4e07\u5e74\u53bf",
+	"pinyin": "wannianxian",
+	"zip_code": "335500",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "361130",
+	"name": "\u5a7a\u6e90\u53bf",
+	"pinyin": "wuyuanxian",
+	"zip_code": "333200",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "361181",
+	"name": "\u5fb7\u5174\u5e02",
+	"pinyin": "dexingshi",
+	"zip_code": "334200",
+	"parent_code": "361100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "370000",
+	"name": "\u5c71\u4e1c\u7701",
+	"pinyin": "shandongsheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "S"
+}, {
+	"code": "370100",
+	"name": "\u6d4e\u5357\u5e02",
+	"pinyin": "jinanshi",
+	"zip_code": "250000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "370102",
+	"name": "\u5386\u4e0b\u533a",
+	"pinyin": "lixiaqu",
+	"zip_code": "250014",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370103",
+	"name": "\u5e02\u4e2d\u533a",
+	"pinyin": "shizhongqu",
+	"zip_code": "250001",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370104",
+	"name": "\u69d0\u836b\u533a",
+	"pinyin": "huaiyinqu",
+	"zip_code": "250022",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "370105",
+	"name": "\u5929\u6865\u533a",
+	"pinyin": "tianqiaoqu",
+	"zip_code": "250031",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "370112",
+	"name": "\u5386\u57ce\u533a",
+	"pinyin": "lichengqu",
+	"zip_code": "250100",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370113",
+	"name": "\u957f\u6e05\u533a",
+	"pinyin": "changqingqu",
+	"zip_code": "250300",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "370114",
+	"name": "\u7ae0\u4e18\u533a",
+	"pinyin": "zhangqiuqu",
+	"zip_code": "250200",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370124",
+	"name": "\u5e73\u9634\u53bf",
+	"pinyin": "pingyinxian",
+	"zip_code": "250400",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "370125",
+	"name": "\u6d4e\u9633\u53bf",
+	"pinyin": "jiyangxian",
+	"zip_code": "251400",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "370126",
+	"name": "\u5546\u6cb3\u53bf",
+	"pinyin": "shanghexian",
+	"zip_code": "251600",
+	"parent_code": "370100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370200",
+	"name": "\u9752\u5c9b\u5e02",
+	"pinyin": "qingdaoshi",
+	"zip_code": "266000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "370202",
+	"name": "\u5e02\u5357\u533a",
+	"pinyin": "shinanqu",
+	"zip_code": "266001",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370203",
+	"name": "\u5e02\u5317\u533a",
+	"pinyin": "shibeiqu",
+	"zip_code": "266011",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370211",
+	"name": "\u9ec4\u5c9b\u533a",
+	"pinyin": "huangdaoqu",
+	"zip_code": "266500",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "370212",
+	"name": "\u5d02\u5c71\u533a",
+	"pinyin": "laoshanqu",
+	"zip_code": "266100",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370213",
+	"name": "\u674e\u6ca7\u533a",
+	"pinyin": "licangqu",
+	"zip_code": "266021",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370214",
+	"name": "\u57ce\u9633\u533a",
+	"pinyin": "chengyangqu",
+	"zip_code": "266041",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "370215",
+	"name": "\u5373\u58a8\u533a",
+	"pinyin": "jimoqu",
+	"zip_code": "266200",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "370281",
+	"name": "\u80f6\u5dde\u5e02",
+	"pinyin": "jiaozhoushi",
+	"zip_code": "266300",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "370283",
+	"name": "\u5e73\u5ea6\u5e02",
+	"pinyin": "pingdushi",
+	"zip_code": "266700",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "370285",
+	"name": "\u83b1\u897f\u5e02",
+	"pinyin": "laixishi",
+	"zip_code": "266600",
+	"parent_code": "370200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370300",
+	"name": "\u6dc4\u535a\u5e02",
+	"pinyin": "ziboshi",
+	"zip_code": "255000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "370302",
+	"name": "\u6dc4\u5ddd\u533a",
+	"pinyin": "zichuanqu",
+	"zip_code": "255100",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370303",
+	"name": "\u5f20\u5e97\u533a",
+	"pinyin": "zhangdianqu",
+	"zip_code": "255022",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370304",
+	"name": "\u535a\u5c71\u533a",
+	"pinyin": "boshanqu",
+	"zip_code": "255200",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "370305",
+	"name": "\u4e34\u6dc4\u533a",
+	"pinyin": "linziqu",
+	"zip_code": "255400",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370306",
+	"name": "\u5468\u6751\u533a",
+	"pinyin": "zhoucunqu",
+	"zip_code": "255300",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370321",
+	"name": "\u6853\u53f0\u53bf",
+	"pinyin": "huantaixian",
+	"zip_code": "256400",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "370322",
+	"name": "\u9ad8\u9752\u53bf",
+	"pinyin": "gaoqingxian",
+	"zip_code": "256300",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "370323",
+	"name": "\u6c82\u6e90\u53bf",
+	"pinyin": "yiyuanxian",
+	"zip_code": "256100",
+	"parent_code": "370300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "370400",
+	"name": "\u67a3\u5e84\u5e02",
+	"pinyin": "zaozhuangshi",
+	"zip_code": "277000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "370402",
+	"name": "\u5e02\u4e2d\u533a",
+	"pinyin": "shizhongqu",
+	"zip_code": "277101",
+	"parent_code": "370400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370403",
+	"name": "\u859b\u57ce\u533a",
+	"pinyin": "xuechengqu",
+	"zip_code": "277000",
+	"parent_code": "370400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "370404",
+	"name": "\u5cc4\u57ce\u533a",
+	"pinyin": "yichengqu",
+	"zip_code": "277300",
+	"parent_code": "370400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "370405",
+	"name": "\u53f0\u513f\u5e84\u533a",
+	"pinyin": "taierzhuangqu",
+	"zip_code": "277400",
+	"parent_code": "370400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "370406",
+	"name": "\u5c71\u4ead\u533a",
+	"pinyin": "shantingqu",
+	"zip_code": "277200",
+	"parent_code": "370400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370481",
+	"name": "\u6ed5\u5dde\u5e02",
+	"pinyin": "tengzhoushi",
+	"zip_code": "277500",
+	"parent_code": "370400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "370500",
+	"name": "\u4e1c\u8425\u5e02",
+	"pinyin": "dongyingshi",
+	"zip_code": "257000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "370502",
+	"name": "\u4e1c\u8425\u533a",
+	"pinyin": "dongyingqu",
+	"zip_code": "257029",
+	"parent_code": "370500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "370503",
+	"name": "\u6cb3\u53e3\u533a",
+	"pinyin": "hekouqu",
+	"zip_code": "257200",
+	"parent_code": "370500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "370505",
+	"name": "\u57a6\u5229\u533a",
+	"pinyin": "kenliqu",
+	"zip_code": "257500",
+	"parent_code": "370500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "370522",
+	"name": "\u5229\u6d25\u53bf",
+	"pinyin": "lijinxian",
+	"zip_code": "257400",
+	"parent_code": "370500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370523",
+	"name": "\u5e7f\u9976\u53bf",
+	"pinyin": "guangraoxian",
+	"zip_code": "257300",
+	"parent_code": "370500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "370600",
+	"name": "\u70df\u53f0\u5e02",
+	"pinyin": "yantaishi",
+	"zip_code": "264000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "370602",
+	"name": "\u829d\u7f58\u533a",
+	"pinyin": "zhifuqu",
+	"zip_code": "264001",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370611",
+	"name": "\u798f\u5c71\u533a",
+	"pinyin": "fushanqu",
+	"zip_code": "265500",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "370612",
+	"name": "\u725f\u5e73\u533a",
+	"pinyin": "moupingqu",
+	"zip_code": "264100",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "370613",
+	"name": "\u83b1\u5c71\u533a",
+	"pinyin": "laishanqu",
+	"zip_code": "264600",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370634",
+	"name": "\u957f\u5c9b\u53bf",
+	"pinyin": "changdaoxian",
+	"zip_code": "265800",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "370681",
+	"name": "\u9f99\u53e3\u5e02",
+	"pinyin": "longkoushi",
+	"zip_code": "265700",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370682",
+	"name": "\u83b1\u9633\u5e02",
+	"pinyin": "laiyangshi",
+	"zip_code": "265200",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370683",
+	"name": "\u83b1\u5dde\u5e02",
+	"pinyin": "laizhoushi",
+	"zip_code": "261400",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370684",
+	"name": "\u84ec\u83b1\u5e02",
+	"pinyin": "penglaishi",
+	"zip_code": "265600",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "370685",
+	"name": "\u62db\u8fdc\u5e02",
+	"pinyin": "zhaoyuanshi",
+	"zip_code": "265400",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370686",
+	"name": "\u6816\u971e\u5e02",
+	"pinyin": "qixiashi",
+	"zip_code": "265300",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "370687",
+	"name": "\u6d77\u9633\u5e02",
+	"pinyin": "haiyangshi",
+	"zip_code": "265100",
+	"parent_code": "370600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "370700",
+	"name": "\u6f4d\u574a\u5e02",
+	"pinyin": "weifangshi",
+	"zip_code": "261000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "370702",
+	"name": "\u6f4d\u57ce\u533a",
+	"pinyin": "weichengqu",
+	"zip_code": "261021",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "370703",
+	"name": "\u5bd2\u4ead\u533a",
+	"pinyin": "hantingqu",
+	"zip_code": "261100",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "370704",
+	"name": "\u574a\u5b50\u533a",
+	"pinyin": "fangziqu",
+	"zip_code": "261200",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "370705",
+	"name": "\u594e\u6587\u533a",
+	"pinyin": "kuiwenqu",
+	"zip_code": "261031",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "370724",
+	"name": "\u4e34\u6710\u53bf",
+	"pinyin": "linquxian",
+	"zip_code": "262600",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370725",
+	"name": "\u660c\u4e50\u53bf",
+	"pinyin": "changlexian",
+	"zip_code": "262400",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "370781",
+	"name": "\u9752\u5dde\u5e02",
+	"pinyin": "qingzhoushi",
+	"zip_code": "262500",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "370782",
+	"name": "\u8bf8\u57ce\u5e02",
+	"pinyin": "zhuchengshi",
+	"zip_code": "262200",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370783",
+	"name": "\u5bff\u5149\u5e02",
+	"pinyin": "shouguangshi",
+	"zip_code": "262700",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370784",
+	"name": "\u5b89\u4e18\u5e02",
+	"pinyin": "anqiushi",
+	"zip_code": "262100",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "370785",
+	"name": "\u9ad8\u5bc6\u5e02",
+	"pinyin": "gaomishi",
+	"zip_code": "261500",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "370786",
+	"name": "\u660c\u9091\u5e02",
+	"pinyin": "changyishi",
+	"zip_code": "261300",
+	"parent_code": "370700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "370800",
+	"name": "\u6d4e\u5b81\u5e02",
+	"pinyin": "jiningshi",
+	"zip_code": "272000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "370811",
+	"name": "\u4efb\u57ce\u533a",
+	"pinyin": "renchengqu",
+	"zip_code": "272113",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "370812",
+	"name": "\u5156\u5dde\u533a",
+	"pinyin": "yanzhouqu",
+	"zip_code": "272000",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "370826",
+	"name": "\u5fae\u5c71\u53bf",
+	"pinyin": "weishanxian",
+	"zip_code": "277600",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "370827",
+	"name": "\u9c7c\u53f0\u53bf",
+	"pinyin": "yutaixian",
+	"zip_code": "272300",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "370828",
+	"name": "\u91d1\u4e61\u53bf",
+	"pinyin": "jinxiangxian",
+	"zip_code": "272200",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "370829",
+	"name": "\u5609\u7965\u53bf",
+	"pinyin": "jiaxiangxian",
+	"zip_code": "272400",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "370830",
+	"name": "\u6c76\u4e0a\u53bf",
+	"pinyin": "wenshangxian",
+	"zip_code": "272501",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "370831",
+	"name": "\u6cd7\u6c34\u53bf",
+	"pinyin": "sishuixian",
+	"zip_code": "273200",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "370832",
+	"name": "\u6881\u5c71\u53bf",
+	"pinyin": "liangshanxian",
+	"zip_code": "272600",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "370881",
+	"name": "\u66f2\u961c\u5e02",
+	"pinyin": "qufushi",
+	"zip_code": "273100",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "370883",
+	"name": "\u90b9\u57ce\u5e02",
+	"pinyin": "zouchengshi",
+	"zip_code": "273500",
+	"parent_code": "370800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "370900",
+	"name": "\u6cf0\u5b89\u5e02",
+	"pinyin": "taianshi",
+	"zip_code": "271000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "370902",
+	"name": "\u6cf0\u5c71\u533a",
+	"pinyin": "taishanqu",
+	"zip_code": "271000",
+	"parent_code": "370900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "370911",
+	"name": "\u5cb1\u5cb3\u533a",
+	"pinyin": "daiyuequ",
+	"zip_code": "271000",
+	"parent_code": "370900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "370921",
+	"name": "\u5b81\u9633\u53bf",
+	"pinyin": "ningyangxian",
+	"zip_code": "271400",
+	"parent_code": "370900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "370923",
+	"name": "\u4e1c\u5e73\u53bf",
+	"pinyin": "dongpingxian",
+	"zip_code": "271500",
+	"parent_code": "370900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "370982",
+	"name": "\u65b0\u6cf0\u5e02",
+	"pinyin": "xintaishi",
+	"zip_code": "271200",
+	"parent_code": "370900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "370983",
+	"name": "\u80a5\u57ce\u5e02",
+	"pinyin": "feichengshi",
+	"zip_code": "271600",
+	"parent_code": "370900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "371000",
+	"name": "\u5a01\u6d77\u5e02",
+	"pinyin": "weihaishi",
+	"zip_code": "264200",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "371002",
+	"name": "\u73af\u7fe0\u533a",
+	"pinyin": "huancuiqu",
+	"zip_code": "264200",
+	"parent_code": "371000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "371003",
+	"name": "\u6587\u767b\u533a",
+	"pinyin": "wendengqu",
+	"zip_code": "264400",
+	"parent_code": "371000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "371082",
+	"name": "\u8363\u6210\u5e02",
+	"pinyin": "rongchengshi",
+	"zip_code": "264300",
+	"parent_code": "371000",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "371083",
+	"name": "\u4e73\u5c71\u5e02",
+	"pinyin": "rushanshi",
+	"zip_code": "264500",
+	"parent_code": "371000",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "371100",
+	"name": "\u65e5\u7167\u5e02",
+	"pinyin": "rizhaoshi",
+	"zip_code": "276800",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "R"
+}, {
+	"code": "371102",
+	"name": "\u4e1c\u6e2f\u533a",
+	"pinyin": "donggangqu",
+	"zip_code": "276800",
+	"parent_code": "371100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "371103",
+	"name": "\u5c9a\u5c71\u533a",
+	"pinyin": "lanshanqu",
+	"zip_code": "276808",
+	"parent_code": "371100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371121",
+	"name": "\u4e94\u83b2\u53bf",
+	"pinyin": "wulianxian",
+	"zip_code": "272300",
+	"parent_code": "371100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "371122",
+	"name": "\u8392\u53bf",
+	"pinyin": "juxian",
+	"zip_code": "266500",
+	"parent_code": "371100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "371200",
+	"name": "\u83b1\u829c\u5e02",
+	"pinyin": "laiwushi",
+	"zip_code": "271100",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "371202",
+	"name": "\u83b1\u57ce\u533a",
+	"pinyin": "laichengqu",
+	"zip_code": "271100",
+	"parent_code": "371200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371203",
+	"name": "\u94a2\u57ce\u533a",
+	"pinyin": "gangchengqu",
+	"zip_code": "271100",
+	"parent_code": "371200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "371300",
+	"name": "\u4e34\u6c82\u5e02",
+	"pinyin": "linyishi",
+	"zip_code": "276000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "371302",
+	"name": "\u5170\u5c71\u533a",
+	"pinyin": "lanshanqu",
+	"zip_code": "276002",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371311",
+	"name": "\u7f57\u5e84\u533a",
+	"pinyin": "luozhuangqu",
+	"zip_code": "276022",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371312",
+	"name": "\u6cb3\u4e1c\u533a",
+	"pinyin": "hedongqu",
+	"zip_code": "572000",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "371321",
+	"name": "\u6c82\u5357\u53bf",
+	"pinyin": "yinanxian",
+	"zip_code": "276300",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "371322",
+	"name": "\u90ef\u57ce\u53bf",
+	"pinyin": "tanchengxian",
+	"zip_code": "276100",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "371323",
+	"name": "\u6c82\u6c34\u53bf",
+	"pinyin": "yishuixian",
+	"zip_code": "276400",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "371324",
+	"name": "\u5170\u9675\u53bf",
+	"pinyin": "lanlingxian",
+	"zip_code": "277700",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371325",
+	"name": "\u8d39\u53bf",
+	"pinyin": "feixian",
+	"zip_code": "273400",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "371326",
+	"name": "\u5e73\u9091\u53bf",
+	"pinyin": "pingyixian",
+	"zip_code": "273300",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "371327",
+	"name": "\u8392\u5357\u53bf",
+	"pinyin": "junanxian",
+	"zip_code": "276600",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "371328",
+	"name": "\u8499\u9634\u53bf",
+	"pinyin": "mengyinxian",
+	"zip_code": "276200",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "371329",
+	"name": "\u4e34\u6cad\u53bf",
+	"pinyin": "linshuxian",
+	"zip_code": "276700",
+	"parent_code": "371300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371400",
+	"name": "\u5fb7\u5dde\u5e02",
+	"pinyin": "dezhoushi",
+	"zip_code": "253000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "371402",
+	"name": "\u5fb7\u57ce\u533a",
+	"pinyin": "dechengqu",
+	"zip_code": "253011",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "371403",
+	"name": "\u9675\u57ce\u533a",
+	"pinyin": "lingchengqu",
+	"zip_code": "253500",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371422",
+	"name": "\u5b81\u6d25\u53bf",
+	"pinyin": "ningjinxian",
+	"zip_code": "253400",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "371423",
+	"name": "\u5e86\u4e91\u53bf",
+	"pinyin": "qingyunxian",
+	"zip_code": "253700",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "371424",
+	"name": "\u4e34\u9091\u53bf",
+	"pinyin": "linyixian",
+	"zip_code": "251500",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371425",
+	"name": "\u9f50\u6cb3\u53bf",
+	"pinyin": "qihexian",
+	"zip_code": "251100",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "371426",
+	"name": "\u5e73\u539f\u53bf",
+	"pinyin": "pingyuanxian",
+	"zip_code": "253100",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "371427",
+	"name": "\u590f\u6d25\u53bf",
+	"pinyin": "xiajinxian",
+	"zip_code": "253200",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "371428",
+	"name": "\u6b66\u57ce\u53bf",
+	"pinyin": "wuchengxian",
+	"zip_code": "253300",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "371481",
+	"name": "\u4e50\u9675\u5e02",
+	"pinyin": "lelingshi",
+	"zip_code": "253600",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371482",
+	"name": "\u79b9\u57ce\u5e02",
+	"pinyin": "yuchengshi",
+	"zip_code": "251200",
+	"parent_code": "371400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "371500",
+	"name": "\u804a\u57ce\u5e02",
+	"pinyin": "liaochengshi",
+	"zip_code": "252000",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "371502",
+	"name": "\u4e1c\u660c\u5e9c\u533a",
+	"pinyin": "dongchangfuqu",
+	"zip_code": "252000",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "371521",
+	"name": "\u9633\u8c37\u53bf",
+	"pinyin": "yangguxian",
+	"zip_code": "252300",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "371522",
+	"name": "\u8398\u53bf",
+	"pinyin": "xinxian",
+	"zip_code": "252400",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "371523",
+	"name": "\u830c\u5e73\u53bf",
+	"pinyin": "chipingxian",
+	"zip_code": "252100",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "371524",
+	"name": "\u4e1c\u963f\u53bf",
+	"pinyin": "dongaxian",
+	"zip_code": "252200",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "371525",
+	"name": "\u51a0\u53bf",
+	"pinyin": "guanxian",
+	"zip_code": "252500",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "371526",
+	"name": "\u9ad8\u5510\u53bf",
+	"pinyin": "gaotangxian",
+	"zip_code": "252800",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "371581",
+	"name": "\u4e34\u6e05\u5e02",
+	"pinyin": "linqingshi",
+	"zip_code": "252600",
+	"parent_code": "371500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "371600",
+	"name": "\u6ee8\u5dde\u5e02",
+	"pinyin": "binzhoushi",
+	"zip_code": "256600",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "371602",
+	"name": "\u6ee8\u57ce\u533a",
+	"pinyin": "binchengqu",
+	"zip_code": "256613",
+	"parent_code": "371600",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "371603",
+	"name": "\u6cbe\u5316\u533a",
+	"pinyin": "zhanhuaqu",
+	"zip_code": "256800",
+	"parent_code": "371600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "371621",
+	"name": "\u60e0\u6c11\u53bf",
+	"pinyin": "huiminxian",
+	"zip_code": "251700",
+	"parent_code": "371600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "371622",
+	"name": "\u9633\u4fe1\u53bf",
+	"pinyin": "yangxinxian",
+	"zip_code": "251800",
+	"parent_code": "371600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "371623",
+	"name": "\u65e0\u68e3\u53bf",
+	"pinyin": "wudixian",
+	"zip_code": "251900",
+	"parent_code": "371600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "371625",
+	"name": "\u535a\u5174\u53bf",
+	"pinyin": "boxingxian",
+	"zip_code": "256500",
+	"parent_code": "371600",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "371626",
+	"name": "\u90b9\u5e73\u53bf",
+	"pinyin": "zoupingxian",
+	"zip_code": "256200",
+	"parent_code": "371600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "371700",
+	"name": "\u83cf\u6cfd\u5e02",
+	"pinyin": "hezeshi",
+	"zip_code": "0",
+	"parent_code": "370000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "371702",
+	"name": "\u7261\u4e39\u533a",
+	"pinyin": "mudanqu",
+	"zip_code": "274009",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "371703",
+	"name": "\u5b9a\u9676\u533a",
+	"pinyin": "dingtaoqu",
+	"zip_code": "274100",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "371721",
+	"name": "\u66f9\u53bf",
+	"pinyin": "caoxian",
+	"zip_code": "274400",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "371722",
+	"name": "\u5355\u53bf",
+	"pinyin": "shanxian",
+	"zip_code": "274300",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "371723",
+	"name": "\u6210\u6b66\u53bf",
+	"pinyin": "chengwuxian",
+	"zip_code": "274200",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "371724",
+	"name": "\u5de8\u91ce\u53bf",
+	"pinyin": "juyexian",
+	"zip_code": "274900",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "371725",
+	"name": "\u90d3\u57ce\u53bf",
+	"pinyin": "yunchengxian",
+	"zip_code": "274700",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "371726",
+	"name": "\u9104\u57ce\u53bf",
+	"pinyin": "juanchengxian",
+	"zip_code": "274600",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "371728",
+	"name": "\u4e1c\u660e\u53bf",
+	"pinyin": "dongmingxian",
+	"zip_code": "274500",
+	"parent_code": "371700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "410000",
+	"name": "\u6cb3\u5357\u7701",
+	"pinyin": "henansheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "H"
+}, {
+	"code": "410100",
+	"name": "\u90d1\u5dde\u5e02",
+	"pinyin": "zhengzhoushi",
+	"zip_code": "450000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "410102",
+	"name": "\u4e2d\u539f\u533a",
+	"pinyin": "zhongyuanqu",
+	"zip_code": "450007",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "410103",
+	"name": "\u4e8c\u4e03\u533a",
+	"pinyin": "erqiqu",
+	"zip_code": "450052",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "410104",
+	"name": "\u7ba1\u57ce\u56de\u65cf\u533a",
+	"pinyin": "guanchenghuizuqu",
+	"zip_code": "450000",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "410105",
+	"name": "\u91d1\u6c34\u533a",
+	"pinyin": "jinshuiqu",
+	"zip_code": "450003",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "410106",
+	"name": "\u4e0a\u8857\u533a",
+	"pinyin": "shangjiequ",
+	"zip_code": "450041",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "410108",
+	"name": "\u60e0\u6d4e\u533a",
+	"pinyin": "huijiqu",
+	"zip_code": "450053",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "410122",
+	"name": "\u4e2d\u725f\u53bf",
+	"pinyin": "zhongmuxian",
+	"zip_code": "451450",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "410181",
+	"name": "\u5de9\u4e49\u5e02",
+	"pinyin": "gongyishi",
+	"zip_code": "451200",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "410182",
+	"name": "\u8365\u9633\u5e02",
+	"pinyin": "xingyangshi",
+	"zip_code": "450100",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410183",
+	"name": "\u65b0\u5bc6\u5e02",
+	"pinyin": "xinmishi",
+	"zip_code": "452300",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410184",
+	"name": "\u65b0\u90d1\u5e02",
+	"pinyin": "xinzhengshi",
+	"zip_code": "451100",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410185",
+	"name": "\u767b\u5c01\u5e02",
+	"pinyin": "dengfengshi",
+	"zip_code": "452470",
+	"parent_code": "410100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "410200",
+	"name": "\u5f00\u5c01\u5e02",
+	"pinyin": "kaifengshi",
+	"zip_code": "475000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "K"
+}, {
+	"code": "410202",
+	"name": "\u9f99\u4ead\u533a",
+	"pinyin": "longtingqu",
+	"zip_code": "475000",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410203",
+	"name": "\u987a\u6cb3\u56de\u65cf\u533a",
+	"pinyin": "shunhehuizuqu",
+	"zip_code": "475000",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "410204",
+	"name": "\u9f13\u697c\u533a",
+	"pinyin": "gulouqu",
+	"zip_code": "475000",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "410205",
+	"name": "\u79b9\u738b\u53f0\u533a",
+	"pinyin": "yuwangtaiqu",
+	"zip_code": "475000",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "410212",
+	"name": "\u7965\u7b26\u533a",
+	"pinyin": "xiangfuqu",
+	"zip_code": "475100",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410221",
+	"name": "\u675e\u53bf",
+	"pinyin": "qixian",
+	"zip_code": "475200",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "410222",
+	"name": "\u901a\u8bb8\u53bf",
+	"pinyin": "tongxuxian",
+	"zip_code": "452200",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "410223",
+	"name": "\u5c09\u6c0f\u53bf",
+	"pinyin": "weishixian",
+	"zip_code": "452100",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410225",
+	"name": "\u5170\u8003\u53bf",
+	"pinyin": "lankaoxian",
+	"zip_code": "475300",
+	"parent_code": "410200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410300",
+	"name": "\u6d1b\u9633\u5e02",
+	"pinyin": "luoyangshi",
+	"zip_code": "471000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "410302",
+	"name": "\u8001\u57ce\u533a",
+	"pinyin": "laochengqu",
+	"zip_code": "471002",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410303",
+	"name": "\u897f\u5de5\u533a",
+	"pinyin": "xigongqu",
+	"zip_code": "471000",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410304",
+	"name": "\u700d\u6cb3\u56de\u65cf\u533a",
+	"pinyin": "chanhehuizuqu",
+	"zip_code": "471002",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "410305",
+	"name": "\u6da7\u897f\u533a",
+	"pinyin": "jianxiqu",
+	"zip_code": "471003",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "410307",
+	"name": "\u5043\u5e08\u533a",
+	"pinyin": "yanshiqu",
+	"zip_code": "471900",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "410308",
+	"name": "\u5b5f\u6d25\u533a",
+	"pinyin": "mengjinqu",
+	"zip_code": "471100",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "410311",
+	"name": "\u6d1b\u9f99\u533a",
+	"pinyin": "luolongqu",
+	"zip_code": "471000",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410323",
+	"name": "\u65b0\u5b89\u53bf",
+	"pinyin": "xinanxian",
+	"zip_code": "471800",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410324",
+	"name": "\u683e\u5ddd\u53bf",
+	"pinyin": "luanchuanxian",
+	"zip_code": "471500",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410325",
+	"name": "\u5d69\u53bf",
+	"pinyin": "songxian",
+	"zip_code": "471400",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "410326",
+	"name": "\u6c5d\u9633\u53bf",
+	"pinyin": "ruyangxian",
+	"zip_code": "471200",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "410327",
+	"name": "\u5b9c\u9633\u53bf",
+	"pinyin": "yiyangxian",
+	"zip_code": "471600",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "410328",
+	"name": "\u6d1b\u5b81\u53bf",
+	"pinyin": "luoningxian",
+	"zip_code": "471700",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410329",
+	"name": "\u4f0a\u5ddd\u53bf",
+	"pinyin": "yichuanxian",
+	"zip_code": "471300",
+	"parent_code": "410300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "410400",
+	"name": "\u5e73\u9876\u5c71\u5e02",
+	"pinyin": "pingdingshanshi",
+	"zip_code": "467000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "410402",
+	"name": "\u65b0\u534e\u533a",
+	"pinyin": "xinhuaqu",
+	"zip_code": "467002",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410403",
+	"name": "\u536b\u4e1c\u533a",
+	"pinyin": "weidongqu",
+	"zip_code": "467021",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410404",
+	"name": "\u77f3\u9f99\u533a",
+	"pinyin": "shilongqu",
+	"zip_code": "467045",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "410411",
+	"name": "\u6e5b\u6cb3\u533a",
+	"pinyin": "zhanhequ",
+	"zip_code": "467000",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "410421",
+	"name": "\u5b9d\u4e30\u53bf",
+	"pinyin": "baofengxian",
+	"zip_code": "467400",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "410422",
+	"name": "\u53f6\u53bf",
+	"pinyin": "xexian",
+	"zip_code": "467200",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410423",
+	"name": "\u9c81\u5c71\u53bf",
+	"pinyin": "lushanxian",
+	"zip_code": "467300",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410425",
+	"name": "\u90cf\u53bf",
+	"pinyin": "jiaxian",
+	"zip_code": "467100",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "410481",
+	"name": "\u821e\u94a2\u5e02",
+	"pinyin": "wugangshi",
+	"zip_code": "462500",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410482",
+	"name": "\u6c5d\u5dde\u5e02",
+	"pinyin": "ruzhoushi",
+	"zip_code": "467500",
+	"parent_code": "410400",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "410500",
+	"name": "\u5b89\u9633\u5e02",
+	"pinyin": "anyangshi",
+	"zip_code": "0",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "410502",
+	"name": "\u6587\u5cf0\u533a",
+	"pinyin": "wenfengqu",
+	"zip_code": "455000",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410503",
+	"name": "\u5317\u5173\u533a",
+	"pinyin": "beiguanqu",
+	"zip_code": "455001",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "410505",
+	"name": "\u6bb7\u90fd\u533a",
+	"pinyin": "yinduqu",
+	"zip_code": "455004",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "410506",
+	"name": "\u9f99\u5b89\u533a",
+	"pinyin": "longanqu",
+	"zip_code": "455001",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410522",
+	"name": "\u5b89\u9633\u53bf",
+	"pinyin": "anyangxian",
+	"zip_code": "455000",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "410523",
+	"name": "\u6c64\u9634\u53bf",
+	"pinyin": "tangyinxian",
+	"zip_code": "456150",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "410526",
+	"name": "\u6ed1\u53bf",
+	"pinyin": "huaxian",
+	"zip_code": "456400",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "410527",
+	"name": "\u5185\u9ec4\u53bf",
+	"pinyin": "neihuangxian",
+	"zip_code": "456350",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "410581",
+	"name": "\u6797\u5dde\u5e02",
+	"pinyin": "linzhoushi",
+	"zip_code": "456500",
+	"parent_code": "410500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "410600",
+	"name": "\u9e64\u58c1\u5e02",
+	"pinyin": "hebishi",
+	"zip_code": "458000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "410602",
+	"name": "\u9e64\u5c71\u533a",
+	"pinyin": "heshanqu",
+	"zip_code": "458010",
+	"parent_code": "410600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "410603",
+	"name": "\u5c71\u57ce\u533a",
+	"pinyin": "shanchengqu",
+	"zip_code": "458000",
+	"parent_code": "410600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "410611",
+	"name": "\u6dc7\u6ee8\u533a",
+	"pinyin": "qibinqu",
+	"zip_code": "458000",
+	"parent_code": "410600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "410621",
+	"name": "\u6d5a\u53bf",
+	"pinyin": "junxian",
+	"zip_code": "456250",
+	"parent_code": "410600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "410622",
+	"name": "\u6dc7\u53bf",
+	"pinyin": "qixian",
+	"zip_code": "456750",
+	"parent_code": "410600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "410700",
+	"name": "\u65b0\u4e61\u5e02",
+	"pinyin": "xinxiangshi",
+	"zip_code": "453000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "410702",
+	"name": "\u7ea2\u65d7\u533a",
+	"pinyin": "hongqiqu",
+	"zip_code": "453000",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "410703",
+	"name": "\u536b\u6ee8\u533a",
+	"pinyin": "weibinqu",
+	"zip_code": "453000",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410704",
+	"name": "\u51e4\u6cc9\u533a",
+	"pinyin": "fengquanqu",
+	"zip_code": "453011",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "410711",
+	"name": "\u7267\u91ce\u533a",
+	"pinyin": "muyequ",
+	"zip_code": "453002",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "410721",
+	"name": "\u65b0\u4e61\u53bf",
+	"pinyin": "xinxiangxian",
+	"zip_code": "453700",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410724",
+	"name": "\u83b7\u5609\u53bf",
+	"pinyin": "huojiaxian",
+	"zip_code": "453800",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "410725",
+	"name": "\u539f\u9633\u53bf",
+	"pinyin": "yuanyangxian",
+	"zip_code": "453500",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "410726",
+	"name": "\u5ef6\u6d25\u53bf",
+	"pinyin": "yanjinxian",
+	"zip_code": "453200",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "410727",
+	"name": "\u5c01\u4e18\u53bf",
+	"pinyin": "fengqiuxian",
+	"zip_code": "453300",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "410728",
+	"name": "\u957f\u57a3\u53bf",
+	"pinyin": "changyuanxian",
+	"zip_code": "453400",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "410781",
+	"name": "\u536b\u8f89\u5e02",
+	"pinyin": "weihuishi",
+	"zip_code": "453100",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410782",
+	"name": "\u8f89\u53bf\u5e02",
+	"pinyin": "huixianshi",
+	"zip_code": "453600",
+	"parent_code": "410700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "410800",
+	"name": "\u7126\u4f5c\u5e02",
+	"pinyin": "jiaozuoshi",
+	"zip_code": "454150",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "410802",
+	"name": "\u89e3\u653e\u533a",
+	"pinyin": "jiefangqu",
+	"zip_code": "454000",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "410803",
+	"name": "\u4e2d\u7ad9\u533a",
+	"pinyin": "zhongzhanqu",
+	"zip_code": "454191",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "410804",
+	"name": "\u9a6c\u6751\u533a",
+	"pinyin": "macunqu",
+	"zip_code": "454171",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "410811",
+	"name": "\u5c71\u9633\u533a",
+	"pinyin": "shanyangqu",
+	"zip_code": "454002",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "410821",
+	"name": "\u4fee\u6b66\u53bf",
+	"pinyin": "xiuwuxian",
+	"zip_code": "454350",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "410822",
+	"name": "\u535a\u7231\u53bf",
+	"pinyin": "boaixian",
+	"zip_code": "454450",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "410823",
+	"name": "\u6b66\u965f\u53bf",
+	"pinyin": "wuzhixian",
+	"zip_code": "454950",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410825",
+	"name": "\u6e29\u53bf",
+	"pinyin": "wenxian",
+	"zip_code": "454850",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "410882",
+	"name": "\u6c81\u9633\u5e02",
+	"pinyin": "qinyangshi",
+	"zip_code": "454550",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "410883",
+	"name": "\u5b5f\u5dde\u5e02",
+	"pinyin": "mengzhoushi",
+	"zip_code": "454750",
+	"parent_code": "410800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "410900",
+	"name": "\u6fee\u9633\u5e02",
+	"pinyin": "puyangshi",
+	"zip_code": "457000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "410902",
+	"name": "\u534e\u9f99\u533a",
+	"pinyin": "hualongqu",
+	"zip_code": "457001",
+	"parent_code": "410900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "410922",
+	"name": "\u6e05\u4e30\u53bf",
+	"pinyin": "qingfengxian",
+	"zip_code": "457300",
+	"parent_code": "410900",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "410923",
+	"name": "\u5357\u4e50\u53bf",
+	"pinyin": "nanlexian",
+	"zip_code": "457400",
+	"parent_code": "410900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "410926",
+	"name": "\u8303\u53bf",
+	"pinyin": "fanxian",
+	"zip_code": "457500",
+	"parent_code": "410900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "410927",
+	"name": "\u53f0\u524d\u53bf",
+	"pinyin": "taiqianxian",
+	"zip_code": "457600",
+	"parent_code": "410900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "410928",
+	"name": "\u6fee\u9633\u53bf",
+	"pinyin": "puyangxian",
+	"zip_code": "457100",
+	"parent_code": "410900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "411000",
+	"name": "\u8bb8\u660c\u5e02",
+	"pinyin": "xuchangshi",
+	"zip_code": "461000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "411002",
+	"name": "\u9b4f\u90fd\u533a",
+	"pinyin": "weiduqu",
+	"zip_code": "461000",
+	"parent_code": "411000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "411003",
+	"name": "\u5efa\u5b89\u533a",
+	"pinyin": "jiananqu",
+	"zip_code": "461100",
+	"parent_code": "411000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "411024",
+	"name": "\u9122\u9675\u53bf",
+	"pinyin": "yanlingxian",
+	"zip_code": "461200",
+	"parent_code": "411000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411025",
+	"name": "\u8944\u57ce\u53bf",
+	"pinyin": "xiangchengxian",
+	"zip_code": "461700",
+	"parent_code": "411000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411081",
+	"name": "\u79b9\u5dde\u5e02",
+	"pinyin": "yuzhoushi",
+	"zip_code": "461670",
+	"parent_code": "411000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411082",
+	"name": "\u957f\u845b\u5e02",
+	"pinyin": "changgeshi",
+	"zip_code": "461500",
+	"parent_code": "411000",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "411100",
+	"name": "\u6f2f\u6cb3\u5e02",
+	"pinyin": "luoheshi",
+	"zip_code": "462000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "411102",
+	"name": "\u6e90\u6c47\u533a",
+	"pinyin": "yuanhuiqu",
+	"zip_code": "462000",
+	"parent_code": "411100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411103",
+	"name": "\u90fe\u57ce\u533a",
+	"pinyin": "yanchengqu",
+	"zip_code": "462300",
+	"parent_code": "411100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411104",
+	"name": "\u53ec\u9675\u533a",
+	"pinyin": "shaolingqu",
+	"zip_code": "462300",
+	"parent_code": "411100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411121",
+	"name": "\u821e\u9633\u53bf",
+	"pinyin": "wuyangxian",
+	"zip_code": "462400",
+	"parent_code": "411100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "411122",
+	"name": "\u4e34\u988d\u53bf",
+	"pinyin": "linyingxian",
+	"zip_code": "462600",
+	"parent_code": "411100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "411200",
+	"name": "\u4e09\u95e8\u5ce1\u5e02",
+	"pinyin": "sanmenxiashi",
+	"zip_code": "472000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "411202",
+	"name": "\u6e56\u6ee8\u533a",
+	"pinyin": "hubinqu",
+	"zip_code": "472000",
+	"parent_code": "411200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "411203",
+	"name": "\u9655\u5dde\u533a",
+	"pinyin": "shanzhouqu",
+	"zip_code": "472100",
+	"parent_code": "411200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411221",
+	"name": "\u6e11\u6c60\u53bf",
+	"pinyin": "minchixian",
+	"zip_code": "472400",
+	"parent_code": "411200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "411224",
+	"name": "\u5362\u6c0f\u53bf",
+	"pinyin": "lushixian",
+	"zip_code": "472200",
+	"parent_code": "411200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "411281",
+	"name": "\u4e49\u9a6c\u5e02",
+	"pinyin": "yimashi",
+	"zip_code": "472300",
+	"parent_code": "411200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411282",
+	"name": "\u7075\u5b9d\u5e02",
+	"pinyin": "lingbaoshi",
+	"zip_code": "472500",
+	"parent_code": "411200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "411300",
+	"name": "\u5357\u9633\u5e02",
+	"pinyin": "nanyangshi",
+	"zip_code": "473000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "411302",
+	"name": "\u5b9b\u57ce\u533a",
+	"pinyin": "wanchengqu",
+	"zip_code": "473001",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "411303",
+	"name": "\u5367\u9f99\u533a",
+	"pinyin": "wolongqu",
+	"zip_code": "473003",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "411321",
+	"name": "\u5357\u53ec\u53bf",
+	"pinyin": "nanzhaoxian",
+	"zip_code": "474650",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "411322",
+	"name": "\u65b9\u57ce\u53bf",
+	"pinyin": "fangchengxian",
+	"zip_code": "473200",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "411323",
+	"name": "\u897f\u5ce1\u53bf",
+	"pinyin": "xixiaxian",
+	"zip_code": "474550",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411324",
+	"name": "\u9547\u5e73\u53bf",
+	"pinyin": "zhenpingxian",
+	"zip_code": "474250",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "411325",
+	"name": "\u5185\u4e61\u53bf",
+	"pinyin": "neixiangxian",
+	"zip_code": "474350",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "411326",
+	"name": "\u6dc5\u5ddd\u53bf",
+	"pinyin": "xichuanxian",
+	"zip_code": "474450",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411327",
+	"name": "\u793e\u65d7\u53bf",
+	"pinyin": "sheqixian",
+	"zip_code": "473300",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411328",
+	"name": "\u5510\u6cb3\u53bf",
+	"pinyin": "tanghexian",
+	"zip_code": "473400",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "411329",
+	"name": "\u65b0\u91ce\u53bf",
+	"pinyin": "xinyexian",
+	"zip_code": "473500",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411330",
+	"name": "\u6850\u67cf\u53bf",
+	"pinyin": "tongbaixian",
+	"zip_code": "474750",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "411381",
+	"name": "\u9093\u5dde\u5e02",
+	"pinyin": "dengzhoushi",
+	"zip_code": "474150",
+	"parent_code": "411300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "411400",
+	"name": "\u5546\u4e18\u5e02",
+	"pinyin": "shangqiushi",
+	"zip_code": "476000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "411402",
+	"name": "\u6881\u56ed\u533a",
+	"pinyin": "liangyuanqu",
+	"zip_code": "476000",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "411403",
+	"name": "\u7762\u9633\u533a",
+	"pinyin": "suiyangqu",
+	"zip_code": "476100",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411421",
+	"name": "\u6c11\u6743\u53bf",
+	"pinyin": "minquanxian",
+	"zip_code": "476800",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "411422",
+	"name": "\u7762\u53bf",
+	"pinyin": "suixian",
+	"zip_code": "476900",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411423",
+	"name": "\u5b81\u9675\u53bf",
+	"pinyin": "ninglingxian",
+	"zip_code": "476700",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "411424",
+	"name": "\u67d8\u57ce\u53bf",
+	"pinyin": "zhechengxian",
+	"zip_code": "476200",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "411425",
+	"name": "\u865e\u57ce\u53bf",
+	"pinyin": "yuchengxian",
+	"zip_code": "476300",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411426",
+	"name": "\u590f\u9091\u53bf",
+	"pinyin": "xiayixian",
+	"zip_code": "476400",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411481",
+	"name": "\u6c38\u57ce\u5e02",
+	"pinyin": "yongchengshi",
+	"zip_code": "476600",
+	"parent_code": "411400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411500",
+	"name": "\u4fe1\u9633\u5e02",
+	"pinyin": "xinyangshi",
+	"zip_code": "464000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "411502",
+	"name": "\u6d49\u6cb3\u533a",
+	"pinyin": "shihequ",
+	"zip_code": "464000",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411503",
+	"name": "\u5e73\u6865\u533a",
+	"pinyin": "pingqiaoqu",
+	"zip_code": "464100",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "411521",
+	"name": "\u7f57\u5c71\u53bf",
+	"pinyin": "luoshanxian",
+	"zip_code": "464200",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "411522",
+	"name": "\u5149\u5c71\u53bf",
+	"pinyin": "guangshanxian",
+	"zip_code": "465450",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "411523",
+	"name": "\u65b0\u53bf",
+	"pinyin": "xinxian",
+	"zip_code": "465550",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411524",
+	"name": "\u5546\u57ce\u53bf",
+	"pinyin": "shangchengxian",
+	"zip_code": "465350",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411525",
+	"name": "\u56fa\u59cb\u53bf",
+	"pinyin": "gushixian",
+	"zip_code": "465250",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "411526",
+	"name": "\u6f62\u5ddd\u53bf",
+	"pinyin": "huangchuanxian",
+	"zip_code": "465150",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "411527",
+	"name": "\u6dee\u6ee8\u53bf",
+	"pinyin": "huaibinxian",
+	"zip_code": "464400",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "411528",
+	"name": "\u606f\u53bf",
+	"pinyin": "xixian",
+	"zip_code": "464300",
+	"parent_code": "411500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411600",
+	"name": "\u5468\u53e3\u5e02",
+	"pinyin": "zhoukoushi",
+	"zip_code": "466000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "411602",
+	"name": "\u5ddd\u6c47\u533a",
+	"pinyin": "chuanhuiqu",
+	"zip_code": "466000",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "411621",
+	"name": "\u6276\u6c9f\u53bf",
+	"pinyin": "fugouxian",
+	"zip_code": "461300",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "411622",
+	"name": "\u897f\u534e\u53bf",
+	"pinyin": "xihuaxian",
+	"zip_code": "466600",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411623",
+	"name": "\u5546\u6c34\u53bf",
+	"pinyin": "shangshuixian",
+	"zip_code": "466100",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411624",
+	"name": "\u6c88\u4e18\u53bf",
+	"pinyin": "shenqiuxian",
+	"zip_code": "466300",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411625",
+	"name": "\u90f8\u57ce\u53bf",
+	"pinyin": "danchengxian",
+	"zip_code": "477150",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "411626",
+	"name": "\u6dee\u9633\u53bf",
+	"pinyin": "huaiyangxian",
+	"zip_code": "477150",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "411627",
+	"name": "\u592a\u5eb7\u53bf",
+	"pinyin": "taikangxian",
+	"zip_code": "461400",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "411628",
+	"name": "\u9e7f\u9091\u53bf",
+	"pinyin": "luyixian",
+	"zip_code": "477200",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "411681",
+	"name": "\u9879\u57ce\u5e02",
+	"pinyin": "xiangchengshi",
+	"zip_code": "466200",
+	"parent_code": "411600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411700",
+	"name": "\u9a7b\u9a6c\u5e97\u5e02",
+	"pinyin": "zhumadianshi",
+	"zip_code": "463000",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "411702",
+	"name": "\u9a7f\u57ce\u533a",
+	"pinyin": "yichengqu",
+	"zip_code": "463000",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "411721",
+	"name": "\u897f\u5e73\u53bf",
+	"pinyin": "xipingxian",
+	"zip_code": "463900",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "411722",
+	"name": "\u4e0a\u8521\u53bf",
+	"pinyin": "shangcaixian",
+	"zip_code": "463800",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411723",
+	"name": "\u5e73\u8206\u53bf",
+	"pinyin": "pingyuxian",
+	"zip_code": "463400",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "411724",
+	"name": "\u6b63\u9633\u53bf",
+	"pinyin": "zhengyangxian",
+	"zip_code": "463600",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "411725",
+	"name": "\u786e\u5c71\u53bf",
+	"pinyin": "queshanxian",
+	"zip_code": "463200",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "411726",
+	"name": "\u6ccc\u9633\u53bf",
+	"pinyin": "biyangxian",
+	"zip_code": "463700",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "411727",
+	"name": "\u6c5d\u5357\u53bf",
+	"pinyin": "runanxian",
+	"zip_code": "463300",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "411728",
+	"name": "\u9042\u5e73\u53bf",
+	"pinyin": "suipingxian",
+	"zip_code": "463100",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "411729",
+	"name": "\u65b0\u8521\u53bf",
+	"pinyin": "xincaixian",
+	"zip_code": "463500",
+	"parent_code": "411700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "419000",
+	"name": "\u7701\u76f4\u8f96\u53bf\u7ea7\u884c\u653f\u533a\u5212",
+	"pinyin": "shengzhixiaxianjixingzhengquhua",
+	"zip_code": "0",
+	"parent_code": "410000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "419001",
+	"name": "\u6d4e\u6e90\u5e02",
+	"pinyin": "jiyuanshi",
+	"zip_code": "454650",
+	"parent_code": "419000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "420000",
+	"name": "\u6e56\u5317\u7701",
+	"pinyin": "hubeisheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "H"
+}, {
+	"code": "420100",
+	"name": "\u6b66\u6c49\u5e02",
+	"pinyin": "wuhanshi",
+	"zip_code": "430000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "420102",
+	"name": "\u6c5f\u5cb8\u533a",
+	"pinyin": "jianganqu",
+	"zip_code": "430014",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "420103",
+	"name": "\u6c5f\u6c49\u533a",
+	"pinyin": "jianghanqu",
+	"zip_code": "430021",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "420104",
+	"name": "\u785a\u53e3\u533a",
+	"pinyin": "qiaokouqu",
+	"zip_code": "430033",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "420105",
+	"name": "\u6c49\u9633\u533a",
+	"pinyin": "hanyangqu",
+	"zip_code": "430050",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "420106",
+	"name": "\u6b66\u660c\u533a",
+	"pinyin": "wuchangqu",
+	"zip_code": "430061",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "420107",
+	"name": "\u9752\u5c71\u533a",
+	"pinyin": "qingshanqu",
+	"zip_code": "430080",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "420111",
+	"name": "\u6d2a\u5c71\u533a",
+	"pinyin": "hongshanqu",
+	"zip_code": "430070",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "420112",
+	"name": "\u4e1c\u897f\u6e56\u533a",
+	"pinyin": "dongxihuqu",
+	"zip_code": "430040",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420113",
+	"name": "\u6c49\u5357\u533a",
+	"pinyin": "hannanqu",
+	"zip_code": "430090",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "420114",
+	"name": "\u8521\u7538\u533a",
+	"pinyin": "caidianqu",
+	"zip_code": "430100",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "420115",
+	"name": "\u6c5f\u590f\u533a",
+	"pinyin": "jiangxiaqu",
+	"zip_code": "430200",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "420116",
+	"name": "\u9ec4\u9642\u533a",
+	"pinyin": "huangpoqu",
+	"zip_code": "432200",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "420117",
+	"name": "\u65b0\u6d32\u533a",
+	"pinyin": "xinzhouqu",
+	"zip_code": "431400",
+	"parent_code": "420100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420200",
+	"name": "\u9ec4\u77f3\u5e02",
+	"pinyin": "huangshishi",
+	"zip_code": "435000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "420202",
+	"name": "\u9ec4\u77f3\u6e2f\u533a",
+	"pinyin": "huangshigangqu",
+	"zip_code": "435000",
+	"parent_code": "420200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "420203",
+	"name": "\u897f\u585e\u5c71\u533a",
+	"pinyin": "xisaishanqu",
+	"zip_code": "435001",
+	"parent_code": "420200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420204",
+	"name": "\u4e0b\u9646\u533a",
+	"pinyin": "xialuqu",
+	"zip_code": "435005",
+	"parent_code": "420200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420205",
+	"name": "\u94c1\u5c71\u533a",
+	"pinyin": "tieshanqu",
+	"zip_code": "435006",
+	"parent_code": "420200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "420222",
+	"name": "\u9633\u65b0\u53bf",
+	"pinyin": "yangxinxian",
+	"zip_code": "435200",
+	"parent_code": "420200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420281",
+	"name": "\u5927\u51b6\u5e02",
+	"pinyin": "dayeshi",
+	"zip_code": "435100",
+	"parent_code": "420200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420300",
+	"name": "\u5341\u5830\u5e02",
+	"pinyin": "shiyanshi",
+	"zip_code": "442000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "420302",
+	"name": "\u8305\u7bad\u533a",
+	"pinyin": "maojianqu",
+	"zip_code": "442012",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "420303",
+	"name": "\u5f20\u6e7e\u533a",
+	"pinyin": "zhangwanqu",
+	"zip_code": "442001",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "420304",
+	"name": "\u90e7\u9633\u533a",
+	"pinyin": "yunyangqu",
+	"zip_code": "442500",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420322",
+	"name": "\u90e7\u897f\u53bf",
+	"pinyin": "yunxixian",
+	"zip_code": "442600",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420323",
+	"name": "\u7af9\u5c71\u53bf",
+	"pinyin": "zhushanxian",
+	"zip_code": "442200",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "420324",
+	"name": "\u7af9\u6eaa\u53bf",
+	"pinyin": "zhuxixian",
+	"zip_code": "442300",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "420325",
+	"name": "\u623f\u53bf",
+	"pinyin": "fangxian",
+	"zip_code": "442100",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "420381",
+	"name": "\u4e39\u6c5f\u53e3\u5e02",
+	"pinyin": "danjiangkoushi",
+	"zip_code": "442700",
+	"parent_code": "420300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420500",
+	"name": "\u5b9c\u660c\u5e02",
+	"pinyin": "yichangshi",
+	"zip_code": "443000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "420502",
+	"name": "\u897f\u9675\u533a",
+	"pinyin": "xilingqu",
+	"zip_code": "443000",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420503",
+	"name": "\u4f0d\u5bb6\u5c97\u533a",
+	"pinyin": "wujiagangqu",
+	"zip_code": "443001",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "420504",
+	"name": "\u70b9\u519b\u533a",
+	"pinyin": "dianjunqu",
+	"zip_code": "443006",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420505",
+	"name": "\u7307\u4ead\u533a",
+	"pinyin": "xiaotingqu",
+	"zip_code": "443007",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420506",
+	"name": "\u5937\u9675\u533a",
+	"pinyin": "yilingqu",
+	"zip_code": "443100",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420525",
+	"name": "\u8fdc\u5b89\u53bf",
+	"pinyin": "yuananxian",
+	"zip_code": "444200",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420526",
+	"name": "\u5174\u5c71\u53bf",
+	"pinyin": "xingshanxian",
+	"zip_code": "443711",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420527",
+	"name": "\u79ed\u5f52\u53bf",
+	"pinyin": "ziguixian",
+	"zip_code": "443600",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "420528",
+	"name": "\u957f\u9633\u571f\u5bb6\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "changyangtujiazuzizhixian",
+	"zip_code": "443500",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "420529",
+	"name": "\u4e94\u5cf0\u571f\u5bb6\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "wufengtujiazuzizhixian",
+	"zip_code": "443400",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "420581",
+	"name": "\u5b9c\u90fd\u5e02",
+	"pinyin": "yidushi",
+	"zip_code": "443300",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420582",
+	"name": "\u5f53\u9633\u5e02",
+	"pinyin": "dangyangshi",
+	"zip_code": "444100",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420583",
+	"name": "\u679d\u6c5f\u5e02",
+	"pinyin": "zhijiangshi",
+	"zip_code": "443200",
+	"parent_code": "420500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "420600",
+	"name": "\u8944\u9633\u5e02",
+	"pinyin": "xiangyangshi",
+	"zip_code": "0",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "420602",
+	"name": "\u8944\u57ce\u533a",
+	"pinyin": "xiangchengqu",
+	"zip_code": "441021",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420606",
+	"name": "\u6a0a\u57ce\u533a",
+	"pinyin": "fanchengqu",
+	"zip_code": "441001",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "420607",
+	"name": "\u8944\u5dde\u533a",
+	"pinyin": "xiangzhouqu",
+	"zip_code": "441000",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420624",
+	"name": "\u5357\u6f33\u53bf",
+	"pinyin": "nanzhangxian",
+	"zip_code": "441500",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "420625",
+	"name": "\u8c37\u57ce\u53bf",
+	"pinyin": "guchengxian",
+	"zip_code": "441700",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "420626",
+	"name": "\u4fdd\u5eb7\u53bf",
+	"pinyin": "baokangxian",
+	"zip_code": "441600",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "420682",
+	"name": "\u8001\u6cb3\u53e3\u5e02",
+	"pinyin": "laohekoushi",
+	"zip_code": "441800",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "420683",
+	"name": "\u67a3\u9633\u5e02",
+	"pinyin": "zaoyangshi",
+	"zip_code": "441200",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "420684",
+	"name": "\u5b9c\u57ce\u5e02",
+	"pinyin": "yichengshi",
+	"zip_code": "441400",
+	"parent_code": "420600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420700",
+	"name": "\u9102\u5dde\u5e02",
+	"pinyin": "ezhoushi",
+	"zip_code": "436000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "E"
+}, {
+	"code": "420702",
+	"name": "\u6881\u5b50\u6e56\u533a",
+	"pinyin": "liangzihuqu",
+	"zip_code": "436064",
+	"parent_code": "420700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "420703",
+	"name": "\u534e\u5bb9\u533a",
+	"pinyin": "huarongqu",
+	"zip_code": "436030",
+	"parent_code": "420700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "420704",
+	"name": "\u9102\u57ce\u533a",
+	"pinyin": "echengqu",
+	"zip_code": "436000",
+	"parent_code": "420700",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "420800",
+	"name": "\u8346\u95e8\u5e02",
+	"pinyin": "jingmenshi",
+	"zip_code": "448000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "420802",
+	"name": "\u4e1c\u5b9d\u533a",
+	"pinyin": "dongbaoqu",
+	"zip_code": "448004",
+	"parent_code": "420800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420804",
+	"name": "\u6387\u5200\u533a",
+	"pinyin": "duodaoqu",
+	"zip_code": "448124",
+	"parent_code": "420800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420821",
+	"name": "\u4eac\u5c71\u53bf",
+	"pinyin": "jingshanxian",
+	"zip_code": "431800",
+	"parent_code": "420800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "420822",
+	"name": "\u6c99\u6d0b\u53bf",
+	"pinyin": "shayangxian",
+	"zip_code": "448200",
+	"parent_code": "420800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "420881",
+	"name": "\u949f\u7965\u5e02",
+	"pinyin": "zhongxiangshi",
+	"zip_code": "431900",
+	"parent_code": "420800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "420900",
+	"name": "\u5b5d\u611f\u5e02",
+	"pinyin": "xiaoganshi",
+	"zip_code": "432000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "420902",
+	"name": "\u5b5d\u5357\u533a",
+	"pinyin": "xiaonanqu",
+	"zip_code": "432100",
+	"parent_code": "420900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420921",
+	"name": "\u5b5d\u660c\u53bf",
+	"pinyin": "xiaochangxian",
+	"zip_code": "432900",
+	"parent_code": "420900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "420922",
+	"name": "\u5927\u609f\u53bf",
+	"pinyin": "dawuxian",
+	"zip_code": "432800",
+	"parent_code": "420900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "420923",
+	"name": "\u4e91\u68a6\u53bf",
+	"pinyin": "yunmengxian",
+	"zip_code": "432500",
+	"parent_code": "420900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420981",
+	"name": "\u5e94\u57ce\u5e02",
+	"pinyin": "yingchengshi",
+	"zip_code": "432400",
+	"parent_code": "420900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "420982",
+	"name": "\u5b89\u9646\u5e02",
+	"pinyin": "anlushi",
+	"zip_code": "432600",
+	"parent_code": "420900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "420984",
+	"name": "\u6c49\u5ddd\u5e02",
+	"pinyin": "hanchuanshi",
+	"zip_code": "432300",
+	"parent_code": "420900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "421000",
+	"name": "\u8346\u5dde\u5e02",
+	"pinyin": "jingzhoushi",
+	"zip_code": "434000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "421002",
+	"name": "\u6c99\u5e02\u533a",
+	"pinyin": "shashiqu",
+	"zip_code": "434000",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "421003",
+	"name": "\u8346\u5dde\u533a",
+	"pinyin": "jingzhouqu",
+	"zip_code": "434020",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "421022",
+	"name": "\u516c\u5b89\u53bf",
+	"pinyin": "gonganxian",
+	"zip_code": "434300",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "421023",
+	"name": "\u76d1\u5229\u53bf",
+	"pinyin": "jianlixian",
+	"zip_code": "433300",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "421024",
+	"name": "\u6c5f\u9675\u53bf",
+	"pinyin": "jianglingxian",
+	"zip_code": "434101",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "421081",
+	"name": "\u77f3\u9996\u5e02",
+	"pinyin": "shishoushi",
+	"zip_code": "434400",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "421083",
+	"name": "\u6d2a\u6e56\u5e02",
+	"pinyin": "honghushi",
+	"zip_code": "433200",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "421087",
+	"name": "\u677e\u6ecb\u5e02",
+	"pinyin": "songzishi",
+	"zip_code": "434200",
+	"parent_code": "421000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "421100",
+	"name": "\u9ec4\u5188\u5e02",
+	"pinyin": "huanggangshi",
+	"zip_code": "438000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "421102",
+	"name": "\u9ec4\u5dde\u533a",
+	"pinyin": "huangzhouqu",
+	"zip_code": "438000",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "421121",
+	"name": "\u56e2\u98ce\u53bf",
+	"pinyin": "tuanfengxian",
+	"zip_code": "438000",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "421122",
+	"name": "\u7ea2\u5b89\u53bf",
+	"pinyin": "honganxian",
+	"zip_code": "438401",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "421123",
+	"name": "\u7f57\u7530\u53bf",
+	"pinyin": "luotianxian",
+	"zip_code": "438600",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "421124",
+	"name": "\u82f1\u5c71\u53bf",
+	"pinyin": "yingshanxian",
+	"zip_code": "438700",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "421125",
+	"name": "\u6d60\u6c34\u53bf",
+	"pinyin": "xishuixian",
+	"zip_code": "438200",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "421126",
+	"name": "\u8572\u6625\u53bf",
+	"pinyin": "qichunxian",
+	"zip_code": "435300",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "421127",
+	"name": "\u9ec4\u6885\u53bf",
+	"pinyin": "huangmeixian",
+	"zip_code": "435500",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "421181",
+	"name": "\u9ebb\u57ce\u5e02",
+	"pinyin": "machengshi",
+	"zip_code": "438300",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "421182",
+	"name": "\u6b66\u7a74\u5e02",
+	"pinyin": "wuxueshi",
+	"zip_code": "435400",
+	"parent_code": "421100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "421200",
+	"name": "\u54b8\u5b81\u5e02",
+	"pinyin": "xianningshi",
+	"zip_code": "437000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "421202",
+	"name": "\u54b8\u5b89\u533a",
+	"pinyin": "xiananqu",
+	"zip_code": "437000",
+	"parent_code": "421200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "421221",
+	"name": "\u5609\u9c7c\u53bf",
+	"pinyin": "jiayuxian",
+	"zip_code": "437200",
+	"parent_code": "421200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "421222",
+	"name": "\u901a\u57ce\u53bf",
+	"pinyin": "tongchengxian",
+	"zip_code": "437400",
+	"parent_code": "421200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "421223",
+	"name": "\u5d07\u9633\u53bf",
+	"pinyin": "chongyangxian",
+	"zip_code": "437500",
+	"parent_code": "421200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "421224",
+	"name": "\u901a\u5c71\u53bf",
+	"pinyin": "tongshanxian",
+	"zip_code": "437600",
+	"parent_code": "421200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "421281",
+	"name": "\u8d64\u58c1\u5e02",
+	"pinyin": "chibishi",
+	"zip_code": "437300",
+	"parent_code": "421200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "421300",
+	"name": "\u968f\u5dde\u5e02",
+	"pinyin": "suizhoushi",
+	"zip_code": "441300",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "421303",
+	"name": "\u66fe\u90fd\u533a",
+	"pinyin": "cengduqu",
+	"zip_code": "441300",
+	"parent_code": "421300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "421321",
+	"name": "\u968f\u53bf",
+	"pinyin": "suixian",
+	"zip_code": "431500",
+	"parent_code": "421300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "421381",
+	"name": "\u5e7f\u6c34\u5e02",
+	"pinyin": "guangshuishi",
+	"zip_code": "432700",
+	"parent_code": "421300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "422800",
+	"name": "\u6069\u65bd\u571f\u5bb6\u65cf\u82d7\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "enshitujiazumiaozuzizhizhou",
+	"zip_code": "445000",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "E"
+}, {
+	"code": "422801",
+	"name": "\u6069\u65bd\u5e02",
+	"pinyin": "enshishi",
+	"zip_code": "445000",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "422802",
+	"name": "\u5229\u5ddd\u5e02",
+	"pinyin": "lichuanshi",
+	"zip_code": "445400",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "422822",
+	"name": "\u5efa\u59cb\u53bf",
+	"pinyin": "jianshixian",
+	"zip_code": "445300",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "422823",
+	"name": "\u5df4\u4e1c\u53bf",
+	"pinyin": "badongxian",
+	"zip_code": "444300",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "422825",
+	"name": "\u5ba3\u6069\u53bf",
+	"pinyin": "xuanenxian",
+	"zip_code": "445500",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "422826",
+	"name": "\u54b8\u4e30\u53bf",
+	"pinyin": "xianfengxian",
+	"zip_code": "445600",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "422827",
+	"name": "\u6765\u51e4\u53bf",
+	"pinyin": "laifengxian",
+	"zip_code": "445700",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "422828",
+	"name": "\u9e64\u5cf0\u53bf",
+	"pinyin": "hefengxian",
+	"zip_code": "445800",
+	"parent_code": "422800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "429000",
+	"name": "\u7701\u76f4\u8f96\u53bf\u7ea7\u884c\u653f\u533a\u5212",
+	"pinyin": "shengzhixiaxianjixingzhengquhua",
+	"zip_code": "0",
+	"parent_code": "420000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "429004",
+	"name": "\u4ed9\u6843\u5e02",
+	"pinyin": "xiantaoshi",
+	"zip_code": "433000",
+	"parent_code": "429000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "429005",
+	"name": "\u6f5c\u6c5f\u5e02",
+	"pinyin": "qianjiangshi",
+	"zip_code": "433100",
+	"parent_code": "429000",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "429006",
+	"name": "\u5929\u95e8\u5e02",
+	"pinyin": "tianmenshi",
+	"zip_code": "431700",
+	"parent_code": "429000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "429021",
+	"name": "\u795e\u519c\u67b6\u6797\u533a",
+	"pinyin": "shennongjialinqu",
+	"zip_code": "442400",
+	"parent_code": "429000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430000",
+	"name": "\u6e56\u5357\u7701",
+	"pinyin": "hunansheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "H"
+}, {
+	"code": "430100",
+	"name": "\u957f\u6c99\u5e02",
+	"pinyin": "changshashi",
+	"zip_code": "410000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "430102",
+	"name": "\u8299\u84c9\u533a",
+	"pinyin": "furongqu",
+	"zip_code": "410011",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "430103",
+	"name": "\u5929\u5fc3\u533a",
+	"pinyin": "tianxinqu",
+	"zip_code": "410011",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "430104",
+	"name": "\u5cb3\u9e93\u533a",
+	"pinyin": "yueluqu",
+	"zip_code": "410006",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430105",
+	"name": "\u5f00\u798f\u533a",
+	"pinyin": "kaifuqu",
+	"zip_code": "410008",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "430111",
+	"name": "\u96e8\u82b1\u533a",
+	"pinyin": "yuhuaqu",
+	"zip_code": "410011",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430112",
+	"name": "\u671b\u57ce\u533a",
+	"pinyin": "wangchengqu",
+	"zip_code": "410000",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "430121",
+	"name": "\u957f\u6c99\u53bf",
+	"pinyin": "changshaxian",
+	"zip_code": "410100",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "430181",
+	"name": "\u6d4f\u9633\u5e02",
+	"pinyin": "liuyangshi",
+	"zip_code": "410300",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430182",
+	"name": "\u5b81\u4e61\u5e02",
+	"pinyin": "ningxiangshi",
+	"zip_code": "410600",
+	"parent_code": "430100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "430200",
+	"name": "\u682a\u6d32\u5e02",
+	"pinyin": "zhuzhoushi",
+	"zip_code": "412000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "430202",
+	"name": "\u8377\u5858\u533a",
+	"pinyin": "hetangqu",
+	"zip_code": "412000",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430203",
+	"name": "\u82a6\u6dde\u533a",
+	"pinyin": "lusongqu",
+	"zip_code": "412000",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430204",
+	"name": "\u77f3\u5cf0\u533a",
+	"pinyin": "shifengqu",
+	"zip_code": "412005",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430211",
+	"name": "\u5929\u5143\u533a",
+	"pinyin": "tianyuanqu",
+	"zip_code": "412007",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "430221",
+	"name": "\u682a\u6d32\u53bf",
+	"pinyin": "zhuzhouxian",
+	"zip_code": "412100",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "430223",
+	"name": "\u6538\u53bf",
+	"pinyin": "youxian",
+	"zip_code": "412300",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430224",
+	"name": "\u8336\u9675\u53bf",
+	"pinyin": "chalingxian",
+	"zip_code": "412400",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "430225",
+	"name": "\u708e\u9675\u53bf",
+	"pinyin": "yanlingxian",
+	"zip_code": "412500",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430281",
+	"name": "\u91b4\u9675\u5e02",
+	"pinyin": "lilingshi",
+	"zip_code": "412200",
+	"parent_code": "430200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430300",
+	"name": "\u6e58\u6f6d\u5e02",
+	"pinyin": "xiangtanshi",
+	"zip_code": "411100",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "430302",
+	"name": "\u96e8\u6e56\u533a",
+	"pinyin": "yuhuqu",
+	"zip_code": "411100",
+	"parent_code": "430300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430304",
+	"name": "\u5cb3\u5858\u533a",
+	"pinyin": "yuetangqu",
+	"zip_code": "411101",
+	"parent_code": "430300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430321",
+	"name": "\u6e58\u6f6d\u53bf",
+	"pinyin": "xiangtanxian",
+	"zip_code": "411228",
+	"parent_code": "430300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "430381",
+	"name": "\u6e58\u4e61\u5e02",
+	"pinyin": "xiangxiangshi",
+	"zip_code": "411400",
+	"parent_code": "430300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "430382",
+	"name": "\u97f6\u5c71\u5e02",
+	"pinyin": "shaoshanshi",
+	"zip_code": "411300",
+	"parent_code": "430300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430400",
+	"name": "\u8861\u9633\u5e02",
+	"pinyin": "hengyangshi",
+	"zip_code": "421000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "430405",
+	"name": "\u73e0\u6656\u533a",
+	"pinyin": "zhuhuiqu",
+	"zip_code": "421002",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "430406",
+	"name": "\u96c1\u5cf0\u533a",
+	"pinyin": "yanfengqu",
+	"zip_code": "421001",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430407",
+	"name": "\u77f3\u9f13\u533a",
+	"pinyin": "shiguqu",
+	"zip_code": "421001",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430408",
+	"name": "\u84b8\u6e58\u533a",
+	"pinyin": "zhengxiangqu",
+	"zip_code": "421001",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "430412",
+	"name": "\u5357\u5cb3\u533a",
+	"pinyin": "nanyuequ",
+	"zip_code": "421900",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "430421",
+	"name": "\u8861\u9633\u53bf",
+	"pinyin": "hengyangxian",
+	"zip_code": "421200",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430422",
+	"name": "\u8861\u5357\u53bf",
+	"pinyin": "hengnanxian",
+	"zip_code": "421131",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430423",
+	"name": "\u8861\u5c71\u53bf",
+	"pinyin": "hengshanxian",
+	"zip_code": "421300",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430424",
+	"name": "\u8861\u4e1c\u53bf",
+	"pinyin": "hengdongxian",
+	"zip_code": "421400",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430426",
+	"name": "\u7941\u4e1c\u53bf",
+	"pinyin": "qidongxian",
+	"zip_code": "421600",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "430481",
+	"name": "\u8012\u9633\u5e02",
+	"pinyin": "leiyangshi",
+	"zip_code": "421800",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430482",
+	"name": "\u5e38\u5b81\u5e02",
+	"pinyin": "changningshi",
+	"zip_code": "421500",
+	"parent_code": "430400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "430500",
+	"name": "\u90b5\u9633\u5e02",
+	"pinyin": "shaoyangshi",
+	"zip_code": "422000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "430502",
+	"name": "\u53cc\u6e05\u533a",
+	"pinyin": "shuangqingqu",
+	"zip_code": "422001",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430503",
+	"name": "\u5927\u7965\u533a",
+	"pinyin": "daxiangqu",
+	"zip_code": "422000",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "430511",
+	"name": "\u5317\u5854\u533a",
+	"pinyin": "beitaqu",
+	"zip_code": "422007",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "430521",
+	"name": "\u90b5\u4e1c\u53bf",
+	"pinyin": "shaodongxian",
+	"zip_code": "422800",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430522",
+	"name": "\u65b0\u90b5\u53bf",
+	"pinyin": "xinshaoxian",
+	"zip_code": "422900",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "430523",
+	"name": "\u90b5\u9633\u53bf",
+	"pinyin": "shaoyangxian",
+	"zip_code": "422100",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430524",
+	"name": "\u9686\u56de\u53bf",
+	"pinyin": "longhuixian",
+	"zip_code": "422200",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430525",
+	"name": "\u6d1e\u53e3\u53bf",
+	"pinyin": "dongkouxian",
+	"zip_code": "422300",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "430527",
+	"name": "\u7ee5\u5b81\u53bf",
+	"pinyin": "suiningxian",
+	"zip_code": "422600",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430528",
+	"name": "\u65b0\u5b81\u53bf",
+	"pinyin": "xinningxian",
+	"zip_code": "422700",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "430529",
+	"name": "\u57ce\u6b65\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "chengbumiaozuzizhixian",
+	"zip_code": "422500",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "430581",
+	"name": "\u6b66\u5188\u5e02",
+	"pinyin": "wugangshi",
+	"zip_code": "422400",
+	"parent_code": "430500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "430600",
+	"name": "\u5cb3\u9633\u5e02",
+	"pinyin": "yueyangshi",
+	"zip_code": "414000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "430602",
+	"name": "\u5cb3\u9633\u697c\u533a",
+	"pinyin": "yueyanglouqu",
+	"zip_code": "414000",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430603",
+	"name": "\u4e91\u6eaa\u533a",
+	"pinyin": "yunxiqu",
+	"zip_code": "414009",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430611",
+	"name": "\u541b\u5c71\u533a",
+	"pinyin": "junshanqu",
+	"zip_code": "414005",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "430621",
+	"name": "\u5cb3\u9633\u53bf",
+	"pinyin": "yueyangxian",
+	"zip_code": "414100",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430623",
+	"name": "\u534e\u5bb9\u53bf",
+	"pinyin": "huarongxian",
+	"zip_code": "414200",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430624",
+	"name": "\u6e58\u9634\u53bf",
+	"pinyin": "xiangyinxian",
+	"zip_code": "414200",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "430626",
+	"name": "\u5e73\u6c5f\u53bf",
+	"pinyin": "pingjiangxian",
+	"zip_code": "414500",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "430681",
+	"name": "\u6c68\u7f57\u5e02",
+	"pinyin": "miluoshi",
+	"zip_code": "414400",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "430682",
+	"name": "\u4e34\u6e58\u5e02",
+	"pinyin": "linxiangshi",
+	"zip_code": "414300",
+	"parent_code": "430600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430700",
+	"name": "\u5e38\u5fb7\u5e02",
+	"pinyin": "changdeshi",
+	"zip_code": "415000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "430702",
+	"name": "\u6b66\u9675\u533a",
+	"pinyin": "wulingqu",
+	"zip_code": "415000",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "430703",
+	"name": "\u9f0e\u57ce\u533a",
+	"pinyin": "dingchengqu",
+	"zip_code": "415101",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "430721",
+	"name": "\u5b89\u4e61\u53bf",
+	"pinyin": "anxiangxian",
+	"zip_code": "415600",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "430722",
+	"name": "\u6c49\u5bff\u53bf",
+	"pinyin": "hanshouxian",
+	"zip_code": "415900",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430723",
+	"name": "\u6fa7\u53bf",
+	"pinyin": "lixian",
+	"zip_code": "415500",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430724",
+	"name": "\u4e34\u6fa7\u53bf",
+	"pinyin": "linlixian",
+	"zip_code": "415200",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "430725",
+	"name": "\u6843\u6e90\u53bf",
+	"pinyin": "taoyuanxian",
+	"zip_code": "415700",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "430726",
+	"name": "\u77f3\u95e8\u53bf",
+	"pinyin": "shimenxian",
+	"zip_code": "415300",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430781",
+	"name": "\u6d25\u5e02\u5e02",
+	"pinyin": "jinshishi",
+	"zip_code": "415400",
+	"parent_code": "430700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "430800",
+	"name": "\u5f20\u5bb6\u754c\u5e02",
+	"pinyin": "zhangjiajieshi",
+	"zip_code": "427000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "430802",
+	"name": "\u6c38\u5b9a\u533a",
+	"pinyin": "yongdingqu",
+	"zip_code": "427000",
+	"parent_code": "430800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "430811",
+	"name": "\u6b66\u9675\u6e90\u533a",
+	"pinyin": "wulingyuanqu",
+	"zip_code": "427400",
+	"parent_code": "430800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "430821",
+	"name": "\u6148\u5229\u53bf",
+	"pinyin": "cilixian",
+	"zip_code": "427200",
+	"parent_code": "430800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "430822",
+	"name": "\u6851\u690d\u53bf",
+	"pinyin": "sangzhixian",
+	"zip_code": "427100",
+	"parent_code": "430800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "430900",
+	"name": "\u76ca\u9633\u5e02",
+	"pinyin": "yiyangshi",
+	"zip_code": "413000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "430902",
+	"name": "\u8d44\u9633\u533a",
+	"pinyin": "ziyangqu",
+	"zip_code": "413001",
+	"parent_code": "430900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "430903",
+	"name": "\u8d6b\u5c71\u533a",
+	"pinyin": "heshanqu",
+	"zip_code": "413002",
+	"parent_code": "430900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "430921",
+	"name": "\u5357\u53bf",
+	"pinyin": "nanxian",
+	"zip_code": "413200",
+	"parent_code": "430900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "430922",
+	"name": "\u6843\u6c5f\u53bf",
+	"pinyin": "taojiangxian",
+	"zip_code": "413400",
+	"parent_code": "430900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "430923",
+	"name": "\u5b89\u5316\u53bf",
+	"pinyin": "anhuaxian",
+	"zip_code": "413500",
+	"parent_code": "430900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "430981",
+	"name": "\u6c85\u6c5f\u5e02",
+	"pinyin": "yuanjiangshi",
+	"zip_code": "413100",
+	"parent_code": "430900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "431000",
+	"name": "\u90f4\u5dde\u5e02",
+	"pinyin": "chenzhoushi",
+	"zip_code": "423000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "431002",
+	"name": "\u5317\u6e56\u533a",
+	"pinyin": "beihuqu",
+	"zip_code": "423000",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "431003",
+	"name": "\u82cf\u4ed9\u533a",
+	"pinyin": "suxianqu",
+	"zip_code": "423000",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "431021",
+	"name": "\u6842\u9633\u53bf",
+	"pinyin": "guiyangxian",
+	"zip_code": "424400",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "431022",
+	"name": "\u5b9c\u7ae0\u53bf",
+	"pinyin": "yizhangxian",
+	"zip_code": "424200",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "431023",
+	"name": "\u6c38\u5174\u53bf",
+	"pinyin": "yongxingxian",
+	"zip_code": "423300",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "431024",
+	"name": "\u5609\u79be\u53bf",
+	"pinyin": "jiahexian",
+	"zip_code": "424500",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "431025",
+	"name": "\u4e34\u6b66\u53bf",
+	"pinyin": "linwuxian",
+	"zip_code": "424300",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "431026",
+	"name": "\u6c5d\u57ce\u53bf",
+	"pinyin": "ruchengxian",
+	"zip_code": "424100",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "431027",
+	"name": "\u6842\u4e1c\u53bf",
+	"pinyin": "guidongxian",
+	"zip_code": "423500",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "431028",
+	"name": "\u5b89\u4ec1\u53bf",
+	"pinyin": "anrenxian",
+	"zip_code": "423600",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "431081",
+	"name": "\u8d44\u5174\u5e02",
+	"pinyin": "zixingshi",
+	"zip_code": "423400",
+	"parent_code": "431000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "431100",
+	"name": "\u6c38\u5dde\u5e02",
+	"pinyin": "yongzhoushi",
+	"zip_code": "425000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "431102",
+	"name": "\u96f6\u9675\u533a",
+	"pinyin": "linglingqu",
+	"zip_code": "425002",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "431103",
+	"name": "\u51b7\u6c34\u6ee9\u533a",
+	"pinyin": "lengshuitanqu",
+	"zip_code": "425100",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "431122",
+	"name": "\u4e1c\u5b89\u53bf",
+	"pinyin": "donganxian",
+	"zip_code": "425900",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "431123",
+	"name": "\u53cc\u724c\u53bf",
+	"pinyin": "shuangpaixian",
+	"zip_code": "425200",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "431124",
+	"name": "\u9053\u53bf",
+	"pinyin": "daoxian",
+	"zip_code": "425300",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "431125",
+	"name": "\u6c5f\u6c38\u53bf",
+	"pinyin": "jiangyongxian",
+	"zip_code": "425400",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "431126",
+	"name": "\u5b81\u8fdc\u53bf",
+	"pinyin": "ningyuanxian",
+	"zip_code": "425600",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "431127",
+	"name": "\u84dd\u5c71\u53bf",
+	"pinyin": "lanshanxian",
+	"zip_code": "425800",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "431128",
+	"name": "\u65b0\u7530\u53bf",
+	"pinyin": "xintianxian",
+	"zip_code": "425700",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "431129",
+	"name": "\u6c5f\u534e\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jianghuayaozuzizhixian",
+	"zip_code": "425500",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "431181",
+	"name": "\u7941\u9633\u5e02",
+	"pinyin": "qiyangshi",
+	"zip_code": "426100",
+	"parent_code": "431100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "431200",
+	"name": "\u6000\u5316\u5e02",
+	"pinyin": "huaihuashi",
+	"zip_code": "418000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "431202",
+	"name": "\u9e64\u57ce\u533a",
+	"pinyin": "hechengqu",
+	"zip_code": "418000",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "431221",
+	"name": "\u4e2d\u65b9\u53bf",
+	"pinyin": "zhongfangxian",
+	"zip_code": "418005",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "431222",
+	"name": "\u6c85\u9675\u53bf",
+	"pinyin": "yuanlingxian",
+	"zip_code": "419600",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "431223",
+	"name": "\u8fb0\u6eaa\u53bf",
+	"pinyin": "chenxixian",
+	"zip_code": "419500",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "431224",
+	"name": "\u6e86\u6d66\u53bf",
+	"pinyin": "xupuxian",
+	"zip_code": "419300",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "431225",
+	"name": "\u4f1a\u540c\u53bf",
+	"pinyin": "huitongxian",
+	"zip_code": "418300",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "431226",
+	"name": "\u9ebb\u9633\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "mayangmiaozuzizhixian",
+	"zip_code": "419400",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "431227",
+	"name": "\u65b0\u6643\u4f97\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "xinhuangtongzuzizhixian",
+	"zip_code": "419200",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "431228",
+	"name": "\u82b7\u6c5f\u4f97\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "zhijiangtongzuzizhixian",
+	"zip_code": "419100",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "431229",
+	"name": "\u9756\u5dde\u82d7\u65cf\u4f97\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jingzhoumiaozutongzuzizhixian",
+	"zip_code": "418400",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "431230",
+	"name": "\u901a\u9053\u4f97\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "tongdaotongzuzizhixian",
+	"zip_code": "418500",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "431281",
+	"name": "\u6d2a\u6c5f\u5e02",
+	"pinyin": "hongjiangshi",
+	"zip_code": "418116",
+	"parent_code": "431200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "431300",
+	"name": "\u5a04\u5e95\u5e02",
+	"pinyin": "loudishi",
+	"zip_code": "417000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "431302",
+	"name": "\u5a04\u661f\u533a",
+	"pinyin": "louxingqu",
+	"zip_code": "417000",
+	"parent_code": "431300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "431321",
+	"name": "\u53cc\u5cf0\u53bf",
+	"pinyin": "shuangfengxian",
+	"zip_code": "417700",
+	"parent_code": "431300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "431322",
+	"name": "\u65b0\u5316\u53bf",
+	"pinyin": "xinhuaxian",
+	"zip_code": "417600",
+	"parent_code": "431300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "431381",
+	"name": "\u51b7\u6c34\u6c5f\u5e02",
+	"pinyin": "lengshuijiangshi",
+	"zip_code": "417500",
+	"parent_code": "431300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "431382",
+	"name": "\u6d9f\u6e90\u5e02",
+	"pinyin": "lianyuanshi",
+	"zip_code": "417100",
+	"parent_code": "431300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "433100",
+	"name": "\u6e58\u897f\u571f\u5bb6\u65cf\u82d7\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "xiangxitujiazumiaozuzizhizhou",
+	"zip_code": "416000",
+	"parent_code": "430000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "433101",
+	"name": "\u5409\u9996\u5e02",
+	"pinyin": "jishoushi",
+	"zip_code": "416000",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "433122",
+	"name": "\u6cf8\u6eaa\u53bf",
+	"pinyin": "luxixian",
+	"zip_code": "416100",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "433123",
+	"name": "\u51e4\u51f0\u53bf",
+	"pinyin": "fenghuangxian",
+	"zip_code": "416200",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "433124",
+	"name": "\u82b1\u57a3\u53bf",
+	"pinyin": "huayuanxian",
+	"zip_code": "416400",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "433125",
+	"name": "\u4fdd\u9756\u53bf",
+	"pinyin": "baojingxian",
+	"zip_code": "416500",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "433126",
+	"name": "\u53e4\u4e08\u53bf",
+	"pinyin": "guzhangxian",
+	"zip_code": "416300",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "433127",
+	"name": "\u6c38\u987a\u53bf",
+	"pinyin": "yongshunxian",
+	"zip_code": "416700",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "433130",
+	"name": "\u9f99\u5c71\u53bf",
+	"pinyin": "longshanxian",
+	"zip_code": "416800",
+	"parent_code": "433100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440000",
+	"name": "\u5e7f\u4e1c\u7701",
+	"pinyin": "guangdongsheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "G"
+}, {
+	"code": "440100",
+	"name": "\u5e7f\u5dde\u5e02",
+	"pinyin": "guangzhoushi",
+	"zip_code": "510000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "440103",
+	"name": "\u8354\u6e7e\u533a",
+	"pinyin": "liwanqu",
+	"zip_code": "510145",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440104",
+	"name": "\u8d8a\u79c0\u533a",
+	"pinyin": "yuexiuqu",
+	"zip_code": "510030",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "440105",
+	"name": "\u6d77\u73e0\u533a",
+	"pinyin": "haizhuqu",
+	"zip_code": "510220",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "440106",
+	"name": "\u5929\u6cb3\u533a",
+	"pinyin": "tianhequ",
+	"zip_code": "510630",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "440111",
+	"name": "\u767d\u4e91\u533a",
+	"pinyin": "baiyunqu",
+	"zip_code": "510080",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "440112",
+	"name": "\u9ec4\u57d4\u533a",
+	"pinyin": "huangpuqu",
+	"zip_code": "510700",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "440113",
+	"name": "\u756a\u79ba\u533a",
+	"pinyin": "panyuqu",
+	"zip_code": "511400",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "440114",
+	"name": "\u82b1\u90fd\u533a",
+	"pinyin": "huaduqu",
+	"zip_code": "510800",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "440115",
+	"name": "\u5357\u6c99\u533a",
+	"pinyin": "nanshaqu",
+	"zip_code": "511400",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "440117",
+	"name": "\u4ece\u5316\u533a",
+	"pinyin": "conghuaqu",
+	"zip_code": "510900",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "440118",
+	"name": "\u589e\u57ce\u533a",
+	"pinyin": "zengchengqu",
+	"zip_code": "511300",
+	"parent_code": "440100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "440200",
+	"name": "\u97f6\u5173\u5e02",
+	"pinyin": "shaoguanshi",
+	"zip_code": "512000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "440203",
+	"name": "\u6b66\u6c5f\u533a",
+	"pinyin": "wujiangqu",
+	"zip_code": "512026",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "440204",
+	"name": "\u6d48\u6c5f\u533a",
+	"pinyin": "zhenjiangqu",
+	"zip_code": "512023",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "440205",
+	"name": "\u66f2\u6c5f\u533a",
+	"pinyin": "qujiangqu",
+	"zip_code": "512100",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "440222",
+	"name": "\u59cb\u5174\u53bf",
+	"pinyin": "shixingxian",
+	"zip_code": "512500",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "440224",
+	"name": "\u4ec1\u5316\u53bf",
+	"pinyin": "renhuaxian",
+	"zip_code": "512300",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "440229",
+	"name": "\u7fc1\u6e90\u53bf",
+	"pinyin": "wengyuanxian",
+	"zip_code": "512600",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "440232",
+	"name": "\u4e73\u6e90\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "ruyuanyaozuzizhixian",
+	"zip_code": "512700",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "440233",
+	"name": "\u65b0\u4e30\u53bf",
+	"pinyin": "xinfengxian",
+	"zip_code": "511100",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "440281",
+	"name": "\u4e50\u660c\u5e02",
+	"pinyin": "lechangshi",
+	"zip_code": "512200",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440282",
+	"name": "\u5357\u96c4\u5e02",
+	"pinyin": "nanxiongshi",
+	"zip_code": "512400",
+	"parent_code": "440200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "440300",
+	"name": "\u6df1\u5733\u5e02",
+	"pinyin": "shenzhenshi",
+	"zip_code": "518000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "440303",
+	"name": "\u7f57\u6e56\u533a",
+	"pinyin": "luohuqu",
+	"zip_code": "518001",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440304",
+	"name": "\u798f\u7530\u533a",
+	"pinyin": "futianqu",
+	"zip_code": "518033",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "440305",
+	"name": "\u5357\u5c71\u533a",
+	"pinyin": "nanshanqu",
+	"zip_code": "518052",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "440306",
+	"name": "\u5b9d\u5b89\u533a",
+	"pinyin": "baoanqu",
+	"zip_code": "518101",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "440307",
+	"name": "\u9f99\u5c97\u533a",
+	"pinyin": "longgangqu",
+	"zip_code": "518116",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440308",
+	"name": "\u76d0\u7530\u533a",
+	"pinyin": "yantianqu",
+	"zip_code": "518083",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "440309",
+	"name": "\u9f99\u534e\u533a",
+	"pinyin": "longhuaqu",
+	"zip_code": "570105",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440310",
+	"name": "\u576a\u5c71\u533a",
+	"pinyin": "pingshanqu",
+	"zip_code": "518118",
+	"parent_code": "440300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "440400",
+	"name": "\u73e0\u6d77\u5e02",
+	"pinyin": "zhuhaishi",
+	"zip_code": "519000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "440402",
+	"name": "\u9999\u6d32\u533a",
+	"pinyin": "xiangzhouqu",
+	"zip_code": "519000",
+	"parent_code": "440400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "440403",
+	"name": "\u6597\u95e8\u533a",
+	"pinyin": "doumenqu",
+	"zip_code": "519100",
+	"parent_code": "440400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "440404",
+	"name": "\u91d1\u6e7e\u533a",
+	"pinyin": "jinwanqu",
+	"zip_code": "519090",
+	"parent_code": "440400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "440500",
+	"name": "\u6c55\u5934\u5e02",
+	"pinyin": "shantoushi",
+	"zip_code": "515000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "440507",
+	"name": "\u9f99\u6e56\u533a",
+	"pinyin": "longhuqu",
+	"zip_code": "515041",
+	"parent_code": "440500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440511",
+	"name": "\u91d1\u5e73\u533a",
+	"pinyin": "jinpingqu",
+	"zip_code": "515041",
+	"parent_code": "440500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "440512",
+	"name": "\u6fe0\u6c5f\u533a",
+	"pinyin": "haojiangqu",
+	"zip_code": "515071",
+	"parent_code": "440500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "440513",
+	"name": "\u6f6e\u9633\u533a",
+	"pinyin": "chaoyangqu",
+	"zip_code": "515100",
+	"parent_code": "440500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "440514",
+	"name": "\u6f6e\u5357\u533a",
+	"pinyin": "chaonanqu",
+	"zip_code": "515144",
+	"parent_code": "440500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "440515",
+	"name": "\u6f84\u6d77\u533a",
+	"pinyin": "chenghaiqu",
+	"zip_code": "515800",
+	"parent_code": "440500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "440523",
+	"name": "\u5357\u6fb3\u53bf",
+	"pinyin": "nanaoxian",
+	"zip_code": "515900",
+	"parent_code": "440500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "440600",
+	"name": "\u4f5b\u5c71\u5e02",
+	"pinyin": "foshanshi",
+	"zip_code": "528000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "F"
+}, {
+	"code": "440604",
+	"name": "\u7985\u57ce\u533a",
+	"pinyin": "chanchengqu",
+	"zip_code": "528000",
+	"parent_code": "440600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "440605",
+	"name": "\u5357\u6d77\u533a",
+	"pinyin": "nanhaiqu",
+	"zip_code": "528200",
+	"parent_code": "440600",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "440606",
+	"name": "\u987a\u5fb7\u533a",
+	"pinyin": "shundequ",
+	"zip_code": "528300",
+	"parent_code": "440600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "440607",
+	"name": "\u4e09\u6c34\u533a",
+	"pinyin": "sanshuiqu",
+	"zip_code": "528100",
+	"parent_code": "440600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "440608",
+	"name": "\u9ad8\u660e\u533a",
+	"pinyin": "gaomingqu",
+	"zip_code": "528500",
+	"parent_code": "440600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "440700",
+	"name": "\u6c5f\u95e8\u5e02",
+	"pinyin": "jiangmenshi",
+	"zip_code": "529000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "440703",
+	"name": "\u84ec\u6c5f\u533a",
+	"pinyin": "pengjiangqu",
+	"zip_code": "529051",
+	"parent_code": "440700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "440704",
+	"name": "\u6c5f\u6d77\u533a",
+	"pinyin": "jianghaiqu",
+	"zip_code": "529000",
+	"parent_code": "440700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "440705",
+	"name": "\u65b0\u4f1a\u533a",
+	"pinyin": "xinhuiqu",
+	"zip_code": "529100",
+	"parent_code": "440700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "440781",
+	"name": "\u53f0\u5c71\u5e02",
+	"pinyin": "taishanshi",
+	"zip_code": "529211",
+	"parent_code": "440700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "440783",
+	"name": "\u5f00\u5e73\u5e02",
+	"pinyin": "kaipingshi",
+	"zip_code": "529312",
+	"parent_code": "440700",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "440784",
+	"name": "\u9e64\u5c71\u5e02",
+	"pinyin": "heshanshi",
+	"zip_code": "529711",
+	"parent_code": "440700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "440785",
+	"name": "\u6069\u5e73\u5e02",
+	"pinyin": "enpingshi",
+	"zip_code": "529411",
+	"parent_code": "440700",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "440800",
+	"name": "\u6e5b\u6c5f\u5e02",
+	"pinyin": "zhanjiangshi",
+	"zip_code": "524000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "440802",
+	"name": "\u8d64\u574e\u533a",
+	"pinyin": "chikanqu",
+	"zip_code": "524033",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "440803",
+	"name": "\u971e\u5c71\u533a",
+	"pinyin": "xiashanqu",
+	"zip_code": "524002",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "440804",
+	"name": "\u5761\u5934\u533a",
+	"pinyin": "potouqu",
+	"zip_code": "524057",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "440811",
+	"name": "\u9ebb\u7ae0\u533a",
+	"pinyin": "mazhangqu",
+	"zip_code": "524003",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "440823",
+	"name": "\u9042\u6eaa\u53bf",
+	"pinyin": "suixixian",
+	"zip_code": "524300",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "440825",
+	"name": "\u5f90\u95fb\u53bf",
+	"pinyin": "xuwenxian",
+	"zip_code": "524100",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "440881",
+	"name": "\u5ec9\u6c5f\u5e02",
+	"pinyin": "lianjiangshi",
+	"zip_code": "524400",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440882",
+	"name": "\u96f7\u5dde\u5e02",
+	"pinyin": "leizhoushi",
+	"zip_code": "524200",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "440883",
+	"name": "\u5434\u5ddd\u5e02",
+	"pinyin": "wuchuanshi",
+	"zip_code": "524500",
+	"parent_code": "440800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "440900",
+	"name": "\u8302\u540d\u5e02",
+	"pinyin": "maomingshi",
+	"zip_code": "525000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "M"
+}, {
+	"code": "440902",
+	"name": "\u8302\u5357\u533a",
+	"pinyin": "maonanqu",
+	"zip_code": "525011",
+	"parent_code": "440900",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "440904",
+	"name": "\u7535\u767d\u533a",
+	"pinyin": "dianbaiqu",
+	"zip_code": "525400",
+	"parent_code": "440900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "440981",
+	"name": "\u9ad8\u5dde\u5e02",
+	"pinyin": "gaozhoushi",
+	"zip_code": "525200",
+	"parent_code": "440900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "440982",
+	"name": "\u5316\u5dde\u5e02",
+	"pinyin": "huazhoushi",
+	"zip_code": "525100",
+	"parent_code": "440900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "440983",
+	"name": "\u4fe1\u5b9c\u5e02",
+	"pinyin": "xinyishi",
+	"zip_code": "525300",
+	"parent_code": "440900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "441200",
+	"name": "\u8087\u5e86\u5e02",
+	"pinyin": "zhaoqingshi",
+	"zip_code": "526000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "441202",
+	"name": "\u7aef\u5dde\u533a",
+	"pinyin": "duanzhouqu",
+	"zip_code": "526040",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441203",
+	"name": "\u9f0e\u6e56\u533a",
+	"pinyin": "dinghuqu",
+	"zip_code": "526070",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441204",
+	"name": "\u9ad8\u8981\u533a",
+	"pinyin": "gaoyaoqu",
+	"zip_code": "526100",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "441223",
+	"name": "\u5e7f\u5b81\u53bf",
+	"pinyin": "guangningxian",
+	"zip_code": "526300",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "441224",
+	"name": "\u6000\u96c6\u53bf",
+	"pinyin": "huaijixian",
+	"zip_code": "526400",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441225",
+	"name": "\u5c01\u5f00\u53bf",
+	"pinyin": "fengkaixian",
+	"zip_code": "526500",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "441226",
+	"name": "\u5fb7\u5e86\u53bf",
+	"pinyin": "deqingxian",
+	"zip_code": "526600",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441284",
+	"name": "\u56db\u4f1a\u5e02",
+	"pinyin": "sihuishi",
+	"zip_code": "526200",
+	"parent_code": "441200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "441300",
+	"name": "\u60e0\u5dde\u5e02",
+	"pinyin": "huizhoushi",
+	"zip_code": "516000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "441302",
+	"name": "\u60e0\u57ce\u533a",
+	"pinyin": "huichengqu",
+	"zip_code": "516001",
+	"parent_code": "441300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441303",
+	"name": "\u60e0\u9633\u533a",
+	"pinyin": "huiyangqu",
+	"zip_code": "516200",
+	"parent_code": "441300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441322",
+	"name": "\u535a\u7f57\u53bf",
+	"pinyin": "boluoxian",
+	"zip_code": "516100",
+	"parent_code": "441300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "441323",
+	"name": "\u60e0\u4e1c\u53bf",
+	"pinyin": "huidongxian",
+	"zip_code": "516300",
+	"parent_code": "441300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441324",
+	"name": "\u9f99\u95e8\u53bf",
+	"pinyin": "longmenxian",
+	"zip_code": "516800",
+	"parent_code": "441300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441400",
+	"name": "\u6885\u5dde\u5e02",
+	"pinyin": "meizhoushi",
+	"zip_code": "514000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "M"
+}, {
+	"code": "441402",
+	"name": "\u6885\u6c5f\u533a",
+	"pinyin": "meijiangqu",
+	"zip_code": "514000",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "441403",
+	"name": "\u6885\u53bf\u533a",
+	"pinyin": "meixianqu",
+	"zip_code": "514700",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "441422",
+	"name": "\u5927\u57d4\u53bf",
+	"pinyin": "dapuxian",
+	"zip_code": "514200",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441423",
+	"name": "\u4e30\u987a\u53bf",
+	"pinyin": "fengshunxian",
+	"zip_code": "514300",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "441424",
+	"name": "\u4e94\u534e\u53bf",
+	"pinyin": "wuhuaxian",
+	"zip_code": "514400",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "441426",
+	"name": "\u5e73\u8fdc\u53bf",
+	"pinyin": "pingyuanxian",
+	"zip_code": "514600",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "441427",
+	"name": "\u8549\u5cad\u53bf",
+	"pinyin": "jiaolingxian",
+	"zip_code": "514100",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "441481",
+	"name": "\u5174\u5b81\u5e02",
+	"pinyin": "xingningshi",
+	"zip_code": "514500",
+	"parent_code": "441400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "441500",
+	"name": "\u6c55\u5c3e\u5e02",
+	"pinyin": "shanweishi",
+	"zip_code": "516600",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "441502",
+	"name": "\u57ce\u533a",
+	"pinyin": "chengqu",
+	"zip_code": "516601",
+	"parent_code": "441500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "441521",
+	"name": "\u6d77\u4e30\u53bf",
+	"pinyin": "haifengxian",
+	"zip_code": "516400",
+	"parent_code": "441500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441523",
+	"name": "\u9646\u6cb3\u53bf",
+	"pinyin": "luhexian",
+	"zip_code": "516700",
+	"parent_code": "441500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441581",
+	"name": "\u9646\u4e30\u5e02",
+	"pinyin": "lufengshi",
+	"zip_code": "516500",
+	"parent_code": "441500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441600",
+	"name": "\u6cb3\u6e90\u5e02",
+	"pinyin": "heyuanshi",
+	"zip_code": "517000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "441602",
+	"name": "\u6e90\u57ce\u533a",
+	"pinyin": "yuanchengqu",
+	"zip_code": "517000",
+	"parent_code": "441600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "441621",
+	"name": "\u7d2b\u91d1\u53bf",
+	"pinyin": "zijinxian",
+	"zip_code": "517400",
+	"parent_code": "441600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "441622",
+	"name": "\u9f99\u5ddd\u53bf",
+	"pinyin": "longchuanxian",
+	"zip_code": "517300",
+	"parent_code": "441600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441623",
+	"name": "\u8fde\u5e73\u53bf",
+	"pinyin": "lianpingxian",
+	"zip_code": "517100",
+	"parent_code": "441600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441624",
+	"name": "\u548c\u5e73\u53bf",
+	"pinyin": "hepingxian",
+	"zip_code": "517200",
+	"parent_code": "441600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441625",
+	"name": "\u4e1c\u6e90\u53bf",
+	"pinyin": "dongyuanxian",
+	"zip_code": "517500",
+	"parent_code": "441600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441700",
+	"name": "\u9633\u6c5f\u5e02",
+	"pinyin": "yangjiangshi",
+	"zip_code": "529500",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "441702",
+	"name": "\u6c5f\u57ce\u533a",
+	"pinyin": "jiangchengqu",
+	"zip_code": "529525",
+	"parent_code": "441700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "441704",
+	"name": "\u9633\u4e1c\u533a",
+	"pinyin": "yangdongqu",
+	"zip_code": "529900",
+	"parent_code": "441700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "441721",
+	"name": "\u9633\u897f\u53bf",
+	"pinyin": "yangxixian",
+	"zip_code": "529800",
+	"parent_code": "441700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "441781",
+	"name": "\u9633\u6625\u5e02",
+	"pinyin": "yangchunshi",
+	"zip_code": "529611",
+	"parent_code": "441700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "441800",
+	"name": "\u6e05\u8fdc\u5e02",
+	"pinyin": "qingyuanshi",
+	"zip_code": "511500",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "441802",
+	"name": "\u6e05\u57ce\u533a",
+	"pinyin": "qingchengqu",
+	"zip_code": "511500",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "441803",
+	"name": "\u6e05\u65b0\u533a",
+	"pinyin": "qingxinqu",
+	"zip_code": "511800",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "441821",
+	"name": "\u4f5b\u5188\u53bf",
+	"pinyin": "fogangxian",
+	"zip_code": "511600",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "441823",
+	"name": "\u9633\u5c71\u53bf",
+	"pinyin": "yangshanxian",
+	"zip_code": "513100",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "441825",
+	"name": "\u8fde\u5c71\u58ee\u65cf\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "lianshanzhuangzuyaozuzizhixian",
+	"zip_code": "513200",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441826",
+	"name": "\u8fde\u5357\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "liannanyaozuzizhixian",
+	"zip_code": "513300",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441881",
+	"name": "\u82f1\u5fb7\u5e02",
+	"pinyin": "yingdeshi",
+	"zip_code": "513000",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "441882",
+	"name": "\u8fde\u5dde\u5e02",
+	"pinyin": "lianzhoushi",
+	"zip_code": "513401",
+	"parent_code": "441800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441900",
+	"name": "\u4e1c\u839e\u5e02",
+	"pinyin": "dongguanshi",
+	"zip_code": "523000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "441901",
+	"name": "\u4e1c\u57ce\u8857\u9053",
+	"pinyin": "dongchengjiedao",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441902",
+	"name": "\u5357\u57ce\u8857\u9053",
+	"pinyin": "nanchengjiedao",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "441903",
+	"name": "\u4e07\u6c5f\u8857\u9053",
+	"pinyin": "wanjiangjiedao",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "441904",
+	"name": "\u839e\u57ce\u8857\u9053",
+	"pinyin": "guanchengjiedao",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "441905",
+	"name": "\u77f3\u78a3\u9547",
+	"pinyin": "shijiezhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "441906",
+	"name": "\u77f3\u9f99\u9547",
+	"pinyin": "shilongzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "441907",
+	"name": "\u8336\u5c71\u9547",
+	"pinyin": "chashanzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "441908",
+	"name": "\u77f3\u6392\u9547",
+	"pinyin": "shipaizhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "441909",
+	"name": "\u4f01\u77f3\u9547",
+	"pinyin": "qishizhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "441910",
+	"name": "\u6a2a\u6ca5\u9547",
+	"pinyin": "henglizhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441911",
+	"name": "\u6865\u5934\u9547",
+	"pinyin": "qiaotouzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "441912",
+	"name": "\u8c22\u5c97\u9547",
+	"pinyin": "xiegangzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "441913",
+	"name": "\u4e1c\u5751\u9547",
+	"pinyin": "dongkengzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441914",
+	"name": "\u5e38\u5e73\u9547",
+	"pinyin": "changpingzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "441915",
+	"name": "\u5bee\u6b65\u9547",
+	"pinyin": "liaobuzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "441916",
+	"name": "\u6a1f\u6728\u5934\u9547",
+	"pinyin": "zhangmutouzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "441917",
+	"name": "\u5927\u6717\u9547",
+	"pinyin": "dalangzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441918",
+	"name": "\u9ec4\u6c5f\u9547",
+	"pinyin": "huangjiangzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441919",
+	"name": "\u6e05\u6eaa\u9547",
+	"pinyin": "qingxizhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "441920",
+	"name": "\u5858\u53a6\u9547",
+	"pinyin": "tangxiazhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "441921",
+	"name": "\u51e4\u5c97\u9547",
+	"pinyin": "fenggangzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "441922",
+	"name": "\u5927\u5cad\u5c71\u9547",
+	"pinyin": "dalingshanzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441923",
+	"name": "\u957f\u5b89\u9547",
+	"pinyin": "changanzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "441924",
+	"name": "\u864e\u95e8\u9547",
+	"pinyin": "humenzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441925",
+	"name": "\u539a\u8857\u9547",
+	"pinyin": "houjiezhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441926",
+	"name": "\u6c99\u7530\u9547",
+	"pinyin": "shatianzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "441927",
+	"name": "\u9053\u6ed8\u9547",
+	"pinyin": "daojiaozhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "441928",
+	"name": "\u6d2a\u6885\u9547",
+	"pinyin": "hongmeizhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441929",
+	"name": "\u9ebb\u6d8c\u9547",
+	"pinyin": "machongzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "441930",
+	"name": "\u671b\u725b\u58a9\u9547",
+	"pinyin": "wangniudunzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "441931",
+	"name": "\u4e2d\u5802\u9547",
+	"pinyin": "zhongtangzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "441932",
+	"name": "\u9ad8\u57d7\u9547",
+	"pinyin": "gaobuzhen",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "441933",
+	"name": "\u677e\u5c71\u6e56\u7ba1\u59d4\u4f1a",
+	"pinyin": "songshanhuguanweihui",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "441934",
+	"name": "\u864e\u95e8\u6e2f\u7ba1\u59d4\u4f1a",
+	"pinyin": "humengangguanweihui",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "441935",
+	"name": "\u4e1c\u839e\u751f\u6001\u56ed",
+	"pinyin": "dongguanshengtaiyuan",
+	"zip_code": "523000",
+	"parent_code": "441900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "442000",
+	"name": "\u4e2d\u5c71\u5e02",
+	"pinyin": "zhongshanshi",
+	"zip_code": "528403",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "442001",
+	"name": "\u77f3\u5c90\u533a\u8857\u9053",
+	"pinyin": "shiqiqujiedao",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "442002",
+	"name": "\u4e1c\u533a\u8857\u9053",
+	"pinyin": "dongqujiedao",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "442003",
+	"name": "\u706b\u70ac\u5f00\u53d1\u533a",
+	"pinyin": "huojukaifaqu",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "442004",
+	"name": "\u897f\u533a\u8857\u9053",
+	"pinyin": "xiqujiedao",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "442005",
+	"name": "\u5357\u533a\u8857\u9053",
+	"pinyin": "nanqujiedao",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "442006",
+	"name": "\u4e94\u6842\u5c71\u8857\u9053",
+	"pinyin": "wuguishanjiedao",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "442007",
+	"name": "\u5c0f\u6984\u9547",
+	"pinyin": "xiaolanzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "442008",
+	"name": "\u9ec4\u5703\u9547",
+	"pinyin": "huangpuzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "442009",
+	"name": "\u6c11\u4f17\u9547",
+	"pinyin": "minzhongzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "442010",
+	"name": "\u4e1c\u51e4\u9547",
+	"pinyin": "dongfengzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "442011",
+	"name": "\u4e1c\u5347\u9547",
+	"pinyin": "dongshengzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "442012",
+	"name": "\u53e4\u9547\u9547",
+	"pinyin": "guzhenzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "442013",
+	"name": "\u6c99\u6eaa\u9547",
+	"pinyin": "shaxizhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "442014",
+	"name": "\u5766\u6d32\u9547",
+	"pinyin": "tanzhouzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "442015",
+	"name": "\u6e2f\u53e3\u9547",
+	"pinyin": "gangkouzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "442016",
+	"name": "\u4e09\u89d2\u9547",
+	"pinyin": "sanjiaozhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "442017",
+	"name": "\u6a2a\u680f\u9547",
+	"pinyin": "henglanzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "442018",
+	"name": "\u5357\u5934\u9547",
+	"pinyin": "nantouzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "442019",
+	"name": "\u961c\u6c99\u9547",
+	"pinyin": "fushazhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "442020",
+	"name": "\u5357\u6717\u9547",
+	"pinyin": "nanlangzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "442021",
+	"name": "\u4e09\u4e61\u9547",
+	"pinyin": "sanxiangzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "442022",
+	"name": "\u677f\u8299\u9547",
+	"pinyin": "banfuzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "442023",
+	"name": "\u5927\u6d8c\u9547",
+	"pinyin": "dayongzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "442024",
+	"name": "\u795e\u6e7e\u9547",
+	"pinyin": "shenwanzhen",
+	"zip_code": "528403",
+	"parent_code": "442000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "445100",
+	"name": "\u6f6e\u5dde\u5e02",
+	"pinyin": "chaozhoushi",
+	"zip_code": "521000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "445102",
+	"name": "\u6e58\u6865\u533a",
+	"pinyin": "xiangqiaoqu",
+	"zip_code": "521000",
+	"parent_code": "445100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "445103",
+	"name": "\u6f6e\u5b89\u533a",
+	"pinyin": "chaoanqu",
+	"zip_code": "515638",
+	"parent_code": "445100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "445122",
+	"name": "\u9976\u5e73\u53bf",
+	"pinyin": "raopingxian",
+	"zip_code": "515700",
+	"parent_code": "445100",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "445200",
+	"name": "\u63ed\u9633\u5e02",
+	"pinyin": "jieyangshi",
+	"zip_code": "522000",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "445202",
+	"name": "\u6995\u57ce\u533a",
+	"pinyin": "rongchengqu",
+	"zip_code": "522095",
+	"parent_code": "445200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "445203",
+	"name": "\u63ed\u4e1c\u533a",
+	"pinyin": "jiedongqu",
+	"zip_code": "515500",
+	"parent_code": "445200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "445222",
+	"name": "\u63ed\u897f\u53bf",
+	"pinyin": "jiexixian",
+	"zip_code": "515400",
+	"parent_code": "445200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "445224",
+	"name": "\u60e0\u6765\u53bf",
+	"pinyin": "huilaixian",
+	"zip_code": "515200",
+	"parent_code": "445200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "445281",
+	"name": "\u666e\u5b81\u5e02",
+	"pinyin": "puningshi",
+	"zip_code": "515300",
+	"parent_code": "445200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "445300",
+	"name": "\u4e91\u6d6e\u5e02",
+	"pinyin": "yunfushi",
+	"zip_code": "527300",
+	"parent_code": "440000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "445302",
+	"name": "\u4e91\u57ce\u533a",
+	"pinyin": "yunchengqu",
+	"zip_code": "527300",
+	"parent_code": "445300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "445303",
+	"name": "\u4e91\u5b89\u533a",
+	"pinyin": "yunanqu",
+	"zip_code": "527500",
+	"parent_code": "445300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "445321",
+	"name": "\u65b0\u5174\u53bf",
+	"pinyin": "xinxingxian",
+	"zip_code": "527400",
+	"parent_code": "445300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "445322",
+	"name": "\u90c1\u5357\u53bf",
+	"pinyin": "yunanxian",
+	"zip_code": "527100",
+	"parent_code": "445300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "445381",
+	"name": "\u7f57\u5b9a\u5e02",
+	"pinyin": "luodingshi",
+	"zip_code": "527500",
+	"parent_code": "445300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450000",
+	"name": "\u5e7f\u897f\u58ee\u65cf\u81ea\u6cbb\u533a",
+	"pinyin": "guangxizhuangzuzizhiqu",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "G"
+}, {
+	"code": "450100",
+	"name": "\u5357\u5b81\u5e02",
+	"pinyin": "nanningshi",
+	"zip_code": "530000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "450102",
+	"name": "\u5174\u5b81\u533a",
+	"pinyin": "xingningqu",
+	"zip_code": "530012",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "450103",
+	"name": "\u9752\u79c0\u533a",
+	"pinyin": "qingxiuqu",
+	"zip_code": "530022",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "450105",
+	"name": "\u6c5f\u5357\u533a",
+	"pinyin": "jiangnanqu",
+	"zip_code": "530031",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "450107",
+	"name": "\u897f\u4e61\u5858\u533a",
+	"pinyin": "xixiangtangqu",
+	"zip_code": "530001",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "450108",
+	"name": "\u826f\u5e86\u533a",
+	"pinyin": "liangqingqu",
+	"zip_code": "530200",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450109",
+	"name": "\u9095\u5b81\u533a",
+	"pinyin": "yongningqu",
+	"zip_code": "530200",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "450110",
+	"name": "\u6b66\u9e23\u533a",
+	"pinyin": "wumingqu",
+	"zip_code": "530100",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "450123",
+	"name": "\u9686\u5b89\u53bf",
+	"pinyin": "longanxian",
+	"zip_code": "532700",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450124",
+	"name": "\u9a6c\u5c71\u53bf",
+	"pinyin": "mashanxian",
+	"zip_code": "530600",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "450125",
+	"name": "\u4e0a\u6797\u53bf",
+	"pinyin": "shanglinxian",
+	"zip_code": "530500",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "450126",
+	"name": "\u5bbe\u9633\u53bf",
+	"pinyin": "binyangxian",
+	"zip_code": "530400",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "450181",
+	"name": "\u6a2a\u5dde\u5e02",
+	"pinyin": "hengzhoushi",
+	"zip_code": "530300",
+	"parent_code": "450100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "450200",
+	"name": "\u67f3\u5dde\u5e02",
+	"pinyin": "liuzhoushi",
+	"zip_code": "545000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "450202",
+	"name": "\u57ce\u4e2d\u533a",
+	"pinyin": "chengzhongqu",
+	"zip_code": "545001",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "450203",
+	"name": "\u9c7c\u5cf0\u533a",
+	"pinyin": "yufengqu",
+	"zip_code": "545005",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "450204",
+	"name": "\u67f3\u5357\u533a",
+	"pinyin": "liunanqu",
+	"zip_code": "545005",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450205",
+	"name": "\u67f3\u5317\u533a",
+	"pinyin": "liubeiqu",
+	"zip_code": "545001",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450206",
+	"name": "\u67f3\u6c5f\u533a",
+	"pinyin": "liujiangqu",
+	"zip_code": "545100",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450222",
+	"name": "\u67f3\u57ce\u53bf",
+	"pinyin": "liuchengxian",
+	"zip_code": "545200",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450223",
+	"name": "\u9e7f\u5be8\u53bf",
+	"pinyin": "luzhaixian",
+	"zip_code": "545600",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450224",
+	"name": "\u878d\u5b89\u53bf",
+	"pinyin": "ronganxian",
+	"zip_code": "545400",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "450225",
+	"name": "\u878d\u6c34\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "rongshuimiaozuzizhixian",
+	"zip_code": "545300",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "450226",
+	"name": "\u4e09\u6c5f\u4f97\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "sanjiangtongzuzizhixian",
+	"zip_code": "545500",
+	"parent_code": "450200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "450300",
+	"name": "\u6842\u6797\u5e02",
+	"pinyin": "guilinshi",
+	"zip_code": "541000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "450302",
+	"name": "\u79c0\u5cf0\u533a",
+	"pinyin": "xiufengqu",
+	"zip_code": "541001",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "450303",
+	"name": "\u53e0\u5f69\u533a",
+	"pinyin": "diecaiqu",
+	"zip_code": "541001",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "450304",
+	"name": "\u8c61\u5c71\u533a",
+	"pinyin": "xiangshanqu",
+	"zip_code": "541002",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "450305",
+	"name": "\u4e03\u661f\u533a",
+	"pinyin": "qixingqu",
+	"zip_code": "541004",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "450311",
+	"name": "\u96c1\u5c71\u533a",
+	"pinyin": "yanshanqu",
+	"zip_code": "541006",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "450312",
+	"name": "\u4e34\u6842\u533a",
+	"pinyin": "linguiqu",
+	"zip_code": "541199",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450321",
+	"name": "\u9633\u6714\u53bf",
+	"pinyin": "yangshuoxian",
+	"zip_code": "541900",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "450323",
+	"name": "\u7075\u5ddd\u53bf",
+	"pinyin": "lingchuanxian",
+	"zip_code": "541200",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450324",
+	"name": "\u5168\u5dde\u53bf",
+	"pinyin": "quanzhouxian",
+	"zip_code": "541500",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "450325",
+	"name": "\u5174\u5b89\u53bf",
+	"pinyin": "xinganxian",
+	"zip_code": "541300",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "450326",
+	"name": "\u6c38\u798f\u53bf",
+	"pinyin": "yongfuxian",
+	"zip_code": "541800",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "450327",
+	"name": "\u704c\u9633\u53bf",
+	"pinyin": "guanyangxian",
+	"zip_code": "541600",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "450328",
+	"name": "\u9f99\u80dc\u5404\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "longshenggezuzizhixian",
+	"zip_code": "541700",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450329",
+	"name": "\u8d44\u6e90\u53bf",
+	"pinyin": "ziyuanxian",
+	"zip_code": "541400",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "450330",
+	"name": "\u5e73\u4e50\u53bf",
+	"pinyin": "pinglexian",
+	"zip_code": "542400",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "450331",
+	"name": "\u8354\u6d66\u53bf",
+	"pinyin": "lipuxian",
+	"zip_code": "546600",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450332",
+	"name": "\u606d\u57ce\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "gongchengyaozuzizhixian",
+	"zip_code": "542500",
+	"parent_code": "450300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "450400",
+	"name": "\u68a7\u5dde\u5e02",
+	"pinyin": "wuzhoushi",
+	"zip_code": "543000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "450403",
+	"name": "\u4e07\u79c0\u533a",
+	"pinyin": "wanxiuqu",
+	"zip_code": "543000",
+	"parent_code": "450400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "450405",
+	"name": "\u957f\u6d32\u533a",
+	"pinyin": "changzhouqu",
+	"zip_code": "543002",
+	"parent_code": "450400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "450406",
+	"name": "\u9f99\u5729\u533a",
+	"pinyin": "longxuqu",
+	"zip_code": "543004",
+	"parent_code": "450400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450421",
+	"name": "\u82cd\u68a7\u53bf",
+	"pinyin": "cangwuxian",
+	"zip_code": "543100",
+	"parent_code": "450400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "450422",
+	"name": "\u85e4\u53bf",
+	"pinyin": "tengxian",
+	"zip_code": "543300",
+	"parent_code": "450400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "450423",
+	"name": "\u8499\u5c71\u53bf",
+	"pinyin": "mengshanxian",
+	"zip_code": "546700",
+	"parent_code": "450400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "450481",
+	"name": "\u5c91\u6eaa\u5e02",
+	"pinyin": "cenxishi",
+	"zip_code": "543200",
+	"parent_code": "450400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "450500",
+	"name": "\u5317\u6d77\u5e02",
+	"pinyin": "beihaishi",
+	"zip_code": "536000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "450502",
+	"name": "\u6d77\u57ce\u533a",
+	"pinyin": "haichengqu",
+	"zip_code": "536000",
+	"parent_code": "450500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "450503",
+	"name": "\u94f6\u6d77\u533a",
+	"pinyin": "yinhaiqu",
+	"zip_code": "536000",
+	"parent_code": "450500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "450512",
+	"name": "\u94c1\u5c71\u6e2f\u533a",
+	"pinyin": "tieshangangqu",
+	"zip_code": "536017",
+	"parent_code": "450500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "450521",
+	"name": "\u5408\u6d66\u53bf",
+	"pinyin": "hepuxian",
+	"zip_code": "536100",
+	"parent_code": "450500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "450600",
+	"name": "\u9632\u57ce\u6e2f\u5e02",
+	"pinyin": "fangchenggangshi",
+	"zip_code": "538000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "F"
+}, {
+	"code": "450602",
+	"name": "\u6e2f\u53e3\u533a",
+	"pinyin": "gangkouqu",
+	"zip_code": "538001",
+	"parent_code": "450600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "450603",
+	"name": "\u9632\u57ce\u533a",
+	"pinyin": "fangchengqu",
+	"zip_code": "538021",
+	"parent_code": "450600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "450621",
+	"name": "\u4e0a\u601d\u53bf",
+	"pinyin": "shangsixian",
+	"zip_code": "535500",
+	"parent_code": "450600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "450681",
+	"name": "\u4e1c\u5174\u5e02",
+	"pinyin": "dongxingshi",
+	"zip_code": "538100",
+	"parent_code": "450600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "450700",
+	"name": "\u94a6\u5dde\u5e02",
+	"pinyin": "qinzhoushi",
+	"zip_code": "535000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "450702",
+	"name": "\u94a6\u5357\u533a",
+	"pinyin": "qinnanqu",
+	"zip_code": "535000",
+	"parent_code": "450700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "450703",
+	"name": "\u94a6\u5317\u533a",
+	"pinyin": "qinbeiqu",
+	"zip_code": "535000",
+	"parent_code": "450700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "450721",
+	"name": "\u7075\u5c71\u53bf",
+	"pinyin": "lingshanxian",
+	"zip_code": "535400",
+	"parent_code": "450700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450722",
+	"name": "\u6d66\u5317\u53bf",
+	"pinyin": "pubeixian",
+	"zip_code": "535300",
+	"parent_code": "450700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "450800",
+	"name": "\u8d35\u6e2f\u5e02",
+	"pinyin": "guigangshi",
+	"zip_code": "537000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "450802",
+	"name": "\u6e2f\u5317\u533a",
+	"pinyin": "gangbeiqu",
+	"zip_code": "537100",
+	"parent_code": "450800",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "450803",
+	"name": "\u6e2f\u5357\u533a",
+	"pinyin": "gangnanqu",
+	"zip_code": "537132",
+	"parent_code": "450800",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "450804",
+	"name": "\u8983\u5858\u533a",
+	"pinyin": "qintangqu",
+	"zip_code": "537121",
+	"parent_code": "450800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "450821",
+	"name": "\u5e73\u5357\u53bf",
+	"pinyin": "pingnanxian",
+	"zip_code": "537300",
+	"parent_code": "450800",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "450881",
+	"name": "\u6842\u5e73\u5e02",
+	"pinyin": "guipingshi",
+	"zip_code": "537200",
+	"parent_code": "450800",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "450900",
+	"name": "\u7389\u6797\u5e02",
+	"pinyin": "yulinshi",
+	"zip_code": "0",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "450902",
+	"name": "\u7389\u5dde\u533a",
+	"pinyin": "yuzhouqu",
+	"zip_code": "537200",
+	"parent_code": "450900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "450903",
+	"name": "\u798f\u7ef5\u533a",
+	"pinyin": "fumianqu",
+	"zip_code": "537500",
+	"parent_code": "450900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "450921",
+	"name": "\u5bb9\u53bf",
+	"pinyin": "rongxian",
+	"zip_code": "537500",
+	"parent_code": "450900",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "450922",
+	"name": "\u9646\u5ddd\u53bf",
+	"pinyin": "luchuanxian",
+	"zip_code": "537700",
+	"parent_code": "450900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "450923",
+	"name": "\u535a\u767d\u53bf",
+	"pinyin": "bobaixian",
+	"zip_code": "537600",
+	"parent_code": "450900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "450924",
+	"name": "\u5174\u4e1a\u53bf",
+	"pinyin": "xingyexian",
+	"zip_code": "537800",
+	"parent_code": "450900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "450981",
+	"name": "\u5317\u6d41\u5e02",
+	"pinyin": "beiliushi",
+	"zip_code": "537400",
+	"parent_code": "450900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "451000",
+	"name": "\u767e\u8272\u5e02",
+	"pinyin": "baiseshi",
+	"zip_code": "533000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "451002",
+	"name": "\u53f3\u6c5f\u533a",
+	"pinyin": "youjiangqu",
+	"zip_code": "533000",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "451021",
+	"name": "\u7530\u9633\u53bf",
+	"pinyin": "tianyangxian",
+	"zip_code": "533600",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "451022",
+	"name": "\u7530\u4e1c\u53bf",
+	"pinyin": "tiandongxian",
+	"zip_code": "531500",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "451023",
+	"name": "\u5e73\u679c\u53bf",
+	"pinyin": "pingguoxian",
+	"zip_code": "531400",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "451024",
+	"name": "\u5fb7\u4fdd\u53bf",
+	"pinyin": "debaoxian",
+	"zip_code": "533700",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "451026",
+	"name": "\u90a3\u5761\u53bf",
+	"pinyin": "napoxian",
+	"zip_code": "533900",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "451027",
+	"name": "\u51cc\u4e91\u53bf",
+	"pinyin": "lingyunxian",
+	"zip_code": "533100",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "451028",
+	"name": "\u4e50\u4e1a\u53bf",
+	"pinyin": "leyexian",
+	"zip_code": "533200",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "451029",
+	"name": "\u7530\u6797\u53bf",
+	"pinyin": "tianlinxian",
+	"zip_code": "533300",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "451030",
+	"name": "\u897f\u6797\u53bf",
+	"pinyin": "xilinxian",
+	"zip_code": "533500",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "451031",
+	"name": "\u9686\u6797\u5404\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "longlingezuzizhixian",
+	"zip_code": "533400",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "451081",
+	"name": "\u9756\u897f\u5e02",
+	"pinyin": "jingxishi",
+	"zip_code": "533000",
+	"parent_code": "451000",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "451100",
+	"name": "\u8d3a\u5dde\u5e02",
+	"pinyin": "hezhoushi",
+	"zip_code": "542800",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "451102",
+	"name": "\u516b\u6b65\u533a",
+	"pinyin": "babuqu",
+	"zip_code": "542800",
+	"parent_code": "451100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "451103",
+	"name": "\u5e73\u6842\u533a",
+	"pinyin": "pingguiqu",
+	"zip_code": "542800",
+	"parent_code": "451100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "451121",
+	"name": "\u662d\u5e73\u53bf",
+	"pinyin": "zhaopingxian",
+	"zip_code": "546800",
+	"parent_code": "451100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "451122",
+	"name": "\u949f\u5c71\u53bf",
+	"pinyin": "zhongshanxian",
+	"zip_code": "542600",
+	"parent_code": "451100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "451123",
+	"name": "\u5bcc\u5ddd\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "fuchuanyaozuzizhixian",
+	"zip_code": "542700",
+	"parent_code": "451100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "451200",
+	"name": "\u6cb3\u6c60\u5e02",
+	"pinyin": "hechishi",
+	"zip_code": "547000",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "451202",
+	"name": "\u91d1\u57ce\u6c5f\u533a",
+	"pinyin": "jinchengjiangqu",
+	"zip_code": "547000",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "451203",
+	"name": "\u5b9c\u5dde\u533a",
+	"pinyin": "yizhouqu",
+	"zip_code": "546300",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "451221",
+	"name": "\u5357\u4e39\u53bf",
+	"pinyin": "nandanxian",
+	"zip_code": "547200",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "451222",
+	"name": "\u5929\u5ce8\u53bf",
+	"pinyin": "tianexian",
+	"zip_code": "547300",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "451223",
+	"name": "\u51e4\u5c71\u53bf",
+	"pinyin": "fengshanxian",
+	"zip_code": "547600",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "451224",
+	"name": "\u4e1c\u5170\u53bf",
+	"pinyin": "donglanxian",
+	"zip_code": "547400",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "451225",
+	"name": "\u7f57\u57ce\u4eeb\u4f6c\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "luochengmulaozuzizhixian",
+	"zip_code": "546400",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "451226",
+	"name": "\u73af\u6c5f\u6bdb\u5357\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "huanjiangmaonanzuzizhixian",
+	"zip_code": "547100",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "451227",
+	"name": "\u5df4\u9a6c\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "bamayaozuzizhixian",
+	"zip_code": "547500",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "451228",
+	"name": "\u90fd\u5b89\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "duanyaozuzizhixian",
+	"zip_code": "530700",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "451229",
+	"name": "\u5927\u5316\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "dahuayaozuzizhixian",
+	"zip_code": "530800",
+	"parent_code": "451200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "451300",
+	"name": "\u6765\u5bbe\u5e02",
+	"pinyin": "laibinshi",
+	"zip_code": "546100",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "451302",
+	"name": "\u5174\u5bbe\u533a",
+	"pinyin": "xingbinqu",
+	"zip_code": "546100",
+	"parent_code": "451300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "451321",
+	"name": "\u5ffb\u57ce\u53bf",
+	"pinyin": "xinchengxian",
+	"zip_code": "546200",
+	"parent_code": "451300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "451322",
+	"name": "\u8c61\u5dde\u53bf",
+	"pinyin": "xiangzhouxian",
+	"zip_code": "545800",
+	"parent_code": "451300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "451323",
+	"name": "\u6b66\u5ba3\u53bf",
+	"pinyin": "wuxuanxian",
+	"zip_code": "545900",
+	"parent_code": "451300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "451324",
+	"name": "\u91d1\u79c0\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jinxiuyaozuzizhixian",
+	"zip_code": "545700",
+	"parent_code": "451300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "451381",
+	"name": "\u5408\u5c71\u5e02",
+	"pinyin": "heshanshi",
+	"zip_code": "546500",
+	"parent_code": "451300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "451400",
+	"name": "\u5d07\u5de6\u5e02",
+	"pinyin": "chongzuoshi",
+	"zip_code": "532200",
+	"parent_code": "450000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "451402",
+	"name": "\u6c5f\u5dde\u533a",
+	"pinyin": "jiangzhouqu",
+	"zip_code": "532200",
+	"parent_code": "451400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "451421",
+	"name": "\u6276\u7ee5\u53bf",
+	"pinyin": "fusuixian",
+	"zip_code": "532100",
+	"parent_code": "451400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "451422",
+	"name": "\u5b81\u660e\u53bf",
+	"pinyin": "ningmingxian",
+	"zip_code": "532500",
+	"parent_code": "451400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "451423",
+	"name": "\u9f99\u5dde\u53bf",
+	"pinyin": "longzhouxian",
+	"zip_code": "532400",
+	"parent_code": "451400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "451424",
+	"name": "\u5927\u65b0\u53bf",
+	"pinyin": "daxinxian",
+	"zip_code": "532300",
+	"parent_code": "451400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "451425",
+	"name": "\u5929\u7b49\u53bf",
+	"pinyin": "tiandengxian",
+	"zip_code": "532800",
+	"parent_code": "451400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "451481",
+	"name": "\u51ed\u7965\u5e02",
+	"pinyin": "pingxiangshi",
+	"zip_code": "532600",
+	"parent_code": "451400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "460000",
+	"name": "\u6d77\u5357\u7701",
+	"pinyin": "hainansheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "H"
+}, {
+	"code": "460100",
+	"name": "\u6d77\u53e3\u5e02",
+	"pinyin": "haikoushi",
+	"zip_code": "570100",
+	"parent_code": "460000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "460105",
+	"name": "\u79c0\u82f1\u533a",
+	"pinyin": "xiuyingqu",
+	"zip_code": "570311",
+	"parent_code": "460100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "460106",
+	"name": "\u9f99\u534e\u533a",
+	"pinyin": "longhuaqu",
+	"zip_code": "570105",
+	"parent_code": "460100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "460107",
+	"name": "\u743c\u5c71\u533a",
+	"pinyin": "qiongshanqu",
+	"zip_code": "571100",
+	"parent_code": "460100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "460108",
+	"name": "\u7f8e\u5170\u533a",
+	"pinyin": "meilanqu",
+	"zip_code": "570203",
+	"parent_code": "460100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "460200",
+	"name": "\u4e09\u4e9a\u5e02",
+	"pinyin": "sanyashi",
+	"zip_code": "572000",
+	"parent_code": "460000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "460202",
+	"name": "\u6d77\u68e0\u533a",
+	"pinyin": "haitangqu",
+	"zip_code": "572000",
+	"parent_code": "460200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "460203",
+	"name": "\u5409\u9633\u533a",
+	"pinyin": "jiyangqu",
+	"zip_code": "572000",
+	"parent_code": "460200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "460204",
+	"name": "\u5929\u6daf\u533a",
+	"pinyin": "tianyaqu",
+	"zip_code": "572000",
+	"parent_code": "460200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "460205",
+	"name": "\u5d16\u5dde\u533a",
+	"pinyin": "yazhouqu",
+	"zip_code": "572000",
+	"parent_code": "460200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "460300",
+	"name": "\u4e09\u6c99\u5e02",
+	"pinyin": "sanshashi",
+	"zip_code": "0",
+	"parent_code": "460000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "460321",
+	"name": "\u897f\u6c99\u7fa4\u5c9b",
+	"pinyin": "xishaqundao",
+	"zip_code": "572000",
+	"parent_code": "460300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "460322",
+	"name": "\u5357\u6c99\u7fa4\u5c9b",
+	"pinyin": "nanshaqundao",
+	"zip_code": "572000",
+	"parent_code": "460300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "460323",
+	"name": "\u4e2d\u6c99\u7fa4\u5c9b\u7684\u5c9b\u7901\u53ca\u5176\u6d77\u57df",
+	"pinyin": "zhongshaqundaodedaojiaojiqihaiyu",
+	"zip_code": "572000",
+	"parent_code": "460300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "460400",
+	"name": "\u510b\u5dde\u5e02",
+	"pinyin": "danzhoushi",
+	"zip_code": "571700",
+	"parent_code": "460000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "460401",
+	"name": "\u90a3\u5927\u9547",
+	"pinyin": "nadazhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "460402",
+	"name": "\u548c\u5e86\u9547",
+	"pinyin": "heqingzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "460403",
+	"name": "\u5357\u4e30\u9547",
+	"pinyin": "nanfengzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "460404",
+	"name": "\u5927\u6210\u9547",
+	"pinyin": "dachengzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "460405",
+	"name": "\u96c5\u661f\u9547",
+	"pinyin": "yaxingzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "460406",
+	"name": "\u5170\u6d0b\u9547",
+	"pinyin": "lanyangzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "460407",
+	"name": "\u5149\u6751\u9547",
+	"pinyin": "guangcunzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "460408",
+	"name": "\u6728\u68e0\u9547",
+	"pinyin": "mutangzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "460409",
+	"name": "\u6d77\u5934\u9547",
+	"pinyin": "haitouzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "460410",
+	"name": "\u5ce8\u8513\u9547",
+	"pinyin": "emanzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "460411",
+	"name": "\u4e09\u90fd\u9547",
+	"pinyin": "sanduzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "460412",
+	"name": "\u738b\u4e94\u9547",
+	"pinyin": "wangwuzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "460413",
+	"name": "\u767d\u9a6c\u4e95\u9547",
+	"pinyin": "baimajingzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "460414",
+	"name": "\u4e2d\u548c\u9547",
+	"pinyin": "zhonghezhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "460415",
+	"name": "\u6392\u6d66\u9547",
+	"pinyin": "paipuzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "460416",
+	"name": "\u4e1c\u6210\u9547",
+	"pinyin": "dongchengzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "460417",
+	"name": "\u65b0\u5dde\u9547",
+	"pinyin": "xinzhouzhen",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "460418",
+	"name": "\u56fd\u8425\u897f\u57f9\u519c\u573a",
+	"pinyin": "guoyingxipeinongchang",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "460419",
+	"name": "\u56fd\u8425\u897f\u8054\u519c\u573a",
+	"pinyin": "guoyingxiliannongchang",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "460420",
+	"name": "\u56fd\u8425\u84dd\u6d0b\u519c\u573a",
+	"pinyin": "guoyinglanyangnongchang",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "460421",
+	"name": "\u56fd\u8425\u516b\u4e00\u519c\u573a",
+	"pinyin": "guoyingbayinongchang",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "460422",
+	"name": "\u6d0b\u6d66\u7ecf\u6d4e\u5f00\u53d1\u533a",
+	"pinyin": "yangpujingjikaifaqu",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "460423",
+	"name": "\u534e\u5357\u70ed\u4f5c\u5b66\u9662",
+	"pinyin": "huananrezuoxueyuan",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "460424",
+	"name": "\u7ea2\u5cad\u519c\u573a",
+	"pinyin": "honglingnongchang",
+	"zip_code": "571700",
+	"parent_code": "460400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "469000",
+	"name": "\u7701\u76f4\u8f96\u53bf\u7ea7\u884c\u653f\u533a\u5212",
+	"pinyin": "shengzhixiaxianjixingzhengquhua",
+	"zip_code": "0",
+	"parent_code": "460000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "469001",
+	"name": "\u4e94\u6307\u5c71\u5e02",
+	"pinyin": "wuzhishanshi",
+	"zip_code": "572200",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "469002",
+	"name": "\u743c\u6d77\u5e02",
+	"pinyin": "qionghaishi",
+	"zip_code": "571400",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "469005",
+	"name": "\u6587\u660c\u5e02",
+	"pinyin": "wenchangshi",
+	"zip_code": "571300",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "469006",
+	"name": "\u4e07\u5b81\u5e02",
+	"pinyin": "wanningshi",
+	"zip_code": "571500",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "469007",
+	"name": "\u4e1c\u65b9\u5e02",
+	"pinyin": "dongfangshi",
+	"zip_code": "572600",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "469021",
+	"name": "\u5b9a\u5b89\u53bf",
+	"pinyin": "dinganxian",
+	"zip_code": "571200",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "469022",
+	"name": "\u5c6f\u660c\u53bf",
+	"pinyin": "tunchangxian",
+	"zip_code": "571600",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "469023",
+	"name": "\u6f84\u8fc8\u53bf",
+	"pinyin": "chengmaixian",
+	"zip_code": "571900",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "469024",
+	"name": "\u4e34\u9ad8\u53bf",
+	"pinyin": "lingaoxian",
+	"zip_code": "571800",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "469025",
+	"name": "\u767d\u6c99\u9ece\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "baishalizuzizhixian",
+	"zip_code": "572800",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "469026",
+	"name": "\u660c\u6c5f\u9ece\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "changjianglizuzizhixian",
+	"zip_code": "572700",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "469027",
+	"name": "\u4e50\u4e1c\u9ece\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "ledonglizuzizhixian",
+	"zip_code": "572500",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "469028",
+	"name": "\u9675\u6c34\u9ece\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "lingshuilizuzizhixian",
+	"zip_code": "572400",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "469029",
+	"name": "\u4fdd\u4ead\u9ece\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "baotinglizumiaozuzizhixian",
+	"zip_code": "572300",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "469030",
+	"name": "\u743c\u4e2d\u9ece\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "qiongzhonglizumiaozuzizhixian",
+	"zip_code": "572900",
+	"parent_code": "469000",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "500000",
+	"name": "\u91cd\u5e86\u5e02",
+	"pinyin": "chongqingshi",
+	"zip_code": "400000",
+	"type": 0,
+	"first_letter": "C"
+}, {
+	"code": "500100",
+	"name": "\u91cd\u5e86\u5e02",
+	"pinyin": "chongqingshi",
+	"zip_code": "400000",
+	"parent_code": "500000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "500101",
+	"name": "\u4e07\u5dde\u533a",
+	"pinyin": "wanzhouqu",
+	"zip_code": "404100",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "500102",
+	"name": "\u6daa\u9675\u533a",
+	"pinyin": "fulingqu",
+	"zip_code": "408000",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "500103",
+	"name": "\u6e1d\u4e2d\u533a",
+	"pinyin": "yuzhongqu",
+	"zip_code": "400010",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "500104",
+	"name": "\u5927\u6e21\u53e3\u533a",
+	"pinyin": "dadukouqu",
+	"zip_code": "400080",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "500105",
+	"name": "\u6c5f\u5317\u533a",
+	"pinyin": "jiangbeiqu",
+	"zip_code": "400020",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "500106",
+	"name": "\u6c99\u576a\u575d\u533a",
+	"pinyin": "shapingbaqu",
+	"zip_code": "400030",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "500107",
+	"name": "\u4e5d\u9f99\u5761\u533a",
+	"pinyin": "jiulongpoqu",
+	"zip_code": "400050",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "500108",
+	"name": "\u5357\u5cb8\u533a",
+	"pinyin": "nananqu",
+	"zip_code": "400064",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "500109",
+	"name": "\u5317\u789a\u533a",
+	"pinyin": "beibeiqu",
+	"zip_code": "400700",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "500110",
+	"name": "\u7da6\u6c5f\u533a",
+	"pinyin": "qijiangqu",
+	"zip_code": "400000",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "500111",
+	"name": "\u5927\u8db3\u533a",
+	"pinyin": "dazuqu",
+	"zip_code": "400000",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "500112",
+	"name": "\u6e1d\u5317\u533a",
+	"pinyin": "yubeiqu",
+	"zip_code": "401120",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "500113",
+	"name": "\u5df4\u5357\u533a",
+	"pinyin": "bananqu",
+	"zip_code": "401320",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "500114",
+	"name": "\u9ed4\u6c5f\u533a",
+	"pinyin": "qianjiangqu",
+	"zip_code": "409700",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "500115",
+	"name": "\u957f\u5bff\u533a",
+	"pinyin": "changshouqu",
+	"zip_code": "401220",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "500116",
+	"name": "\u6c5f\u6d25\u533a",
+	"pinyin": "jiangjinqu",
+	"zip_code": "402260",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "500117",
+	"name": "\u5408\u5ddd\u533a",
+	"pinyin": "hechuanqu",
+	"zip_code": "401520",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "500118",
+	"name": "\u6c38\u5ddd\u533a",
+	"pinyin": "yongchuanqu",
+	"zip_code": "402160",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "500119",
+	"name": "\u5357\u5ddd\u533a",
+	"pinyin": "nanchuanqu",
+	"zip_code": "408400",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "500120",
+	"name": "\u74a7\u5c71\u533a",
+	"pinyin": "bishanqu",
+	"zip_code": "408400",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "500151",
+	"name": "\u94dc\u6881\u533a",
+	"pinyin": "tongliangqu",
+	"zip_code": "408400",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "500152",
+	"name": "\u6f7c\u5357\u533a",
+	"pinyin": "tongnanqu",
+	"zip_code": "402660",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "500153",
+	"name": "\u8363\u660c\u533a",
+	"pinyin": "rongchangqu",
+	"zip_code": "408400",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "500154",
+	"name": "\u5f00\u5dde\u533a",
+	"pinyin": "kaizhouqu",
+	"zip_code": "408400",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "500155",
+	"name": "\u6881\u5e73\u533a",
+	"pinyin": "liangpingqu",
+	"zip_code": "405200",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "500156",
+	"name": "\u6b66\u9686\u533a",
+	"pinyin": "wulongqu",
+	"zip_code": "408500",
+	"parent_code": "500100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "500200",
+	"name": "\u53bf",
+	"pinyin": "xian",
+	"zip_code": "0",
+	"parent_code": "500000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "500229",
+	"name": "\u57ce\u53e3\u53bf",
+	"pinyin": "chengkouxian",
+	"zip_code": "405900",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "500230",
+	"name": "\u4e30\u90fd\u53bf",
+	"pinyin": "fengduxian",
+	"zip_code": "408200",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "500231",
+	"name": "\u57ab\u6c5f\u53bf",
+	"pinyin": "dianjiangxian",
+	"zip_code": "408300",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "500233",
+	"name": "\u5fe0\u53bf",
+	"pinyin": "zhongxian",
+	"zip_code": "404300",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "500235",
+	"name": "\u4e91\u9633\u53bf",
+	"pinyin": "yunyangxian",
+	"zip_code": "404500",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "500236",
+	"name": "\u5949\u8282\u53bf",
+	"pinyin": "fengjiexian",
+	"zip_code": "404600",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "500237",
+	"name": "\u5deb\u5c71\u53bf",
+	"pinyin": "wushanxian",
+	"zip_code": "404700",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "500238",
+	"name": "\u5deb\u6eaa\u53bf",
+	"pinyin": "wuxixian",
+	"zip_code": "405800",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "500240",
+	"name": "\u77f3\u67f1\u571f\u5bb6\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "shizhutujiazuzizhixian",
+	"zip_code": "409100",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "500241",
+	"name": "\u79c0\u5c71\u571f\u5bb6\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "xiushantujiazumiaozuzizhixian",
+	"zip_code": "409900",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "500242",
+	"name": "\u9149\u9633\u571f\u5bb6\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "youyangtujiazumiaozuzizhixian",
+	"zip_code": "409800",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "500243",
+	"name": "\u5f6d\u6c34\u82d7\u65cf\u571f\u5bb6\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "pengshuimiaozutujiazuzizhixian",
+	"zip_code": "409600",
+	"parent_code": "500200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "510000",
+	"name": "\u56db\u5ddd\u7701",
+	"pinyin": "sichuansheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "S"
+}, {
+	"code": "510100",
+	"name": "\u6210\u90fd\u5e02",
+	"pinyin": "chengdushi",
+	"zip_code": "610000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "510104",
+	"name": "\u9526\u6c5f\u533a",
+	"pinyin": "jinjiangqu",
+	"zip_code": "610021",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510105",
+	"name": "\u9752\u7f8a\u533a",
+	"pinyin": "qingyangqu",
+	"zip_code": "610031",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "510106",
+	"name": "\u91d1\u725b\u533a",
+	"pinyin": "jinniuqu",
+	"zip_code": "610036",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510107",
+	"name": "\u6b66\u4faf\u533a",
+	"pinyin": "wuhouqu",
+	"zip_code": "610041",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "510108",
+	"name": "\u6210\u534e\u533a",
+	"pinyin": "chenghuaqu",
+	"zip_code": "610066",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "510112",
+	"name": "\u9f99\u6cc9\u9a7f\u533a",
+	"pinyin": "longquanyiqu",
+	"zip_code": "610100",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "510113",
+	"name": "\u9752\u767d\u6c5f\u533a",
+	"pinyin": "qingbaijiangqu",
+	"zip_code": "610300",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "510114",
+	"name": "\u65b0\u90fd\u533a",
+	"pinyin": "xinduqu",
+	"zip_code": "610500",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "510115",
+	"name": "\u6e29\u6c5f\u533a",
+	"pinyin": "wenjiangqu",
+	"zip_code": "611130",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "510116",
+	"name": "\u53cc\u6d41\u533a",
+	"pinyin": "shuangliuqu",
+	"zip_code": "610200",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "510117",
+	"name": "\u90eb\u90fd\u533a",
+	"pinyin": "piduqu",
+	"zip_code": "611730",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "510121",
+	"name": "\u91d1\u5802\u53bf",
+	"pinyin": "jintangxian",
+	"zip_code": "610400",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510129",
+	"name": "\u5927\u9091\u53bf",
+	"pinyin": "dayixian",
+	"zip_code": "611300",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "510131",
+	"name": "\u84b2\u6c5f\u53bf",
+	"pinyin": "pujiangxian",
+	"zip_code": "611630",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "510132",
+	"name": "\u65b0\u6d25\u53bf",
+	"pinyin": "xinjinxian",
+	"zip_code": "611430",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "510181",
+	"name": "\u90fd\u6c5f\u5830\u5e02",
+	"pinyin": "dujiangyanshi",
+	"zip_code": "611830",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "510182",
+	"name": "\u5f6d\u5dde\u5e02",
+	"pinyin": "pengzhoushi",
+	"zip_code": "611930",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "510183",
+	"name": "\u909b\u5d03\u5e02",
+	"pinyin": "qionglaishi",
+	"zip_code": "611530",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "510184",
+	"name": "\u5d07\u5dde\u5e02",
+	"pinyin": "chongzhoushi",
+	"zip_code": "611230",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "510185",
+	"name": "\u7b80\u9633\u5e02",
+	"pinyin": "jianyangshi",
+	"zip_code": "611230",
+	"parent_code": "510100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510300",
+	"name": "\u81ea\u8d21\u5e02",
+	"pinyin": "zigongshi",
+	"zip_code": "643000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "510302",
+	"name": "\u81ea\u6d41\u4e95\u533a",
+	"pinyin": "ziliujingqu",
+	"zip_code": "643000",
+	"parent_code": "510300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "510303",
+	"name": "\u8d21\u4e95\u533a",
+	"pinyin": "gongjingqu",
+	"zip_code": "643020",
+	"parent_code": "510300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "510304",
+	"name": "\u5927\u5b89\u533a",
+	"pinyin": "daanqu",
+	"zip_code": "643010",
+	"parent_code": "510300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "510311",
+	"name": "\u6cbf\u6ee9\u533a",
+	"pinyin": "yantanqu",
+	"zip_code": "643030",
+	"parent_code": "510300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "510321",
+	"name": "\u8363\u53bf",
+	"pinyin": "rongxian",
+	"zip_code": "643100",
+	"parent_code": "510300",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "510322",
+	"name": "\u5bcc\u987a\u53bf",
+	"pinyin": "fushunxian",
+	"zip_code": "643200",
+	"parent_code": "510300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "510400",
+	"name": "\u6500\u679d\u82b1\u5e02",
+	"pinyin": "panzhihuashi",
+	"zip_code": "617000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "510402",
+	"name": "\u4e1c\u533a",
+	"pinyin": "dongqu",
+	"zip_code": "617067",
+	"parent_code": "510400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "510403",
+	"name": "\u897f\u533a",
+	"pinyin": "xiqu",
+	"zip_code": "617068",
+	"parent_code": "510400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "510411",
+	"name": "\u4ec1\u548c\u533a",
+	"pinyin": "renhequ",
+	"zip_code": "617061",
+	"parent_code": "510400",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "510421",
+	"name": "\u7c73\u6613\u53bf",
+	"pinyin": "miyixian",
+	"zip_code": "617200",
+	"parent_code": "510400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "510422",
+	"name": "\u76d0\u8fb9\u53bf",
+	"pinyin": "yanbianxian",
+	"zip_code": "617100",
+	"parent_code": "510400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "510500",
+	"name": "\u6cf8\u5dde\u5e02",
+	"pinyin": "luzhoushi",
+	"zip_code": "646000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "510502",
+	"name": "\u6c5f\u9633\u533a",
+	"pinyin": "jiangyangqu",
+	"zip_code": "646000",
+	"parent_code": "510500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510503",
+	"name": "\u7eb3\u6eaa\u533a",
+	"pinyin": "naxiqu",
+	"zip_code": "646300",
+	"parent_code": "510500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "510504",
+	"name": "\u9f99\u9a6c\u6f6d\u533a",
+	"pinyin": "longmatanqu",
+	"zip_code": "646000",
+	"parent_code": "510500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "510521",
+	"name": "\u6cf8\u53bf",
+	"pinyin": "luxian",
+	"zip_code": "646106",
+	"parent_code": "510500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "510522",
+	"name": "\u5408\u6c5f\u53bf",
+	"pinyin": "hejiangxian",
+	"zip_code": "646200",
+	"parent_code": "510500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "510524",
+	"name": "\u53d9\u6c38\u53bf",
+	"pinyin": "xuyongxian",
+	"zip_code": "646400",
+	"parent_code": "510500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "510525",
+	"name": "\u53e4\u853a\u53bf",
+	"pinyin": "gulinxian",
+	"zip_code": "646500",
+	"parent_code": "510500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "510600",
+	"name": "\u5fb7\u9633\u5e02",
+	"pinyin": "deyangshi",
+	"zip_code": "618000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "510603",
+	"name": "\u65cc\u9633\u533a",
+	"pinyin": "jingyangqu",
+	"zip_code": "618000",
+	"parent_code": "510600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510604",
+	"name": "\u7f57\u6c5f\u533a",
+	"pinyin": "luojiangqu",
+	"zip_code": "618500",
+	"parent_code": "510600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "510623",
+	"name": "\u4e2d\u6c5f\u53bf",
+	"pinyin": "zhongjiangxian",
+	"zip_code": "618100",
+	"parent_code": "510600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "510681",
+	"name": "\u5e7f\u6c49\u5e02",
+	"pinyin": "guanghanshi",
+	"zip_code": "618300",
+	"parent_code": "510600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "510682",
+	"name": "\u4ec0\u90a1\u5e02",
+	"pinyin": "shifangshi",
+	"zip_code": "618300",
+	"parent_code": "510600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "510683",
+	"name": "\u7ef5\u7af9\u5e02",
+	"pinyin": "mianzhushi",
+	"zip_code": "618200",
+	"parent_code": "510600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "510700",
+	"name": "\u7ef5\u9633\u5e02",
+	"pinyin": "mianyangshi",
+	"zip_code": "621000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "M"
+}, {
+	"code": "510703",
+	"name": "\u6daa\u57ce\u533a",
+	"pinyin": "fuchengqu",
+	"zip_code": "621000",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "510704",
+	"name": "\u6e38\u4ed9\u533a",
+	"pinyin": "youxianqu",
+	"zip_code": "621022",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "510705",
+	"name": "\u5b89\u5dde\u533a",
+	"pinyin": "anzhouqu",
+	"zip_code": "622650",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "510722",
+	"name": "\u4e09\u53f0\u53bf",
+	"pinyin": "santaixian",
+	"zip_code": "621100",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "510723",
+	"name": "\u76d0\u4ead\u53bf",
+	"pinyin": "yantingxian",
+	"zip_code": "621600",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "510725",
+	"name": "\u6893\u6f7c\u53bf",
+	"pinyin": "zitongxian",
+	"zip_code": "622150",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "510726",
+	"name": "\u5317\u5ddd\u7f8c\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "beichuanqiangzuzizhixian",
+	"zip_code": "622750",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "510727",
+	"name": "\u5e73\u6b66\u53bf",
+	"pinyin": "pingwuxian",
+	"zip_code": "622550",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "510781",
+	"name": "\u6c5f\u6cb9\u5e02",
+	"pinyin": "jiangyoushi",
+	"zip_code": "621700",
+	"parent_code": "510700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510800",
+	"name": "\u5e7f\u5143\u5e02",
+	"pinyin": "guangyuanshi",
+	"zip_code": "628000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "510802",
+	"name": "\u5229\u5dde\u533a",
+	"pinyin": "lizhouqu",
+	"zip_code": "628017",
+	"parent_code": "510800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "510811",
+	"name": "\u662d\u5316\u533a",
+	"pinyin": "zhaohuaqu",
+	"zip_code": "628000",
+	"parent_code": "510800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "510812",
+	"name": "\u671d\u5929\u533a",
+	"pinyin": "chaotianqu",
+	"zip_code": "628017",
+	"parent_code": "510800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "510821",
+	"name": "\u65fa\u82cd\u53bf",
+	"pinyin": "wangcangxian",
+	"zip_code": "628200",
+	"parent_code": "510800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "510822",
+	"name": "\u9752\u5ddd\u53bf",
+	"pinyin": "qingchuanxian",
+	"zip_code": "628100",
+	"parent_code": "510800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "510823",
+	"name": "\u5251\u9601\u53bf",
+	"pinyin": "jiangexian",
+	"zip_code": "628300",
+	"parent_code": "510800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "510824",
+	"name": "\u82cd\u6eaa\u53bf",
+	"pinyin": "cangxixian",
+	"zip_code": "628400",
+	"parent_code": "510800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "510900",
+	"name": "\u9042\u5b81\u5e02",
+	"pinyin": "suiningshi",
+	"zip_code": "629000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "510903",
+	"name": "\u8239\u5c71\u533a",
+	"pinyin": "chuanshanqu",
+	"zip_code": "629000",
+	"parent_code": "510900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "510904",
+	"name": "\u5b89\u5c45\u533a",
+	"pinyin": "anjuqu",
+	"zip_code": "629000",
+	"parent_code": "510900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "510921",
+	"name": "\u84ec\u6eaa\u53bf",
+	"pinyin": "pengxixian",
+	"zip_code": "629100",
+	"parent_code": "510900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "510922",
+	"name": "\u5c04\u6d2a\u53bf",
+	"pinyin": "shehongxian",
+	"zip_code": "629200",
+	"parent_code": "510900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "510923",
+	"name": "\u5927\u82f1\u53bf",
+	"pinyin": "dayingxian",
+	"zip_code": "629300",
+	"parent_code": "510900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "511000",
+	"name": "\u5185\u6c5f\u5e02",
+	"pinyin": "neijiangshi",
+	"zip_code": "641000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "511002",
+	"name": "\u5e02\u4e2d\u533a",
+	"pinyin": "shizhongqu",
+	"zip_code": "614000",
+	"parent_code": "511000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "511011",
+	"name": "\u4e1c\u5174\u533a",
+	"pinyin": "dongxingqu",
+	"zip_code": "641100",
+	"parent_code": "511000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "511024",
+	"name": "\u5a01\u8fdc\u53bf",
+	"pinyin": "weiyuanxian",
+	"zip_code": "642450",
+	"parent_code": "511000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "511025",
+	"name": "\u8d44\u4e2d\u53bf",
+	"pinyin": "zizhongxian",
+	"zip_code": "641200",
+	"parent_code": "511000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "511083",
+	"name": "\u9686\u660c\u5e02",
+	"pinyin": "longchangshi",
+	"zip_code": "642150",
+	"parent_code": "511000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "511100",
+	"name": "\u4e50\u5c71\u5e02",
+	"pinyin": "leshanshi",
+	"zip_code": "614000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "511102",
+	"name": "\u5e02\u4e2d\u533a",
+	"pinyin": "shizhongqu",
+	"zip_code": "614000",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "511111",
+	"name": "\u6c99\u6e7e\u533a",
+	"pinyin": "shawanqu",
+	"zip_code": "614900",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "511112",
+	"name": "\u4e94\u901a\u6865\u533a",
+	"pinyin": "wutongqiaoqu",
+	"zip_code": "614800",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "511113",
+	"name": "\u91d1\u53e3\u6cb3\u533a",
+	"pinyin": "jinkouhequ",
+	"zip_code": "614700",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "511123",
+	"name": "\u728d\u4e3a\u53bf",
+	"pinyin": "qianweixian",
+	"zip_code": "614400",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "511124",
+	"name": "\u4e95\u7814\u53bf",
+	"pinyin": "jingyanxian",
+	"zip_code": "613100",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "511126",
+	"name": "\u5939\u6c5f\u53bf",
+	"pinyin": "jiajiangxian",
+	"zip_code": "614100",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "511129",
+	"name": "\u6c90\u5ddd\u53bf",
+	"pinyin": "muchuanxian",
+	"zip_code": "614500",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "511132",
+	"name": "\u5ce8\u8fb9\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "ebianyizuzizhixian",
+	"zip_code": "614300",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "511133",
+	"name": "\u9a6c\u8fb9\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "mabianyizuzizhixian",
+	"zip_code": "614600",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "511181",
+	"name": "\u5ce8\u7709\u5c71\u5e02",
+	"pinyin": "emeishanshi",
+	"zip_code": "614200",
+	"parent_code": "511100",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "511300",
+	"name": "\u5357\u5145\u5e02",
+	"pinyin": "nanchongshi",
+	"zip_code": "637000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "511302",
+	"name": "\u987a\u5e86\u533a",
+	"pinyin": "shunqingqu",
+	"zip_code": "637000",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "511303",
+	"name": "\u9ad8\u576a\u533a",
+	"pinyin": "gaopingqu",
+	"zip_code": "637100",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "511304",
+	"name": "\u5609\u9675\u533a",
+	"pinyin": "jialingqu",
+	"zip_code": "637100",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "511321",
+	"name": "\u5357\u90e8\u53bf",
+	"pinyin": "nanbuxian",
+	"zip_code": "637300",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "511322",
+	"name": "\u8425\u5c71\u53bf",
+	"pinyin": "yingshanxian",
+	"zip_code": "637700",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "511323",
+	"name": "\u84ec\u5b89\u53bf",
+	"pinyin": "penganxian",
+	"zip_code": "637800",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "511324",
+	"name": "\u4eea\u9647\u53bf",
+	"pinyin": "yilongxian",
+	"zip_code": "637600",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "511325",
+	"name": "\u897f\u5145\u53bf",
+	"pinyin": "xichongxian",
+	"zip_code": "637200",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "511381",
+	"name": "\u9606\u4e2d\u5e02",
+	"pinyin": "langzhongshi",
+	"zip_code": "637400",
+	"parent_code": "511300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "511400",
+	"name": "\u7709\u5c71\u5e02",
+	"pinyin": "meishanshi",
+	"zip_code": "620000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "M"
+}, {
+	"code": "511402",
+	"name": "\u4e1c\u5761\u533a",
+	"pinyin": "dongpoqu",
+	"zip_code": "620010",
+	"parent_code": "511400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "511403",
+	"name": "\u5f6d\u5c71\u533a",
+	"pinyin": "pengshanqu",
+	"zip_code": "620860",
+	"parent_code": "511400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "511421",
+	"name": "\u4ec1\u5bff\u53bf",
+	"pinyin": "renshouxian",
+	"zip_code": "620500",
+	"parent_code": "511400",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "511423",
+	"name": "\u6d2a\u96c5\u53bf",
+	"pinyin": "hongyaxian",
+	"zip_code": "620360",
+	"parent_code": "511400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "511424",
+	"name": "\u4e39\u68f1\u53bf",
+	"pinyin": "danlingxian",
+	"zip_code": "620200",
+	"parent_code": "511400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "511425",
+	"name": "\u9752\u795e\u53bf",
+	"pinyin": "qingshenxian",
+	"zip_code": "620460",
+	"parent_code": "511400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "511500",
+	"name": "\u5b9c\u5bbe\u5e02",
+	"pinyin": "yibinshi",
+	"zip_code": "644000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "511502",
+	"name": "\u7fe0\u5c4f\u533a",
+	"pinyin": "cuipingqu",
+	"zip_code": "644000",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "511503",
+	"name": "\u5357\u6eaa\u533a",
+	"pinyin": "nanxiqu",
+	"zip_code": "0",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "511521",
+	"name": "\u5b9c\u5bbe\u53bf",
+	"pinyin": "yibinxian",
+	"zip_code": "644600",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "511523",
+	"name": "\u6c5f\u5b89\u53bf",
+	"pinyin": "jianganxian",
+	"zip_code": "644200",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "511524",
+	"name": "\u957f\u5b81\u53bf",
+	"pinyin": "changningxian",
+	"zip_code": "644300",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "511525",
+	"name": "\u9ad8\u53bf",
+	"pinyin": "gaoxian",
+	"zip_code": "645150",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "511526",
+	"name": "\u73d9\u53bf",
+	"pinyin": "gongxian",
+	"zip_code": "644500",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "511527",
+	"name": "\u7b60\u8fde\u53bf",
+	"pinyin": "junlianxian",
+	"zip_code": "645250",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "511528",
+	"name": "\u5174\u6587\u53bf",
+	"pinyin": "xingwenxian",
+	"zip_code": "644400",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "511529",
+	"name": "\u5c4f\u5c71\u53bf",
+	"pinyin": "pingshanxian",
+	"zip_code": "645350",
+	"parent_code": "511500",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "511600",
+	"name": "\u5e7f\u5b89\u5e02",
+	"pinyin": "guanganshi",
+	"zip_code": "638500",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "511602",
+	"name": "\u5e7f\u5b89\u533a",
+	"pinyin": "guanganqu",
+	"zip_code": "638000",
+	"parent_code": "511600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "511603",
+	"name": "\u524d\u950b\u533a",
+	"pinyin": "qianfengqu",
+	"zip_code": "638019",
+	"parent_code": "511600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "511621",
+	"name": "\u5cb3\u6c60\u53bf",
+	"pinyin": "yuechixian",
+	"zip_code": "638300",
+	"parent_code": "511600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "511622",
+	"name": "\u6b66\u80dc\u53bf",
+	"pinyin": "wushengxian",
+	"zip_code": "638400",
+	"parent_code": "511600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "511623",
+	"name": "\u90bb\u6c34\u53bf",
+	"pinyin": "linshuixian",
+	"zip_code": "638500",
+	"parent_code": "511600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "511681",
+	"name": "\u534e\u84e5\u5e02",
+	"pinyin": "huayingshi",
+	"zip_code": "638600",
+	"parent_code": "511600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "511700",
+	"name": "\u8fbe\u5dde\u5e02",
+	"pinyin": "dazhoushi",
+	"zip_code": "635000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "511702",
+	"name": "\u901a\u5ddd\u533a",
+	"pinyin": "tongchuanqu",
+	"zip_code": "635000",
+	"parent_code": "511700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "511703",
+	"name": "\u8fbe\u5ddd\u533a",
+	"pinyin": "dachuanqu",
+	"zip_code": "635000",
+	"parent_code": "511700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "511722",
+	"name": "\u5ba3\u6c49\u53bf",
+	"pinyin": "xuanhanxian",
+	"zip_code": "636150",
+	"parent_code": "511700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "511723",
+	"name": "\u5f00\u6c5f\u53bf",
+	"pinyin": "kaijiangxian",
+	"zip_code": "636250",
+	"parent_code": "511700",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "511724",
+	"name": "\u5927\u7af9\u53bf",
+	"pinyin": "dazhuxian",
+	"zip_code": "635100",
+	"parent_code": "511700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "511725",
+	"name": "\u6e20\u53bf",
+	"pinyin": "quxian",
+	"zip_code": "635200",
+	"parent_code": "511700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "511781",
+	"name": "\u4e07\u6e90\u5e02",
+	"pinyin": "wanyuanshi",
+	"zip_code": "636350",
+	"parent_code": "511700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "511800",
+	"name": "\u96c5\u5b89\u5e02",
+	"pinyin": "yaanshi",
+	"zip_code": "625000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "511802",
+	"name": "\u96e8\u57ce\u533a",
+	"pinyin": "yuchengqu",
+	"zip_code": "625000",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "511803",
+	"name": "\u540d\u5c71\u533a",
+	"pinyin": "mingshanqu",
+	"zip_code": "0",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "511822",
+	"name": "\u8365\u7ecf\u53bf",
+	"pinyin": "xingjingxian",
+	"zip_code": "625200",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "511823",
+	"name": "\u6c49\u6e90\u53bf",
+	"pinyin": "hanyuanxian",
+	"zip_code": "625300",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "511824",
+	"name": "\u77f3\u68c9\u53bf",
+	"pinyin": "shimianxian",
+	"zip_code": "625400",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "511825",
+	"name": "\u5929\u5168\u53bf",
+	"pinyin": "tianquanxian",
+	"zip_code": "625500",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "511826",
+	"name": "\u82a6\u5c71\u53bf",
+	"pinyin": "lushanxian",
+	"zip_code": "625600",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "511827",
+	"name": "\u5b9d\u5174\u53bf",
+	"pinyin": "baoxingxian",
+	"zip_code": "625700",
+	"parent_code": "511800",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "511900",
+	"name": "\u5df4\u4e2d\u5e02",
+	"pinyin": "bazhongshi",
+	"zip_code": "636600",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "511902",
+	"name": "\u5df4\u5dde\u533a",
+	"pinyin": "bazhouqu",
+	"zip_code": "636001",
+	"parent_code": "511900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "511903",
+	"name": "\u6069\u9633\u533a",
+	"pinyin": "enyangqu",
+	"zip_code": "636001",
+	"parent_code": "511900",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "511921",
+	"name": "\u901a\u6c5f\u53bf",
+	"pinyin": "tongjiangxian",
+	"zip_code": "636700",
+	"parent_code": "511900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "511922",
+	"name": "\u5357\u6c5f\u53bf",
+	"pinyin": "nanjiangxian",
+	"zip_code": "636600",
+	"parent_code": "511900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "511923",
+	"name": "\u5e73\u660c\u53bf",
+	"pinyin": "pingchangxian",
+	"zip_code": "636400",
+	"parent_code": "511900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "512000",
+	"name": "\u8d44\u9633\u5e02",
+	"pinyin": "ziyangshi",
+	"zip_code": "641300",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "512002",
+	"name": "\u96c1\u6c5f\u533a",
+	"pinyin": "yanjiangqu",
+	"zip_code": "641300",
+	"parent_code": "512000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "512021",
+	"name": "\u5b89\u5cb3\u53bf",
+	"pinyin": "anyuexian",
+	"zip_code": "642350",
+	"parent_code": "512000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "512022",
+	"name": "\u4e50\u81f3\u53bf",
+	"pinyin": "lezhixian",
+	"zip_code": "641500",
+	"parent_code": "512000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "513200",
+	"name": "\u963f\u575d\u85cf\u65cf\u7f8c\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "abazangzuqiangzuzizhizhou",
+	"zip_code": "624000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "513201",
+	"name": "\u9a6c\u5c14\u5eb7\u5e02",
+	"pinyin": "maerkangshi",
+	"zip_code": "624000",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "513221",
+	"name": "\u6c76\u5ddd\u53bf",
+	"pinyin": "wenchuanxian",
+	"zip_code": "623000",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "513222",
+	"name": "\u7406\u53bf",
+	"pinyin": "lixian",
+	"zip_code": "623100",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "513223",
+	"name": "\u8302\u53bf",
+	"pinyin": "maoxian",
+	"zip_code": "623200",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "513224",
+	"name": "\u677e\u6f58\u53bf",
+	"pinyin": "songpanxian",
+	"zip_code": "623300",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "513225",
+	"name": "\u4e5d\u5be8\u6c9f\u53bf",
+	"pinyin": "jiuzhaigouxian",
+	"zip_code": "623400",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "513226",
+	"name": "\u91d1\u5ddd\u53bf",
+	"pinyin": "jinchuanxian",
+	"zip_code": "624100",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "513227",
+	"name": "\u5c0f\u91d1\u53bf",
+	"pinyin": "xiaojinxian",
+	"zip_code": "624200",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "513228",
+	"name": "\u9ed1\u6c34\u53bf",
+	"pinyin": "heishuixian",
+	"zip_code": "623500",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "513230",
+	"name": "\u58e4\u5858\u53bf",
+	"pinyin": "rangtangxian",
+	"zip_code": "624300",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "513231",
+	"name": "\u963f\u575d\u53bf",
+	"pinyin": "abaxian",
+	"zip_code": "624600",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "513232",
+	"name": "\u82e5\u5c14\u76d6\u53bf",
+	"pinyin": "ruoergaixian",
+	"zip_code": "624500",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "513233",
+	"name": "\u7ea2\u539f\u53bf",
+	"pinyin": "hongyuanxian",
+	"zip_code": "624400",
+	"parent_code": "513200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "513300",
+	"name": "\u7518\u5b5c\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "ganzizangzuzizhizhou",
+	"zip_code": "626000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "513301",
+	"name": "\u5eb7\u5b9a\u5e02",
+	"pinyin": "kangdingshi",
+	"zip_code": "626000",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "513322",
+	"name": "\u6cf8\u5b9a\u53bf",
+	"pinyin": "ludingxian",
+	"zip_code": "626100",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "513323",
+	"name": "\u4e39\u5df4\u53bf",
+	"pinyin": "danbaxian",
+	"zip_code": "626300",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "513324",
+	"name": "\u4e5d\u9f99\u53bf",
+	"pinyin": "jiulongxian",
+	"zip_code": "626200",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "513325",
+	"name": "\u96c5\u6c5f\u53bf",
+	"pinyin": "yajiangxian",
+	"zip_code": "627450",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "513326",
+	"name": "\u9053\u5b5a\u53bf",
+	"pinyin": "daofuxian",
+	"zip_code": "626400",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "513327",
+	"name": "\u7089\u970d\u53bf",
+	"pinyin": "luhuoxian",
+	"zip_code": "626500",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "513328",
+	"name": "\u7518\u5b5c\u53bf",
+	"pinyin": "ganzixian",
+	"zip_code": "626700",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "513329",
+	"name": "\u65b0\u9f99\u53bf",
+	"pinyin": "xinlongxian",
+	"zip_code": "626800",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "513330",
+	"name": "\u5fb7\u683c\u53bf",
+	"pinyin": "degexian",
+	"zip_code": "627250",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "513331",
+	"name": "\u767d\u7389\u53bf",
+	"pinyin": "baiyuxian",
+	"zip_code": "627150",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "513332",
+	"name": "\u77f3\u6e20\u53bf",
+	"pinyin": "shiquxian",
+	"zip_code": "627350",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "513333",
+	"name": "\u8272\u8fbe\u53bf",
+	"pinyin": "sedaxian",
+	"zip_code": "626600",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "513334",
+	"name": "\u7406\u5858\u53bf",
+	"pinyin": "litangxian",
+	"zip_code": "627550",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "513335",
+	"name": "\u5df4\u5858\u53bf",
+	"pinyin": "batangxian",
+	"zip_code": "627650",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "513336",
+	"name": "\u4e61\u57ce\u53bf",
+	"pinyin": "xiangchengxian",
+	"zip_code": "627850",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "513337",
+	"name": "\u7a3b\u57ce\u53bf",
+	"pinyin": "daochengxian",
+	"zip_code": "627750",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "513338",
+	"name": "\u5f97\u8363\u53bf",
+	"pinyin": "derongxian",
+	"zip_code": "627950",
+	"parent_code": "513300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "513400",
+	"name": "\u51c9\u5c71\u5f5d\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "liangshanyizuzizhizhou",
+	"zip_code": "615000",
+	"parent_code": "510000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "513401",
+	"name": "\u897f\u660c\u5e02",
+	"pinyin": "xichangshi",
+	"zip_code": "615000",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "513402",
+	"name": "\u4f1a\u7406\u5e02",
+	"pinyin": "huilishi",
+	"zip_code": "615100",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "513422",
+	"name": "\u6728\u91cc\u85cf\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "mulizangzuzizhixian",
+	"zip_code": "615800",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "513423",
+	"name": "\u76d0\u6e90\u53bf",
+	"pinyin": "yanyuanxian",
+	"zip_code": "615700",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "513424",
+	"name": "\u5fb7\u660c\u53bf",
+	"pinyin": "dechangxian",
+	"zip_code": "615500",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "513426",
+	"name": "\u4f1a\u4e1c\u53bf",
+	"pinyin": "huidongxian",
+	"zip_code": "615200",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "513427",
+	"name": "\u5b81\u5357\u53bf",
+	"pinyin": "ningnanxian",
+	"zip_code": "615400",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "513428",
+	"name": "\u666e\u683c\u53bf",
+	"pinyin": "pugexian",
+	"zip_code": "615300",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "513429",
+	"name": "\u5e03\u62d6\u53bf",
+	"pinyin": "butuoxian",
+	"zip_code": "615350",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "513430",
+	"name": "\u91d1\u9633\u53bf",
+	"pinyin": "jinyangxian",
+	"zip_code": "616250",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "513431",
+	"name": "\u662d\u89c9\u53bf",
+	"pinyin": "zhaojuexian",
+	"zip_code": "616150",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "513432",
+	"name": "\u559c\u5fb7\u53bf",
+	"pinyin": "xidexian",
+	"zip_code": "616750",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "513433",
+	"name": "\u5195\u5b81\u53bf",
+	"pinyin": "mianningxian",
+	"zip_code": "615600",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "513434",
+	"name": "\u8d8a\u897f\u53bf",
+	"pinyin": "yuexixian",
+	"zip_code": "616650",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "513435",
+	"name": "\u7518\u6d1b\u53bf",
+	"pinyin": "ganluoxian",
+	"zip_code": "616850",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "513436",
+	"name": "\u7f8e\u59d1\u53bf",
+	"pinyin": "meiguxian",
+	"zip_code": "616450",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "513437",
+	"name": "\u96f7\u6ce2\u53bf",
+	"pinyin": "leiboxian",
+	"zip_code": "616550",
+	"parent_code": "513400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "520000",
+	"name": "\u8d35\u5dde\u7701",
+	"pinyin": "guizhousheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "G"
+}, {
+	"code": "520100",
+	"name": "\u8d35\u9633\u5e02",
+	"pinyin": "guiyangshi",
+	"zip_code": "550000",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "520102",
+	"name": "\u5357\u660e\u533a",
+	"pinyin": "nanmingqu",
+	"zip_code": "550001",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "520103",
+	"name": "\u4e91\u5ca9\u533a",
+	"pinyin": "yunyanqu",
+	"zip_code": "550001",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "520111",
+	"name": "\u82b1\u6eaa\u533a",
+	"pinyin": "huaxiqu",
+	"zip_code": "550025",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "520112",
+	"name": "\u4e4c\u5f53\u533a",
+	"pinyin": "wudangqu",
+	"zip_code": "550018",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "520113",
+	"name": "\u767d\u4e91\u533a",
+	"pinyin": "baiyunqu",
+	"zip_code": "550014",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "520115",
+	"name": "\u89c2\u5c71\u6e56\u533a",
+	"pinyin": "guanshanhuqu",
+	"zip_code": "550009",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "520121",
+	"name": "\u5f00\u9633\u53bf",
+	"pinyin": "kaiyangxian",
+	"zip_code": "550300",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "520122",
+	"name": "\u606f\u70fd\u53bf",
+	"pinyin": "xifengxian",
+	"zip_code": "551100",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "520123",
+	"name": "\u4fee\u6587\u53bf",
+	"pinyin": "xiuwenxian",
+	"zip_code": "550200",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "520181",
+	"name": "\u6e05\u9547\u5e02",
+	"pinyin": "qingzhenshi",
+	"zip_code": "551400",
+	"parent_code": "520100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "520200",
+	"name": "\u516d\u76d8\u6c34\u5e02",
+	"pinyin": "liupanshuishi",
+	"zip_code": "553000",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "520201",
+	"name": "\u949f\u5c71\u533a",
+	"pinyin": "zhongshanqu",
+	"zip_code": "553000",
+	"parent_code": "520200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "520203",
+	"name": "\u516d\u679d\u7279\u533a",
+	"pinyin": "liuzhitequ",
+	"zip_code": "553400",
+	"parent_code": "520200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "520221",
+	"name": "\u6c34\u57ce\u53bf",
+	"pinyin": "shuichengxian",
+	"zip_code": "553000",
+	"parent_code": "520200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "520281",
+	"name": "\u76d8\u5dde\u5e02",
+	"pinyin": "panzhoushi",
+	"zip_code": "561601",
+	"parent_code": "520200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "520300",
+	"name": "\u9075\u4e49\u5e02",
+	"pinyin": "zunyishi",
+	"zip_code": "563000",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "520302",
+	"name": "\u7ea2\u82b1\u5c97\u533a",
+	"pinyin": "honghuagangqu",
+	"zip_code": "563000",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "520303",
+	"name": "\u6c47\u5ddd\u533a",
+	"pinyin": "huichuanqu",
+	"zip_code": "563000",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "520304",
+	"name": "\u64ad\u5dde\u533a",
+	"pinyin": "bozhouqu",
+	"zip_code": "563000",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "520322",
+	"name": "\u6850\u6893\u53bf",
+	"pinyin": "tongzixian",
+	"zip_code": "563200",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "520323",
+	"name": "\u7ee5\u9633\u53bf",
+	"pinyin": "suiyangxian",
+	"zip_code": "563300",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "520324",
+	"name": "\u6b63\u5b89\u53bf",
+	"pinyin": "zhenganxian",
+	"zip_code": "563400",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "520325",
+	"name": "\u9053\u771f\u4ee1\u4f6c\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "daozhengelaozumiaozuzizhixian",
+	"zip_code": "563500",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "520326",
+	"name": "\u52a1\u5ddd\u4ee1\u4f6c\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "wuchuangelaozumiaozuzizhixian",
+	"zip_code": "564300",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "520327",
+	"name": "\u51e4\u5188\u53bf",
+	"pinyin": "fenggangxian",
+	"zip_code": "564200",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "520328",
+	"name": "\u6e44\u6f6d\u53bf",
+	"pinyin": "meitanxian",
+	"zip_code": "564100",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "520329",
+	"name": "\u4f59\u5e86\u53bf",
+	"pinyin": "yuqingxian",
+	"zip_code": "564400",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "520330",
+	"name": "\u4e60\u6c34\u53bf",
+	"pinyin": "xishuixian",
+	"zip_code": "564600",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "520381",
+	"name": "\u8d64\u6c34\u5e02",
+	"pinyin": "chishuishi",
+	"zip_code": "564700",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "520382",
+	"name": "\u4ec1\u6000\u5e02",
+	"pinyin": "renhuaishi",
+	"zip_code": "564500",
+	"parent_code": "520300",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "520400",
+	"name": "\u5b89\u987a\u5e02",
+	"pinyin": "anshunshi",
+	"zip_code": "561000",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "520402",
+	"name": "\u897f\u79c0\u533a",
+	"pinyin": "xixiuqu",
+	"zip_code": "561000",
+	"parent_code": "520400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "520403",
+	"name": "\u5e73\u575d\u533a",
+	"pinyin": "pingbaqu",
+	"zip_code": "561100",
+	"parent_code": "520400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "520422",
+	"name": "\u666e\u5b9a\u53bf",
+	"pinyin": "pudingxian",
+	"zip_code": "562100",
+	"parent_code": "520400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "520423",
+	"name": "\u9547\u5b81\u5e03\u4f9d\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "zhenningbuyizumiaozuzizhixian",
+	"zip_code": "561200",
+	"parent_code": "520400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "520424",
+	"name": "\u5173\u5cad\u5e03\u4f9d\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "guanlingbuyizumiaozuzizhixian",
+	"zip_code": "561300",
+	"parent_code": "520400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "520425",
+	"name": "\u7d2b\u4e91\u82d7\u65cf\u5e03\u4f9d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "ziyunmiaozubuyizuzizhixian",
+	"zip_code": "550800",
+	"parent_code": "520400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "520500",
+	"name": "\u6bd5\u8282\u5e02",
+	"pinyin": "bijieshi",
+	"zip_code": "551700",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "520502",
+	"name": "\u4e03\u661f\u5173\u533a",
+	"pinyin": "qixingguanqu",
+	"zip_code": "551700",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "520521",
+	"name": "\u5927\u65b9\u53bf",
+	"pinyin": "dafangxian",
+	"zip_code": "551600",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "520523",
+	"name": "\u91d1\u6c99\u53bf",
+	"pinyin": "jinshaxian",
+	"zip_code": "551800",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "520524",
+	"name": "\u7ec7\u91d1\u53bf",
+	"pinyin": "zhijinxian",
+	"zip_code": "552100",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "520525",
+	"name": "\u7eb3\u96cd\u53bf",
+	"pinyin": "nayongxian",
+	"zip_code": "553300",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "520526",
+	"name": "\u5a01\u5b81\u5f5d\u65cf\u56de\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "weiningyizuhuizumiaozuzizhixian",
+	"zip_code": "553100",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "520527",
+	"name": "\u8d6b\u7ae0\u53bf",
+	"pinyin": "hezhangxian",
+	"zip_code": "553200",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "520581",
+	"name": "\u9ed4\u897f\u5e02",
+	"pinyin": "qianxishi",
+	"zip_code": "551500",
+	"parent_code": "520500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "520600",
+	"name": "\u94dc\u4ec1\u5e02",
+	"pinyin": "tongrenshi",
+	"zip_code": "554300",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "520602",
+	"name": "\u78a7\u6c5f\u533a",
+	"pinyin": "bijiangqu",
+	"zip_code": "554300",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "520603",
+	"name": "\u4e07\u5c71\u533a",
+	"pinyin": "wanshanqu",
+	"zip_code": "554300",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "520621",
+	"name": "\u6c5f\u53e3\u53bf",
+	"pinyin": "jiangkouxian",
+	"zip_code": "554400",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "520622",
+	"name": "\u7389\u5c4f\u4f97\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yupingtongzuzizhixian",
+	"zip_code": "554004",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "520623",
+	"name": "\u77f3\u9621\u53bf",
+	"pinyin": "shiqianxian",
+	"zip_code": "555100",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "520624",
+	"name": "\u601d\u5357\u53bf",
+	"pinyin": "sinanxian",
+	"zip_code": "565100",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "520625",
+	"name": "\u5370\u6c5f\u571f\u5bb6\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yinjiangtujiazumiaozuzizhixian",
+	"zip_code": "555200",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "520626",
+	"name": "\u5fb7\u6c5f\u53bf",
+	"pinyin": "dejiangxian",
+	"zip_code": "565200",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "520627",
+	"name": "\u6cbf\u6cb3\u571f\u5bb6\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yanhetujiazuzizhixian",
+	"zip_code": "565300",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "520628",
+	"name": "\u677e\u6843\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "songtaomiaozuzizhixian",
+	"zip_code": "554100",
+	"parent_code": "520600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "522300",
+	"name": "\u9ed4\u897f\u5357\u5e03\u4f9d\u65cf\u82d7\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "qianxinanbuyizumiaozuzizhizhou",
+	"zip_code": "562400",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "522301",
+	"name": "\u5174\u4e49\u5e02",
+	"pinyin": "xingyishi",
+	"zip_code": "562400",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "522322",
+	"name": "\u5174\u4ec1\u53bf",
+	"pinyin": "xingrenxian",
+	"zip_code": "562300",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "522323",
+	"name": "\u666e\u5b89\u53bf",
+	"pinyin": "puanxian",
+	"zip_code": "561500",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "522324",
+	"name": "\u6674\u9686\u53bf",
+	"pinyin": "qinglongxian",
+	"zip_code": "561400",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "522325",
+	"name": "\u8d1e\u4e30\u53bf",
+	"pinyin": "zhenfengxian",
+	"zip_code": "562200",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "522326",
+	"name": "\u671b\u8c1f\u53bf",
+	"pinyin": "wangmoxian",
+	"zip_code": "552300",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "522327",
+	"name": "\u518c\u4ea8\u53bf",
+	"pinyin": "cehengxian",
+	"zip_code": "552200",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "522328",
+	"name": "\u5b89\u9f99\u53bf",
+	"pinyin": "anlongxian",
+	"zip_code": "552400",
+	"parent_code": "522300",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "522600",
+	"name": "\u9ed4\u4e1c\u5357\u82d7\u65cf\u4f97\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "qiandongnanmiaozutongzuzizhizhou",
+	"zip_code": "556000",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "522601",
+	"name": "\u51ef\u91cc\u5e02",
+	"pinyin": "kailishi",
+	"zip_code": "556000",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "522622",
+	"name": "\u9ec4\u5e73\u53bf",
+	"pinyin": "huangpingxian",
+	"zip_code": "556100",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "522623",
+	"name": "\u65bd\u79c9\u53bf",
+	"pinyin": "shibingxian",
+	"zip_code": "556200",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "522624",
+	"name": "\u4e09\u7a57\u53bf",
+	"pinyin": "sansuixian",
+	"zip_code": "556500",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "522625",
+	"name": "\u9547\u8fdc\u53bf",
+	"pinyin": "zhenyuanxian",
+	"zip_code": "557700",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "522626",
+	"name": "\u5c91\u5de9\u53bf",
+	"pinyin": "cengongxian",
+	"zip_code": "557800",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "522627",
+	"name": "\u5929\u67f1\u53bf",
+	"pinyin": "tianzhuxian",
+	"zip_code": "556600",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "522628",
+	"name": "\u9526\u5c4f\u53bf",
+	"pinyin": "jinpingxian",
+	"zip_code": "556700",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "522629",
+	"name": "\u5251\u6cb3\u53bf",
+	"pinyin": "jianhexian",
+	"zip_code": "556400",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "522630",
+	"name": "\u53f0\u6c5f\u53bf",
+	"pinyin": "taijiangxian",
+	"zip_code": "556300",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "522631",
+	"name": "\u9ece\u5e73\u53bf",
+	"pinyin": "lipingxian",
+	"zip_code": "557300",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "522632",
+	"name": "\u6995\u6c5f\u53bf",
+	"pinyin": "rongjiangxian",
+	"zip_code": "557200",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "522633",
+	"name": "\u4ece\u6c5f\u53bf",
+	"pinyin": "congjiangxian",
+	"zip_code": "557400",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "522634",
+	"name": "\u96f7\u5c71\u53bf",
+	"pinyin": "leishanxian",
+	"zip_code": "557100",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "522635",
+	"name": "\u9ebb\u6c5f\u53bf",
+	"pinyin": "majiangxian",
+	"zip_code": "557600",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "522636",
+	"name": "\u4e39\u5be8\u53bf",
+	"pinyin": "danzhaixian",
+	"zip_code": "557500",
+	"parent_code": "522600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "522700",
+	"name": "\u9ed4\u5357\u5e03\u4f9d\u65cf\u82d7\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "qiannanbuyizumiaozuzizhizhou",
+	"zip_code": "558000",
+	"parent_code": "520000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "522701",
+	"name": "\u90fd\u5300\u5e02",
+	"pinyin": "duyunshi",
+	"zip_code": "558000",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "522702",
+	"name": "\u798f\u6cc9\u5e02",
+	"pinyin": "fuquanshi",
+	"zip_code": "550500",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "522722",
+	"name": "\u8354\u6ce2\u53bf",
+	"pinyin": "liboxian",
+	"zip_code": "558400",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "522723",
+	"name": "\u8d35\u5b9a\u53bf",
+	"pinyin": "guidingxian",
+	"zip_code": "551300",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "522725",
+	"name": "\u74ee\u5b89\u53bf",
+	"pinyin": "wenganxian",
+	"zip_code": "550400",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "522726",
+	"name": "\u72ec\u5c71\u53bf",
+	"pinyin": "dushanxian",
+	"zip_code": "558200",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "522727",
+	"name": "\u5e73\u5858\u53bf",
+	"pinyin": "pingtangxian",
+	"zip_code": "558300",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "522728",
+	"name": "\u7f57\u7538\u53bf",
+	"pinyin": "luodianxian",
+	"zip_code": "550100",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "522729",
+	"name": "\u957f\u987a\u53bf",
+	"pinyin": "changshunxian",
+	"zip_code": "550700",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "522730",
+	"name": "\u9f99\u91cc\u53bf",
+	"pinyin": "longlixian",
+	"zip_code": "551200",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "522731",
+	"name": "\u60e0\u6c34\u53bf",
+	"pinyin": "huishuixian",
+	"zip_code": "550600",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "522732",
+	"name": "\u4e09\u90fd\u6c34\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "sandushuizuzizhixian",
+	"zip_code": "558100",
+	"parent_code": "522700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530000",
+	"name": "\u4e91\u5357\u7701",
+	"pinyin": "yunnansheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "Y"
+}, {
+	"code": "530100",
+	"name": "\u6606\u660e\u5e02",
+	"pinyin": "kunmingshi",
+	"zip_code": "650000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "K"
+}, {
+	"code": "530102",
+	"name": "\u4e94\u534e\u533a",
+	"pinyin": "wuhuaqu",
+	"zip_code": "650032",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "530103",
+	"name": "\u76d8\u9f99\u533a",
+	"pinyin": "panlongqu",
+	"zip_code": "650051",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "530111",
+	"name": "\u5b98\u6e21\u533a",
+	"pinyin": "guanduqu",
+	"zip_code": "650217",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "530112",
+	"name": "\u897f\u5c71\u533a",
+	"pinyin": "xishanqu",
+	"zip_code": "650100",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "530113",
+	"name": "\u4e1c\u5ddd\u533a",
+	"pinyin": "dongchuanqu",
+	"zip_code": "654100",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "530114",
+	"name": "\u5448\u8d21\u533a",
+	"pinyin": "chenggongqu",
+	"zip_code": "650000",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "530115",
+	"name": "\u664b\u5b81\u533a",
+	"pinyin": "jinningqu",
+	"zip_code": "650600",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "530124",
+	"name": "\u5bcc\u6c11\u53bf",
+	"pinyin": "fuminxian",
+	"zip_code": "650400",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "530125",
+	"name": "\u5b9c\u826f\u53bf",
+	"pinyin": "yiliangxian",
+	"zip_code": "652100",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530126",
+	"name": "\u77f3\u6797\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "shilinyizuzizhixian",
+	"zip_code": "652200",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530127",
+	"name": "\u5d69\u660e\u53bf",
+	"pinyin": "songmingxian",
+	"zip_code": "651700",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530128",
+	"name": "\u7984\u529d\u5f5d\u65cf\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "luquanyizumiaozuzizhixian",
+	"zip_code": "651500",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530129",
+	"name": "\u5bfb\u7538\u56de\u65cf\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "xundianhuizuyizuzizhixian",
+	"zip_code": "655200",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "530181",
+	"name": "\u5b89\u5b81\u5e02",
+	"pinyin": "anningshi",
+	"zip_code": "650300",
+	"parent_code": "530100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "530300",
+	"name": "\u66f2\u9756\u5e02",
+	"pinyin": "qujingshi",
+	"zip_code": "655000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "530302",
+	"name": "\u9e92\u9e9f\u533a",
+	"pinyin": "qilinqu",
+	"zip_code": "655000",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "530303",
+	"name": "\u6cbe\u76ca\u533a",
+	"pinyin": "zhanyiqu",
+	"zip_code": "655331",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "530321",
+	"name": "\u9a6c\u9f99\u53bf",
+	"pinyin": "malongxian",
+	"zip_code": "655100",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "530322",
+	"name": "\u9646\u826f\u53bf",
+	"pinyin": "luliangxian",
+	"zip_code": "655600",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530323",
+	"name": "\u5e08\u5b97\u53bf",
+	"pinyin": "shizongxian",
+	"zip_code": "655700",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530324",
+	"name": "\u7f57\u5e73\u53bf",
+	"pinyin": "luopingxian",
+	"zip_code": "655800",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530325",
+	"name": "\u5bcc\u6e90\u53bf",
+	"pinyin": "fuyuanxian",
+	"zip_code": "655500",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "530326",
+	"name": "\u4f1a\u6cfd\u53bf",
+	"pinyin": "huizexian",
+	"zip_code": "654200",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "530381",
+	"name": "\u5ba3\u5a01\u5e02",
+	"pinyin": "xuanweishi",
+	"zip_code": "655400",
+	"parent_code": "530300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "530400",
+	"name": "\u7389\u6eaa\u5e02",
+	"pinyin": "yuxishi",
+	"zip_code": "653100",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "530402",
+	"name": "\u7ea2\u5854\u533a",
+	"pinyin": "hongtaqu",
+	"zip_code": "653100",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "530403",
+	"name": "\u6c5f\u5ddd\u533a",
+	"pinyin": "jiangchuanqu",
+	"zip_code": "652600",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "530422",
+	"name": "\u6f84\u6c5f\u53bf",
+	"pinyin": "chengjiangxian",
+	"zip_code": "652500",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "530423",
+	"name": "\u901a\u6d77\u53bf",
+	"pinyin": "tonghaixian",
+	"zip_code": "652700",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "530424",
+	"name": "\u534e\u5b81\u53bf",
+	"pinyin": "huaningxian",
+	"zip_code": "652800",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "530425",
+	"name": "\u6613\u95e8\u53bf",
+	"pinyin": "yimenxian",
+	"zip_code": "651100",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530426",
+	"name": "\u5ce8\u5c71\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "eshanyizuzizhixian",
+	"zip_code": "653200",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "530427",
+	"name": "\u65b0\u5e73\u5f5d\u65cf\u50a3\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "xinpingyizudaizuzizhixian",
+	"zip_code": "653400",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "530428",
+	"name": "\u5143\u6c5f\u54c8\u5c3c\u65cf\u5f5d\u65cf\u50a3\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yuanjianghanizuyizudaizuzizhixian",
+	"zip_code": "653300",
+	"parent_code": "530400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530500",
+	"name": "\u4fdd\u5c71\u5e02",
+	"pinyin": "baoshanshi",
+	"zip_code": "678000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "530502",
+	"name": "\u9686\u9633\u533a",
+	"pinyin": "longyangqu",
+	"zip_code": "678000",
+	"parent_code": "530500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530521",
+	"name": "\u65bd\u7538\u53bf",
+	"pinyin": "shidianxian",
+	"zip_code": "678200",
+	"parent_code": "530500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530523",
+	"name": "\u9f99\u9675\u53bf",
+	"pinyin": "longlingxian",
+	"zip_code": "678300",
+	"parent_code": "530500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530524",
+	"name": "\u660c\u5b81\u53bf",
+	"pinyin": "changningxian",
+	"zip_code": "678100",
+	"parent_code": "530500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "530581",
+	"name": "\u817e\u51b2\u5e02",
+	"pinyin": "tengchongshi",
+	"zip_code": "679100",
+	"parent_code": "530500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "530600",
+	"name": "\u662d\u901a\u5e02",
+	"pinyin": "zhaotongshi",
+	"zip_code": "657000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "530602",
+	"name": "\u662d\u9633\u533a",
+	"pinyin": "zhaoyangqu",
+	"zip_code": "657000",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "530621",
+	"name": "\u9c81\u7538\u53bf",
+	"pinyin": "ludianxian",
+	"zip_code": "657100",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530622",
+	"name": "\u5de7\u5bb6\u53bf",
+	"pinyin": "qiaojiaxian",
+	"zip_code": "654600",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "530623",
+	"name": "\u76d0\u6d25\u53bf",
+	"pinyin": "yanjinxian",
+	"zip_code": "657500",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530624",
+	"name": "\u5927\u5173\u53bf",
+	"pinyin": "daguanxian",
+	"zip_code": "657400",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "530625",
+	"name": "\u6c38\u5584\u53bf",
+	"pinyin": "yongshanxian",
+	"zip_code": "657300",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530626",
+	"name": "\u7ee5\u6c5f\u53bf",
+	"pinyin": "suijiangxian",
+	"zip_code": "657700",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530627",
+	"name": "\u9547\u96c4\u53bf",
+	"pinyin": "zhenxiongxian",
+	"zip_code": "657200",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "530628",
+	"name": "\u5f5d\u826f\u53bf",
+	"pinyin": "yiliangxian",
+	"zip_code": "657600",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530629",
+	"name": "\u5a01\u4fe1\u53bf",
+	"pinyin": "weixinxian",
+	"zip_code": "657900",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "530630",
+	"name": "\u6c34\u5bcc\u53bf",
+	"pinyin": "shuifuxian",
+	"zip_code": "657800",
+	"parent_code": "530600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530700",
+	"name": "\u4e3d\u6c5f\u5e02",
+	"pinyin": "lijiangshi",
+	"zip_code": "674100",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "530702",
+	"name": "\u53e4\u57ce\u533a",
+	"pinyin": "guchengqu",
+	"zip_code": "674100",
+	"parent_code": "530700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "530721",
+	"name": "\u7389\u9f99\u7eb3\u897f\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yulongnaxizuzizhixian",
+	"zip_code": "674100",
+	"parent_code": "530700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530722",
+	"name": "\u6c38\u80dc\u53bf",
+	"pinyin": "yongshengxian",
+	"zip_code": "674200",
+	"parent_code": "530700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530723",
+	"name": "\u534e\u576a\u53bf",
+	"pinyin": "huapingxian",
+	"zip_code": "674800",
+	"parent_code": "530700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "530724",
+	"name": "\u5b81\u8497\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "ninglangyizuzizhixian",
+	"zip_code": "674300",
+	"parent_code": "530700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "530800",
+	"name": "\u666e\u6d31\u5e02",
+	"pinyin": "puershi",
+	"zip_code": "0",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "530802",
+	"name": "\u601d\u8305\u533a",
+	"pinyin": "simaoqu",
+	"zip_code": "665000",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530821",
+	"name": "\u5b81\u6d31\u54c8\u5c3c\u65cf\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "ningerhanizuyizuzizhixian",
+	"zip_code": "665100",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "530822",
+	"name": "\u58a8\u6c5f\u54c8\u5c3c\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "mojianghanizuzizhixian",
+	"zip_code": "654800",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "530823",
+	"name": "\u666f\u4e1c\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jingdongyizuzizhixian",
+	"zip_code": "676200",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "530824",
+	"name": "\u666f\u8c37\u50a3\u65cf\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jinggudaizuyizuzizhixian",
+	"zip_code": "666400",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "530825",
+	"name": "\u9547\u6c85\u5f5d\u65cf\u54c8\u5c3c\u65cf\u62c9\u795c\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "zhenyuanyizuhanizulahuzuzizhixian",
+	"zip_code": "666500",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "530826",
+	"name": "\u6c5f\u57ce\u54c8\u5c3c\u65cf\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jiangchenghanizuyizuzizhixian",
+	"zip_code": "665900",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "530827",
+	"name": "\u5b5f\u8fde\u50a3\u65cf\u62c9\u795c\u65cf\u4f64\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "mengliandaizulahuzuwazuzizhixian",
+	"zip_code": "665800",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "530828",
+	"name": "\u6f9c\u6ca7\u62c9\u795c\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "lancanglahuzuzizhixian",
+	"zip_code": "665600",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530829",
+	"name": "\u897f\u76df\u4f64\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "ximengwazuzizhixian",
+	"zip_code": "665700",
+	"parent_code": "530800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "530900",
+	"name": "\u4e34\u6ca7\u5e02",
+	"pinyin": "lincangshi",
+	"zip_code": "677000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "530902",
+	"name": "\u4e34\u7fd4\u533a",
+	"pinyin": "linxiangqu",
+	"zip_code": "677000",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "530921",
+	"name": "\u51e4\u5e86\u53bf",
+	"pinyin": "fengqingxian",
+	"zip_code": "675900",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "530922",
+	"name": "\u4e91\u53bf",
+	"pinyin": "yunxian",
+	"zip_code": "675800",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530923",
+	"name": "\u6c38\u5fb7\u53bf",
+	"pinyin": "yongdexian",
+	"zip_code": "677600",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "530924",
+	"name": "\u9547\u5eb7\u53bf",
+	"pinyin": "zhenkangxian",
+	"zip_code": "677704",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "530925",
+	"name": "\u53cc\u6c5f\u62c9\u795c\u65cf\u4f64\u65cf\u5e03\u6717\u65cf\u50a3\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "shuangjianglahuzuwazubulangzudaizuzizhixian",
+	"zip_code": "677300",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "530926",
+	"name": "\u803f\u9a6c\u50a3\u65cf\u4f64\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "gengmadaizuwazuzizhixian",
+	"zip_code": "677500",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "530927",
+	"name": "\u6ca7\u6e90\u4f64\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "cangyuanwazuzizhixian",
+	"zip_code": "677400",
+	"parent_code": "530900",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "532300",
+	"name": "\u695a\u96c4\u5f5d\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "chuxiongyizuzizhizhou",
+	"zip_code": "675000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "532301",
+	"name": "\u695a\u96c4\u5e02",
+	"pinyin": "chuxiongshi",
+	"zip_code": "675000",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "532302",
+	"name": "\u7984\u4e30\u5e02",
+	"pinyin": "lufengshi",
+	"zip_code": "651200",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "532322",
+	"name": "\u53cc\u67cf\u53bf",
+	"pinyin": "shuangbaixian",
+	"zip_code": "675100",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "532323",
+	"name": "\u725f\u5b9a\u53bf",
+	"pinyin": "moudingxian",
+	"zip_code": "675500",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532324",
+	"name": "\u5357\u534e\u53bf",
+	"pinyin": "nanhuaxian",
+	"zip_code": "675200",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "532325",
+	"name": "\u59da\u5b89\u53bf",
+	"pinyin": "yaoanxian",
+	"zip_code": "675300",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532326",
+	"name": "\u5927\u59da\u53bf",
+	"pinyin": "dayaoxian",
+	"zip_code": "675400",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "532327",
+	"name": "\u6c38\u4ec1\u53bf",
+	"pinyin": "yongrenxian",
+	"zip_code": "651400",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532328",
+	"name": "\u5143\u8c0b\u53bf",
+	"pinyin": "yuanmouxian",
+	"zip_code": "651300",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532329",
+	"name": "\u6b66\u5b9a\u53bf",
+	"pinyin": "wudingxian",
+	"zip_code": "651600",
+	"parent_code": "532300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "532500",
+	"name": "\u7ea2\u6cb3\u54c8\u5c3c\u65cf\u5f5d\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "honghehanizuyizuzizhizhou",
+	"zip_code": "661400",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "532501",
+	"name": "\u4e2a\u65e7\u5e02",
+	"pinyin": "gejiushi",
+	"zip_code": "661000",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "532502",
+	"name": "\u5f00\u8fdc\u5e02",
+	"pinyin": "kaiyuanshi",
+	"zip_code": "661600",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "532503",
+	"name": "\u8499\u81ea\u5e02",
+	"pinyin": "mengzishi",
+	"zip_code": "661400",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532504",
+	"name": "\u5f25\u52d2\u5e02",
+	"pinyin": "mileishi",
+	"zip_code": "652399",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532523",
+	"name": "\u5c4f\u8fb9\u82d7\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "pingbianmiaozuzizhixian",
+	"zip_code": "661200",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "532524",
+	"name": "\u5efa\u6c34\u53bf",
+	"pinyin": "jianshuixian",
+	"zip_code": "654300",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "532525",
+	"name": "\u77f3\u5c4f\u53bf",
+	"pinyin": "shipingxian",
+	"zip_code": "654300",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "532527",
+	"name": "\u6cf8\u897f\u53bf",
+	"pinyin": "luxixian",
+	"zip_code": "652400",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "532528",
+	"name": "\u5143\u9633\u53bf",
+	"pinyin": "yuanyangxian",
+	"zip_code": "662400",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532529",
+	"name": "\u7ea2\u6cb3\u53bf",
+	"pinyin": "honghexian",
+	"zip_code": "654400",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "532530",
+	"name": "\u91d1\u5e73\u82d7\u65cf\u7476\u65cf\u50a3\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jinpingmiaozuyaozudaizuzizhixian",
+	"zip_code": "661500",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "532531",
+	"name": "\u7eff\u6625\u53bf",
+	"pinyin": "lvchunxian",
+	"zip_code": "662500",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "532532",
+	"name": "\u6cb3\u53e3\u7476\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "hekouyaozuzizhixian",
+	"zip_code": "661300",
+	"parent_code": "532500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "532600",
+	"name": "\u6587\u5c71\u58ee\u65cf\u82d7\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "wenshanzhuangzumiaozuzizhizhou",
+	"zip_code": "663000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "532601",
+	"name": "\u6587\u5c71\u5e02",
+	"pinyin": "wenshanshi",
+	"zip_code": "663000",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "532622",
+	"name": "\u781a\u5c71\u53bf",
+	"pinyin": "yanshanxian",
+	"zip_code": "663100",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532623",
+	"name": "\u897f\u7574\u53bf",
+	"pinyin": "xichouxian",
+	"zip_code": "663500",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "532624",
+	"name": "\u9ebb\u6817\u5761\u53bf",
+	"pinyin": "malipoxian",
+	"zip_code": "663600",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532625",
+	"name": "\u9a6c\u5173\u53bf",
+	"pinyin": "maguanxian",
+	"zip_code": "663700",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532626",
+	"name": "\u4e18\u5317\u53bf",
+	"pinyin": "qiubeixian",
+	"zip_code": "663200",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "532627",
+	"name": "\u5e7f\u5357\u53bf",
+	"pinyin": "guangnanxian",
+	"zip_code": "663300",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "532628",
+	"name": "\u5bcc\u5b81\u53bf",
+	"pinyin": "funingxian",
+	"zip_code": "663400",
+	"parent_code": "532600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "532800",
+	"name": "\u897f\u53cc\u7248\u7eb3\u50a3\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "xishuangbannadaizuzizhizhou",
+	"zip_code": "666100",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "532801",
+	"name": "\u666f\u6d2a\u5e02",
+	"pinyin": "jinghongshi",
+	"zip_code": "666100",
+	"parent_code": "532800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "532822",
+	"name": "\u52d0\u6d77\u53bf",
+	"pinyin": "menghaixian",
+	"zip_code": "666200",
+	"parent_code": "532800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532823",
+	"name": "\u52d0\u814a\u53bf",
+	"pinyin": "menglaxian",
+	"zip_code": "666300",
+	"parent_code": "532800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532900",
+	"name": "\u5927\u7406\u767d\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "dalibaizuzizhizhou",
+	"zip_code": "671000",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "532901",
+	"name": "\u5927\u7406\u5e02",
+	"pinyin": "dalishi",
+	"zip_code": "671000",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "532922",
+	"name": "\u6f3e\u6fde\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yangbiyizuzizhixian",
+	"zip_code": "672500",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532923",
+	"name": "\u7965\u4e91\u53bf",
+	"pinyin": "xiangyunxian",
+	"zip_code": "672100",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "532924",
+	"name": "\u5bbe\u5ddd\u53bf",
+	"pinyin": "binchuanxian",
+	"zip_code": "671600",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "532925",
+	"name": "\u5f25\u6e21\u53bf",
+	"pinyin": "miduxian",
+	"zip_code": "675600",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "532926",
+	"name": "\u5357\u6da7\u5f5d\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "nanjianyizuzizhixian",
+	"zip_code": "675700",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "532927",
+	"name": "\u5dcd\u5c71\u5f5d\u65cf\u56de\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "weishanyizuhuizuzizhixian",
+	"zip_code": "672400",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "532928",
+	"name": "\u6c38\u5e73\u53bf",
+	"pinyin": "yongpingxian",
+	"zip_code": "672600",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532929",
+	"name": "\u4e91\u9f99\u53bf",
+	"pinyin": "yunlongxian",
+	"zip_code": "672700",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "532930",
+	"name": "\u6d31\u6e90\u53bf",
+	"pinyin": "eryuanxian",
+	"zip_code": "671200",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "532931",
+	"name": "\u5251\u5ddd\u53bf",
+	"pinyin": "jianchuanxian",
+	"zip_code": "671300",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "532932",
+	"name": "\u9e64\u5e86\u53bf",
+	"pinyin": "heqingxian",
+	"zip_code": "671500",
+	"parent_code": "532900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "533100",
+	"name": "\u5fb7\u5b8f\u50a3\u65cf\u666f\u9887\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "dehongdaizujingpozuzizhizhou",
+	"zip_code": "678400",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "533102",
+	"name": "\u745e\u4e3d\u5e02",
+	"pinyin": "ruilishi",
+	"zip_code": "678600",
+	"parent_code": "533100",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "533103",
+	"name": "\u8292\u5e02",
+	"pinyin": "mangshi",
+	"zip_code": "678400",
+	"parent_code": "533100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "533122",
+	"name": "\u6881\u6cb3\u53bf",
+	"pinyin": "lianghexian",
+	"zip_code": "679200",
+	"parent_code": "533100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "533123",
+	"name": "\u76c8\u6c5f\u53bf",
+	"pinyin": "yingjiangxian",
+	"zip_code": "679300",
+	"parent_code": "533100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "533124",
+	"name": "\u9647\u5ddd\u53bf",
+	"pinyin": "longchuanxian",
+	"zip_code": "678700",
+	"parent_code": "533100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "533300",
+	"name": "\u6012\u6c5f\u5088\u50f3\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "nujianglisuzuzizhizhou",
+	"zip_code": "673100",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "533301",
+	"name": "\u6cf8\u6c34\u5e02",
+	"pinyin": "lushuishi",
+	"zip_code": "673100",
+	"parent_code": "533300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "533323",
+	"name": "\u798f\u8d21\u53bf",
+	"pinyin": "fugongxian",
+	"zip_code": "673400",
+	"parent_code": "533300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "533324",
+	"name": "\u8d21\u5c71\u72ec\u9f99\u65cf\u6012\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "gongshandulongzunuzuzizhixian",
+	"zip_code": "673500",
+	"parent_code": "533300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "533325",
+	"name": "\u5170\u576a\u767d\u65cf\u666e\u7c73\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "lanpingbaizupumizuzizhixian",
+	"zip_code": "671400",
+	"parent_code": "533300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "533400",
+	"name": "\u8fea\u5e86\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "diqingzangzuzizhizhou",
+	"zip_code": "674400",
+	"parent_code": "530000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "533401",
+	"name": "\u9999\u683c\u91cc\u62c9\u5e02",
+	"pinyin": "xianggelilashi",
+	"zip_code": "674400",
+	"parent_code": "533400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "533422",
+	"name": "\u5fb7\u94a6\u53bf",
+	"pinyin": "deqinxian",
+	"zip_code": "674500",
+	"parent_code": "533400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "533423",
+	"name": "\u7ef4\u897f\u5088\u50f3\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "weixilisuzuzizhixian",
+	"zip_code": "674600",
+	"parent_code": "533400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "540000",
+	"name": "\u897f\u85cf\u81ea\u6cbb\u533a",
+	"pinyin": "xizangzizhiqu",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "X"
+}, {
+	"code": "540100",
+	"name": "\u62c9\u8428\u5e02",
+	"pinyin": "lasashi",
+	"zip_code": "850000",
+	"parent_code": "540000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "540102",
+	"name": "\u57ce\u5173\u533a",
+	"pinyin": "chengguanqu",
+	"zip_code": "850000",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "540103",
+	"name": "\u5806\u9f99\u5fb7\u5e86\u533a",
+	"pinyin": "duilongdeqingqu",
+	"zip_code": "851400",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "540104",
+	"name": "\u8fbe\u5b5c\u533a",
+	"pinyin": "daziqu",
+	"zip_code": "850100",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "540121",
+	"name": "\u6797\u5468\u53bf",
+	"pinyin": "linzhouxian",
+	"zip_code": "852000",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "540122",
+	"name": "\u5f53\u96c4\u53bf",
+	"pinyin": "dangxiongxian",
+	"zip_code": "851500",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "540123",
+	"name": "\u5c3c\u6728\u53bf",
+	"pinyin": "nimuxian",
+	"zip_code": "851300",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "540124",
+	"name": "\u66f2\u6c34\u53bf",
+	"pinyin": "qushuixian",
+	"zip_code": "850600",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "540127",
+	"name": "\u58a8\u7af9\u5de5\u5361\u53bf",
+	"pinyin": "mozhugongkaxian",
+	"zip_code": "850200",
+	"parent_code": "540100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "540200",
+	"name": "\u65e5\u5580\u5219\u5e02",
+	"pinyin": "rikazeshi",
+	"zip_code": "857000",
+	"parent_code": "540000",
+	"type": 1,
+	"first_letter": "R"
+}, {
+	"code": "540202",
+	"name": "\u6851\u73e0\u5b5c\u533a",
+	"pinyin": "sangzhuziqu",
+	"zip_code": "857000",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "540221",
+	"name": "\u5357\u6728\u6797\u53bf",
+	"pinyin": "nanmulinxian",
+	"zip_code": "857100",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "540222",
+	"name": "\u6c5f\u5b5c\u53bf",
+	"pinyin": "jiangzixian",
+	"zip_code": "857400",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "540223",
+	"name": "\u5b9a\u65e5\u53bf",
+	"pinyin": "dingrixian",
+	"zip_code": "858200",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "540224",
+	"name": "\u8428\u8fe6\u53bf",
+	"pinyin": "sajiaxian",
+	"zip_code": "857800",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "540225",
+	"name": "\u62c9\u5b5c\u53bf",
+	"pinyin": "lazixian",
+	"zip_code": "858100",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "540226",
+	"name": "\u6602\u4ec1\u53bf",
+	"pinyin": "angrenxian",
+	"zip_code": "858500",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "540227",
+	"name": "\u8c22\u901a\u95e8\u53bf",
+	"pinyin": "xietongmenxian",
+	"zip_code": "858900",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "540228",
+	"name": "\u767d\u6717\u53bf",
+	"pinyin": "bailangxian",
+	"zip_code": "857300",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "540229",
+	"name": "\u4ec1\u5e03\u53bf",
+	"pinyin": "renbuxian",
+	"zip_code": "857200",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "540230",
+	"name": "\u5eb7\u9a6c\u53bf",
+	"pinyin": "kangmaxian",
+	"zip_code": "857500",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "540231",
+	"name": "\u5b9a\u7ed3\u53bf",
+	"pinyin": "dingjiexian",
+	"zip_code": "857900",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "540232",
+	"name": "\u4ef2\u5df4\u53bf",
+	"pinyin": "zhongbaxian",
+	"zip_code": "858800",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "540233",
+	"name": "\u4e9a\u4e1c\u53bf",
+	"pinyin": "yadongxian",
+	"zip_code": "857600",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "540234",
+	"name": "\u5409\u9686\u53bf",
+	"pinyin": "jilongxian",
+	"zip_code": "858700",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "540235",
+	"name": "\u8042\u62c9\u6728\u53bf",
+	"pinyin": "nielamuxian",
+	"zip_code": "858300",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "540236",
+	"name": "\u8428\u560e\u53bf",
+	"pinyin": "sagaxian",
+	"zip_code": "857800",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "540237",
+	"name": "\u5c97\u5df4\u53bf",
+	"pinyin": "gangbaxian",
+	"zip_code": "857700",
+	"parent_code": "540200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "540300",
+	"name": "\u660c\u90fd\u5e02",
+	"pinyin": "changdushi",
+	"zip_code": "854000",
+	"parent_code": "540000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "540302",
+	"name": "\u5361\u82e5\u533a",
+	"pinyin": "karuoqu",
+	"zip_code": "854000",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "540321",
+	"name": "\u6c5f\u8fbe\u53bf",
+	"pinyin": "jiangdaxian",
+	"zip_code": "854100",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "540322",
+	"name": "\u8d21\u89c9\u53bf",
+	"pinyin": "gongjuexian",
+	"zip_code": "854200",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "540323",
+	"name": "\u7c7b\u4e4c\u9f50\u53bf",
+	"pinyin": "leiwuqixian",
+	"zip_code": "855600",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "540324",
+	"name": "\u4e01\u9752\u53bf",
+	"pinyin": "dingqingxian",
+	"zip_code": "855700",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "540325",
+	"name": "\u5bdf\u96c5\u53bf",
+	"pinyin": "chayaxian",
+	"zip_code": "854300",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "540326",
+	"name": "\u516b\u5bbf\u53bf",
+	"pinyin": "basuxian",
+	"zip_code": "854600",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "540327",
+	"name": "\u5de6\u8d21\u53bf",
+	"pinyin": "zuogongxian",
+	"zip_code": "854400",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "540328",
+	"name": "\u8292\u5eb7\u53bf",
+	"pinyin": "mangkangxian",
+	"zip_code": "854500",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "540329",
+	"name": "\u6d1b\u9686\u53bf",
+	"pinyin": "luolongxian",
+	"zip_code": "855400",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "540330",
+	"name": "\u8fb9\u575d\u53bf",
+	"pinyin": "bianbaxian",
+	"zip_code": "855500",
+	"parent_code": "540300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "540400",
+	"name": "\u6797\u829d\u5e02",
+	"pinyin": "linzhishi",
+	"zip_code": "860000",
+	"parent_code": "540000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "540402",
+	"name": "\u5df4\u5b9c\u533a",
+	"pinyin": "bayiqu",
+	"zip_code": "850400",
+	"parent_code": "540400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "540421",
+	"name": "\u5de5\u5e03\u6c5f\u8fbe\u53bf",
+	"pinyin": "gongbujiangdaxian",
+	"zip_code": "850300",
+	"parent_code": "540400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "540422",
+	"name": "\u7c73\u6797\u53bf",
+	"pinyin": "milinxian",
+	"zip_code": "860500",
+	"parent_code": "540400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "540423",
+	"name": "\u58a8\u8131\u53bf",
+	"pinyin": "motuoxian",
+	"zip_code": "855300",
+	"parent_code": "540400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "540424",
+	"name": "\u6ce2\u5bc6\u53bf",
+	"pinyin": "bomixian",
+	"zip_code": "855200",
+	"parent_code": "540400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "540425",
+	"name": "\u5bdf\u9685\u53bf",
+	"pinyin": "chayuxian",
+	"zip_code": "855100",
+	"parent_code": "540400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "540426",
+	"name": "\u6717\u53bf",
+	"pinyin": "langxian",
+	"zip_code": "856500",
+	"parent_code": "540400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "540500",
+	"name": "\u5c71\u5357\u5e02",
+	"pinyin": "shannanshi",
+	"zip_code": "856000",
+	"parent_code": "540000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "540502",
+	"name": "\u4e43\u4e1c\u533a",
+	"pinyin": "naidongqu",
+	"zip_code": "856100",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "540521",
+	"name": "\u624e\u56ca\u53bf",
+	"pinyin": "zhanangxian",
+	"zip_code": "850800",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "540522",
+	"name": "\u8d21\u560e\u53bf",
+	"pinyin": "gonggaxian",
+	"zip_code": "850700",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "540523",
+	"name": "\u6851\u65e5\u53bf",
+	"pinyin": "sangrixian",
+	"zip_code": "856200",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "540524",
+	"name": "\u743c\u7ed3\u53bf",
+	"pinyin": "qiongjiexian",
+	"zip_code": "856800",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "540525",
+	"name": "\u66f2\u677e\u53bf",
+	"pinyin": "qusongxian",
+	"zip_code": "856300",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "540526",
+	"name": "\u63aa\u7f8e\u53bf",
+	"pinyin": "cuomeixian",
+	"zip_code": "856900",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "540527",
+	"name": "\u6d1b\u624e\u53bf",
+	"pinyin": "luozhaxian",
+	"zip_code": "851200",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "540528",
+	"name": "\u52a0\u67e5\u53bf",
+	"pinyin": "jiachaxian",
+	"zip_code": "856400",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "540529",
+	"name": "\u9686\u5b50\u53bf",
+	"pinyin": "longzixian",
+	"zip_code": "856600",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "540530",
+	"name": "\u9519\u90a3\u53bf",
+	"pinyin": "cuonaxian",
+	"zip_code": "856700",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "540531",
+	"name": "\u6d6a\u5361\u5b50\u53bf",
+	"pinyin": "langkazixian",
+	"zip_code": "851000",
+	"parent_code": "540500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "542400",
+	"name": "\u90a3\u66f2\u5730\u533a",
+	"pinyin": "naqudiqu",
+	"zip_code": "0",
+	"parent_code": "540000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "542421",
+	"name": "\u90a3\u66f2\u53bf",
+	"pinyin": "naquxian",
+	"zip_code": "852000",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "542422",
+	"name": "\u5609\u9ece\u53bf",
+	"pinyin": "jialixian",
+	"zip_code": "852400",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "542423",
+	"name": "\u6bd4\u5982\u53bf",
+	"pinyin": "biruxian",
+	"zip_code": "852300",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "542424",
+	"name": "\u8042\u8363\u53bf",
+	"pinyin": "nierongxian",
+	"zip_code": "853500",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "542425",
+	"name": "\u5b89\u591a\u53bf",
+	"pinyin": "anduoxian",
+	"zip_code": "852600",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "542426",
+	"name": "\u7533\u624e\u53bf",
+	"pinyin": "shenzhaxian",
+	"zip_code": "853100",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "542427",
+	"name": "\u7d22\u53bf",
+	"pinyin": "suoxian",
+	"zip_code": "852200",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "542428",
+	"name": "\u73ed\u6208\u53bf",
+	"pinyin": "bangexian",
+	"zip_code": "852500",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "542429",
+	"name": "\u5df4\u9752\u53bf",
+	"pinyin": "baqingxian",
+	"zip_code": "852100",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "542430",
+	"name": "\u5c3c\u739b\u53bf",
+	"pinyin": "nimaxian",
+	"zip_code": "853200",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "542431",
+	"name": "\u53cc\u6e56\u53bf",
+	"pinyin": "shuanghuxian",
+	"zip_code": "853300",
+	"parent_code": "542400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "542500",
+	"name": "\u963f\u91cc\u5730\u533a",
+	"pinyin": "alidiqu",
+	"zip_code": "859000",
+	"parent_code": "540000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "542521",
+	"name": "\u666e\u5170\u53bf",
+	"pinyin": "pulanxian",
+	"zip_code": "859500",
+	"parent_code": "542500",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "542522",
+	"name": "\u672d\u8fbe\u53bf",
+	"pinyin": "zhadaxian",
+	"zip_code": "859600",
+	"parent_code": "542500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "542523",
+	"name": "\u5676\u5c14\u53bf",
+	"pinyin": "gaerxian",
+	"zip_code": "859400",
+	"parent_code": "542500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "542524",
+	"name": "\u65e5\u571f\u53bf",
+	"pinyin": "rituxian",
+	"zip_code": "859700",
+	"parent_code": "542500",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "542525",
+	"name": "\u9769\u5409\u53bf",
+	"pinyin": "gejixian",
+	"zip_code": "859100",
+	"parent_code": "542500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "542526",
+	"name": "\u6539\u5219\u53bf",
+	"pinyin": "gaizexian",
+	"zip_code": "859200",
+	"parent_code": "542500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "542527",
+	"name": "\u63aa\u52e4\u53bf",
+	"pinyin": "cuoqinxian",
+	"zip_code": "859300",
+	"parent_code": "542500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "610000",
+	"name": "\u9655\u897f\u7701",
+	"pinyin": "shanxisheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "S"
+}, {
+	"code": "610100",
+	"name": "\u897f\u5b89\u5e02",
+	"pinyin": "xianshi",
+	"zip_code": "710000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "610102",
+	"name": "\u65b0\u57ce\u533a",
+	"pinyin": "xinchengqu",
+	"zip_code": "710004",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "610103",
+	"name": "\u7891\u6797\u533a",
+	"pinyin": "beilinqu",
+	"zip_code": "710001",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "610104",
+	"name": "\u83b2\u6e56\u533a",
+	"pinyin": "lianhuqu",
+	"zip_code": "710003",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610111",
+	"name": "\u705e\u6865\u533a",
+	"pinyin": "baqiaoqu",
+	"zip_code": "710038",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "610112",
+	"name": "\u672a\u592e\u533a",
+	"pinyin": "weiyangqu",
+	"zip_code": "710014",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "610113",
+	"name": "\u96c1\u5854\u533a",
+	"pinyin": "yantaqu",
+	"zip_code": "710061",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610114",
+	"name": "\u960e\u826f\u533a",
+	"pinyin": "yanliangqu",
+	"zip_code": "710087",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610115",
+	"name": "\u4e34\u6f7c\u533a",
+	"pinyin": "lintongqu",
+	"zip_code": "710600",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610116",
+	"name": "\u957f\u5b89\u533a",
+	"pinyin": "changanqu",
+	"zip_code": "710100",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "610117",
+	"name": "\u9ad8\u9675\u533a",
+	"pinyin": "gaolingqu",
+	"zip_code": "710200",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "610118",
+	"name": "\u9120\u9091\u533a",
+	"pinyin": "huyiqu",
+	"zip_code": "710300",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610122",
+	"name": "\u84dd\u7530\u53bf",
+	"pinyin": "lantianxian",
+	"zip_code": "710500",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610124",
+	"name": "\u5468\u81f3\u53bf",
+	"pinyin": "zhouzhixian",
+	"zip_code": "710400",
+	"parent_code": "610100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "610200",
+	"name": "\u94dc\u5ddd\u5e02",
+	"pinyin": "tongchuanshi",
+	"zip_code": "727000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "610202",
+	"name": "\u738b\u76ca\u533a",
+	"pinyin": "wangyiqu",
+	"zip_code": "727000",
+	"parent_code": "610200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "610203",
+	"name": "\u5370\u53f0\u533a",
+	"pinyin": "yintaiqu",
+	"zip_code": "727007",
+	"parent_code": "610200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610204",
+	"name": "\u8000\u5dde\u533a",
+	"pinyin": "yaozhouqu",
+	"zip_code": "727100",
+	"parent_code": "610200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610222",
+	"name": "\u5b9c\u541b\u53bf",
+	"pinyin": "yijunxian",
+	"zip_code": "727200",
+	"parent_code": "610200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610300",
+	"name": "\u5b9d\u9e21\u5e02",
+	"pinyin": "baojishi",
+	"zip_code": "721000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "610302",
+	"name": "\u6e2d\u6ee8\u533a",
+	"pinyin": "weibinqu",
+	"zip_code": "721000",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "610303",
+	"name": "\u91d1\u53f0\u533a",
+	"pinyin": "jintaiqu",
+	"zip_code": "721000",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "610304",
+	"name": "\u9648\u4ed3\u533a",
+	"pinyin": "chencangqu",
+	"zip_code": "721300",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "610305",
+	"name": "\u51e4\u7fd4\u533a",
+	"pinyin": "fengxiangqu",
+	"zip_code": "721400",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "610323",
+	"name": "\u5c90\u5c71\u53bf",
+	"pinyin": "qishanxian",
+	"zip_code": "722400",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "610324",
+	"name": "\u6276\u98ce\u53bf",
+	"pinyin": "fufengxian",
+	"zip_code": "722200",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "610326",
+	"name": "\u7709\u53bf",
+	"pinyin": "meixian",
+	"zip_code": "722300",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "610327",
+	"name": "\u9647\u53bf",
+	"pinyin": "longxian",
+	"zip_code": "721200",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610328",
+	"name": "\u5343\u9633\u53bf",
+	"pinyin": "qianyangxian",
+	"zip_code": "721100",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "610329",
+	"name": "\u9e9f\u6e38\u53bf",
+	"pinyin": "linyouxian",
+	"zip_code": "721500",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610330",
+	"name": "\u51e4\u53bf",
+	"pinyin": "fengxian",
+	"zip_code": "721700",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "610331",
+	"name": "\u592a\u767d\u53bf",
+	"pinyin": "taibaixian",
+	"zip_code": "721600",
+	"parent_code": "610300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "610400",
+	"name": "\u54b8\u9633\u5e02",
+	"pinyin": "xianyangshi",
+	"zip_code": "712000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "610402",
+	"name": "\u79e6\u90fd\u533a",
+	"pinyin": "qinduqu",
+	"zip_code": "712000",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "610403",
+	"name": "\u6768\u9675\u533a",
+	"pinyin": "yanglingqu",
+	"zip_code": "712100",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610404",
+	"name": "\u6e2d\u57ce\u533a",
+	"pinyin": "weichengqu",
+	"zip_code": "712000",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "610422",
+	"name": "\u4e09\u539f\u53bf",
+	"pinyin": "sanyuanxian",
+	"zip_code": "713800",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "610423",
+	"name": "\u6cfe\u9633\u53bf",
+	"pinyin": "jingyangxian",
+	"zip_code": "713700",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "610424",
+	"name": "\u4e7e\u53bf",
+	"pinyin": "qianxian",
+	"zip_code": "713300",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "610425",
+	"name": "\u793c\u6cc9\u53bf",
+	"pinyin": "liquanxian",
+	"zip_code": "713200",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610426",
+	"name": "\u6c38\u5bff\u53bf",
+	"pinyin": "yongshouxian",
+	"zip_code": "713400",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610427",
+	"name": "\u5f6c\u5dde\u5e02",
+	"pinyin": "binzhoushi",
+	"zip_code": "713500",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "610428",
+	"name": "\u957f\u6b66\u53bf",
+	"pinyin": "changwuxian",
+	"zip_code": "713600",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "610429",
+	"name": "\u65ec\u9091\u53bf",
+	"pinyin": "xunyixian",
+	"zip_code": "711300",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "610430",
+	"name": "\u6df3\u5316\u53bf",
+	"pinyin": "chunhuaxian",
+	"zip_code": "711200",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "610431",
+	"name": "\u6b66\u529f\u53bf",
+	"pinyin": "wugongxian",
+	"zip_code": "712200",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "610481",
+	"name": "\u5174\u5e73\u5e02",
+	"pinyin": "xingpingshi",
+	"zip_code": "713100",
+	"parent_code": "610400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "610500",
+	"name": "\u6e2d\u5357\u5e02",
+	"pinyin": "weinanshi",
+	"zip_code": "714000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "610502",
+	"name": "\u4e34\u6e2d\u533a",
+	"pinyin": "linweiqu",
+	"zip_code": "714000",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610503",
+	"name": "\u534e\u5dde\u533a",
+	"pinyin": "huazhouqu",
+	"zip_code": "714100",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610522",
+	"name": "\u6f7c\u5173\u53bf",
+	"pinyin": "tongguanxian",
+	"zip_code": "714300",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "610523",
+	"name": "\u5927\u8354\u53bf",
+	"pinyin": "dalixian",
+	"zip_code": "715100",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "610524",
+	"name": "\u5408\u9633\u53bf",
+	"pinyin": "heyangxian",
+	"zip_code": "715300",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610525",
+	"name": "\u6f84\u57ce\u53bf",
+	"pinyin": "chengchengxian",
+	"zip_code": "715200",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "610526",
+	"name": "\u84b2\u57ce\u53bf",
+	"pinyin": "puchengxian",
+	"zip_code": "715500",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "610527",
+	"name": "\u767d\u6c34\u53bf",
+	"pinyin": "baishuixian",
+	"zip_code": "715600",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "610528",
+	"name": "\u5bcc\u5e73\u53bf",
+	"pinyin": "fupingxian",
+	"zip_code": "711700",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "610581",
+	"name": "\u97e9\u57ce\u5e02",
+	"pinyin": "hanchengshi",
+	"zip_code": "715400",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610582",
+	"name": "\u534e\u9634\u5e02",
+	"pinyin": "huayinshi",
+	"zip_code": "714200",
+	"parent_code": "610500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610600",
+	"name": "\u5ef6\u5b89\u5e02",
+	"pinyin": "yananshi",
+	"zip_code": "716000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "610602",
+	"name": "\u5b9d\u5854\u533a",
+	"pinyin": "baotaqu",
+	"zip_code": "716000",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "610603",
+	"name": "\u5b89\u585e\u533a",
+	"pinyin": "ansaiqu",
+	"zip_code": "717400",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "610621",
+	"name": "\u5ef6\u957f\u53bf",
+	"pinyin": "yanchangxian",
+	"zip_code": "717100",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610622",
+	"name": "\u5ef6\u5ddd\u53bf",
+	"pinyin": "yanchuanxian",
+	"zip_code": "717200",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610623",
+	"name": "\u5b50\u957f\u53bf",
+	"pinyin": "zichangxian",
+	"zip_code": "717300",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "610625",
+	"name": "\u5fd7\u4e39\u53bf",
+	"pinyin": "zhidanxian",
+	"zip_code": "717500",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "610626",
+	"name": "\u5434\u8d77\u53bf",
+	"pinyin": "wuqixian",
+	"zip_code": "716000",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "610627",
+	"name": "\u7518\u6cc9\u53bf",
+	"pinyin": "ganquanxian",
+	"zip_code": "716100",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "610628",
+	"name": "\u5bcc\u53bf",
+	"pinyin": "fuxian",
+	"zip_code": "727500",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "610629",
+	"name": "\u6d1b\u5ddd\u53bf",
+	"pinyin": "luochuanxian",
+	"zip_code": "727400",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610630",
+	"name": "\u5b9c\u5ddd\u53bf",
+	"pinyin": "yichuanxian",
+	"zip_code": "716200",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610631",
+	"name": "\u9ec4\u9f99\u53bf",
+	"pinyin": "huanglongxian",
+	"zip_code": "715700",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610632",
+	"name": "\u9ec4\u9675\u53bf",
+	"pinyin": "huanglingxian",
+	"zip_code": "727300",
+	"parent_code": "610600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610700",
+	"name": "\u6c49\u4e2d\u5e02",
+	"pinyin": "hanzhongshi",
+	"zip_code": "723000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "610702",
+	"name": "\u6c49\u53f0\u533a",
+	"pinyin": "hantaiqu",
+	"zip_code": "723000",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610703",
+	"name": "\u5357\u90d1\u533a",
+	"pinyin": "nanzhengqu",
+	"zip_code": "723100",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "610722",
+	"name": "\u57ce\u56fa\u53bf",
+	"pinyin": "chengguxian",
+	"zip_code": "723200",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "610723",
+	"name": "\u6d0b\u53bf",
+	"pinyin": "yangxian",
+	"zip_code": "723300",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610724",
+	"name": "\u897f\u4e61\u53bf",
+	"pinyin": "xixiangxian",
+	"zip_code": "723500",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "610725",
+	"name": "\u52c9\u53bf",
+	"pinyin": "mianxian",
+	"zip_code": "724200",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "610726",
+	"name": "\u5b81\u5f3a\u53bf",
+	"pinyin": "ningqiangxian",
+	"zip_code": "724400",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "610727",
+	"name": "\u7565\u9633\u53bf",
+	"pinyin": "lveyangxian",
+	"zip_code": "724300",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610728",
+	"name": "\u9547\u5df4\u53bf",
+	"pinyin": "zhenbaxian",
+	"zip_code": "723600",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "610729",
+	"name": "\u7559\u575d\u53bf",
+	"pinyin": "liubaxian",
+	"zip_code": "724100",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610730",
+	"name": "\u4f5b\u576a\u53bf",
+	"pinyin": "fopingxian",
+	"zip_code": "723400",
+	"parent_code": "610700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "610800",
+	"name": "\u6986\u6797\u5e02",
+	"pinyin": "yulinshi",
+	"zip_code": "719000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "610802",
+	"name": "\u6986\u9633\u533a",
+	"pinyin": "yuyangqu",
+	"zip_code": "719000",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "610803",
+	"name": "\u6a2a\u5c71\u533a",
+	"pinyin": "hengshanqu",
+	"zip_code": "719100",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610822",
+	"name": "\u5e9c\u8c37\u53bf",
+	"pinyin": "fuguxian",
+	"zip_code": "719400",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "610824",
+	"name": "\u9756\u8fb9\u53bf",
+	"pinyin": "jingbianxian",
+	"zip_code": "718500",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "610825",
+	"name": "\u5b9a\u8fb9\u53bf",
+	"pinyin": "dingbianxian",
+	"zip_code": "718600",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "610826",
+	"name": "\u7ee5\u5fb7\u53bf",
+	"pinyin": "suidexian",
+	"zip_code": "718000",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "610827",
+	"name": "\u7c73\u8102\u53bf",
+	"pinyin": "mizhixian",
+	"zip_code": "718100",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "610828",
+	"name": "\u4f73\u53bf",
+	"pinyin": "jiaxian",
+	"zip_code": "719200",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "610829",
+	"name": "\u5434\u5821\u53bf",
+	"pinyin": "wubaoxian",
+	"zip_code": "718200",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "610830",
+	"name": "\u6e05\u6da7\u53bf",
+	"pinyin": "qingjianxian",
+	"zip_code": "718300",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "610831",
+	"name": "\u5b50\u6d32\u53bf",
+	"pinyin": "zizhouxian",
+	"zip_code": "718400",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "610881",
+	"name": "\u795e\u6728\u5e02",
+	"pinyin": "shenmushi",
+	"zip_code": "719300",
+	"parent_code": "610800",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "610900",
+	"name": "\u5b89\u5eb7\u5e02",
+	"pinyin": "ankangshi",
+	"zip_code": "725000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "610902",
+	"name": "\u6c49\u6ee8\u533a",
+	"pinyin": "hanbinqu",
+	"zip_code": "725000",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610921",
+	"name": "\u6c49\u9634\u53bf",
+	"pinyin": "hanyinxian",
+	"zip_code": "725100",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "610922",
+	"name": "\u77f3\u6cc9\u53bf",
+	"pinyin": "shiquanxian",
+	"zip_code": "725200",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "610923",
+	"name": "\u5b81\u9655\u53bf",
+	"pinyin": "ningshanxian",
+	"zip_code": "711600",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "610924",
+	"name": "\u7d2b\u9633\u53bf",
+	"pinyin": "ziyangxian",
+	"zip_code": "725300",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "610925",
+	"name": "\u5c9a\u768b\u53bf",
+	"pinyin": "langaoxian",
+	"zip_code": "725400",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "610926",
+	"name": "\u5e73\u5229\u53bf",
+	"pinyin": "pinglixian",
+	"zip_code": "725500",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "610927",
+	"name": "\u9547\u576a\u53bf",
+	"pinyin": "zhenpingxian",
+	"zip_code": "725600",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "610929",
+	"name": "\u767d\u6cb3\u53bf",
+	"pinyin": "baihexian",
+	"zip_code": "725800",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "610981",
+	"name": "\u65ec\u9633\u5e02",
+	"pinyin": "xunyangshi",
+	"zip_code": "725700",
+	"parent_code": "610900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "611000",
+	"name": "\u5546\u6d1b\u5e02",
+	"pinyin": "shangluoshi",
+	"zip_code": "726000",
+	"parent_code": "610000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "611002",
+	"name": "\u5546\u5dde\u533a",
+	"pinyin": "shangzhouqu",
+	"zip_code": "726000",
+	"parent_code": "611000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "611021",
+	"name": "\u6d1b\u5357\u53bf",
+	"pinyin": "luonanxian",
+	"zip_code": "726100",
+	"parent_code": "611000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "611022",
+	"name": "\u4e39\u51e4\u53bf",
+	"pinyin": "danfengxian",
+	"zip_code": "726200",
+	"parent_code": "611000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "611023",
+	"name": "\u5546\u5357\u53bf",
+	"pinyin": "shangnanxian",
+	"zip_code": "726300",
+	"parent_code": "611000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "611024",
+	"name": "\u5c71\u9633\u53bf",
+	"pinyin": "shanyangxian",
+	"zip_code": "726400",
+	"parent_code": "611000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "611025",
+	"name": "\u9547\u5b89\u53bf",
+	"pinyin": "zhenanxian",
+	"zip_code": "711500",
+	"parent_code": "611000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "611026",
+	"name": "\u67de\u6c34\u53bf",
+	"pinyin": "zhashuixian",
+	"zip_code": "711400",
+	"parent_code": "611000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "620000",
+	"name": "\u7518\u8083\u7701",
+	"pinyin": "gansusheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "G"
+}, {
+	"code": "620100",
+	"name": "\u5170\u5dde\u5e02",
+	"pinyin": "lanzhoushi",
+	"zip_code": "730000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "620102",
+	"name": "\u57ce\u5173\u533a",
+	"pinyin": "chengguanqu",
+	"zip_code": "730030",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "620103",
+	"name": "\u4e03\u91cc\u6cb3\u533a",
+	"pinyin": "qilihequ",
+	"zip_code": "730050",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "620104",
+	"name": "\u897f\u56fa\u533a",
+	"pinyin": "xiguqu",
+	"zip_code": "730060",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "620105",
+	"name": "\u5b89\u5b81\u533a",
+	"pinyin": "anningqu",
+	"zip_code": "730070",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "620111",
+	"name": "\u7ea2\u53e4\u533a",
+	"pinyin": "hongguqu",
+	"zip_code": "730080",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "620121",
+	"name": "\u6c38\u767b\u53bf",
+	"pinyin": "yongdengxian",
+	"zip_code": "730300",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "620122",
+	"name": "\u768b\u5170\u53bf",
+	"pinyin": "gaolanxian",
+	"zip_code": "730200",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "620123",
+	"name": "\u6986\u4e2d\u53bf",
+	"pinyin": "yuzhongxian",
+	"zip_code": "730100",
+	"parent_code": "620100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "620200",
+	"name": "\u5609\u5cea\u5173\u5e02",
+	"pinyin": "jiayuguanshi",
+	"zip_code": "735100",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "620201",
+	"name": "\u96c4\u5173\u533a",
+	"pinyin": "xiongguanqu",
+	"zip_code": "735100",
+	"parent_code": "620200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "620202",
+	"name": "\u955c\u94c1\u533a",
+	"pinyin": "jingtiequ",
+	"zip_code": "735100",
+	"parent_code": "620200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "620203",
+	"name": "\u957f\u57ce\u533a",
+	"pinyin": "changchengqu",
+	"zip_code": "735100",
+	"parent_code": "620200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "620300",
+	"name": "\u91d1\u660c\u5e02",
+	"pinyin": "jinchangshi",
+	"zip_code": "737100",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "620302",
+	"name": "\u91d1\u5ddd\u533a",
+	"pinyin": "jinchuanqu",
+	"zip_code": "737103",
+	"parent_code": "620300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "620321",
+	"name": "\u6c38\u660c\u53bf",
+	"pinyin": "yongchangxian",
+	"zip_code": "737200",
+	"parent_code": "620300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "620400",
+	"name": "\u767d\u94f6\u5e02",
+	"pinyin": "baiyinshi",
+	"zip_code": "730900",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "620402",
+	"name": "\u767d\u94f6\u533a",
+	"pinyin": "baiyinqu",
+	"zip_code": "730900",
+	"parent_code": "620400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "620403",
+	"name": "\u5e73\u5ddd\u533a",
+	"pinyin": "pingchuanqu",
+	"zip_code": "730913",
+	"parent_code": "620400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "620421",
+	"name": "\u9756\u8fdc\u53bf",
+	"pinyin": "jingyuanxian",
+	"zip_code": "730600",
+	"parent_code": "620400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "620422",
+	"name": "\u4f1a\u5b81\u53bf",
+	"pinyin": "huiningxian",
+	"zip_code": "730700",
+	"parent_code": "620400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "620423",
+	"name": "\u666f\u6cf0\u53bf",
+	"pinyin": "jingtaixian",
+	"zip_code": "730400",
+	"parent_code": "620400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "620500",
+	"name": "\u5929\u6c34\u5e02",
+	"pinyin": "tianshuishi",
+	"zip_code": "741000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "620502",
+	"name": "\u79e6\u5dde\u533a",
+	"pinyin": "qinzhouqu",
+	"zip_code": "741000",
+	"parent_code": "620500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "620503",
+	"name": "\u9ea6\u79ef\u533a",
+	"pinyin": "maijiqu",
+	"zip_code": "741020",
+	"parent_code": "620500",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "620521",
+	"name": "\u6e05\u6c34\u53bf",
+	"pinyin": "qingshuixian",
+	"zip_code": "741400",
+	"parent_code": "620500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "620522",
+	"name": "\u79e6\u5b89\u53bf",
+	"pinyin": "qinanxian",
+	"zip_code": "741600",
+	"parent_code": "620500",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "620523",
+	"name": "\u7518\u8c37\u53bf",
+	"pinyin": "ganguxian",
+	"zip_code": "741200",
+	"parent_code": "620500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "620524",
+	"name": "\u6b66\u5c71\u53bf",
+	"pinyin": "wushanxian",
+	"zip_code": "741300",
+	"parent_code": "620500",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "620525",
+	"name": "\u5f20\u5bb6\u5ddd\u56de\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "zhangjiachuanhuizuzizhixian",
+	"zip_code": "741500",
+	"parent_code": "620500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "620600",
+	"name": "\u6b66\u5a01\u5e02",
+	"pinyin": "wuweishi",
+	"zip_code": "733000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "620602",
+	"name": "\u51c9\u5dde\u533a",
+	"pinyin": "liangzhouqu",
+	"zip_code": "733000",
+	"parent_code": "620600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "620621",
+	"name": "\u6c11\u52e4\u53bf",
+	"pinyin": "minqinxian",
+	"zip_code": "733300",
+	"parent_code": "620600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "620622",
+	"name": "\u53e4\u6d6a\u53bf",
+	"pinyin": "gulangxian",
+	"zip_code": "733100",
+	"parent_code": "620600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "620623",
+	"name": "\u5929\u795d\u85cf\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "tianzhuzangzuzizhixian",
+	"zip_code": "733200",
+	"parent_code": "620600",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "620700",
+	"name": "\u5f20\u6396\u5e02",
+	"pinyin": "zhangyeshi",
+	"zip_code": "734000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "620702",
+	"name": "\u7518\u5dde\u533a",
+	"pinyin": "ganzhouqu",
+	"zip_code": "734000",
+	"parent_code": "620700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "620721",
+	"name": "\u8083\u5357\u88d5\u56fa\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "sunanyuguzuzizhixian",
+	"zip_code": "734400",
+	"parent_code": "620700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "620722",
+	"name": "\u6c11\u4e50\u53bf",
+	"pinyin": "minlexian",
+	"zip_code": "734500",
+	"parent_code": "620700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "620723",
+	"name": "\u4e34\u6cfd\u53bf",
+	"pinyin": "linzexian",
+	"zip_code": "734200",
+	"parent_code": "620700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "620724",
+	"name": "\u9ad8\u53f0\u53bf",
+	"pinyin": "gaotaixian",
+	"zip_code": "734300",
+	"parent_code": "620700",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "620725",
+	"name": "\u5c71\u4e39\u53bf",
+	"pinyin": "shandanxian",
+	"zip_code": "734100",
+	"parent_code": "620700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "620800",
+	"name": "\u5e73\u51c9\u5e02",
+	"pinyin": "pingliangshi",
+	"zip_code": "744000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "620802",
+	"name": "\u5d06\u5cd2\u533a",
+	"pinyin": "kongdongqu",
+	"zip_code": "744000",
+	"parent_code": "620800",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "620821",
+	"name": "\u6cfe\u5ddd\u53bf",
+	"pinyin": "jingchuanxian",
+	"zip_code": "744300",
+	"parent_code": "620800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "620822",
+	"name": "\u7075\u53f0\u53bf",
+	"pinyin": "lingtaixian",
+	"zip_code": "744400",
+	"parent_code": "620800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "620823",
+	"name": "\u5d07\u4fe1\u53bf",
+	"pinyin": "chongxinxian",
+	"zip_code": "744200",
+	"parent_code": "620800",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "620824",
+	"name": "\u534e\u4ead\u53bf",
+	"pinyin": "huatingxian",
+	"zip_code": "744100",
+	"parent_code": "620800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "620825",
+	"name": "\u5e84\u6d6a\u53bf",
+	"pinyin": "zhuanglangxian",
+	"zip_code": "744600",
+	"parent_code": "620800",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "620826",
+	"name": "\u9759\u5b81\u53bf",
+	"pinyin": "jingningxian",
+	"zip_code": "743400",
+	"parent_code": "620800",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "620900",
+	"name": "\u9152\u6cc9\u5e02",
+	"pinyin": "jiuquanshi",
+	"zip_code": "735000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "620902",
+	"name": "\u8083\u5dde\u533a",
+	"pinyin": "suzhouqu",
+	"zip_code": "735000",
+	"parent_code": "620900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "620921",
+	"name": "\u91d1\u5854\u53bf",
+	"pinyin": "jintaxian",
+	"zip_code": "735300",
+	"parent_code": "620900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "620922",
+	"name": "\u74dc\u5dde\u53bf",
+	"pinyin": "guazhouxian",
+	"zip_code": "735000",
+	"parent_code": "620900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "620923",
+	"name": "\u8083\u5317\u8499\u53e4\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "subeimengguzuzizhixian",
+	"zip_code": "736300",
+	"parent_code": "620900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "620924",
+	"name": "\u963f\u514b\u585e\u54c8\u8428\u514b\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "akesaihasakezuzizhixian",
+	"zip_code": "736400",
+	"parent_code": "620900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "620981",
+	"name": "\u7389\u95e8\u5e02",
+	"pinyin": "yumenshi",
+	"zip_code": "735200",
+	"parent_code": "620900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "620982",
+	"name": "\u6566\u714c\u5e02",
+	"pinyin": "dunhuangshi",
+	"zip_code": "736200",
+	"parent_code": "620900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "621000",
+	"name": "\u5e86\u9633\u5e02",
+	"pinyin": "qingyangshi",
+	"zip_code": "745000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "Q"
+}, {
+	"code": "621002",
+	"name": "\u897f\u5cf0\u533a",
+	"pinyin": "xifengqu",
+	"zip_code": "745000",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "621021",
+	"name": "\u5e86\u57ce\u53bf",
+	"pinyin": "qingchengxian",
+	"zip_code": "745100",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "621022",
+	"name": "\u73af\u53bf",
+	"pinyin": "huanxian",
+	"zip_code": "745700",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "621023",
+	"name": "\u534e\u6c60\u53bf",
+	"pinyin": "huachixian",
+	"zip_code": "745600",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "621024",
+	"name": "\u5408\u6c34\u53bf",
+	"pinyin": "heshuixian",
+	"zip_code": "745400",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "621025",
+	"name": "\u6b63\u5b81\u53bf",
+	"pinyin": "zhengningxian",
+	"zip_code": "745300",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "621026",
+	"name": "\u5b81\u53bf",
+	"pinyin": "ningxian",
+	"zip_code": "745200",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "621027",
+	"name": "\u9547\u539f\u53bf",
+	"pinyin": "zhenyuanxian",
+	"zip_code": "744500",
+	"parent_code": "621000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "621100",
+	"name": "\u5b9a\u897f\u5e02",
+	"pinyin": "dingxishi",
+	"zip_code": "743000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "D"
+}, {
+	"code": "621102",
+	"name": "\u5b89\u5b9a\u533a",
+	"pinyin": "andingqu",
+	"zip_code": "744300",
+	"parent_code": "621100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "621121",
+	"name": "\u901a\u6e2d\u53bf",
+	"pinyin": "tongweixian",
+	"zip_code": "743300",
+	"parent_code": "621100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "621122",
+	"name": "\u9647\u897f\u53bf",
+	"pinyin": "longxixian",
+	"zip_code": "748100",
+	"parent_code": "621100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "621123",
+	"name": "\u6e2d\u6e90\u53bf",
+	"pinyin": "weiyuanxian",
+	"zip_code": "748200",
+	"parent_code": "621100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "621124",
+	"name": "\u4e34\u6d2e\u53bf",
+	"pinyin": "lintaoxian",
+	"zip_code": "730500",
+	"parent_code": "621100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "621125",
+	"name": "\u6f33\u53bf",
+	"pinyin": "zhangxian",
+	"zip_code": "748300",
+	"parent_code": "621100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "621126",
+	"name": "\u5cb7\u53bf",
+	"pinyin": "minxian",
+	"zip_code": "748400",
+	"parent_code": "621100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "621200",
+	"name": "\u9647\u5357\u5e02",
+	"pinyin": "longnanshi",
+	"zip_code": "742500",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "621202",
+	"name": "\u6b66\u90fd\u533a",
+	"pinyin": "wuduqu",
+	"zip_code": "746000",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "621221",
+	"name": "\u6210\u53bf",
+	"pinyin": "chengxian",
+	"zip_code": "742500",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "621222",
+	"name": "\u6587\u53bf",
+	"pinyin": "wenxian",
+	"zip_code": "746400",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "621223",
+	"name": "\u5b95\u660c\u53bf",
+	"pinyin": "dangchangxian",
+	"zip_code": "748500",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "621224",
+	"name": "\u5eb7\u53bf",
+	"pinyin": "kangxian",
+	"zip_code": "746500",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "621225",
+	"name": "\u897f\u548c\u53bf",
+	"pinyin": "xihexian",
+	"zip_code": "742100",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "621226",
+	"name": "\u793c\u53bf",
+	"pinyin": "lixian",
+	"zip_code": "742200",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "621227",
+	"name": "\u5fbd\u53bf",
+	"pinyin": "huixian",
+	"zip_code": "742300",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "621228",
+	"name": "\u4e24\u5f53\u53bf",
+	"pinyin": "liangdangxian",
+	"zip_code": "742400",
+	"parent_code": "621200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "622900",
+	"name": "\u4e34\u590f\u56de\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "linxiahuizuzizhizhou",
+	"zip_code": "731100",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "L"
+}, {
+	"code": "622901",
+	"name": "\u4e34\u590f\u5e02",
+	"pinyin": "linxiashi",
+	"zip_code": "731100",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "622921",
+	"name": "\u4e34\u590f\u53bf",
+	"pinyin": "linxiaxian",
+	"zip_code": "731800",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "622922",
+	"name": "\u5eb7\u4e50\u53bf",
+	"pinyin": "kanglexian",
+	"zip_code": "731500",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "622923",
+	"name": "\u6c38\u9756\u53bf",
+	"pinyin": "yongjingxian",
+	"zip_code": "731600",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "622924",
+	"name": "\u5e7f\u6cb3\u53bf",
+	"pinyin": "guanghexian",
+	"zip_code": "731300",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "622925",
+	"name": "\u548c\u653f\u53bf",
+	"pinyin": "hezhengxian",
+	"zip_code": "731200",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "622926",
+	"name": "\u4e1c\u4e61\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "dongxiangzuzizhixian",
+	"zip_code": "731400",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "622927",
+	"name": "\u79ef\u77f3\u5c71\u4fdd\u5b89\u65cf\u4e1c\u4e61\u65cf\u6492\u62c9\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "jishishanbaoanzudongxiangzusalazuzizhixian",
+	"zip_code": "731700",
+	"parent_code": "622900",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "623000",
+	"name": "\u7518\u5357\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "gannanzangzuzizhizhou",
+	"zip_code": "747000",
+	"parent_code": "620000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "623001",
+	"name": "\u5408\u4f5c\u5e02",
+	"pinyin": "hezuoshi",
+	"zip_code": "747000",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "623021",
+	"name": "\u4e34\u6f6d\u53bf",
+	"pinyin": "lintanxian",
+	"zip_code": "747500",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "623022",
+	"name": "\u5353\u5c3c\u53bf",
+	"pinyin": "zhuonixian",
+	"zip_code": "747600",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "623023",
+	"name": "\u821f\u66f2\u53bf",
+	"pinyin": "zhouquxian",
+	"zip_code": "746300",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "623024",
+	"name": "\u8fed\u90e8\u53bf",
+	"pinyin": "diebuxian",
+	"zip_code": "747400",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "623025",
+	"name": "\u739b\u66f2\u53bf",
+	"pinyin": "maquxian",
+	"zip_code": "747300",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "623026",
+	"name": "\u788c\u66f2\u53bf",
+	"pinyin": "luquxian",
+	"zip_code": "747200",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "623027",
+	"name": "\u590f\u6cb3\u53bf",
+	"pinyin": "xiahexian",
+	"zip_code": "747100",
+	"parent_code": "623000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "630000",
+	"name": "\u9752\u6d77\u7701",
+	"pinyin": "qinghaisheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "Q"
+}, {
+	"code": "630100",
+	"name": "\u897f\u5b81\u5e02",
+	"pinyin": "xiningshi",
+	"zip_code": "810000",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "630102",
+	"name": "\u57ce\u4e1c\u533a",
+	"pinyin": "chengdongqu",
+	"zip_code": "810000",
+	"parent_code": "630100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "630103",
+	"name": "\u57ce\u4e2d\u533a",
+	"pinyin": "chengzhongqu",
+	"zip_code": "810000",
+	"parent_code": "630100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "630104",
+	"name": "\u57ce\u897f\u533a",
+	"pinyin": "chengxiqu",
+	"zip_code": "810000",
+	"parent_code": "630100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "630105",
+	"name": "\u57ce\u5317\u533a",
+	"pinyin": "chengbeiqu",
+	"zip_code": "810000",
+	"parent_code": "630100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "630121",
+	"name": "\u5927\u901a\u56de\u65cf\u571f\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "datonghuizutuzuzizhixian",
+	"zip_code": "810100",
+	"parent_code": "630100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "630122",
+	"name": "\u6e5f\u4e2d\u53bf",
+	"pinyin": "huangzhongxian",
+	"zip_code": "811600",
+	"parent_code": "630100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "630123",
+	"name": "\u6e5f\u6e90\u53bf",
+	"pinyin": "huangyuanxian",
+	"zip_code": "812100",
+	"parent_code": "630100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "630200",
+	"name": "\u6d77\u4e1c\u5e02",
+	"pinyin": "haidongshi",
+	"zip_code": "810699",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "630202",
+	"name": "\u4e50\u90fd\u533a",
+	"pinyin": "leduqu",
+	"zip_code": "810700",
+	"parent_code": "630200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "630203",
+	"name": "\u5e73\u5b89\u533a",
+	"pinyin": "pinganqu",
+	"zip_code": "810699",
+	"parent_code": "630200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "630222",
+	"name": "\u6c11\u548c\u56de\u65cf\u571f\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "minhehuizutuzuzizhixian",
+	"zip_code": "810800",
+	"parent_code": "630200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "630223",
+	"name": "\u4e92\u52a9\u571f\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "huzhutuzuzizhixian",
+	"zip_code": "810500",
+	"parent_code": "630200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "630224",
+	"name": "\u5316\u9686\u56de\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "hualonghuizuzizhixian",
+	"zip_code": "810900",
+	"parent_code": "630200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "630225",
+	"name": "\u5faa\u5316\u6492\u62c9\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "xunhuasalazuzizhixian",
+	"zip_code": "811100",
+	"parent_code": "630200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "632200",
+	"name": "\u6d77\u5317\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "haibeizangzuzizhizhou",
+	"zip_code": "812200",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "632221",
+	"name": "\u95e8\u6e90\u56de\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "menyuanhuizuzizhixian",
+	"zip_code": "810300",
+	"parent_code": "632200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "632222",
+	"name": "\u7941\u8fde\u53bf",
+	"pinyin": "qilianxian",
+	"zip_code": "810400",
+	"parent_code": "632200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "632223",
+	"name": "\u6d77\u664f\u53bf",
+	"pinyin": "haiyanxian",
+	"zip_code": "812200",
+	"parent_code": "632200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "632224",
+	"name": "\u521a\u5bdf\u53bf",
+	"pinyin": "gangchaxian",
+	"zip_code": "812300",
+	"parent_code": "632200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "632300",
+	"name": "\u9ec4\u5357\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "huangnanzangzuzizhizhou",
+	"zip_code": "811300",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "632321",
+	"name": "\u540c\u4ec1\u53bf",
+	"pinyin": "tongrenxian",
+	"zip_code": "811300",
+	"parent_code": "632300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "632322",
+	"name": "\u5c16\u624e\u53bf",
+	"pinyin": "jianzhaxian",
+	"zip_code": "811200",
+	"parent_code": "632300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "632323",
+	"name": "\u6cfd\u5e93\u53bf",
+	"pinyin": "zekuxian",
+	"zip_code": "811400",
+	"parent_code": "632300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "632324",
+	"name": "\u6cb3\u5357\u8499\u53e4\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "henanmengguzuzizhixian",
+	"zip_code": "811500",
+	"parent_code": "632300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "632500",
+	"name": "\u6d77\u5357\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "hainanzangzuzizhizhou",
+	"zip_code": "813000",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "632521",
+	"name": "\u5171\u548c\u53bf",
+	"pinyin": "gonghexian",
+	"zip_code": "813000",
+	"parent_code": "632500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "632522",
+	"name": "\u540c\u5fb7\u53bf",
+	"pinyin": "tongdexian",
+	"zip_code": "813200",
+	"parent_code": "632500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "632523",
+	"name": "\u8d35\u5fb7\u53bf",
+	"pinyin": "guidexian",
+	"zip_code": "811700",
+	"parent_code": "632500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "632524",
+	"name": "\u5174\u6d77\u53bf",
+	"pinyin": "xinghaixian",
+	"zip_code": "813300",
+	"parent_code": "632500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "632525",
+	"name": "\u8d35\u5357\u53bf",
+	"pinyin": "guinanxian",
+	"zip_code": "813100",
+	"parent_code": "632500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "632600",
+	"name": "\u679c\u6d1b\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "guoluozangzuzizhizhou",
+	"zip_code": "814000",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "632621",
+	"name": "\u739b\u6c81\u53bf",
+	"pinyin": "maqinxian",
+	"zip_code": "814000",
+	"parent_code": "632600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "632622",
+	"name": "\u73ed\u739b\u53bf",
+	"pinyin": "banmaxian",
+	"zip_code": "814300",
+	"parent_code": "632600",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "632623",
+	"name": "\u7518\u5fb7\u53bf",
+	"pinyin": "gandexian",
+	"zip_code": "814100",
+	"parent_code": "632600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "632624",
+	"name": "\u8fbe\u65e5\u53bf",
+	"pinyin": "darixian",
+	"zip_code": "814200",
+	"parent_code": "632600",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "632625",
+	"name": "\u4e45\u6cbb\u53bf",
+	"pinyin": "jiuzhixian",
+	"zip_code": "624700",
+	"parent_code": "632600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "632626",
+	"name": "\u739b\u591a\u53bf",
+	"pinyin": "maduoxian",
+	"zip_code": "813500",
+	"parent_code": "632600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "632700",
+	"name": "\u7389\u6811\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "yushuzangzuzizhizhou",
+	"zip_code": "815000",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "632701",
+	"name": "\u7389\u6811\u5e02",
+	"pinyin": "yushushi",
+	"zip_code": "815000",
+	"parent_code": "632700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "632722",
+	"name": "\u6742\u591a\u53bf",
+	"pinyin": "zaduoxian",
+	"zip_code": "815300",
+	"parent_code": "632700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "632723",
+	"name": "\u79f0\u591a\u53bf",
+	"pinyin": "chengduoxian",
+	"zip_code": "815100",
+	"parent_code": "632700",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "632724",
+	"name": "\u6cbb\u591a\u53bf",
+	"pinyin": "zhiduoxian",
+	"zip_code": "815400",
+	"parent_code": "632700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "632725",
+	"name": "\u56ca\u8c26\u53bf",
+	"pinyin": "nangqianxian",
+	"zip_code": "815200",
+	"parent_code": "632700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "632726",
+	"name": "\u66f2\u9ebb\u83b1\u53bf",
+	"pinyin": "qumalaixian",
+	"zip_code": "815500",
+	"parent_code": "632700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "632800",
+	"name": "\u6d77\u897f\u8499\u53e4\u65cf\u85cf\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "haiximengguzuzangzuzizhizhou",
+	"zip_code": "817000",
+	"parent_code": "630000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "632801",
+	"name": "\u683c\u5c14\u6728\u5e02",
+	"pinyin": "geermushi",
+	"zip_code": "816000",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "632802",
+	"name": "\u5fb7\u4ee4\u54c8\u5e02",
+	"pinyin": "delinghashi",
+	"zip_code": "817000",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "632821",
+	"name": "\u4e4c\u5170\u53bf",
+	"pinyin": "wulanxian",
+	"zip_code": "817100",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "632822",
+	"name": "\u90fd\u5170\u53bf",
+	"pinyin": "dulanxian",
+	"zip_code": "816100",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "632823",
+	"name": "\u5929\u5cfb\u53bf",
+	"pinyin": "tianjunxian",
+	"zip_code": "817200",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "632824",
+	"name": "\u51b7\u6e56\u884c\u653f\u59d4\u5458\u4f1a",
+	"pinyin": "lenghuxingzhengweiyuanhui",
+	"zip_code": "816300",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "632825",
+	"name": "\u5927\u67f4\u65e6\u884c\u653f\u59d4\u5458\u4f1a",
+	"pinyin": "dachaidanxingzhengweiyuanhui",
+	"zip_code": "817000",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "632826",
+	"name": "\u832b\u5d16\u884c\u653f\u59d4\u5458\u4f1a",
+	"pinyin": "mangyaxingzhengweiyuanhui",
+	"zip_code": "817000",
+	"parent_code": "632800",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "640000",
+	"name": "\u5b81\u590f\u56de\u65cf\u81ea\u6cbb\u533a",
+	"pinyin": "ningxiahuizuzizhiqu",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "N"
+}, {
+	"code": "640100",
+	"name": "\u94f6\u5ddd\u5e02",
+	"pinyin": "yinchuanshi",
+	"zip_code": "750000",
+	"parent_code": "640000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "640104",
+	"name": "\u5174\u5e86\u533a",
+	"pinyin": "xingqingqu",
+	"zip_code": "750001",
+	"parent_code": "640100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "640105",
+	"name": "\u897f\u590f\u533a",
+	"pinyin": "xixiaqu",
+	"zip_code": "750021",
+	"parent_code": "640100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "640106",
+	"name": "\u91d1\u51e4\u533a",
+	"pinyin": "jinfengqu",
+	"zip_code": "750011",
+	"parent_code": "640100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "640121",
+	"name": "\u6c38\u5b81\u53bf",
+	"pinyin": "yongningxian",
+	"zip_code": "750100",
+	"parent_code": "640100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "640122",
+	"name": "\u8d3a\u5170\u53bf",
+	"pinyin": "helanxian",
+	"zip_code": "750200",
+	"parent_code": "640100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "640181",
+	"name": "\u7075\u6b66\u5e02",
+	"pinyin": "lingwushi",
+	"zip_code": "750004",
+	"parent_code": "640100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "640200",
+	"name": "\u77f3\u5634\u5c71\u5e02",
+	"pinyin": "shizuishanshi",
+	"zip_code": "753000",
+	"parent_code": "640000",
+	"type": 1,
+	"first_letter": "S"
+}, {
+	"code": "640202",
+	"name": "\u5927\u6b66\u53e3\u533a",
+	"pinyin": "dawukouqu",
+	"zip_code": "753000",
+	"parent_code": "640200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "640205",
+	"name": "\u60e0\u519c\u533a",
+	"pinyin": "huinongqu",
+	"zip_code": "753600",
+	"parent_code": "640200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "640221",
+	"name": "\u5e73\u7f57\u53bf",
+	"pinyin": "pingluoxian",
+	"zip_code": "753400",
+	"parent_code": "640200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "640300",
+	"name": "\u5434\u5fe0\u5e02",
+	"pinyin": "wuzhongshi",
+	"zip_code": "751100",
+	"parent_code": "640000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "640302",
+	"name": "\u5229\u901a\u533a",
+	"pinyin": "litongqu",
+	"zip_code": "751100",
+	"parent_code": "640300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "640303",
+	"name": "\u7ea2\u5bfa\u5821\u533a",
+	"pinyin": "hongsibuqu",
+	"zip_code": "751100",
+	"parent_code": "640300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "640323",
+	"name": "\u76d0\u6c60\u53bf",
+	"pinyin": "yanchixian",
+	"zip_code": "751500",
+	"parent_code": "640300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "640324",
+	"name": "\u540c\u5fc3\u53bf",
+	"pinyin": "tongxinxian",
+	"zip_code": "751300",
+	"parent_code": "640300",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "640381",
+	"name": "\u9752\u94dc\u5ce1\u5e02",
+	"pinyin": "qingtongxiashi",
+	"zip_code": "751600",
+	"parent_code": "640300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "640400",
+	"name": "\u56fa\u539f\u5e02",
+	"pinyin": "guyuanshi",
+	"zip_code": "756000",
+	"parent_code": "640000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "640402",
+	"name": "\u539f\u5dde\u533a",
+	"pinyin": "yuanzhouqu",
+	"zip_code": "756000",
+	"parent_code": "640400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "640422",
+	"name": "\u897f\u5409\u53bf",
+	"pinyin": "xijixian",
+	"zip_code": "756200",
+	"parent_code": "640400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "640423",
+	"name": "\u9686\u5fb7\u53bf",
+	"pinyin": "longdexian",
+	"zip_code": "756300",
+	"parent_code": "640400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "640424",
+	"name": "\u6cfe\u6e90\u53bf",
+	"pinyin": "jingyuanxian",
+	"zip_code": "756400",
+	"parent_code": "640400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "640425",
+	"name": "\u5f6d\u9633\u53bf",
+	"pinyin": "pengyangxian",
+	"zip_code": "756500",
+	"parent_code": "640400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "640500",
+	"name": "\u4e2d\u536b\u5e02",
+	"pinyin": "zhongweishi",
+	"zip_code": "751700",
+	"parent_code": "640000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "640502",
+	"name": "\u6c99\u5761\u5934\u533a",
+	"pinyin": "shapotouqu",
+	"zip_code": "755000",
+	"parent_code": "640500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "640521",
+	"name": "\u4e2d\u5b81\u53bf",
+	"pinyin": "zhongningxian",
+	"zip_code": "755000",
+	"parent_code": "640500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "640522",
+	"name": "\u6d77\u539f\u53bf",
+	"pinyin": "haiyuanxian",
+	"zip_code": "755200",
+	"parent_code": "640500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "650000",
+	"name": "\u65b0\u7586\u7ef4\u543e\u5c14\u81ea\u6cbb\u533a",
+	"pinyin": "xinjiangweiwuerzizhiqu",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "X"
+}, {
+	"code": "650100",
+	"name": "\u4e4c\u9c81\u6728\u9f50\u5e02",
+	"pinyin": "wulumuqishi",
+	"zip_code": "830000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "W"
+}, {
+	"code": "650102",
+	"name": "\u5929\u5c71\u533a",
+	"pinyin": "tianshanqu",
+	"zip_code": "830000",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "650103",
+	"name": "\u6c99\u4f9d\u5df4\u514b\u533a",
+	"pinyin": "shayibakequ",
+	"zip_code": "830002",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "650104",
+	"name": "\u65b0\u5e02\u533a",
+	"pinyin": "xinshiqu",
+	"zip_code": "830011",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "650105",
+	"name": "\u6c34\u78e8\u6c9f\u533a",
+	"pinyin": "shuimogouqu",
+	"zip_code": "830017",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "650106",
+	"name": "\u5934\u5c6f\u6cb3\u533a",
+	"pinyin": "toutunhequ",
+	"zip_code": "830022",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "650107",
+	"name": "\u8fbe\u5742\u57ce\u533a",
+	"pinyin": "dabanchengqu",
+	"zip_code": "830039",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "650109",
+	"name": "\u7c73\u4e1c\u533a",
+	"pinyin": "midongqu",
+	"zip_code": "830019",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "650121",
+	"name": "\u4e4c\u9c81\u6728\u9f50\u53bf",
+	"pinyin": "wulumuqixian",
+	"zip_code": "830063",
+	"parent_code": "650100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "650200",
+	"name": "\u514b\u62c9\u739b\u4f9d\u5e02",
+	"pinyin": "kelamayishi",
+	"zip_code": "834000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "K"
+}, {
+	"code": "650202",
+	"name": "\u72ec\u5c71\u5b50\u533a",
+	"pinyin": "dushanziqu",
+	"zip_code": "834021",
+	"parent_code": "650200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "650203",
+	"name": "\u514b\u62c9\u739b\u4f9d\u533a",
+	"pinyin": "kelamayiqu",
+	"zip_code": "834000",
+	"parent_code": "650200",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "650204",
+	"name": "\u767d\u78b1\u6ee9\u533a",
+	"pinyin": "baijiantanqu",
+	"zip_code": "834008",
+	"parent_code": "650200",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "650205",
+	"name": "\u4e4c\u5c14\u79be\u533a",
+	"pinyin": "wuerhequ",
+	"zip_code": "834012",
+	"parent_code": "650200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "650400",
+	"name": "\u5410\u9c81\u756a\u5e02",
+	"pinyin": "tulufanshi",
+	"zip_code": "838000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "650402",
+	"name": "\u9ad8\u660c\u533a",
+	"pinyin": "gaochangqu",
+	"zip_code": "838000",
+	"parent_code": "650400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "650421",
+	"name": "\u912f\u5584\u53bf",
+	"pinyin": "shanshanxian",
+	"zip_code": "838200",
+	"parent_code": "650400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "650422",
+	"name": "\u6258\u514b\u900a\u53bf",
+	"pinyin": "tuokexunxian",
+	"zip_code": "838100",
+	"parent_code": "650400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "650500",
+	"name": "\u54c8\u5bc6\u5e02",
+	"pinyin": "hamishi",
+	"zip_code": "839000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "650502",
+	"name": "\u4f0a\u5dde\u533a",
+	"pinyin": "yizhouqu",
+	"zip_code": "839000",
+	"parent_code": "650500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "650521",
+	"name": "\u5df4\u91cc\u5764\u54c8\u8428\u514b\u81ea\u6cbb\u53bf",
+	"pinyin": "balikunhasakezizhixian",
+	"zip_code": "839200",
+	"parent_code": "650500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "650522",
+	"name": "\u4f0a\u543e\u53bf",
+	"pinyin": "yiwuxian",
+	"zip_code": "839300",
+	"parent_code": "650500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "652300",
+	"name": "\u660c\u5409\u56de\u65cf\u81ea\u6cbb\u5dde",
+	"pinyin": "changjihuizuzizhizhou",
+	"zip_code": "831100",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "C"
+}, {
+	"code": "652301",
+	"name": "\u660c\u5409\u5e02",
+	"pinyin": "changjishi",
+	"zip_code": "831100",
+	"parent_code": "652300",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "652302",
+	"name": "\u961c\u5eb7\u5e02",
+	"pinyin": "fukangshi",
+	"zip_code": "831500",
+	"parent_code": "652300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "652323",
+	"name": "\u547c\u56fe\u58c1\u53bf",
+	"pinyin": "hutubixian",
+	"zip_code": "831200",
+	"parent_code": "652300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "652324",
+	"name": "\u739b\u7eb3\u65af\u53bf",
+	"pinyin": "manasixian",
+	"zip_code": "832200",
+	"parent_code": "652300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "652325",
+	"name": "\u5947\u53f0\u53bf",
+	"pinyin": "qitaixian",
+	"zip_code": "831800",
+	"parent_code": "652300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "652327",
+	"name": "\u5409\u6728\u8428\u5c14\u53bf",
+	"pinyin": "jimusaerxian",
+	"zip_code": "831700",
+	"parent_code": "652300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "652328",
+	"name": "\u6728\u5792\u54c8\u8428\u514b\u81ea\u6cbb\u53bf",
+	"pinyin": "muleihasakezizhixian",
+	"zip_code": "831900",
+	"parent_code": "652300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "652700",
+	"name": "\u535a\u5c14\u5854\u62c9\u8499\u53e4\u81ea\u6cbb\u5dde",
+	"pinyin": "boertalamengguzizhizhou",
+	"zip_code": "833400",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "652701",
+	"name": "\u535a\u4e50\u5e02",
+	"pinyin": "boleshi",
+	"zip_code": "833400",
+	"parent_code": "652700",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "652702",
+	"name": "\u963f\u62c9\u5c71\u53e3\u5e02",
+	"pinyin": "alashankoushi",
+	"zip_code": "833400",
+	"parent_code": "652700",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "652722",
+	"name": "\u7cbe\u6cb3\u53bf",
+	"pinyin": "jinghexian",
+	"zip_code": "833300",
+	"parent_code": "652700",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "652723",
+	"name": "\u6e29\u6cc9\u53bf",
+	"pinyin": "wenquanxian",
+	"zip_code": "833500",
+	"parent_code": "652700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "652800",
+	"name": "\u5df4\u97f3\u90ed\u695e\u8499\u53e4\u81ea\u6cbb\u5dde",
+	"pinyin": "bayinguolengmengguzizhizhou",
+	"zip_code": "841000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "B"
+}, {
+	"code": "652801",
+	"name": "\u5e93\u5c14\u52d2\u5e02",
+	"pinyin": "kuerleishi",
+	"zip_code": "841000",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "652822",
+	"name": "\u8f6e\u53f0\u53bf",
+	"pinyin": "luntaixian",
+	"zip_code": "841600",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "652823",
+	"name": "\u5c09\u7281\u53bf",
+	"pinyin": "weilixian",
+	"zip_code": "841500",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "652824",
+	"name": "\u82e5\u7f8c\u53bf",
+	"pinyin": "ruoqiangxian",
+	"zip_code": "841800",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "652825",
+	"name": "\u4e14\u672b\u53bf",
+	"pinyin": "qiemoxian",
+	"zip_code": "841900",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "652826",
+	"name": "\u7109\u8006\u56de\u65cf\u81ea\u6cbb\u53bf",
+	"pinyin": "yanqihuizuzizhixian",
+	"zip_code": "841100",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "652827",
+	"name": "\u548c\u9759\u53bf",
+	"pinyin": "hejingxian",
+	"zip_code": "841300",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "652828",
+	"name": "\u548c\u7855\u53bf",
+	"pinyin": "heshuoxian",
+	"zip_code": "841200",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "652829",
+	"name": "\u535a\u6e56\u53bf",
+	"pinyin": "bohuxian",
+	"zip_code": "841400",
+	"parent_code": "652800",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "652900",
+	"name": "\u963f\u514b\u82cf\u5730\u533a",
+	"pinyin": "akesudiqu",
+	"zip_code": "843000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "652901",
+	"name": "\u963f\u514b\u82cf\u5e02",
+	"pinyin": "akesushi",
+	"zip_code": "843000",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "652922",
+	"name": "\u6e29\u5bbf\u53bf",
+	"pinyin": "wensuxian",
+	"zip_code": "843100",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "652923",
+	"name": "\u5e93\u8f66\u53bf",
+	"pinyin": "kuchexian",
+	"zip_code": "842000",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "652924",
+	"name": "\u6c99\u96c5\u53bf",
+	"pinyin": "shayaxian",
+	"zip_code": "842200",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "652925",
+	"name": "\u65b0\u548c\u53bf",
+	"pinyin": "xinhexian",
+	"zip_code": "842100",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "652926",
+	"name": "\u62dc\u57ce\u53bf",
+	"pinyin": "baichengxian",
+	"zip_code": "842300",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "652927",
+	"name": "\u4e4c\u4ec0\u53bf",
+	"pinyin": "wushixian",
+	"zip_code": "843400",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "652928",
+	"name": "\u963f\u74e6\u63d0\u53bf",
+	"pinyin": "awatixian",
+	"zip_code": "843200",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "652929",
+	"name": "\u67ef\u576a\u53bf",
+	"pinyin": "kepingxian",
+	"zip_code": "843600",
+	"parent_code": "652900",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "653000",
+	"name": "\u514b\u5b5c\u52d2\u82cf\u67ef\u5c14\u514b\u5b5c\u81ea\u6cbb\u5dde",
+	"pinyin": "kezileisukeerkezizizhizhou",
+	"zip_code": "845350",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "K"
+}, {
+	"code": "653001",
+	"name": "\u963f\u56fe\u4ec0\u5e02",
+	"pinyin": "atushishi",
+	"zip_code": "845350",
+	"parent_code": "653000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "653022",
+	"name": "\u963f\u514b\u9676\u53bf",
+	"pinyin": "aketaoxian",
+	"zip_code": "845550",
+	"parent_code": "653000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "653023",
+	"name": "\u963f\u5408\u5947\u53bf",
+	"pinyin": "aheqixian",
+	"zip_code": "843500",
+	"parent_code": "653000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "653024",
+	"name": "\u4e4c\u6070\u53bf",
+	"pinyin": "wuqiaxian",
+	"zip_code": "845450",
+	"parent_code": "653000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "653100",
+	"name": "\u5580\u4ec0\u5730\u533a",
+	"pinyin": "kashidiqu",
+	"zip_code": "844000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "K"
+}, {
+	"code": "653101",
+	"name": "\u5580\u4ec0\u5e02",
+	"pinyin": "kashishi",
+	"zip_code": "844000",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "653121",
+	"name": "\u758f\u9644\u53bf",
+	"pinyin": "shufuxian",
+	"zip_code": "844100",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "653122",
+	"name": "\u758f\u52d2\u53bf",
+	"pinyin": "shuleixian",
+	"zip_code": "844200",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "653123",
+	"name": "\u82f1\u5409\u6c99\u53bf",
+	"pinyin": "yingjishaxian",
+	"zip_code": "844500",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "653124",
+	"name": "\u6cfd\u666e\u53bf",
+	"pinyin": "zepuxian",
+	"zip_code": "844800",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "653125",
+	"name": "\u838e\u8f66\u53bf",
+	"pinyin": "shachexian",
+	"zip_code": "844700",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "653126",
+	"name": "\u53f6\u57ce\u53bf",
+	"pinyin": "xechengxian",
+	"zip_code": "844900",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "653127",
+	"name": "\u9ea6\u76d6\u63d0\u53bf",
+	"pinyin": "maigaitixian",
+	"zip_code": "844600",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "653128",
+	"name": "\u5cb3\u666e\u6e56\u53bf",
+	"pinyin": "yuepuhuxian",
+	"zip_code": "844400",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "653129",
+	"name": "\u4f3d\u5e08\u53bf",
+	"pinyin": "gashixian",
+	"zip_code": "844300",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "653130",
+	"name": "\u5df4\u695a\u53bf",
+	"pinyin": "bachuxian",
+	"zip_code": "843800",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "653131",
+	"name": "\u5854\u4ec0\u5e93\u5c14\u5e72\u5854\u5409\u514b\u81ea\u6cbb\u53bf",
+	"pinyin": "tashikuergantajikezizhixian",
+	"zip_code": "845250",
+	"parent_code": "653100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "653200",
+	"name": "\u548c\u7530\u5730\u533a",
+	"pinyin": "hetiandiqu",
+	"zip_code": "848000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "653201",
+	"name": "\u548c\u7530\u5e02",
+	"pinyin": "hetianshi",
+	"zip_code": "848000",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "653221",
+	"name": "\u548c\u7530\u53bf",
+	"pinyin": "hetianxian",
+	"zip_code": "848000",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "653222",
+	"name": "\u58a8\u7389\u53bf",
+	"pinyin": "moyuxian",
+	"zip_code": "848100",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "653223",
+	"name": "\u76ae\u5c71\u53bf",
+	"pinyin": "pishanxian",
+	"zip_code": "845150",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "653224",
+	"name": "\u6d1b\u6d66\u53bf",
+	"pinyin": "luopuxian",
+	"zip_code": "848200",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "653225",
+	"name": "\u7b56\u52d2\u53bf",
+	"pinyin": "celeixian",
+	"zip_code": "848300",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "653226",
+	"name": "\u4e8e\u7530\u53bf",
+	"pinyin": "yutianxian",
+	"zip_code": "848400",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "653227",
+	"name": "\u6c11\u4e30\u53bf",
+	"pinyin": "minfengxian",
+	"zip_code": "848500",
+	"parent_code": "653200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "654000",
+	"name": "\u4f0a\u7281\u54c8\u8428\u514b\u81ea\u6cbb\u5dde",
+	"pinyin": "yilihasakezizhizhou",
+	"zip_code": "835000",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "654002",
+	"name": "\u4f0a\u5b81\u5e02",
+	"pinyin": "yiningshi",
+	"zip_code": "835000",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "654003",
+	"name": "\u594e\u5c6f\u5e02",
+	"pinyin": "kuitunshi",
+	"zip_code": "833200",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "654004",
+	"name": "\u970d\u5c14\u679c\u65af\u5e02",
+	"pinyin": "huoerguosishi",
+	"zip_code": "835100",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "654021",
+	"name": "\u4f0a\u5b81\u53bf",
+	"pinyin": "yiningxian",
+	"zip_code": "835100",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "654022",
+	"name": "\u5bdf\u5e03\u67e5\u5c14\u9521\u4f2f\u81ea\u6cbb\u53bf",
+	"pinyin": "chabuchaerxibaizizhixian",
+	"zip_code": "835300",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "654023",
+	"name": "\u970d\u57ce\u53bf",
+	"pinyin": "huochengxian",
+	"zip_code": "835200",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "654024",
+	"name": "\u5de9\u7559\u53bf",
+	"pinyin": "gongliuxian",
+	"zip_code": "835400",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "654025",
+	"name": "\u65b0\u6e90\u53bf",
+	"pinyin": "xinyuanxian",
+	"zip_code": "835800",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "654026",
+	"name": "\u662d\u82cf\u53bf",
+	"pinyin": "zhaosuxian",
+	"zip_code": "835600",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "654027",
+	"name": "\u7279\u514b\u65af\u53bf",
+	"pinyin": "tekesixian",
+	"zip_code": "835500",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "654028",
+	"name": "\u5c3c\u52d2\u514b\u53bf",
+	"pinyin": "nileikexian",
+	"zip_code": "835700",
+	"parent_code": "654000",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "654200",
+	"name": "\u5854\u57ce\u5730\u533a",
+	"pinyin": "tachengdiqu",
+	"zip_code": "834700",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "654201",
+	"name": "\u5854\u57ce\u5e02",
+	"pinyin": "tachengshi",
+	"zip_code": "834700",
+	"parent_code": "654200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "654202",
+	"name": "\u4e4c\u82cf\u5e02",
+	"pinyin": "wusushi",
+	"zip_code": "833300",
+	"parent_code": "654200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "654203",
+	"name": "\u6c99\u6e7e\u5e02",
+	"pinyin": "shawanshi",
+	"zip_code": "832100",
+	"parent_code": "654200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "654221",
+	"name": "\u989d\u654f\u53bf",
+	"pinyin": "eminxian",
+	"zip_code": "834600",
+	"parent_code": "654200",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "654224",
+	"name": "\u6258\u91cc\u53bf",
+	"pinyin": "tuolixian",
+	"zip_code": "834500",
+	"parent_code": "654200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "654225",
+	"name": "\u88d5\u6c11\u53bf",
+	"pinyin": "yuminxian",
+	"zip_code": "834800",
+	"parent_code": "654200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "654226",
+	"name": "\u548c\u5e03\u514b\u8d5b\u5c14\u8499\u53e4\u81ea\u6cbb\u53bf",
+	"pinyin": "hebukesaiermengguzizhixian",
+	"zip_code": "834400",
+	"parent_code": "654200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "654300",
+	"name": "\u963f\u52d2\u6cf0\u5730\u533a",
+	"pinyin": "aletaidiqu",
+	"zip_code": "836500",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "654301",
+	"name": "\u963f\u52d2\u6cf0\u5e02",
+	"pinyin": "aletaishi",
+	"zip_code": "836500",
+	"parent_code": "654300",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "654321",
+	"name": "\u5e03\u5c14\u6d25\u53bf",
+	"pinyin": "buerjinxian",
+	"zip_code": "836600",
+	"parent_code": "654300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "654322",
+	"name": "\u5bcc\u8574\u53bf",
+	"pinyin": "fuyunxian",
+	"zip_code": "836100",
+	"parent_code": "654300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "654323",
+	"name": "\u798f\u6d77\u53bf",
+	"pinyin": "fuhaixian",
+	"zip_code": "836400",
+	"parent_code": "654300",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "654324",
+	"name": "\u54c8\u5df4\u6cb3\u53bf",
+	"pinyin": "habahexian",
+	"zip_code": "836700",
+	"parent_code": "654300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "654325",
+	"name": "\u9752\u6cb3\u53bf",
+	"pinyin": "qinghexian",
+	"zip_code": "836200",
+	"parent_code": "654300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "654326",
+	"name": "\u5409\u6728\u4e43\u53bf",
+	"pinyin": "jimunaixian",
+	"zip_code": "836800",
+	"parent_code": "654300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "659000",
+	"name": "\u81ea\u6cbb\u533a\u76f4\u8f96\u53bf\u7ea7\u884c\u653f\u533a\u5212",
+	"pinyin": "zizhiquzhixiaxianjixingzhengquhua",
+	"zip_code": "0",
+	"parent_code": "650000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "659001",
+	"name": "\u77f3\u6cb3\u5b50\u5e02",
+	"pinyin": "shihezishi",
+	"zip_code": "832000",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "659002",
+	"name": "\u963f\u62c9\u5c14\u5e02",
+	"pinyin": "alaershi",
+	"zip_code": "843300",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "659003",
+	"name": "\u56fe\u6728\u8212\u514b\u5e02",
+	"pinyin": "tumushukeshi",
+	"zip_code": "843806",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "659004",
+	"name": "\u4e94\u5bb6\u6e20\u5e02",
+	"pinyin": "wujiaqushi",
+	"zip_code": "831300",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "659005",
+	"name": "\u5317\u5c6f\u5e02",
+	"pinyin": "beitunshi",
+	"zip_code": "836000",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "659006",
+	"name": "\u94c1\u95e8\u5173\u5e02",
+	"pinyin": "tiemenguanshi",
+	"zip_code": "831300",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "659007",
+	"name": "\u53cc\u6cb3\u5e02",
+	"pinyin": "shuangheshi",
+	"zip_code": "833408",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "659008",
+	"name": "\u53ef\u514b\u8fbe\u62c9\u5e02",
+	"pinyin": "kekedalashi",
+	"zip_code": "835213",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "659009",
+	"name": "\u6606\u7389\u5e02",
+	"pinyin": "kunyushi",
+	"zip_code": "848116",
+	"parent_code": "659000",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "710000",
+	"name": "\u53f0\u6e7e\u7701",
+	"pinyin": "taiwansheng",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "T"
+}, {
+	"code": "710100",
+	"name": "\u53f0\u5317\u5e02",
+	"pinyin": "taibeishi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "710101",
+	"name": "\u4e2d\u6b63\u533a",
+	"pinyin": "zhongzhengqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710102",
+	"name": "\u5927\u540c\u533a",
+	"pinyin": "datongqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710103",
+	"name": "\u4e2d\u5c71\u533a",
+	"pinyin": "zhongshanqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710104",
+	"name": "\u677e\u5c71\u533a",
+	"pinyin": "songshanqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710105",
+	"name": "\u5927\u5b89\u533a",
+	"pinyin": "daanqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710106",
+	"name": "\u4e07\u534e\u533a",
+	"pinyin": "wanhuaqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "710107",
+	"name": "\u4fe1\u4e49\u533a",
+	"pinyin": "xinyiqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710108",
+	"name": "\u58eb\u6797\u533a",
+	"pinyin": "shilinqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710109",
+	"name": "\u5317\u6295\u533a",
+	"pinyin": "beitouqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "710110",
+	"name": "\u5185\u6e56\u533a",
+	"pinyin": "neihuqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710111",
+	"name": "\u5357\u6e2f\u533a",
+	"pinyin": "nangangqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710112",
+	"name": "\u6587\u5c71\u533a",
+	"pinyin": "wenshanqu",
+	"zip_code": "0",
+	"parent_code": "710100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "710200",
+	"name": "\u9ad8\u96c4\u5e02",
+	"pinyin": "gaoxiongshi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "G"
+}, {
+	"code": "710201",
+	"name": "\u65b0\u5174\u533a",
+	"pinyin": "xinxingqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710202",
+	"name": "\u524d\u91d1\u533a",
+	"pinyin": "qianjinqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710203",
+	"name": "\u82d3\u96c5\u533a",
+	"pinyin": "lingyaqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710204",
+	"name": "\u76d0\u57d5\u533a",
+	"pinyin": "yanchengqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "710205",
+	"name": "\u9f13\u5c71\u533a",
+	"pinyin": "gushanqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "710206",
+	"name": "\u65d7\u6d25\u533a",
+	"pinyin": "qijinqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710207",
+	"name": "\u524d\u9547\u533a",
+	"pinyin": "qianzhenqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710208",
+	"name": "\u4e09\u6c11\u533a",
+	"pinyin": "sanminqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710209",
+	"name": "\u5de6\u8425\u533a",
+	"pinyin": "zuoyingqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710210",
+	"name": "\u6960\u6893\u533a",
+	"pinyin": "nanziqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710211",
+	"name": "\u5c0f\u6e2f\u533a",
+	"pinyin": "xiaogangqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710242",
+	"name": "\u4ec1\u6b66\u533a",
+	"pinyin": "renwuqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "710243",
+	"name": "\u5927\u793e\u533a",
+	"pinyin": "dashequ",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710244",
+	"name": "\u5188\u5c71\u533a",
+	"pinyin": "gangshanqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "710245",
+	"name": "\u8def\u7af9\u533a",
+	"pinyin": "luzhuqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710246",
+	"name": "\u963f\u83b2\u533a",
+	"pinyin": "alianqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "710247",
+	"name": "\u7530\u5bee\u533a",
+	"pinyin": "tianliaoqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "710248",
+	"name": "\u71d5\u5de2\u533a",
+	"pinyin": "yanchaoqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "710249",
+	"name": "\u6865\u5934\u533a",
+	"pinyin": "qiaotouqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710250",
+	"name": "\u6893\u5b98\u533a",
+	"pinyin": "ziguanqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710251",
+	"name": "\u5f25\u9640\u533a",
+	"pinyin": "mituoqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "710252",
+	"name": "\u6c38\u5b89\u533a",
+	"pinyin": "yonganqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "710253",
+	"name": "\u6e56\u5185\u533a",
+	"pinyin": "huneiqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "710254",
+	"name": "\u51e4\u5c71\u533a",
+	"pinyin": "fengshanqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "710255",
+	"name": "\u5927\u5bee\u533a",
+	"pinyin": "daliaoqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710256",
+	"name": "\u6797\u56ed\u533a",
+	"pinyin": "linyuanqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710257",
+	"name": "\u9e1f\u677e\u533a",
+	"pinyin": "niaosongqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710258",
+	"name": "\u5927\u6811\u533a",
+	"pinyin": "dashuqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710259",
+	"name": "\u65d7\u5c71\u533a",
+	"pinyin": "qishanqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710260",
+	"name": "\u7f8e\u6d53\u533a",
+	"pinyin": "meinongqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "710261",
+	"name": "\u516d\u9f9f\u533a",
+	"pinyin": "liuguiqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710262",
+	"name": "\u5185\u95e8\u533a",
+	"pinyin": "neimenqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710263",
+	"name": "\u6749\u6797\u533a",
+	"pinyin": "shanlinqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710264",
+	"name": "\u7532\u4ed9\u533a",
+	"pinyin": "jiaxianqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "710265",
+	"name": "\u6843\u6e90\u533a",
+	"pinyin": "taoyuanqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "710266",
+	"name": "\u90a3\u739b\u590f\u533a",
+	"pinyin": "namaxiaqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710267",
+	"name": "\u8302\u6797\u533a",
+	"pinyin": "maolinqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "710268",
+	"name": "\u8304\u8423\u533a",
+	"pinyin": "qiedingqu",
+	"zip_code": "0",
+	"parent_code": "710200",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710300",
+	"name": "\u53f0\u5357\u5e02",
+	"pinyin": "tainanshi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "710301",
+	"name": "\u4e2d\u897f\u533a",
+	"pinyin": "zhongxiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710302",
+	"name": "\u4e1c\u533a",
+	"pinyin": "dongqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710303",
+	"name": "\u5357\u533a",
+	"pinyin": "nanqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710304",
+	"name": "\u5317\u533a",
+	"pinyin": "beiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "710305",
+	"name": "\u5b89\u5e73\u533a",
+	"pinyin": "anpingqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "710306",
+	"name": "\u5b89\u5357\u533a",
+	"pinyin": "annanqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "710339",
+	"name": "\u6c38\u5eb7\u533a",
+	"pinyin": "yongkangqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "710340",
+	"name": "\u5f52\u4ec1\u533a",
+	"pinyin": "guirenqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "710341",
+	"name": "\u65b0\u5316\u533a",
+	"pinyin": "xinhuaqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710342",
+	"name": "\u5de6\u9547\u533a",
+	"pinyin": "zuozhenqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710343",
+	"name": "\u7389\u4e95\u533a",
+	"pinyin": "yujingqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "710344",
+	"name": "\u6960\u897f\u533a",
+	"pinyin": "nanxiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710345",
+	"name": "\u5357\u5316\u533a",
+	"pinyin": "nanhuaqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710346",
+	"name": "\u4ec1\u5fb7\u533a",
+	"pinyin": "rendequ",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "710347",
+	"name": "\u5173\u5e99\u533a",
+	"pinyin": "guanmiaoqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "710348",
+	"name": "\u9f99\u5d0e\u533a",
+	"pinyin": "longqiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710349",
+	"name": "\u5b98\u7530\u533a",
+	"pinyin": "guantianqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "710350",
+	"name": "\u9ebb\u8c46\u533a",
+	"pinyin": "madouqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "710351",
+	"name": "\u4f73\u91cc\u533a",
+	"pinyin": "jialiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "710352",
+	"name": "\u897f\u6e2f\u533a",
+	"pinyin": "xigangqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710353",
+	"name": "\u4e03\u80a1\u533a",
+	"pinyin": "qiguqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710354",
+	"name": "\u5c06\u519b\u533a",
+	"pinyin": "jiangjunqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "710355",
+	"name": "\u5b66\u7532\u533a",
+	"pinyin": "xuejiaqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710356",
+	"name": "\u5317\u95e8\u533a",
+	"pinyin": "beimenqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "710357",
+	"name": "\u65b0\u8425\u533a",
+	"pinyin": "xinyingqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710358",
+	"name": "\u540e\u58c1\u533a",
+	"pinyin": "houbiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "710359",
+	"name": "\u767d\u6cb3\u533a",
+	"pinyin": "baihequ",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "710360",
+	"name": "\u4e1c\u5c71\u533a",
+	"pinyin": "dongshanqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710361",
+	"name": "\u516d\u7532\u533a",
+	"pinyin": "liujiaqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710362",
+	"name": "\u4e0b\u8425\u533a",
+	"pinyin": "xiayingqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710363",
+	"name": "\u67f3\u8425\u533a",
+	"pinyin": "liuyingqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710364",
+	"name": "\u76d0\u6c34\u533a",
+	"pinyin": "yanshuiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "710365",
+	"name": "\u5584\u5316\u533a",
+	"pinyin": "shanhuaqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710366",
+	"name": "\u5927\u5185\u533a",
+	"pinyin": "daneiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710367",
+	"name": "\u5c71\u4e0a\u533a",
+	"pinyin": "shanshangqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710368",
+	"name": "\u65b0\u5e02\u533a",
+	"pinyin": "xinshiqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710369",
+	"name": "\u5b89\u5b9a\u533a",
+	"pinyin": "andingqu",
+	"zip_code": "0",
+	"parent_code": "710300",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "710400",
+	"name": "\u53f0\u4e2d\u5e02",
+	"pinyin": "taizhongshi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "710401",
+	"name": "\u4e2d\u533a",
+	"pinyin": "zhongqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710402",
+	"name": "\u4e1c\u533a",
+	"pinyin": "dongqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710403",
+	"name": "\u5357\u533a",
+	"pinyin": "nanqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710404",
+	"name": "\u897f\u533a",
+	"pinyin": "xiqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710405",
+	"name": "\u5317\u533a",
+	"pinyin": "beiqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "710406",
+	"name": "\u5317\u5c6f\u533a",
+	"pinyin": "beitunqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "710407",
+	"name": "\u897f\u5c6f\u533a",
+	"pinyin": "xitunqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710408",
+	"name": "\u5357\u5c6f\u533a",
+	"pinyin": "nantunqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710431",
+	"name": "\u592a\u5e73\u533a",
+	"pinyin": "taipingqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "710432",
+	"name": "\u5927\u91cc\u533a",
+	"pinyin": "daliqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710433",
+	"name": "\u96fe\u5cf0\u533a",
+	"pinyin": "wufengqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "710434",
+	"name": "\u4e4c\u65e5\u533a",
+	"pinyin": "wuriqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "710435",
+	"name": "\u4e30\u539f\u533a",
+	"pinyin": "fengyuanqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "710436",
+	"name": "\u540e\u91cc\u533a",
+	"pinyin": "houliqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "710437",
+	"name": "\u77f3\u5188\u533a",
+	"pinyin": "shigangqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710438",
+	"name": "\u4e1c\u52bf\u533a",
+	"pinyin": "dongshiqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710439",
+	"name": "\u548c\u5e73\u533a",
+	"pinyin": "hepingqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "710440",
+	"name": "\u65b0\u793e\u533a",
+	"pinyin": "xinshequ",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710441",
+	"name": "\u6f6d\u5b50\u533a",
+	"pinyin": "tanziqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "710442",
+	"name": "\u5927\u96c5\u533a",
+	"pinyin": "dayaqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710443",
+	"name": "\u795e\u5188\u533a",
+	"pinyin": "shengangqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710444",
+	"name": "\u5927\u809a\u533a",
+	"pinyin": "daduqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710445",
+	"name": "\u6c99\u9e7f\u533a",
+	"pinyin": "shaluqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710446",
+	"name": "\u9f99\u4e95\u533a",
+	"pinyin": "longjingqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710447",
+	"name": "\u68a7\u6816\u533a",
+	"pinyin": "wuxiqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "710448",
+	"name": "\u6e05\u6c34\u533a",
+	"pinyin": "qingshuiqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710449",
+	"name": "\u5927\u7532\u533a",
+	"pinyin": "dajiaqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710450",
+	"name": "\u5916\u57d4\u533a",
+	"pinyin": "waipuqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "710451",
+	"name": "\u5927\u5b89\u533a",
+	"pinyin": "daanqu",
+	"zip_code": "0",
+	"parent_code": "710400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710600",
+	"name": "\u5357\u6295\u53bf",
+	"pinyin": "nantouxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "N"
+}, {
+	"code": "710614",
+	"name": "\u5357\u6295\u5e02",
+	"pinyin": "nantoushi",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710615",
+	"name": "\u4e2d\u5bee\u4e61",
+	"pinyin": "zhongliaoxiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710616",
+	"name": "\u8349\u5c6f\u9547",
+	"pinyin": "caotunzhen",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "710617",
+	"name": "\u56fd\u59d3\u4e61",
+	"pinyin": "guoxingxiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "710618",
+	"name": "\u57d4\u91cc\u9547",
+	"pinyin": "pulizhen",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "710619",
+	"name": "\u4ec1\u7231\u4e61",
+	"pinyin": "renaixiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "710620",
+	"name": "\u540d\u95f4\u4e61",
+	"pinyin": "mingjianxiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "710621",
+	"name": "\u96c6\u96c6\u9547",
+	"pinyin": "jijizhen",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "710622",
+	"name": "\u6c34\u91cc\u4e61",
+	"pinyin": "shuilixiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "710623",
+	"name": "\u9c7c\u6c60\u4e61",
+	"pinyin": "yuchixiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "710624",
+	"name": "\u4fe1\u4e49\u4e61",
+	"pinyin": "xinyixiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710625",
+	"name": "\u7af9\u5c71\u9547",
+	"pinyin": "zhushanzhen",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710626",
+	"name": "\u9e7f\u8c37\u4e61",
+	"pinyin": "luguxiang",
+	"zip_code": "0",
+	"parent_code": "710600",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "710700",
+	"name": "\u57fa\u9686\u5e02",
+	"pinyin": "jilongshi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "710701",
+	"name": "\u4ec1\u7231\u533a",
+	"pinyin": "renaiqu",
+	"zip_code": "0",
+	"parent_code": "710700",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "710702",
+	"name": "\u4fe1\u4e49\u533a",
+	"pinyin": "xinyiqu",
+	"zip_code": "0",
+	"parent_code": "710700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710703",
+	"name": "\u4e2d\u6b63\u533a",
+	"pinyin": "zhongzhengqu",
+	"zip_code": "0",
+	"parent_code": "710700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710704",
+	"name": "\u4e2d\u5c71\u533a",
+	"pinyin": "zhongshanqu",
+	"zip_code": "0",
+	"parent_code": "710700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "710705",
+	"name": "\u5b89\u4e50\u533a",
+	"pinyin": "anlequ",
+	"zip_code": "0",
+	"parent_code": "710700",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "710706",
+	"name": "\u6696\u6696\u533a",
+	"pinyin": "nuannuanqu",
+	"zip_code": "0",
+	"parent_code": "710700",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "710707",
+	"name": "\u4e03\u5835\u533a",
+	"pinyin": "qiduqu",
+	"zip_code": "0",
+	"parent_code": "710700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "710800",
+	"name": "\u65b0\u7af9\u5e02",
+	"pinyin": "xinzhushi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "710801",
+	"name": "\u4e1c\u533a",
+	"pinyin": "dongqu",
+	"zip_code": "0",
+	"parent_code": "710800",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710802",
+	"name": "\u5317\u533a",
+	"pinyin": "beiqu",
+	"zip_code": "0",
+	"parent_code": "710800",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "710803",
+	"name": "\u9999\u5c71\u533a",
+	"pinyin": "xiangshanqu",
+	"zip_code": "0",
+	"parent_code": "710800",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "710900",
+	"name": "\u5609\u4e49\u5e02",
+	"pinyin": "jiayishi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "710901",
+	"name": "\u4e1c\u533a",
+	"pinyin": "dongqu",
+	"zip_code": "0",
+	"parent_code": "710900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "710902",
+	"name": "\u897f\u533a",
+	"pinyin": "xiqu",
+	"zip_code": "0",
+	"parent_code": "710900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711100",
+	"name": "\u65b0\u5317\u5e02",
+	"pinyin": "xinbeishi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "711130",
+	"name": "\u4e07\u91cc\u533a",
+	"pinyin": "wanliqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "711131",
+	"name": "\u91d1\u5c71\u533a",
+	"pinyin": "jinshanqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "711132",
+	"name": "\u677f\u6865\u533a",
+	"pinyin": "banqiaoqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "711133",
+	"name": "\u6c50\u6b62\u533a",
+	"pinyin": "xizhiqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711134",
+	"name": "\u6df1\u5751\u533a",
+	"pinyin": "shenkengqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711135",
+	"name": "\u77f3\u7887\u533a",
+	"pinyin": "shidingqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711136",
+	"name": "\u745e\u82b3\u533a",
+	"pinyin": "ruifangqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "711137",
+	"name": "\u5e73\u6eaa\u533a",
+	"pinyin": "pingxiqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "711138",
+	"name": "\u53cc\u6eaa\u533a",
+	"pinyin": "shuangxiqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711139",
+	"name": "\u8d21\u5bee\u533a",
+	"pinyin": "gongliaoqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "711140",
+	"name": "\u65b0\u5e97\u533a",
+	"pinyin": "xindianqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711141",
+	"name": "\u576a\u6797\u533a",
+	"pinyin": "pinglinqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "711142",
+	"name": "\u4e4c\u6765\u533a",
+	"pinyin": "wulaiqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "711143",
+	"name": "\u6c38\u548c\u533a",
+	"pinyin": "yonghequ",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711144",
+	"name": "\u4e2d\u548c\u533a",
+	"pinyin": "zhonghequ",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711145",
+	"name": "\u571f\u57ce\u533a",
+	"pinyin": "tuchengqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711146",
+	"name": "\u4e09\u5ce1\u533a",
+	"pinyin": "sanxiaqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711147",
+	"name": "\u6811\u6797\u533a",
+	"pinyin": "shulinqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711148",
+	"name": "\u83ba\u6b4c\u533a",
+	"pinyin": "yinggequ",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711149",
+	"name": "\u4e09\u91cd\u533a",
+	"pinyin": "sanchongqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711150",
+	"name": "\u65b0\u5e84\u533a",
+	"pinyin": "xinzhuangqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711151",
+	"name": "\u6cf0\u5c71\u533a",
+	"pinyin": "taishanqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711152",
+	"name": "\u6797\u53e3\u533a",
+	"pinyin": "linkouqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711153",
+	"name": "\u82a6\u6d32\u533a",
+	"pinyin": "luzhouqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711154",
+	"name": "\u4e94\u80a1\u533a",
+	"pinyin": "wuguqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "711155",
+	"name": "\u516b\u91cc\u533a",
+	"pinyin": "baliqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "711156",
+	"name": "\u6de1\u6c34\u533a",
+	"pinyin": "danshuiqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711157",
+	"name": "\u4e09\u829d\u533a",
+	"pinyin": "sanzhiqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711158",
+	"name": "\u77f3\u95e8\u533a",
+	"pinyin": "shimenqu",
+	"zip_code": "0",
+	"parent_code": "711100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711200",
+	"name": "\u5b9c\u5170\u53bf",
+	"pinyin": "yilanxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "711214",
+	"name": "\u5b9c\u5170\u5e02",
+	"pinyin": "yilanshi",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711215",
+	"name": "\u5934\u57ce\u9547",
+	"pinyin": "touchengzhen",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711216",
+	"name": "\u7901\u6eaa\u4e61",
+	"pinyin": "jiaoxixiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "711217",
+	"name": "\u58ee\u56f4\u4e61",
+	"pinyin": "zhuangweixiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711218",
+	"name": "\u5458\u5c71\u4e61",
+	"pinyin": "yuanshanxiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711219",
+	"name": "\u7f57\u4e1c\u9547",
+	"pinyin": "luodongzhen",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711220",
+	"name": "\u4e09\u661f\u4e61",
+	"pinyin": "sanxingxiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711221",
+	"name": "\u5927\u540c\u4e61",
+	"pinyin": "datongxiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711222",
+	"name": "\u4e94\u7ed3\u4e61",
+	"pinyin": "wujiexiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "711223",
+	"name": "\u51ac\u5c71\u4e61",
+	"pinyin": "dongshanxiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711224",
+	"name": "\u82cf\u6fb3\u9547",
+	"pinyin": "suaozhen",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711225",
+	"name": "\u5357\u6fb3\u4e61",
+	"pinyin": "nanaoxiang",
+	"zip_code": "0",
+	"parent_code": "711200",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "711300",
+	"name": "\u65b0\u7af9\u53bf",
+	"pinyin": "xinzhuxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "711314",
+	"name": "\u7af9\u5317\u5e02",
+	"pinyin": "zhubeishi",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711315",
+	"name": "\u6e56\u53e3\u4e61",
+	"pinyin": "hukouxiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "711316",
+	"name": "\u65b0\u4e30\u4e61",
+	"pinyin": "xinfengxiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711317",
+	"name": "\u65b0\u57d4\u9547",
+	"pinyin": "xinpuzhen",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711318",
+	"name": "\u5173\u897f\u9547",
+	"pinyin": "guanxizhen",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "711319",
+	"name": "\u828e\u6797\u4e61",
+	"pinyin": "xionglinxiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711320",
+	"name": "\u5b9d\u5c71\u4e61",
+	"pinyin": "baoshanxiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "711321",
+	"name": "\u7af9\u4e1c\u9547",
+	"pinyin": "zhudongzhen",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711322",
+	"name": "\u4e94\u5cf0\u4e61",
+	"pinyin": "wufengxiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "711323",
+	"name": "\u6a2a\u5c71\u4e61",
+	"pinyin": "hengshanxiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "711324",
+	"name": "\u5c16\u77f3\u4e61",
+	"pinyin": "jianshixiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "711325",
+	"name": "\u5317\u57d4\u4e61",
+	"pinyin": "beipuxiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "711326",
+	"name": "\u5ce8\u7709\u4e61",
+	"pinyin": "emeixiang",
+	"zip_code": "0",
+	"parent_code": "711300",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "711400",
+	"name": "\u6843\u56ed\u5e02",
+	"pinyin": "taoyuanshi",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "711414",
+	"name": "\u4e2d\u575c\u533a",
+	"pinyin": "zhongliqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711415",
+	"name": "\u5e73\u9547\u533a",
+	"pinyin": "pingzhenqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "711416",
+	"name": "\u9f99\u6f6d\u533a",
+	"pinyin": "longtanqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711417",
+	"name": "\u6768\u6885\u533a",
+	"pinyin": "yangmeiqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711418",
+	"name": "\u65b0\u5c4b\u533a",
+	"pinyin": "xinwuqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711419",
+	"name": "\u89c2\u97f3\u533a",
+	"pinyin": "guanyinqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "711420",
+	"name": "\u6843\u56ed\u533a",
+	"pinyin": "taoyuanqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711421",
+	"name": "\u9f9f\u5c71\u533a",
+	"pinyin": "guishanqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "711422",
+	"name": "\u516b\u5fb7\u533a",
+	"pinyin": "badequ",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "711423",
+	"name": "\u5927\u6eaa\u533a",
+	"pinyin": "daxiqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711424",
+	"name": "\u590d\u5174\u533a",
+	"pinyin": "fuxingqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "711425",
+	"name": "\u5927\u56ed\u533a",
+	"pinyin": "dayuanqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711426",
+	"name": "\u82a6\u7af9\u533a",
+	"pinyin": "luzhuqu",
+	"zip_code": "0",
+	"parent_code": "711400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711500",
+	"name": "\u82d7\u6817\u53bf",
+	"pinyin": "miaolixian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "M"
+}, {
+	"code": "711519",
+	"name": "\u7af9\u5357\u9547",
+	"pinyin": "zhunanzhen",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711520",
+	"name": "\u5934\u4efd\u5e02",
+	"pinyin": "toufenshi",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711521",
+	"name": "\u4e09\u6e7e\u4e61",
+	"pinyin": "sanwanxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711522",
+	"name": "\u5357\u5e84\u4e61",
+	"pinyin": "nanzhuangxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "711523",
+	"name": "\u72ee\u6f6d\u4e61",
+	"pinyin": "shitanxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711524",
+	"name": "\u540e\u9f99\u9547",
+	"pinyin": "houlongzhen",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "711525",
+	"name": "\u901a\u9704\u9547",
+	"pinyin": "tongxiaozhen",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711526",
+	"name": "\u82d1\u91cc\u9547",
+	"pinyin": "yuanlizhen",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711527",
+	"name": "\u82d7\u6817\u5e02",
+	"pinyin": "miaolishi",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "711528",
+	"name": "\u9020\u6865\u4e61",
+	"pinyin": "zaoqiaoxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711529",
+	"name": "\u5934\u5c4b\u4e61",
+	"pinyin": "touwuxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711530",
+	"name": "\u516c\u9986\u4e61",
+	"pinyin": "gongguanxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "711531",
+	"name": "\u5927\u6e56\u4e61",
+	"pinyin": "dahuxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711532",
+	"name": "\u6cf0\u5b89\u4e61",
+	"pinyin": "taianxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711533",
+	"name": "\u94dc\u9523\u4e61",
+	"pinyin": "tongluoxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711534",
+	"name": "\u4e09\u4e49\u4e61",
+	"pinyin": "sanyixiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711535",
+	"name": "\u897f\u6e56\u4e61",
+	"pinyin": "xihuxiang",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711536",
+	"name": "\u5353\u5170\u9547",
+	"pinyin": "zhuolanzhen",
+	"zip_code": "0",
+	"parent_code": "711500",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711700",
+	"name": "\u5f70\u5316\u53bf",
+	"pinyin": "zhanghuaxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "Z"
+}, {
+	"code": "711727",
+	"name": "\u5f70\u5316\u5e02",
+	"pinyin": "zhanghuashi",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711728",
+	"name": "\u82ac\u56ed\u4e61",
+	"pinyin": "fenyuanxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "711729",
+	"name": "\u82b1\u575b\u4e61",
+	"pinyin": "huatanxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "711730",
+	"name": "\u79c0\u6c34\u4e61",
+	"pinyin": "xiushuixiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711731",
+	"name": "\u9e7f\u6e2f\u9547",
+	"pinyin": "lugangzhen",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711732",
+	"name": "\u798f\u5174\u4e61",
+	"pinyin": "fuxingxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "711733",
+	"name": "\u7ebf\u897f\u4e61",
+	"pinyin": "xianxixiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711734",
+	"name": "\u548c\u7f8e\u9547",
+	"pinyin": "hemeizhen",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "711735",
+	"name": "\u4f38\u6e2f\u4e61",
+	"pinyin": "shengangxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711736",
+	"name": "\u5458\u6797\u5e02",
+	"pinyin": "yuanlinshi",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711737",
+	"name": "\u793e\u5934\u4e61",
+	"pinyin": "shetouxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711738",
+	"name": "\u6c38\u9756\u4e61",
+	"pinyin": "yongjingxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711739",
+	"name": "\u57d4\u5fc3\u4e61",
+	"pinyin": "puxinxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "711740",
+	"name": "\u6eaa\u6e56\u9547",
+	"pinyin": "xihuzhen",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711741",
+	"name": "\u5927\u6751\u4e61",
+	"pinyin": "dacunxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711742",
+	"name": "\u57d4\u76d0\u4e61",
+	"pinyin": "puyanxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "711743",
+	"name": "\u7530\u4e2d\u9547",
+	"pinyin": "tianzhongzhen",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711744",
+	"name": "\u5317\u6597\u9547",
+	"pinyin": "beidouzhen",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "711745",
+	"name": "\u7530\u5c3e\u4e61",
+	"pinyin": "tianweixiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711746",
+	"name": "\u57e4\u5934\u4e61",
+	"pinyin": "pitouxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "711747",
+	"name": "\u6eaa\u5dde\u4e61",
+	"pinyin": "xizhouxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711748",
+	"name": "\u7af9\u5858\u4e61",
+	"pinyin": "zhutangxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711749",
+	"name": "\u4e8c\u6797\u9547",
+	"pinyin": "erlinzhen",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "711750",
+	"name": "\u5927\u57ce\u4e61",
+	"pinyin": "dachengxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711751",
+	"name": "\u82b3\u82d1\u4e61",
+	"pinyin": "fangyuanxiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "711752",
+	"name": "\u4e8c\u6c34\u4e61",
+	"pinyin": "ershuixiang",
+	"zip_code": "0",
+	"parent_code": "711700",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "711900",
+	"name": "\u5609\u4e49\u53bf",
+	"pinyin": "jiayixian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "J"
+}, {
+	"code": "711919",
+	"name": "\u756a\u8def\u4e61",
+	"pinyin": "fanluxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "711920",
+	"name": "\u6885\u5c71\u4e61",
+	"pinyin": "meishanxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "711921",
+	"name": "\u7af9\u5d0e\u4e61",
+	"pinyin": "zhuqixiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711922",
+	"name": "\u963f\u91cc\u5c71\u4e61",
+	"pinyin": "alishanxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "711923",
+	"name": "\u4e2d\u57d4\u4e61",
+	"pinyin": "zhongpuxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "711924",
+	"name": "\u5927\u57d4\u4e61",
+	"pinyin": "dapuxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711925",
+	"name": "\u6c34\u4e0a\u4e61",
+	"pinyin": "shuishangxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "711926",
+	"name": "\u9e7f\u8349\u4e61",
+	"pinyin": "lucaoxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711927",
+	"name": "\u592a\u4fdd\u5e02",
+	"pinyin": "taibaoshi",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "711928",
+	"name": "\u6734\u5b50\u5e02",
+	"pinyin": "puzishi",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "711929",
+	"name": "\u4e1c\u77f3\u4e61",
+	"pinyin": "dongshixiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711930",
+	"name": "\u516d\u811a\u4e61",
+	"pinyin": "liujiaoxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "711931",
+	"name": "\u65b0\u6e2f\u4e61",
+	"pinyin": "xingangxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711932",
+	"name": "\u6c11\u96c4\u4e61",
+	"pinyin": "minxiongxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "711933",
+	"name": "\u5927\u6797\u9547",
+	"pinyin": "dalinzhen",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "711934",
+	"name": "\u6eaa\u53e3\u4e61",
+	"pinyin": "xikouxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "711935",
+	"name": "\u4e49\u7af9\u4e61",
+	"pinyin": "yizhuxiang",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "711936",
+	"name": "\u5e03\u888b\u9547",
+	"pinyin": "budaizhen",
+	"zip_code": "0",
+	"parent_code": "711900",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "712100",
+	"name": "\u4e91\u6797\u53bf",
+	"pinyin": "yunlinxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "Y"
+}, {
+	"code": "712121",
+	"name": "\u6597\u5357\u9547",
+	"pinyin": "dounanzhen",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712122",
+	"name": "\u5927\u57e4\u4e61",
+	"pinyin": "dapixiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712123",
+	"name": "\u864e\u5c3e\u9547",
+	"pinyin": "huweizhen",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "712124",
+	"name": "\u571f\u5e93\u9547",
+	"pinyin": "tukuzhen",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "712125",
+	"name": "\u8912\u5fe0\u4e61",
+	"pinyin": "baozhongxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "712126",
+	"name": "\u4e1c\u52bf\u4e61",
+	"pinyin": "dongshixiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712127",
+	"name": "\u53f0\u897f\u4e61",
+	"pinyin": "taixixiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "712128",
+	"name": "\u4ed1\u80cc\u4e61",
+	"pinyin": "lunbeixiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712129",
+	"name": "\u9ea6\u5bee\u4e61",
+	"pinyin": "mailiaoxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "712130",
+	"name": "\u6597\u516d\u5e02",
+	"pinyin": "douliushi",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712131",
+	"name": "\u6797\u5185\u4e61",
+	"pinyin": "linneixiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712132",
+	"name": "\u53e4\u5751\u4e61",
+	"pinyin": "gukengxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "712133",
+	"name": "\u83bf\u6850\u4e61",
+	"pinyin": "citongxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712134",
+	"name": "\u897f\u87ba\u9547",
+	"pinyin": "xiluozhen",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "712135",
+	"name": "\u4e8c\u4ed1\u4e61",
+	"pinyin": "erlunxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "E"
+}, {
+	"code": "712136",
+	"name": "\u5317\u6e2f\u9547",
+	"pinyin": "beigangzhen",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "712137",
+	"name": "\u6c34\u6797\u4e61",
+	"pinyin": "shuilinxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "712138",
+	"name": "\u53e3\u6e56\u4e61",
+	"pinyin": "kouhuxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "712139",
+	"name": "\u56db\u6e56\u4e61",
+	"pinyin": "sihuxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "712140",
+	"name": "\u5143\u957f\u4e61",
+	"pinyin": "yuanchangxiang",
+	"zip_code": "0",
+	"parent_code": "712100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "712400",
+	"name": "\u5c4f\u4e1c\u53bf",
+	"pinyin": "pingdongxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "712434",
+	"name": "\u5c4f\u4e1c\u5e02",
+	"pinyin": "pingdongshi",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "P"
+}, {
+	"code": "712435",
+	"name": "\u4e09\u5730\u95e8\u4e61",
+	"pinyin": "sandimenxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "712436",
+	"name": "\u96fe\u53f0\u4e61",
+	"pinyin": "wutaixiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "712437",
+	"name": "\u739b\u5bb6\u4e61",
+	"pinyin": "majiaxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "712438",
+	"name": "\u4e5d\u5982\u4e61",
+	"pinyin": "jiuruxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "712439",
+	"name": "\u91cc\u6e2f\u4e61",
+	"pinyin": "ligangxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712440",
+	"name": "\u9ad8\u6811\u4e61",
+	"pinyin": "gaoshuxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "712441",
+	"name": "\u76d0\u57d4\u4e61",
+	"pinyin": "yanpuxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "712442",
+	"name": "\u957f\u6cbb\u4e61",
+	"pinyin": "changzhixiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712443",
+	"name": "\u9e9f\u6d1b\u4e61",
+	"pinyin": "linluoxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712444",
+	"name": "\u7af9\u7530\u4e61",
+	"pinyin": "zhutianxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "712445",
+	"name": "\u5185\u57d4\u4e61",
+	"pinyin": "neipuxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "712446",
+	"name": "\u4e07\u4e39\u4e61",
+	"pinyin": "wandanxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "712447",
+	"name": "\u6f6e\u5dde\u9547",
+	"pinyin": "chaozhouzhen",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712448",
+	"name": "\u6cf0\u6b66\u4e61",
+	"pinyin": "taiwuxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "712449",
+	"name": "\u6765\u4e49\u4e61",
+	"pinyin": "laiyixiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712450",
+	"name": "\u4e07\u5ce6\u4e61",
+	"pinyin": "wanluanxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "712451",
+	"name": "\u5d01\u9876\u4e61",
+	"pinyin": "kandingxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "712452",
+	"name": "\u65b0\u57e4\u4e61",
+	"pinyin": "xinpixiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "712453",
+	"name": "\u5357\u5dde\u4e61",
+	"pinyin": "nanzhouxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "712454",
+	"name": "\u6797\u8fb9\u4e61",
+	"pinyin": "linbianxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712455",
+	"name": "\u4e1c\u6e2f\u9547",
+	"pinyin": "donggangzhen",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712456",
+	"name": "\u7409\u7403\u4e61",
+	"pinyin": "liuqiuxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712457",
+	"name": "\u4f73\u51ac\u4e61",
+	"pinyin": "jiadongxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "712458",
+	"name": "\u65b0\u56ed\u4e61",
+	"pinyin": "xinyuanxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "712459",
+	"name": "\u678b\u5bee\u4e61",
+	"pinyin": "fangliaoxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "712460",
+	"name": "\u678b\u5c71\u4e61",
+	"pinyin": "fangshanxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "712461",
+	"name": "\u6625\u65e5\u4e61",
+	"pinyin": "chunrixiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712462",
+	"name": "\u72ee\u5b50\u4e61",
+	"pinyin": "shizixiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "712463",
+	"name": "\u8f66\u57ce\u4e61",
+	"pinyin": "chechengxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712464",
+	"name": "\u7261\u4e39\u4e61",
+	"pinyin": "mudanxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "712465",
+	"name": "\u6052\u6625\u9547",
+	"pinyin": "hengchunzhen",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "712466",
+	"name": "\u6ee1\u5dde\u4e61",
+	"pinyin": "manzhouxiang",
+	"zip_code": "0",
+	"parent_code": "712400",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "712500",
+	"name": "\u53f0\u4e1c\u53bf",
+	"pinyin": "taidongxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "T"
+}, {
+	"code": "712517",
+	"name": "\u53f0\u4e1c\u5e02",
+	"pinyin": "taidongshi",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "712518",
+	"name": "\u7eff\u5c9b\u4e61",
+	"pinyin": "lvdaoxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712519",
+	"name": "\u5170\u5c7f\u4e61",
+	"pinyin": "lanyuxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712520",
+	"name": "\u5ef6\u5e73\u4e61",
+	"pinyin": "yanpingxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "712521",
+	"name": "\u5351\u5357\u4e61",
+	"pinyin": "beinanxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "712522",
+	"name": "\u9e7f\u91ce\u4e61",
+	"pinyin": "luyexiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "712523",
+	"name": "\u5173\u5c71\u9547",
+	"pinyin": "guanshanzhen",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "712524",
+	"name": "\u6d77\u7aef\u4e61",
+	"pinyin": "haiduanxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "712525",
+	"name": "\u6c60\u4e0a\u4e61",
+	"pinyin": "chishangxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712526",
+	"name": "\u4e1c\u6cb3\u4e61",
+	"pinyin": "donghexiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712527",
+	"name": "\u6210\u529f\u9547",
+	"pinyin": "chenggongzhen",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712528",
+	"name": "\u957f\u6ee8\u4e61",
+	"pinyin": "changbinxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "C"
+}, {
+	"code": "712529",
+	"name": "\u91d1\u5cf0\u4e61",
+	"pinyin": "jinfengxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "712530",
+	"name": "\u5927\u6b66\u4e61",
+	"pinyin": "dawuxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712531",
+	"name": "\u8fbe\u4ec1\u4e61",
+	"pinyin": "darenxiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "712532",
+	"name": "\u592a\u9ebb\u91cc\u4e61",
+	"pinyin": "taimalixiang",
+	"zip_code": "0",
+	"parent_code": "712500",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "712600",
+	"name": "\u82b1\u83b2\u53bf",
+	"pinyin": "hualianxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "H"
+}, {
+	"code": "712615",
+	"name": "\u82b1\u83b2\u5e02",
+	"pinyin": "hualianshi",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "712616",
+	"name": "\u65b0\u57ce\u4e61",
+	"pinyin": "xinchengxiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "712618",
+	"name": "\u79c0\u6797\u4e61",
+	"pinyin": "xiulinxiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "712619",
+	"name": "\u5409\u5b89\u4e61",
+	"pinyin": "jianxiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "712620",
+	"name": "\u5bff\u4e30\u4e61",
+	"pinyin": "shoufengxiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "712621",
+	"name": "\u51e4\u6797\u9547",
+	"pinyin": "fenglinzhen",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "712622",
+	"name": "\u5149\u590d\u4e61",
+	"pinyin": "guangfuxiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "712623",
+	"name": "\u4e30\u6ee8\u4e61",
+	"pinyin": "fengbinxiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "712624",
+	"name": "\u745e\u7a57\u4e61",
+	"pinyin": "ruisuixiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "R"
+}, {
+	"code": "712625",
+	"name": "\u4e07\u8363\u4e61",
+	"pinyin": "wanrongxiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "712626",
+	"name": "\u7389\u91cc\u9547",
+	"pinyin": "yulizhen",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "712627",
+	"name": "\u5353\u6eaa\u4e61",
+	"pinyin": "zhuoxixiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "712628",
+	"name": "\u5bcc\u91cc\u4e61",
+	"pinyin": "fulixiang",
+	"zip_code": "0",
+	"parent_code": "712600",
+	"type": 2,
+	"first_letter": "F"
+}, {
+	"code": "712700",
+	"name": "\u6f8e\u6e56\u53bf",
+	"pinyin": "penghuxian",
+	"zip_code": "0",
+	"parent_code": "710000",
+	"type": 1,
+	"first_letter": "P"
+}, {
+	"code": "712707",
+	"name": "\u9a6c\u516c\u5e02",
+	"pinyin": "magongshi",
+	"zip_code": "0",
+	"parent_code": "712700",
+	"type": 2,
+	"first_letter": "M"
+}, {
+	"code": "712708",
+	"name": "\u897f\u5c7f\u4e61",
+	"pinyin": "xiyuxiang",
+	"zip_code": "0",
+	"parent_code": "712700",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "712709",
+	"name": "\u671b\u5b89\u4e61",
+	"pinyin": "wanganxiang",
+	"zip_code": "0",
+	"parent_code": "712700",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "712710",
+	"name": "\u4e03\u7f8e\u4e61",
+	"pinyin": "qimeixiang",
+	"zip_code": "0",
+	"parent_code": "712700",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "712711",
+	"name": "\u767d\u6c99\u4e61",
+	"pinyin": "baishaxiang",
+	"zip_code": "0",
+	"parent_code": "712700",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "712712",
+	"name": "\u6e56\u897f\u4e61",
+	"pinyin": "huxixiang",
+	"zip_code": "0",
+	"parent_code": "712700",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "810000",
+	"name": "\u9999\u6e2f\u7279\u522b\u884c\u653f\u533a",
+	"pinyin": "xianggangtebiexingzhengqu",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "X"
+}, {
+	"code": "810100",
+	"name": "\u9999\u6e2f\u7279\u522b\u884c\u653f\u533a",
+	"pinyin": "xianggangtebiexingzhengqu",
+	"zip_code": "0",
+	"parent_code": "810000",
+	"type": 1,
+	"first_letter": "X"
+}, {
+	"code": "810101",
+	"name": "\u4e2d\u897f\u533a",
+	"pinyin": "zhongxiqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "Z"
+}, {
+	"code": "810102",
+	"name": "\u4e1c\u533a",
+	"pinyin": "dongqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "810103",
+	"name": "\u4e5d\u9f99\u57ce\u533a",
+	"pinyin": "jiulongchengqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "J"
+}, {
+	"code": "810104",
+	"name": "\u89c2\u5858\u533a",
+	"pinyin": "guantangqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "G"
+}, {
+	"code": "810105",
+	"name": "\u5357\u533a",
+	"pinyin": "nanqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "N"
+}, {
+	"code": "810106",
+	"name": "\u6df1\u6c34\u57d7\u533a",
+	"pinyin": "shenshuibuqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "810107",
+	"name": "\u6e7e\u4ed4\u533a",
+	"pinyin": "wanzaiqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "W"
+}, {
+	"code": "810108",
+	"name": "\u9ec4\u5927\u4ed9\u533a",
+	"pinyin": "huangdaxianqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "H"
+}, {
+	"code": "810109",
+	"name": "\u6cb9\u5c16\u65fa\u533a",
+	"pinyin": "youjianwangqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "810110",
+	"name": "\u79bb\u5c9b\u533a",
+	"pinyin": "lidaoqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "810111",
+	"name": "\u8475\u9752\u533a",
+	"pinyin": "kuiqingqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "K"
+}, {
+	"code": "810112",
+	"name": "\u5317\u533a",
+	"pinyin": "beiqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "B"
+}, {
+	"code": "810113",
+	"name": "\u897f\u8d21\u533a",
+	"pinyin": "xigongqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "X"
+}, {
+	"code": "810114",
+	"name": "\u6c99\u7530\u533a",
+	"pinyin": "shatianqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "S"
+}, {
+	"code": "810115",
+	"name": "\u5c6f\u95e8\u533a",
+	"pinyin": "tunmenqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "T"
+}, {
+	"code": "810116",
+	"name": "\u5927\u57d4\u533a",
+	"pinyin": "dapuqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "810117",
+	"name": "\u8343\u6e7e\u533a",
+	"pinyin": "quanwanqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "Q"
+}, {
+	"code": "810118",
+	"name": "\u5143\u6717\u533a",
+	"pinyin": "yuanlangqu",
+	"zip_code": "0",
+	"parent_code": "810100",
+	"type": 2,
+	"first_letter": "Y"
+}, {
+	"code": "820000",
+	"name": "\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a",
+	"pinyin": "aomentebiexingzhengqu",
+	"zip_code": "0",
+	"type": 0,
+	"first_letter": "A"
+}, {
+	"code": "820100",
+	"name": "\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a",
+	"pinyin": "aomentebiexingzhengqu",
+	"zip_code": "0",
+	"parent_code": "820000",
+	"type": 1,
+	"first_letter": "A"
+}, {
+	"code": "820101",
+	"name": "\u6fb3\u95e8\u534a\u5c9b",
+	"pinyin": "aomenbandao",
+	"zip_code": "0",
+	"parent_code": "820100",
+	"type": 2,
+	"first_letter": "A"
+}, {
+	"code": "820102",
+	"name": "\u51fc\u4ed4",
+	"pinyin": "dangzai",
+	"zip_code": "0",
+	"parent_code": "820100",
+	"type": 2,
+	"first_letter": "D"
+}, {
+	"code": "820103",
+	"name": "\u8def\u51fc\u57ce",
+	"pinyin": "ludangcheng",
+	"zip_code": "0",
+	"parent_code": "820100",
+	"type": 2,
+	"first_letter": "L"
+}, {
+	"code": "820104",
+	"name": "\u8def\u73af",
+	"pinyin": "luhuan",
+	"zip_code": "0",
+	"parent_code": "820100",
+	"type": 2,
+	"first_letter": "L"
+}];
+
+export default data;

@@ -191,7 +191,7 @@ export default {
 		// options = { account_id: '7222240432728573964', order_id: '1014561279398427295' }; // 排期票档限制
 		// options = { account_id: '7222240432728573964', order_id: '1014990025432667295' }; // 排期票档限制
 		// options = { account_id: '7222240432728573964', order_id: '1014990371976347295' }; // 排期票档限制
-		// options = { account_id: '7222240432728573964', order_id: '1014990180107867295' }; // 排期票档限制
+		options = { account_id: '7222240432728573964', order_id: '1015285707975067295' }; // 排期票档限制
 		if (!options.order_id) {
 			this.myMessage('未找到订单id');
 		}

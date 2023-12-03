@@ -15,7 +15,7 @@
                         style="border-bottom: 1px solid #eee;">
                         <template v-if="item.id">
                             <div v-if="canSelect" @click="onSetDefault(item)">
-                                <u-icon size="22px" name="checkmark-circle-fill" :color="curSelect && item.id === curSelect.id ? '#FF545C' : '#ccc'"></u-icon>
+                                <u-icon size="22px" name="checkmark-circle-fill" :color="curSelect && item.id == curSelect.id ? '#FF545C' : '#ccc'"></u-icon>
                             </div>
                             <div class="mx-10px flex-1" @click="onSetDefault(item)">
                                 <div class="text-14px text-gray-333">
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+
 export default {
     data() {
         return {
@@ -56,6 +57,7 @@ export default {
         }
     },
     props: {
+        cinema_id: String,
         canDelete: {
             default: true,
             type: Boolean,
@@ -100,15 +102,15 @@ export default {
         },
         getData(showLoading = true) {
             return new Promise((resolve) => {
-                this.request("address", {
+                this.request("address.index", {
                     page: this.myCurrentPage,
-                    _showLoading: showLoading,
+                    cinema_id: this.cinema_id
                 }).then(res => {
-                    const { total, list } = res;
+                    const { total, data } = res;
                     if (!this.listData[0] || !this.listData[0].id) {
                         this.listData = [];
                     }
-                    this.listData = [...this.listData, ...list];
+                    this.listData = [...this.listData, ...data];
                     this.myCurrentPage++;
                     this.pageFinish = this.listData.length >= Number(total);
                     resolve();
@@ -124,7 +126,7 @@ export default {
             this.getData(false);
         },
         toEdit(item) {
-            this.toPath('/order/address/add?isEdit=true&id=' + item.id)
+            this.toPath('/order/address/add?isEdit=true&id=' + item.id + '&cinema_id=' + this.cinema_id)
         },
         onSetDefault(item) {
             // 选择的时候就用来切换
@@ -140,7 +142,7 @@ export default {
                     content: '请确认将当前地址设置为默认地址',
                     success: (result) => {
                         if (result.confirm) {
-                            this.request('address.is_default', { id: item.id }, 'POST').then(res => {
+                            this.request('address.is_default', { id: item.id, cinema_id: this.cinema_id }, 'POST').then(res => {
                                 this.pageFinish = false;
                                 this.listData = new Array(15).fill({});
                                 this.myCurrentPage = 1;
@@ -160,7 +162,7 @@ export default {
                 content: '请确认删除该地址',
                 success: (result) => {
                     if (result.confirm) {
-                        this.request('address.delete', { id: item.id }, 'POST').then(res => {
+                        this.request('address.delete', { id: item.id, cinema_id: this.cinema_id }, 'POST').then(res => {
                             this.pageFinish = false;
                             this.listData = new Array(15).fill({});
                             this.myCurrentPage = 1;

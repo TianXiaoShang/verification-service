@@ -3,7 +3,7 @@
         <loading />
         <div :style="{ width: '100%', height: `calc(${isHeight || '100vh'} - ${'79px'})` }">
             <idcard-list @onConfirmHook="onConfirmHook" :hookDataChange="hookDataChange" ref="addressListRef"
-                :maxSelect="maxSelect" :curSelect="curSelect" :canDelete="false" :canSelect="true"
+                :maxSelect="maxSelect" :curSelect="curSelect" :canDelete="false" :canSelect="true"  :cinema_id="cinema_id"
                 @onChange="onChangeAddress"></idcard-list>
         </div>
         <div class="h-44px flex items-center justify-center px-20px w-full box-border mt-20px bottom-15px">
@@ -28,7 +28,8 @@ export default {
     props: {
         isHeight: String,
         curSelect: Array,
-        maxSelect: Number
+        maxSelect: Number,
+        cinema_id: String
     },
     created() {
         this.waitLogin().then(() => {
@@ -51,7 +52,7 @@ export default {
             this.$emit('onChange', e)
         },
         onAdd() {
-            this.toPath('/order/idcard/add');
+            this.toPath('/order/idcard/add?cinema_id=' + this.cinema_id);
         },
     }
 };

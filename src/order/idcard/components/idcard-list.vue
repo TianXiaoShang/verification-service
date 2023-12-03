@@ -71,7 +71,8 @@ export default {
         },
         curSelect: Array,
         maxSelect: Number,
-        hookDataChange: Number
+        hookDataChange: Number,
+        cinema_id: String,
     },
     watch: {
         curSelect: {
@@ -103,7 +104,7 @@ export default {
     },
     methods: {
         onAdd() {
-            this.toPath('/order/idcard/add');
+            this.toPath('/order/idcard/add?cinema_id=' + this.cinema_id);
         },
         getCurData() {
             return this.curSelectIdcards;
@@ -135,15 +136,16 @@ export default {
         },
         getData(showLoading = true) {
             return new Promise((resolve) => {
-                this.request("idcard", {
+                this.request("idcard.index", {
                     page: this.myCurrentPage,
-                    _showLoading: showLoading,
+                    // _showLoading: showLoading,
+                    cinema_id: this.cinema_id
                 }).then(res => {
-                    const { total, list } = res;
+                    const { total, data } = res;
                     if (!this.listData[0] || !this.listData[0].id) {
                         this.listData = [];
                     }
-                    this.listData = [...this.listData, ...list];
+                    this.listData = [...this.listData, ...data];
                     this.myCurrentPage++;
                     this.pageFinish = this.listData.length >= Number(total);
                     resolve();
@@ -167,7 +169,7 @@ export default {
                 content: '请确认删除该身份信息',
                 success: (result) => {
                     if (result.confirm) {
-                        this.request('idcard.delete', { id: item.id }, 'POST').then(res => {
+                        this.request('idcard.delete&cinema_id=' + this.cinema_id, { idcard_id: item.id }, 'POST').then(res => {
                             this.pageFinish = false;
                             this.listData = new Array(15).fill({});
                             this.myCurrentPage = 1;

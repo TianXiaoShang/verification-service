@@ -21,6 +21,7 @@ export default {
         return {
             show: false,
             isLogin: false,
+            cinema_id: ''
         }
     },
     onHide() {
@@ -32,6 +33,7 @@ export default {
         }
     },
     onLoad() {
+        this.cinema_id = options.cinema_id;
         this.waitLogin().then(() => {
             this.show = true;
             this.isLogin = true;
@@ -45,7 +47,7 @@ export default {
     },
     methods: {
         onAdd() {
-            this.toPath('/order/address/add');
+            this.toPath('/order/address/add?cinema_id=' + this.cinema_id);
         },
     }
 };

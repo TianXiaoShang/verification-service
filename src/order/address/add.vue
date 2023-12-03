@@ -39,6 +39,7 @@
 
 <script>
 import UniDataPicker from './components/uni-data-picker/uni-data-picker.vue';
+import AreaData from './data.js';
 export default {
     components: { UniDataPicker },
     data() {
@@ -81,24 +82,25 @@ export default {
             isEdit: false,
             showAreaPicker: false,
             orderId: '',  // 有orderId为直接修改订单地址
+            cinema_id: '',
         }
     },
     onLoad(options) {
         this.isEdit = options.isEdit == 'true' ? true : false;
         this.id = options.id || '';
+        this.cinema_id = options.cinema_id;
         this.orderId = options.orderId || '';
         if (this.orderId || this.id) {
             uni.setNavigationBarTitle({
                 title: '修改地址'
             });
         }
+        // 地区数据
+        this.areaData = AreaData;
+        this.loadAreaData(this.areaData);
         this.waitLogin().then(() => {
-            this.request('address.data').then(res => {
-                this.areaData = res.data || [];
-                this.loadAreaData(this.areaData)
-            })
             if (this.id) {
-                this.request('address.detail', { id: this.id }).then(res => {
+                this.request('address.show', { address_id: this.id, cinema_id: this.cinema_id}).then(res => {
                     const data = res.address || {};
                     this.formData = {
                         realname: data.realname,
@@ -166,19 +168,20 @@ export default {
                 params.province_code = this.curAreaData[0].value;
                 params.city_code = this.curAreaData[1].value;
                 params.area_code = this.curAreaData[2].value;
-                if (this.orderId) {
-                    params.order_id = this.orderId;
-                    delete params.id;
-                    this.request('address.updateAddress', params, 'POST').then(res => {
-                        this.myMessage('修改地址成功');
-                        setTimeout(() => {
-                            this.back();
-                        }, 800)
-                    });
-                    return;
-                }
+                // if (this.orderId) {
+                //     params.order_id = this.orderId;
+                //     delete params.id;
+                //     this.request('address.updateAddress', params, 'POST').then(res => {
+                //         this.myMessage('修改地址成功');
+                //         setTimeout(() => {
+                //             this.back();
+                //         }, 800)
+                //     });
+                //     return;
+                // }
                 if (this.isEdit) {
-                    this.request('address.edit', params, 'POST').then(res => {
+                    params.address_id = this.id;
+                    this.request('address.update&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
                         this.myMessage('修改地址成功');
                         uni.$emit('refreshAddressPopupData');
                         setTimeout(() => {
@@ -186,7 +189,7 @@ export default {
                         }, 800)
                     });
                 } else {
-                    this.request('address.add', params, 'POST').then(res => {
+                    this.request('address.store&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
                         this.myMessage('添加地址成功');
                         uni.$emit('refreshAddressPopupData');
                         setTimeout(() => {

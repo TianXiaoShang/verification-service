@@ -36,7 +36,7 @@
             </div>
 
             <!-- 观演人 -->
-            <div class="bg-white mt-10px p-20px rounded-10px" v-if="order.is_autonym == 1">
+            <div class="bg-white mt-10px p-20px rounded-10px" v-if="order.is_autonym == 1 || true">
                 <div class="text-gray-999 flex justify-between items-center text-14px">实名观演人</div>
                 <div class="text-red flex justify-between items-center text-12px mt-10px">
                     仅需选择{{ maxSelectIdcard }}位，入场需携带对应身份证</div>
@@ -59,7 +59,7 @@
             <!-- 配送方式 -->
             <div class="bg-white mt-10px p-20px rounded-10px">
                 <div class="text-gray-999 flex justify-between items-center text-14">配送方式</div>
-                <template v-if="order.ticket_mode == 1">
+                <template v-if="order.ticket_mode == 1 || true">
                     <div class="mt-10px">{{ rule.ticket_explain.title }}</div>
                     <div class="text-12px text-gray-400 mt-6px leading-4">{{ rule.ticket_explain.desc }}</div>
                     <div class="mt-10px">地址</div>
@@ -192,7 +192,7 @@
                 </div>
                 <div class="h-60vh w-100vw">
                     <idcard-list :maxSelect="maxSelectIdcard" v-if="showIdcardPopup" :curSelect="curIdacrds"
-                        :isHeight="'60vh'" ref="isIdcard" @onChange="onChangeIdcards"
+                        :isHeight="'60vh'" ref="isIdcard" @onChange="onChangeIdcards" :cinema_id="cinema_id"
                         @onClose="showIdcardPopup = false"></idcard-list>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                     </span>
                 </div>
                 <div class="h-60vh w-100vw">
-                    <address-list :curSelect="curAddress" v-if="showAddressPopup" :isHeight="'60vh'" ref="isAddress"
+                    <address-list :cinema_id="cinema_id" :curSelect="curAddress" v-if="showAddressPopup" :isHeight="'60vh'" ref="isAddress"
                         @onChange="onChangeAddress"></address-list>
                 </div>
             </div>
@@ -324,6 +324,7 @@ export default {
             pay: {},
             _diyFormData: {},
             isBooking: false,
+            cinema_id: '',
         }
     },
     onUnload() {
@@ -384,6 +385,11 @@ export default {
                 this.timer = setInterval(() => {
                     this.getExpireTime(time);
                 }, 1000);
+                if(this.order.ticket_mode == 1){
+                    this.request('address.defaults', {cinema_id: this.cinema_id}, 'GET').then(res=>{
+                        this.curAddress = res.address;
+                    })
+                }
             }, err => {
                 uni.showModal({
                     title: '错误',

@@ -2,7 +2,7 @@
     <div class="page-box relative">
         <loading />
         <div :style="{ width: '100%', height: `calc(${isHeight || '100vh'} - ${'79px'})` }">
-            <address-list ref="addressListRef" :curSelect="curSelect" :canDelete="false" :canSelect="true"
+            <address-list :cinema_id="cinema_id" ref="addressListRef" :curSelect="curSelect" :canDelete="false" :canSelect="true"
                 @onChange="onChangeAddress"></address-list>
         </div>
         <div class="h-44px flex items-center justify-center px-20px w-full box-border mt-20px bottom-15px">
@@ -25,7 +25,8 @@ export default {
     },
     props: {
         isHeight: String,
-        curSelect: Object
+        curSelect: Object,
+        cinema_id: String
     },
     created() {
         this.waitLogin().then(() => {
@@ -40,7 +41,7 @@ export default {
             this.$emit('onChange', e)
         },
         onAdd() {
-            this.toPath('/order/address/add');
+            this.toPath('/order/address/add?cinema_id=' + this.cinema_id);
         },
     }
 };

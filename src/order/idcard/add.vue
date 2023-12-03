@@ -105,17 +105,19 @@ export default {
             },
             id: '',
             isEdit: false,
+            cinema_id: '',
         }
     },
     onLoad(options) {
         this.isEdit = options.isEdit == 'true' ? true : false;
         this.id = options.id || '';
+        this.cinema_id = options.cinema_id || '';
         this.waitLogin().then(() => {
             this.waitInitConfig().then(() => {
                 this.autonym_explain = this.setting.autonym_explain ? parseRichText(this.setting.autonym_explain) : '';
             });
             if (this.id) {
-                this.request('idcard.detail', { id: this.id }).then(res => {
+                this.request('idcard.show', { idcard_id: this.id, cinema_id: this.cinema_id }).then(res => {
                     const data = res.idcard || {};
                     this.formData = {
                         realname: data.realname,
@@ -152,7 +154,7 @@ export default {
                     }
                     const params = { ...this.formData };
                     if (this.isEdit) {
-                        this.request('idcard.edit', params, 'POST').then(res => {
+                        this.request('idcard.update&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
                             this.myMessage('修改身份信息成功');
                             uni.$emit('refreshIdcardPopupData');
                             setTimeout(() => {
@@ -160,7 +162,7 @@ export default {
                             }, 800)
                         });
                     } else {
-                        this.request('idcard.add', params, 'POST').then(res => {
+                        this.request('idcard.store&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
                             this.myMessage('添加身份信息成功');
                             uni.$emit('refreshIdcardPopupData');
                             setTimeout(() => {
