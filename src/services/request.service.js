@@ -13,10 +13,15 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
     if (_showLoading === false) {
       delete data._showLoading;
     }
-    // data.showToast为ftrue则提示返回的message，其他值都关闭
+    // data.showToast为true则提示返回的message，其他值都关闭
     const _showToast = data._showToast === true ? true : false;
     if (_showToast === true) {
       delete data._showToast;
+    }
+    // data.showErrorToast为false则不提示返回的message，其他值都关打开
+    const _showErrorToast = data._showErrorToast === false ? false : true;
+    if (_showErrorToast === true) {
+      delete data._showErrorToast;
     }
     if (_showLoading) {
       store.commit("SHOW_LOADING", "");
@@ -60,6 +65,10 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
             res.data.code === 500 ||
             res.data.code === 405
           ) {
+            if(!_showErrorToast){
+              reject(res.data);
+              return;
+            }
             uni.showToast({
               title: res.data.message || "请求失败",
               icon: "none",

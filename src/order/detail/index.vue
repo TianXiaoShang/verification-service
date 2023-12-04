@@ -74,11 +74,6 @@
                 <template v-if="order.ticket_mode == 1">
                     <div class="mt-10px flex justify-between items-center">
                         <div class='font-semibold text-gray-333 text-16 '>邮寄票</div>
-                        <div v-if='order.is_express == 0 && order.update_address <= 0 && order.status == 2'
-                            @click="toEditAddress" class="flex items-center">
-                            <u-icon name="edit-pen" color="#999" size="20" class="mr-5px"></u-icon>
-                            <span class="text-12px text-gray-333 ml-2px underline">修改地址</span>
-                        </div>
                     </div>
                     <div class="mt-10px font-normal text-gray-999 text-14">{{ order.province }} {{ order.city }} {{
                         order.area }} {{ order.detail }}</div>
@@ -175,7 +170,7 @@
 
                 <div class="flex justify-between items-center">
                     <div class="h-26px mt-15px w-100px inline-block text-white rounded-13px text-14px flex justify-center items-center px-10px relative"
-                        v-if="!isWx && order.tiktoksop_order_id" style="border: 1px solid #7e5e49; color: #7e5e49;">
+                        v-if="order.tiktoksop_order_id" style="border: 1px solid #7e5e49; color: #7e5e49;">
                         IM客服
                         <button class="z-9 absolute left-0 right-0 top-0 bottom-0 opacity-0" open-type="im" @im="imCallback"
                             data-im-type="order" @error="onimError" data-biz-line="1" :data-im-id="setting.service_order"
@@ -201,7 +196,7 @@
             class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', marginRight: '8px', border: '1px solid #FF545C', color: '#FF545C' }"
-                color="#fff" text="取消订单" :disabled="btnLoading" @click="cancelOrder">
+                color="#fff" text="取消预约" :disabled="btnLoading" @click="cancelOrder">
             </u-button>
             <u-button shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }"
@@ -263,9 +258,6 @@ export default {
             }
             return this.moment(this.order.entrance_time * 1000).format('YYYY/MM/DD HH:mm') + ' - ' + this.moment(this.order.end_time * 1000).format('YYYY/MM/DD HH:mm');
         },
-        toEditAddress() {
-            this.toPath(`/order/address/add?isEdit=true&orderId=${this.order_id}&id=${this.order.address_id}`)
-        },
         checkStatus() {
             return new Promise((resolve, reject) => {
                 this.getData().then(() => {
@@ -280,23 +272,24 @@ export default {
         cancelOrder() {
             uni.showModal({
                 title: '温馨提示',
-                content: '是否要取消该订单',
+                content: '是否要取消该预约订单',
                 success: (result) => {
                     if (result.confirm) {
                         this.btnLoading = true;
                         this.checkStatus().then(() => {
-                            // this.request("order.cancel", {
-                            //     order_id: this.order_id
-                            // }, 'POST').then(res => {
-                            //     uni.showToast({ title: res.message, icon: 'none' });
-                            //     setTimeout(() => {
-                            //         this.getData().then(() => {
-                            //             this.btnLoading = false;
-                            //         })
-                            //     }, 800);
-                            // }, () => {
-                            //     this.btnLoading = false;
-                            // })
+                            this.request("order.cancel", {
+                                order_id: this.order_id,
+                                cinema_id: this.cinema_id
+                            }, 'POST').then(() => {
+                                uni.showToast({ title: '取消预约成功', icon: 'none' });
+                                setTimeout(() => {
+                                    this.getData().then(() => {
+                                        this.btnLoading = false;
+                                    })
+                                }, 800);
+                            }, () => {
+                                this.btnLoading = false;
+                            })
                         })
                     }
                 },
@@ -306,11 +299,11 @@ export default {
         },
         toPay() {
             this.checkStatus().then(() => {
-                this.toPath('/order/pay/index?order_id=' + this.order_id + '&cinema_id=' + this.order.cinema_id)
+                this.toPath('/order/pay/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id)
             })
         },
         toTicket() {
-            this.toPath('/order/ticket/index?order_id=' + this.order_id)
+            this.toPath('/order/ticket/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id)
         },
         getData() {
             return this.request("order.show", {
@@ -328,6 +321,11 @@ export default {
                     }, 1000);
                 } else {
                     this.timer && clearInterval(this.timer)
+                }
+                if (this.order.status === 2 && this.order.is_booking == 0) {
+                    this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id, _showErrorToast: false }, 'POST').then(payRes => {
+                        console.log(payRes, 'payRes')
+                    })
                 }
                 return this.order;
             })

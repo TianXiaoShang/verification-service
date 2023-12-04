@@ -12,7 +12,7 @@
 					<div class="text-12px text-gray-999 my-10px font-normal flex justify-between items-center">
 						<span>{{ item.ext.cinema_title }}</span>
 						<span class="text-red text-14">{{
-							moment(item.ext.entrance_time *
+							moment(item.entrance_time *
 								1000).format('YYYY-MM-DD HH:mm')
 						}}</span>
 					</div>
@@ -24,8 +24,8 @@
 
 					<!-- 状态 -->
 					<div class="absolute right-0 top-0 text-12px px-8px py-5px"
-						:style="{ 'border-radius': '0 10px 0 10px', background: statusBgColor[item.status], color: statusTextColor[item.status] }">
-						{{ statusSign[item.status] }}
+						:style="{ 'border-radius': '0 10px 0 10px', background: statusBgColor[item.ticket_status], color: statusTextColor[item.ticket_status] }">
+						{{ statusSign[item.ticket_status] }}
 					</div>
 				</template>
 				<u-skeleton v-else rows="2" title :avatar="false" loading></u-skeleton>

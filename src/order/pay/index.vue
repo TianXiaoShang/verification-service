@@ -31,12 +31,12 @@
                 <div class="text-gray-333 text-14 font-semibold">{{ order.ext.hall_title }}</div>
                 <div class="mt-10px font-normal text-gray-999 text-14">{{ order.ext.film_title
                 }} |
-                    {{ order.ext.seats.map(el => el.name).join('、') }}
+                    {{ order.seats.map(el => el.name).join('、') }}
                 </div>
             </div>
 
             <!-- 观演人 -->
-            <div class="bg-white mt-10px p-20px rounded-10px" v-if="order.is_autonym == 1 || true">
+            <div class="bg-white mt-10px p-20px rounded-10px" v-if="order.is_autonym == 1">
                 <div class="text-gray-999 flex justify-between items-center text-14px">实名观演人</div>
                 <div class="text-red flex justify-between items-center text-12px mt-10px">
                     仅需选择{{ maxSelectIdcard }}位，入场需携带对应身份证</div>
@@ -59,7 +59,7 @@
             <!-- 配送方式 -->
             <div class="bg-white mt-10px p-20px rounded-10px">
                 <div class="text-gray-999 flex justify-between items-center text-14">配送方式</div>
-                <template v-if="order.ticket_mode == 1 || true">
+                <template v-if="order.ticket_mode == 1">
                     <div class="mt-10px">{{ rule.ticket_explain.title }}</div>
                     <div class="text-12px text-gray-400 mt-6px leading-4">{{ rule.ticket_explain.desc }}</div>
                     <div class="mt-10px">地址</div>
@@ -100,7 +100,7 @@
                         placeholder="请输入姓名" border="surround" class="flex-1" :value="user.name"></u--input>
                 </div>
                 <!-- 手机号 -->
-                <div class="mt-10px flex items-center" v-if="true">
+                <div class="mt-10px flex items-center">
                     <div class="text-14px font-semibold text-gray-333 w-5em">手机号<span class="text-red">*</span></div>
                     <div class="relative h-40px flex-1">
                         <div class="w-full h-full text-14px box-border flex items-center px-20px py-8px rounded"
@@ -110,11 +110,6 @@
                         </div>
                         <my-phone-button v-model="user.phone"></my-phone-button>
                     </div>
-                </div>
-                <div class="mt-10px flex items-center flex-1" v-else>
-                    <div class="text-14px font-semibold text-gray-333 w-5em">手机号<span class="text-red">*</span></div>
-                    <u--input :customStyle="inputCustomStyle" type="number" placeholder="请输入手机号" border="surround"
-                        class="flex-1" v-model="user.phone"></u--input>
                 </div>
 
                 <!-- 自定义表单 - 快递不需要姓名和自定义表单 -->
@@ -232,8 +227,8 @@
                     </span>
                 </div>
                 <div class="h-60vh w-100vw">
-                    <address-list :cinema_id="cinema_id" :curSelect="curAddress" v-if="showAddressPopup" :isHeight="'60vh'" ref="isAddress"
-                        @onChange="onChangeAddress"></address-list>
+                    <address-list :cinema_id="cinema_id" :curSelect="curAddress" v-if="showAddressPopup" :isHeight="'60vh'"
+                        ref="isAddress" @onChange="onChangeAddress"></address-list>
                 </div>
             </div>
         </u-popup>
@@ -255,7 +250,7 @@
                         <u-icon class="mr-4px relative top-2px" size="18px" color="#3eaf7c"
                             name="checkmark-circle"></u-icon>
                         <div>
-                            座位：{{ order.ext ? order.ext.seats.map(el => el.name).join('、') : '' }}
+                            座位：{{ order.seats ? order.seats.map(el => el.name).join('、') : '-' }}
                         </div>
                     </div>
                     <div class="text-gray-333 py-6px flex mb-4px">
@@ -385,8 +380,8 @@ export default {
                 this.timer = setInterval(() => {
                     this.getExpireTime(time);
                 }, 1000);
-                if(this.order.ticket_mode == 1){
-                    this.request('address.defaults', {cinema_id: this.cinema_id}, 'GET').then(res=>{
+                if (this.order.ticket_mode == 1) {
+                    this.request('address.defaults', { cinema_id: this.cinema_id }, 'GET').then(res => {
                         this.curAddress = res.address;
                     })
                 }
@@ -534,15 +529,17 @@ export default {
             })
         },
         confirmVerification() {
-            this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id }, 'POST').then(payRes => {
-                console.log('booking.index', payRes)
-                uni.redirectTo({
-                    url: '/order/detail/index?id=' + this.order_id,
-                });
-                this.paying = false;
-            }, () => {
-                this.paying = false;
-            })
+            uni.redirectTo({
+                url: '/order/detail/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id,
+            });
+            this.paying = false;
+            // this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id }, 'POST').then(payRes => {
+            //     console.log('booking.index', payRes)
+
+            //     this.paying = false;
+            // }, () => {
+            //     this.paying = false;
+            // })
         },
         handlerPayFail() {
             // 调起收银台失败处理逻辑
@@ -556,7 +553,7 @@ export default {
             this.paying = false;
             setTimeout(() => {
                 uni.redirectTo({
-                    url: '/order/detail/index?id=' + this.order_id,
+                    url: '/order/detail/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id,
                 });
             }, 1000);
         },

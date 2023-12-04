@@ -6,7 +6,7 @@
             <!-- 电影 -->
             <div class="p-15px rounded bg-white flex justify-between items-center">
                 <div>
-                    <image class="w-92px h-126px mr-15px rounded overflow-hidden" :src="film.logo" />
+                    <image class="w-92px h-126px mr-15px rounded overflow-hidden" :src="order.film_logo" />
                 </div>
                 <div class="flex-1">
                     <div class="text-16px text-gray-333 font-semibold leading-5">{{ order.film_title }}</div>
@@ -14,7 +14,7 @@
                         moment(order.entrance_time *
                             1000).format('YYYY-MM-DD HH:mm')
                     }}</div>
-                    <div class="text-14px text-gray-999 font-normal mt-10px">{{ myCinema.title }}</div>
+                    <div class="text-14px text-gray-999 font-normal mt-10px">{{ navigation.title }}</div>
                     <div class="text-14px text-gray-999 font-normal mt-10px">{{ order.hall_title }}</div>
                     <div class="text-14px text-white font-normal mt-10px bg-red rounded-14px w-110px py-5px text-center"
                         @click="toDetail">
@@ -42,7 +42,7 @@
                             </div>
                             <div v-if="order.take_ticket_status != 0"
                                 class="absolute flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                <image class="w-55px h-55px" :src="`../static/${statusOrder[order.is_ticket]}.png`" />
+                                <image class="w-55px h-55px" :src="`../static/${statusOrder[order.take_ticket_status]}.png`" />
                                 <div class="mt-8px text-16px font-semibold" style="color: #63c899">
                                     {{ statusOrderText[order.take_ticket_status] }}</div>
                             </div>
@@ -120,8 +120,8 @@
             <!-- 地址 -->
             <div class="rounded flex mt-10px bg-white px-15px py-20px justify-between items-center">
                 <div class="text-14px font-semibold">
-                    <div>{{ myCinema.title }}</div>
-                    <div class="font-normal mt-10px text-gray-999 leading-6">{{ myCinema.address }}</div>
+                    <div>{{ navigation.title }}</div>
+                    <div class="font-normal mt-10px text-gray-999 leading-6">{{ navigation.address }}</div>
                 </div>
                 <div class="flex items-center">
                     <div class="ml-10px min-w-22px w-22px h-22px" @click="onCall">
@@ -184,8 +184,6 @@ export default {
             order_id: '',
             cinema_id: '',
             order: {},
-            film: {},
-            myCinema: {},
             ticket: [],
             global: {},
             richText: '',
@@ -234,25 +232,22 @@ export default {
             this.tabIndex = e.index;
         },
         toDetail() {
-            this.toPath('/order/detail/index?id=' + this.order_id)
+            this.toPath('/order/detail/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id)
         },
         getData() {
             this.request("ticket.show", {
                 order_id: this.order_id,
                 cinema_id: this.cinema_id
             }).then(res => {
-                console.log(res, '=d=d=d=d');
                 this.navigation = res.navigation;
-                if (res.watch_film) {
-                    this.richText = parseRichText(res.watch_film).replace(/width: 1086.8px;/g, "");;
-                }
-                this.myCinema = res.cinema;
                 this.ticket_explain = res.ticket_explain;
                 this.ticket = res.ticket;
                 this.order = res.order;
-                this.film = res.film;
-                this.global = res.global;
+                this.global = res.setting || {};
 
+                if (res.setting.watch_film) {
+                    this.richText = parseRichText(res.setting.watch_film).replace(/width: 1086.8px;/g, "");;
+                }
                 if (this.global.show_ticketscode != 1) {
                     this.tabsDataList.push({ name: '取票' })
                 }
@@ -262,10 +257,10 @@ export default {
             });
         },
         onCall() {
-            sendCall(this.myCinema.tel)
+            sendCall(this.navigation.tel)
         },
         onMap() {
-            openMap(this.myCinema)
+            openMap(this.navigation)
         }
     },
 };
