@@ -24,7 +24,7 @@
                             :class="{ 'text-black': user.mobile, 'text-gray-999': !user.mobile }">
                             {{ user.mobile || '授权手机号' }}
                         </div>
-                        <!-- <my-phone-button v-model="user.mobile"></my-phone-button> -->
+                        <my-phone-button v-model="user.mobile"></my-phone-button>
                     </div>
                 </div>
 
@@ -35,7 +35,6 @@
                     <div class="text-gray-666 text-14px mr-10px">头像</div>
                     <div class="flex-1 relative text-0px h-full flex items-center">
                         <image v-if="user.avatar" class="w-35px h-35px rounded-full overflow-hidden" :src="user.avatar">
-                        </image>
                         </image>
                         <span v-else class="text-14px text-gray-999">点击授权头像昵称</span>
                     </div>

@@ -100,7 +100,7 @@
                         placeholder="请输入姓名" border="surround" class="flex-1" :value="user.name"></u--input>
                 </div>
                 <!-- 手机号 -->
-                <div class="mt-10px flex items-center" v-if="false">
+                <div class="mt-10px flex items-center" v-if="true">
                     <div class="text-14px font-semibold text-gray-333 w-5em">手机号<span class="text-red">*</span></div>
                     <div class="relative h-40px flex-1">
                         <div class="w-full h-full text-14px box-border flex items-center px-20px py-8px rounded"

@@ -58,14 +58,36 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
             res.data.code === 400 ||
             res.data.code === 404 ||
             res.data.code === 500 ||
-            res.data.code === 405 ||
-            res.data.code === 410
+            res.data.code === 405
           ) {
             uni.showToast({
               title: res.data.message || "请求失败",
               icon: "none",
             });
             reject(res.data);
+          }else if(res.data.code === 410){
+            uni.showModal({
+              title: "提示",
+              content: res.data.message,
+              showCancel: false,
+              success: () => {
+                if (!noDirect) {
+                  res.data.url
+                    ? uni.redirectTo({
+                        url: res.data.url,
+                        fail: () => {
+                          uni.switchTab({
+                            url: res.data.url,
+                          });
+                        },
+                      })
+                    : uni.navigateBack();
+                  reject(res.data);
+                } else {
+                  reject(res.data);
+                }
+              },
+            });
           } else if (res.data.code === 0) {
             // 请求成功
             if (_showToast && (res.message || res.data.message)) {
