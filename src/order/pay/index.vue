@@ -503,13 +503,13 @@ export default {
                 if (this.order.pre_create == 1 || this.isBooking) {
                     this.confirmVerification();
                 } else {
-                    // 代表已经走过booking了
-                    this.isBooking = true;
                     tt.booking({
                         orderId: res.orderId,
                         bookInfo: res.bookInfo,
                         scene: 2,
                         success: (res) => {
+                            // 代表已经走过booking了
+                            this.isBooking = true;
                             console.log('booking: success-res', res);
                             if (res.bookId) {
                                 this.confirmVerification();
