@@ -17,7 +17,7 @@
                             <div class="text-12px text-gray-999 my-10px font-normal flex justify-between items-center">
                                 <div style="max-width: calc(100% - 40px);" class="truncate">{{ item.ext.cinema_title }} | {{
                                     item.ext.hall_title }}</div>
-                                <span>{{ orderStatus(item.status) || '-' }}</span>
+                                <span>{{ orderStatus(item.status, item.pre_create) || '-' }}</span>
                             </div>
                             <div class="text-14 font-normal flex justify-between items-center">
                                 <span class="text-gray-333">{{ item.ext.seats.map(el => el.name).join('、') }}</span>

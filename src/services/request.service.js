@@ -106,6 +106,10 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
               });
             }
             resolve(res.data.data);
+          } else if (res.data.code === 666) {
+            uni.reLaunch({
+              url: `/other/update/index?version=${res.data.data.upgrade_versions}&desc=${res.data.data.upgrade_desc}`,
+            });
           } else {
             reject(res.data);
           }

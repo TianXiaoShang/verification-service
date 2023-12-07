@@ -7,8 +7,12 @@
                 order.status == 1 ? '#FF545C' :
                     order.status == 3 ? '#FF9933' :
                         order.status == 4 || order.status == 11 ? '#CCCCCC' : '',
-        }" class="p-30px flex flex-col justify-center items-center text-white">
-            <div class="text-16 font-semibold">订单{{ orderStatus(order.status) }}</div>
+        }" class="p-30px flex flex-col justify-center items-center text-white relative">
+            <div class="text-16 font-semibold">
+                订单{{ orderStatus(order.status, order.pre_create) }}
+                <span v-if="order.status == 1 && order.pre_create == 1"
+                    class="ml-8px absolute right-10px bottom-10px text-12px underline underline-offset-2" @click="getData">刷新状态</span>
+            </div>
             <div class="text-16 font-semibold" v-if="order.status == 1">剩余支付时间 {{ payTime }}</div>
             <div class="text-14px mt-6px" v-if="refund && (order.status == 3 || order.status == 4)">{{ refund.reason }}
             </div>
@@ -322,7 +326,7 @@ export default {
                 } else {
                     this.timer && clearInterval(this.timer)
                 }
-                if (this.order.status === 2 && this.order.is_booking == 0) {
+                if (this.order.status == 1 && this.order.pre_create == 1) {
                     this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id, _showErrorToast: false }, 'POST').then(payRes => {
                         console.log(payRes, 'payRes')
                     })

@@ -188,10 +188,8 @@ export default {
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
-		// options = { account_id: '7222240432728573964', order_id: '1014561279398427295' }; // 排期票档限制
-		// options = { account_id: '7222240432728573964', order_id: '1014990025432667295' }; // 排期票档限制
-		// options = { account_id: '7222240432728573964', order_id: '1014990371976347295' }; // 排期票档限制
-		// options = { account_id: '7222240432728573964', order_id: '1015480658390427295' };
+		// options = { account_id: '7222240432728573964', order_id: '1015687533772827295' };
+		// options = { account_id: '7222240432728573964', order_id: '1015702760322587295' };
 		if (!options.order_id) {
 			this.myMessage('未找到订单id');
 		}

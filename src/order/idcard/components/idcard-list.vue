@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <!-- 切换的时候不能删除 -->
-                            <div class="ml-6px" v-if="canDelete && !canSelect">
+                            <div class="ml-6px">
                                 <u-icon size="22px" name="trash" @click="onDelete(item)" color="#FF545C"></u-icon>
                             </div>
                         </template>

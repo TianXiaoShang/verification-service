@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { login, initCinemaConfig } from '@/util/base';
+import { login } from '@/util/base';
 import store from "@/store";
 
 export default {
@@ -33,15 +33,12 @@ export default {
     methods: {
         reload() {
             this.refreshLoading = true;
+            // 能登陆就说明升级完成
             login().then(() => {
-                initCinemaConfig().then(() => {
-                    this.refreshLoading = false;
-                    uni.reLaunch({
-                        url: `/pages/index/index`,
-                    });
-                }, () => {
-                    this.refreshLoading = false;
-                })
+                this.refreshLoading = false;
+                uni.reLaunch({
+                    url: `/pages/index/index`,
+                });
             }, () => {
                 this.refreshLoading = false;
             })

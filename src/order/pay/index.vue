@@ -59,7 +59,7 @@
             <!-- 配送方式 -->
             <div class="bg-white mt-10px p-20px rounded-10px">
                 <div class="text-gray-999 flex justify-between items-center text-14">配送方式</div>
-                <template v-if="order.ticket_mode == 1">
+                <template v-if="rule.ticket_rule.ticket_mode == 1">
                     <div class="mt-10px">{{ rule.ticket_explain.title }}</div>
                     <div class="text-12px text-gray-400 mt-6px leading-4">{{ rule.ticket_explain.desc }}</div>
                     <div class="mt-10px">地址</div>
@@ -94,7 +94,7 @@
             <div class="bg-white mt-10px p-20px rounded-10px is-input">
                 <!-- 姓名 -->
                 <div class="text-gray-999 flex justify-between items-center text-14">联系人</div>
-                <div class="mt-10px flex items-center flex-1" v-if="order.ticket_mode != '1'">
+                <div class="mt-10px flex items-center flex-1" v-if="rule.ticket_rule.ticket_mode != '1'">
                     <div class="text-14px font-semibold text-gray-333 w-5em">姓名<span class="text-red">*</span></div>
                     <u--input :customStyle="inputCustomStyle" @change="onCustomChange(user, 'name', $event)"
                         placeholder="请输入姓名" border="surround" class="flex-1" :value="user.name"></u--input>
@@ -318,7 +318,6 @@ export default {
             mySetting: {},
             pay: {},
             _diyFormData: {},
-            isBooking: false,
             cinema_id: '',
         }
     },
@@ -380,7 +379,7 @@ export default {
                 this.timer = setInterval(() => {
                     this.getExpireTime(time);
                 }, 1000);
-                if (this.order.ticket_mode == 1) {
+                if (this.rule.ticket_rule.ticket_mode == 1) {
                     this.request('address.defaults', { cinema_id: this.cinema_id }, 'GET').then(res => {
                         this.curAddress = res.address;
                     })
@@ -424,7 +423,7 @@ export default {
                 this.showReadPopup = true;
                 return;
             }
-            if ((!this.curAddress || !this.curAddress.id) && this.order.ticket_mode == 1) {
+            if ((!this.curAddress || !this.curAddress.id) && this.rule.ticket_rule.ticket_mode == 1) {
                 uni.showToast({ title: "请选择票务配送地址", icon: 'none' })
                 return;
             }
@@ -433,7 +432,7 @@ export default {
                 return;
             }
             // 快递模式不需要姓名
-            if (this.order.ticket_mode == '0' && !this.user.name) {
+            if (this.rule.ticket_rule.ticket_mode == '0' && !this.user.name) {
                 uni.showToast({ title: "请填写姓名", icon: 'none' })
                 return;
             }
@@ -484,10 +483,9 @@ export default {
                 address_id: '',
                 diydata: encodeURIComponent(JSON.stringify(this._diyFormData)),
             }
-            if (this.order.ticket_mode == 1) {
+            if (this.rule.ticket_rule.ticket_mode == 1) {
                 params.address_id = this.curAddress.id;
                 params.realname = this.curAddress.realname;
-                // params.mobile = this.curAddress.mobile;
             } else {
                 params.realname = this.user.name;
                 params.mobile = this.user.phone;
@@ -497,35 +495,22 @@ export default {
             }
             uni.setStorageSync('payName', this.user.name);
             this.request('pay.payment' + '&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
-                console.log(res, 'pay.payment')
                 this.showConfirmBookModal = false;
-                // 说明已经走过tt.booking了
-                if (this.order.pre_create == 1 || this.isBooking) {
-                    this.confirmVerification();
-                } else {
-                    tt.booking({
-                        orderId: res.orderId,
-                        bookInfo: res.bookInfo,
-                        scene: 2,
-                        success: (res) => {
-                            // 代表已经走过booking了
-                            this.isBooking = true;
-                            console.log('booking: success-res', res);
-                            if (res.bookId) {
-                                this.confirmVerification();
-                            } else {
-                                this.paying = false;
-                                uni.showToast({ title: res.errMsg || 'booking-fail', icon: 'none' });
-                            }
-                        },
-                        fail: (err) => {
-                            console.log('booking: fail-err', err);
-                            uni.showToast({ title: err.errMsg, icon: 'none' });
-                            this.paying = false;
-                            this.showConfirmBookModal = false;
-                        }
-                    })
-                }
+                tt.booking({
+                    orderId: res.orderId,
+                    bookInfo: res.bookInfo,
+                    scene: 2,
+                    success: (res) => {
+                        console.log('booking: success-res', res);
+                        this.confirmVerification();
+                    },
+                    fail: (err) => {
+                        console.log('booking: fail-err', err);
+                        uni.showToast({ title: err.errMsg, icon: 'none' });
+                        this.paying = false;
+                        this.showConfirmBookModal = false;
+                    }
+                })
             })
         },
         confirmVerification() {
@@ -533,13 +518,6 @@ export default {
                 url: '/order/detail/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id,
             });
             this.paying = false;
-            // this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id }, 'POST').then(payRes => {
-            //     console.log('booking.index', payRes)
-
-            //     this.paying = false;
-            // }, () => {
-            //     this.paying = false;
-            // })
         },
         handlerPayFail() {
             // 调起收银台失败处理逻辑
