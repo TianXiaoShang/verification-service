@@ -20,7 +20,7 @@ const request = function (path, data = {}, method = "GET", noDirect = false) {
     }
     // data.showErrorToast为false则不提示返回的message，其他值都关打开
     const _showErrorToast = data._showErrorToast === false ? false : true;
-    if (_showErrorToast === true) {
+    if (_showErrorToast === false) {
       delete data._showErrorToast;
     }
     if (_showLoading) {

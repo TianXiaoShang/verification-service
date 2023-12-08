@@ -188,14 +188,21 @@ export default {
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
-		// options = { account_id: '7222240432728573964', order_id: '1015687533772827295' };
 		// options = { account_id: '7222240432728573964', order_id: '1015702760322587295' };
 		if (!options.order_id) {
-			this.myMessage('未找到订单id');
+			uni.showModal({
+              title: "提示",
+              content: '未找到订单',
+              showCancel: false,
+              success: () => {
+                this.goHome();
+              },
+            });
+			return;
 		}
 		this.order_id = options.order_id;
 		this.waitLogin().then(() => {
-			this.request('certificate.index', { order_id: options.order_id, account_id: options.account_id }, 'POST').then(res => {
+			this.request('certificate.index', { order_id: options.order_id, account_id: options.account_id, _showErrorToast: false }, 'POST').then(res => {
 				this.orderData = res;
 				this.seatNum = res.quantity;
 				this.request('row.index', { cinema_id: res.cinema_id, film_id: res.film_id }).then(res => {
@@ -211,8 +218,17 @@ export default {
 					this.curDate = this.dateList[0];
 					this.isLoad = true;
 				})
-			})
-		})
+			}, (err) => {
+				uni.showModal({
+					title: "提示",
+					content: err.message || '未找到订单',
+					showCancel: false,
+					success: () => {
+						this.goHome();
+					},
+				});
+			});
+		});
 	},
 	watch: {
 		curDate: {

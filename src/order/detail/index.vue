@@ -196,7 +196,7 @@
         </div>
 
         <!-- 底部按钮 -->
-        <div v-if="order.status == 1"
+        <div v-if="order.status == 1 && order.pre_create == 0"
             class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', marginRight: '8px', border: '1px solid #FF545C', color: '#FF545C' }"
@@ -265,7 +265,7 @@ export default {
         checkStatus() {
             return new Promise((resolve, reject) => {
                 this.getData().then(() => {
-                    if (this.order.status == 1) {
+                    if (this.order.status == 1 && this.order.pre_create == 0) {
                         resolve();
                     } else {
                         reject();
@@ -317,7 +317,7 @@ export default {
                 this.order = res.order;
                 this.refund = res.refund;
                 const time = res.order.expire_time;
-                if (time && this.order.status == 1) {
+                if (time && this.order.status == 1 && this.order.pre_create == 0) {
                     this.getExpireTime(time);
                     this.timer && clearInterval(this.timer)
                     this.timer = setInterval(() => {

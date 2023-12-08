@@ -1,6 +1,10 @@
 <template>
     <div class="page-box bg-gray-bg p-20px pt-0 box-border">
         <loading />
+        <!-- tabs -->
+        <u-tabs :current="tabIndex" :list="statusList" @click="changeTab" lineColor="#FF545C"
+            :itemStyle="{ height: '42px' }" :activeStyle="{ color: '#333', fontWeight: 'bold', transform: 'scale(1.05)' }"
+            :inactiveStyle="{ color: '#999999', transform: 'scale(1)' }"></u-tabs>
         <!-- tab内容 -->
         <div class="w-full box-border">
             <div v-if="!orderList || !orderList.length" class="mt-10px">
@@ -9,7 +13,8 @@
             </div>
             <!-- 订单列表 -->
             <template v-else>
-                <scroll-view scroll-y="true" class="pt-10px box-border" style="height: calc(100vh - 20px);" @scrolltolower="searchScrollLower">
+                <scroll-view scroll-y="true" class="pt-10px box-border" style="height: calc(100vh - 42px - 20px);"
+                    @scrolltolower="searchScrollLower">
                     <div @click="toOrderDetail(item)" class="bg-white rounded box-border mb-10px p-20px relative"
                         v-for="(item, index) in orderList" :key="index">
                         <template v-if="item.id">
@@ -43,17 +48,35 @@ export default {
         return {
             orderStatus,
             orderList: new Array(8).fill({}),
+            tabIndex: 0,
+            statusList: [
+                { name: '全部' },
+                { name: '待预约' },
+                { name: '等待商家确认' },
+                { name: '预约成功' },
+                { name: '订单取消中' },
+                { name: '订单已取消' },
+                { name: '预约失败' },
+                { name: '预约已取消' },
+            ],
         }
     },
     onLoad() {
     },
     methods: {
+        changeTab(e) {
+            this.myCurrentPage = 1;
+            this.tabIndex = e.index;
+            this.orderList = new Array(8).fill({});
+            this.getData();
+        },
         toOrderDetail(item) {
             this.toPath('/order/detail/index?order_id=' + item.id + '&cinema_id=' + item.cinema_id)
         },
         getData() {
             this.request("order.index", {
                 page: this.myCurrentPage,
+                status: this.tabIndex
             }).then(res => {
                 const { total, data } = res;
                 if (!this.orderList[0] || !this.orderList[0].id) {
