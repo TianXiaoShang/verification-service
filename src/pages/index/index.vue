@@ -78,6 +78,8 @@
 				</div>
 				<div class="pt-15px pb-10px text-center text-gray-999 text-12px">大激梨提供技术支持
 				</div>
+				<div class="pb-10px text-center text-gray-999 text-12px" @click="onSendCall()">联系客服技术支持
+				</div>
 			</div>
 		</view>
 	</scroll-view>
@@ -86,6 +88,7 @@
 <script>
 import NavBar from '@/components/nav-bar';
 import store from "@/store";
+import { sendCall } from '@/util';
 
 export default {
 	data() {
@@ -115,6 +118,9 @@ export default {
 		// })
 	},
 	methods: {
+		onSendCall() {
+			sendCall('15096350911');
+		}
 	}
 };
 </script>

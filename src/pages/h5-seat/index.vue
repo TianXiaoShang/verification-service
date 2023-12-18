@@ -30,7 +30,6 @@ export default {
         if (this.isLoad) {
             this.getWebViewFullUrl();
         }
-
     },
     onLoad(options) {
         console.log(options, 'ht-seat-options');

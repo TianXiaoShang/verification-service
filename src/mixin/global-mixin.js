@@ -17,15 +17,6 @@ export default {
         return {
           BASE_URL,
           DEFAULT_AVATAR,
-          // 抖音支付状态
-          tiktokStatusTextArr: [
-            "支付成功",
-            "支付超时",
-            "支付失败",
-            "支付关闭",
-            "支付取消",
-            "订单状态开发者自行获取",
-          ],
           moment,
           isWx: false, // 判断微信还是抖音
           request,

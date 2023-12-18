@@ -442,7 +442,7 @@ export default {
                 return;
             }
             if (this.paying) {
-                uni.showToast({ title: "支付操作频繁，请稍后重试", icon: 'none' })
+                uni.showToast({ title: "操作频繁，请稍后重试", icon: 'none' })
                 return;
             }
             if (this.diyform.diyform_set && this.diyform.fields && this.diyform.fields.length) {
@@ -518,11 +518,6 @@ export default {
                 url: '/order/detail/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id,
             });
             this.paying = false;
-        },
-        handlerPayFail() {
-            // 调起收银台失败处理逻辑
-            this.paying = false;
-            uni.showToast({ title: '支付失败', icon: 'none' })
         },
         handlerPaySuccess() {
             this.toOrderDetail();

@@ -124,11 +124,21 @@
                     <div class="font-normal mt-10px text-gray-999 leading-6">{{ navigation.address }}</div>
                 </div>
                 <div class="flex items-center">
-                    <div class="ml-10px min-w-22px w-22px h-22px" @click="onCall">
-                        <image class="w-22px h-22px" src="@/static/common/call.png" />
-                    </div>
                     <div class="ml-5px min-w-22px w-22px h-22px" @click="onMap">
                         <image class="w-full h-full" src="../static/go@2x.png" />
+                    </div>
+                </div>
+            </div>
+            <!-- 电话 -->
+            <div class="rounded flex mt-10px bg-white px-15px py-20px justify-between items-center" v-if="phoneList.length"
+                @click="showPhone = true">
+                <div class="text-14px font-semibold">
+                    电话客服
+                    <div class="font-normal mt-10px text-gray-999 leading-6">点击拨打商户客服电话为您处理售后问题</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="ml-10px min-w-22px w-22px h-22px">
+                        <image class="w-22px h-22px" src="../static/call.png" />
                     </div>
                 </div>
             </div>
@@ -171,6 +181,31 @@
                 <u-skeleton rows="8" title :avatar="false" loading></u-skeleton>
             </div>
         </div>
+
+        <!-- 电话列表 -->
+        <u-popup :show="showPhone" :round="20" @cloe="showPhone = false">
+            <div class="bg-gray-50 w-full p-15px box-border" style="border-radius: 20px 20px 0 0 ;">
+                <div class="px-10px mb-10px flex justify-between items-center">
+                    <div class="text-16px">联系商家</div>
+                    <div class="rounded-full bg-gray-eee p-5px" @click="showPhone = false">
+                        <u-icon name="close" size="14px" color="#333"></u-icon>
+                    </div>
+                </div>
+                <div class="max-h-40vh overflow-y-auto w-full box-border">
+                    <div v-for="(item, index) in phoneList" :key="index"
+                        class="w-full px-15px py-8px rounded-10px flex items-center mb-8px justify-between box-border bg-white">
+                        <div class="text-gray-333 text-18px">{{ item }}</div>
+                        <div class="bg-white w-40px h-40px flex justify-center items-center rounded-full"
+                            @click="onSendCall(item)" style="border: 1px solid #eee;">
+                            <u-icon name="phone-fill" size="16px" color="#666666"></u-icon>
+                        </div>
+                    </div>
+                    <div class="text-gray-666 text-14px flex justify-center items-center" v-if="!phoneList.length">
+                        无可用客服热线
+                    </div>
+                </div>
+            </div>
+        </u-popup>
     </div>
 </template>
 
@@ -196,7 +231,9 @@ export default {
             statusSign: ['', '', 'yiqupiao', 'yijieshu', 'yituikuan'],
             statusSignText: ['', '', '已取票', '已结束', '已退款'],
             ticket_explain: null,
-            navigation: {}
+            navigation: {},
+            showPhone: false,
+            phoneList: [],
         }
     },
     components: { tkiQrcode },
@@ -244,20 +281,21 @@ export default {
                 this.ticket = res.ticket;
                 this.order = res.order;
                 this.global = res.setting || {};
-
+                this.phoneList = res.setting.consumer_hotline || [];
                 if (res.setting.watch_film) {
-                    this.richText = parseRichText(res.setting.watch_film).replace(/width: 1086.8px;/g, "");;
-                }
+                    this.richText = parseRichText(res.setting.watch_film).replace(/width: 1086.8px;/g, "");
+                };
                 if (this.global.show_ticketscode != 1) {
                     this.tabsDataList.push({ name: '取票' })
-                }
+                };
                 if (this.global.show_entrycode != 1 && this.order.ticket_mode != 1) {
                     this.tabsDataList.push({ name: '扫码入场' })
-                }
+                };
             });
         },
-        onCall() {
-            sendCall(this.navigation.tel)
+        onSendCall(tel) {
+            this.showPhone = false;
+            sendCall(tel);
         },
         onMap() {
             openMap(this.navigation)

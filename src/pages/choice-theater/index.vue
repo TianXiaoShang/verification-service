@@ -188,7 +188,7 @@ export default {
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
-		// options = { account_id: '7222240432728573964', order_id: '1015702760322587295' };
+		// options = { account_id: '7268993733603887156', order_id: '1016011949996507295' };
 		if (!options.order_id) {
 			uni.showModal({
               title: "提示",

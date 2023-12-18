@@ -11,9 +11,10 @@
             <div class="text-16 font-semibold">
                 订单{{ orderStatus(order.status, order.pre_create) }}
                 <span v-if="order.status == 1 && order.pre_create == 1"
-                    class="ml-8px absolute right-10px bottom-10px text-12px underline underline-offset-2" @click="getData">刷新状态</span>
+                    class="ml-8px absolute right-10px bottom-10px text-12px underline underline-offset-2"
+                    @click="getData">刷新状态</span>
             </div>
-            <div class="text-16 font-semibold" v-if="order.status == 1">剩余支付时间 {{ payTime }}</div>
+            <div class="text-16 font-semibold" v-if="order.expire_time && order.status == 1">{{ payTime }}</div>
             <div class="text-14px mt-6px" v-if="refund && (order.status == 3 || order.status == 4)">{{ refund.reason }}
             </div>
             <div class="text-14px mt-6px" v-if="refund && refund.type == 2 && order.status == 3">
@@ -104,7 +105,10 @@
                 v-if="order.status == 2" @click="toTicket" style="background: #2ACB95;">
                 <u-icon name="grid" color="#fff" size="26" class="mr-5px"></u-icon>查看门票信息
             </div>
-
+            <div class="p-20px p-20px mb-20px rounded-10px flex justify-center text-white items-center"
+                v-if="phoneList.length" @click="showPhone = true" style="background: #4396f6;">
+                <u-icon name="server-fill" color="#fff" size="26" class="mr-5px"></u-icon>电话联系商户
+            </div>
             <div class="bg-white p-20px pt-10px rounded-10px">
                 <!-- 订单共计 -->
                 <div class="flex justify-between py-15px items-center text-gray-33 text-14"
@@ -129,17 +133,6 @@
                     <span class="font-semibold">优惠券</span>
                     <span class="font-normal">{{ order.coupon_price }}</span>
                 </div>
-                <div v-if="order.is_level == 1" class="flex justify-between py-15px items-center text-gray-33 text-14"
-                    style="border-bottom: 1px solid #eee;">
-                    <span class="font-semibold">会员折扣</span>
-                    <span class="font-normal">{{ order.level_discounts }}折</span>
-                </div>
-                <div v-if="order.part_discount && order.part_discount !== '0.00' && order.part_discount !== '0'"
-                    class="flex justify-between py-15px items-center text-gray-33 text-14"
-                    style="border-bottom: 1px solid #eee;">
-                    <span class="font-semibold">套票折扣</span>
-                    <span class="font-normal">-{{ order.part_discount }}元</span>
-                </div>
                 <div v-if="order.is_pay > 0" class="flex justify-between py-15px items-center text-gray-33 text-14"
                     style="border-bottom: 1px solid #eee;">
                     <span class="font-semibold">实际支付</span>
@@ -150,12 +143,6 @@
                     <span class="font-semibold">支付方式</span>
                     <span class="font-normal">{{ order.pay_type_str || '-' }}</span>
                 </div>
-                <!-- 邮寄票类型 -->
-                <!-- <div v-if="ticket_explain" class="flex justify-between py-15px items-center text-gray-33 text-14"
-                    style="border-bottom: 1px solid #eee;">
-                    <span class="font-semibold">{{ ticket_explain.title }}</span>
-                    <span class="font-normal">{{ ticket_explain.desc || '-' }}</span>
-                </div> -->
                 <!-- 订单信息 -->
                 <div class="font-semibold pt-15px text-gray-333 text-14px" style="border-top: 1px solid #eee;">订单信息
                 </div>
@@ -165,10 +152,6 @@
                 </div>
                 <div class="mt-10px font-normal text-gray-999 text-14px">创建时间：{{
                     moment(order.create_time *
-                        1000).format('YYYY-MM-DD HH:mm:ss')
-                }}</div>
-                <div class="mt-10px font-normal text-gray-999 text-14px" v-if="order.status == 2">支付时间：{{
-                    moment(order.pay_time *
                         1000).format('YYYY-MM-DD HH:mm:ss')
                 }}</div>
 
@@ -207,10 +190,36 @@
                 color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="去预约" @click="toPay">
             </u-button>
         </div>
+
+        <!-- 电话列表 -->
+        <u-popup :show="showPhone" :round="20" @cloe="showPhone = false">
+            <div class="bg-gray-50 w-full p-15px box-border" style="border-radius: 20px 20px 0 0 ;">
+                <div class="px-10px mb-10px flex justify-between items-center">
+                    <div class="text-16px">联系商家</div>
+                    <div class="rounded-full bg-gray-eee p-5px" @click="showPhone = false">
+                        <u-icon name="close" size="14px" color="#333"></u-icon>
+                    </div>
+                </div>
+                <div class="max-h-40vh overflow-y-auto w-full box-border">
+                    <div v-for="(item, index) in phoneList" :key="index"
+                        class="w-full px-15px py-8px rounded-10px flex items-center mb-8px justify-between box-border bg-white">
+                        <div class="text-gray-333 text-18px">{{ item }}</div>
+                        <div class="bg-white w-40px h-40px flex justify-center items-center rounded-full"
+                            @click="onSendCall(item)" style="border: 1px solid #eee;">
+                            <u-icon name="phone-fill" size="16px" color="#666666"></u-icon>
+                        </div>
+                    </div>
+                    <div class="text-gray-666 text-14px flex justify-center items-center" v-if="!phoneList.length">
+                        无可用客服热线
+                    </div>
+                </div>
+            </div>
+        </u-popup>
     </div>
 </template>
 
 <script>
+import { sendCall } from '@/util';
 import { orderStatus } from '../util';
 import moment from 'moment';
 export default {
@@ -230,6 +239,8 @@ export default {
             loadFlag: false,
             member_refund: 0, // 1 可退款  0 不可退款
             tiktok_refund: 0,  // 抖音   1 可退款  0 不可退款
+            showPhone: false,
+            phoneList: [],
         }
     },
     onLoad(options) {
@@ -253,6 +264,10 @@ export default {
         }
     },
     methods: {
+        onSendCall(tel) {
+            this.showPhone = false;
+            sendCall(tel);
+        },
         getDateTime() {
             const start = this.moment(this.order.entrance_time * 1000).format('YYYY-MM-DD');
             const end = this.moment(this.order.end_time * 1000).format('YYYY-MM-DD');
@@ -314,10 +329,11 @@ export default {
                 order_id: this.order_id,
                 cinema_id: this.cinema_id
             }).then(res => {
+                this.phoneList = res.consumer_hotline || []
                 this.order = res.order;
                 this.refund = res.refund;
                 const time = res.order.expire_time;
-                if (time && this.order.status == 1 && this.order.pre_create == 0) {
+                if (time && this.order.status == 1) {
                     this.getExpireTime(time);
                     this.timer && clearInterval(this.timer)
                     this.timer = setInterval(() => {
