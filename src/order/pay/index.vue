@@ -20,17 +20,28 @@
             </div>
             <!-- 订单信息 -->
             <div class="bg-white p-20px rounded-10px mt-10px">
-                <div class="font-semibold text-gray-333 text-16">{{ order.order_no }}</div>
-                <div class="mt-10px font-normal text-gray-999 text-14 flex items-center">
+                <!-- <div class="font-semibold text-gray-333 text-16">{{ order.order_no }}</div> -->
+                <div class="flex items-center mt-10px font-normal text-gray-999 text-14 flex items-center">
+                    <u-icon size="18px" class="mr-4px" color="#aaa" name="clock"></u-icon>
                     <span>
                         {{ moment(order.create_time * 1000).format('YYYY-MM-DD HH:mm') }}
                     </span>
                 </div>
-                <div class="mt-10px font-normal text-gray-999 text-14">{{ navigation.address }}</div>
+                <div class="flex items-center mt-10px font-normal text-gray-999 text-14">
+                    <u-icon size="18px" class="mr-4px" color="#aaa" name="map"></u-icon>
+                    {{ navigation.address }}
+                </div>
                 <u-divider></u-divider>
-                <div class="text-gray-333 text-14 font-semibold">{{ order.ext.hall_title }}</div>
-                <div class="mt-10px font-normal text-gray-999 text-14">{{ order.ext.film_title
-                }} |
+                <div class="flex items-center text-gray-333 text-14 font-semibold">
+                    <u-icon size="18px" class="mr-4px" color="#aaa" name="home"></u-icon>
+                    {{ order.ext.hall_title }}
+                </div>
+                <div class="flex items-center mt-10px font-normal text-gray-999 text-14">
+                    <u-icon size="18px" class="mr-4px" color="#aaa" name="coupon"></u-icon>
+                    {{ order.ext.film_title }}
+                </div>
+                <div class="flex items-center mt-10px font-normal text-gray-999 text-14">
+                    <u-icon size="18px" class="mr-4px" color="#aaa" name="account"></u-icon>
                     {{ order.seats.map(el => el.name).join('、') }}
                 </div>
             </div>
