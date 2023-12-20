@@ -107,8 +107,19 @@
                 <div class="text-gray-999 flex justify-between items-center text-14">联系人</div>
                 <div class="mt-10px flex items-center flex-1" v-if="rule.ticket_rule.ticket_mode != '1'">
                     <div class="text-14px font-semibold text-gray-333 w-5em">姓名<span class="text-red">*</span></div>
-                    <u--input :customStyle="inputCustomStyle" @change="onCustomChange(user, 'name', $event)"
-                        placeholder="请输入姓名" border="surround" class="flex-1" :value="user.name"></u--input>
+                    <!-- <div class="flex-1 relative">
+                        <u--input :customStyle="inputCustomStyle" @change="onCustomChange(user, 'name', $event)"
+                            placeholder="请输入姓名" border="surround" class="flex-1" :value="user.name"></u--input>
+                    </div> -->
+                    <div class="relative h-40px flex-1">
+                        <div class="w-full h-full text-14px box-border flex items-center px-20px py-8px rounded"
+                            :style="{ background: '#F2F3F5' }"
+                            :class="{ 'text-black': user.name, 'text-gray-999': !user.name }">
+                            {{ user.name || '从抖音生活服务平台导入' }}
+                        </div>
+                        <reservation class="w-full h-full opacity-0 absolute left-0 right-0 top-0 bottom-0" :maxCount="1"
+                            :zIndex="9999" @getreservationlist="getReservationList" @error="onReservationError" />
+                    </div>
                 </div>
                 <!-- 手机号 -->
                 <div class="mt-10px flex items-center">
@@ -117,9 +128,10 @@
                         <div class="w-full h-full text-14px box-border flex items-center px-20px py-8px rounded"
                             :style="{ background: '#F2F3F5' }"
                             :class="{ 'text-black': user.phone, 'text-gray-999': !user.phone }">
-                            {{ user.phone || '点击获取手机号' }}
+                            {{ user.phone || '从抖音生活服务平台导入' }}
                         </div>
-                        <my-phone-button v-model="user.phone"></my-phone-button>
+                        <reservation class="w-full h-full opacity-0 absolute left-0 right-0 top-0 bottom-0" :maxCount="1"
+                            :zIndex="9999" @getreservationlist="getReservationList" @error="onReservationError" />
                     </div>
                 </div>
 
@@ -341,9 +353,23 @@ export default {
         this.waitLogin().then(() => {
             this.getData();
         });
-        this.user.name = uni.getStorageSync('payName') || '';
+        // this.user.name = uni.getStorageSync('payName') || '';
     },
     methods: {
+        getReservationList(res) {
+            const data = res.detail.reservationList[0] || {};
+            this.user.name = data.name;
+            this.user.phone = data.phoneNumber;
+            console.log(res, data, 'res-res-res-res');
+        },
+        onReservationError(err) {
+            console.log(err, 'err-err-err-err');
+            if (err.detail.errNo === 159303) {
+                this.myMessage('取消授权');
+                return;
+            }
+            this.myMessage('获取生活服务用户信息失败:' + err.detail.errMsg);
+        },
         onShowIdcardPopup() {
             this.curIdacrds = [...this.curIdacrds]
             this.showIdcardPopup = true;

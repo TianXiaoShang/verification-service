@@ -70,7 +70,12 @@
         {
           "path": "pay/index",
           "style": {
-            "navigationBarTitleText": "订单预约"
+            "navigationBarTitleText": "订单预约",
+            "mp-toutiao": {
+              "usingComponents": {
+                "reservation": "ext://industry/reservation"
+              }
+            }
           }
         },
         {
