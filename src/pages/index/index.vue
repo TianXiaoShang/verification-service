@@ -110,12 +110,11 @@ export default {
 		store.commit("SET_CAN_FETCH_TICKET", true);
 	},
 	onLoad(options) {
-		console.log(options, 'options')
+		console.log(options, 'options');
 		// // 确保已经登录完成，再去检查是否有授权
-		// this.waitLogin().then(() => {
-		// 	// 检查授权用户信息，在没有授权的情况下引导授权，但不阻塞购买业务
-		// 	this.checkAuth().then(() => { }, () => { });
-		// })
+		this.waitLogin().then(() => {
+			console.log(this.userInfo, '----');
+		})
 	},
 	methods: {
 		onSendCall() {

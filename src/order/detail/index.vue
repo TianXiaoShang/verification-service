@@ -2,7 +2,7 @@
     <div class="page-box bg-gray-bg box-border">
         <loading />
         <!-- 倒计时区域 -->
-        <div v-if="order.id" :style="{
+        <div v-if="order.id && !loadBooking" :style="{
             background: order.status == 2 ? '#2ACB95' :
                 order.status == 1 ? '#FF545C' :
                     order.status == 3 ? '#FF9933' :
@@ -29,7 +29,7 @@
             'pb-90px': order.status == 1,
             'pb-90px': is_comment == 1 && !isWx && order.is_evaluate == 0,
             'pb-20px': order.status != 1 && !(is_comment == 1 && !isWx && order.is_evaluate == 0)
-        }" v-if="order.order_no">
+        }" v-if="order.order_no && !loadBooking">
             <!-- 待支付-订单信息 -->
             <div class="bg-white p-20px mb-20px rounded-10px" v-if="order.status == 1">
                 <div class="font-semibold text-gray-333 text-16">{{ order.order_no }}</div>
@@ -241,6 +241,8 @@ export default {
             tiktok_refund: 0,  // 抖音   1 可退款  0 不可退款
             showPhone: false,
             phoneList: [],
+            first: false,
+            loadBooking: true,
         }
     },
     onLoad(options) {
@@ -344,11 +346,20 @@ export default {
                 }
                 if (this.order.status == 1 && this.order.pre_create == 1) {
                     this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id, _showErrorToast: false }, 'POST').then(payRes => {
-                        console.log(payRes, 'payRes')
-                    })
+                        console.log(payRes, 'payRes');
+                        if (!this.first) {
+                            this.first = true;
+                            this.getData();
+                        } else {
+                            // 请求一次后还未成功则报错
+                            this.myMessage('出错啦，请联系商家处理～');
+                        };
+                    });
+                } else {
+                    this.loadBooking = false;
                 }
                 return this.order;
-            })
+            });
         },
         getExpireTime(time) {
             const t = (moment(time * 1000).diff(moment())) / 1000;

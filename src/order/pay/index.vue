@@ -308,6 +308,7 @@
 
 <script>
 import { parseRichText } from '@/util';
+import store from "@/store";
 import moment from 'moment';
 import AddressList from '@/order/address-comp/list.vue';
 import IdcardList from '@/order/idcard-comp/list.vue';
@@ -533,15 +534,18 @@ export default {
             uni.setStorageSync('payName', this.user.name);
             this.request('pay.payment' + '&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
                 this.showConfirmBookModal = false;
+                store.commit("SHOW_LOADING", "");
                 tt.booking({
                     orderId: res.orderId,
                     bookInfo: res.bookInfo,
                     scene: 2,
                     success: (res) => {
                         console.log('booking: success-res', res);
+                        store.commit("HIDE_LOADING");
                         this.confirmVerification();
                     },
                     fail: (err) => {
+                        store.commit("HIDE_LOADING");
                         console.log('booking: fail-err', err);
                         uni.showToast({ title: err.errMsg, icon: 'none' });
                         this.paying = false;
