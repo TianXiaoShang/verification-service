@@ -52,6 +52,12 @@
 										class="w-12vw h-12vw rounded-full" />
 									<span class="mt-5px text-12 text-gray-333">我的订单</span>
 								</div>
+								<div class="scroll-list-item-plus flex flex-col justify-center items-center"
+									v-if="userInfo.is_staff" @click="toPath('/staff/store/index')">
+									<image mode="aspectFit" src="@/static/self/yuangongrukou.png"
+										class="w-12vw h-12vw rounded-full" />
+									<span class="mt-5px text-12 text-gray-333">员工入口</span>
+								</div>
 							</div>
 						</u-scroll-list>
 					</div>

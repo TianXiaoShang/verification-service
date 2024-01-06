@@ -132,6 +132,69 @@
           }
         }
       ]
+    },
+    {
+      "root": "staff",
+      "pages": [
+        {
+          "path": "store/index",
+          "style": {
+            "navigationBarTitleText": "选择影院"
+          }
+        },
+        {
+          "path": "home/index",
+          "style": {
+            "navigationBarTitleText": "员工首页",
+            "mp-weixin": {
+              "navigationStyle": "custom",
+              "backgroundColor": "#F9F9F9"
+            },
+            "mp-toutiao": {
+              "navigationStyle": "custom",
+              "backgroundColor": "#F9F9F9"
+            }
+          }
+        },
+        {
+          "path": "session/index",
+          "style": {
+            "navigationBarTitleText": "场次"
+          }
+        },
+        {
+          "path": "check/index",
+          "style": {
+            "navigationBarTitleText": "门票核销",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "select-session/index",
+          "style": {
+            "navigationBarTitleText": "选择场次"
+          }
+        },
+        {
+          "path": "multiple-check/index",
+          "style": {
+            "navigationBarTitleText": "门票核销",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "record/index",
+          "style": {
+            "navigationBarTitleText": "核销记录"
+          }
+        },
+        {
+          "path": "data/index",
+          "style": {
+            "navigationBarTitleText": "数据统计"
+          }
+        }
+      ]
     }
   ],
   "globalStyle": {
