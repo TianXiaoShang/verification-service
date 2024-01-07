@@ -28,7 +28,7 @@
                                     </div>
                                     <div>{{ item.ext.type_title || '-' }}</div>
                                 </div>
-                                <div @click="toPath('/staff/check/index?id=' + item.id + '&cinema_id=' + options.cinema_id + '&staff_id=' + options.staff_id)"
+                                <div @click="toPath('/staff/check/index?id=' + item.id + '&cinema_id=' + options.cinema_id + '&staff_id=' + options.staff_id + '&fromRecord=true')"
                                     class="w-70px text-12px min-w-70px h-26px flex text-white justify-center items-center rounded-15px bg-red">
                                     查看详情</div>
                             </div>

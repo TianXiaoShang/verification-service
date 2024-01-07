@@ -35,6 +35,7 @@
                 <!-- 功能卡片 -->
                 <div class="bar-wrap">
                     <div @click="toPath('/staff/session/index' + '?cinema_id=' + options.cinema_id + '&staff_id=' + options.staff_id)"
+                        v-if="info.type === '0'"
                         class="h-56px mt-10px px-20px box-border py-18px flex items-center justify-between bg-white rounded">
                         <div class="flex items-center">
                             <image mode="aspectFit" src="../static/tikets-16.png" class="w-16px h-16px" />
@@ -75,8 +76,8 @@
             <div class="p-30px" v-if="showCode">
                 <div class="p-10px text-gray-333 font-semibold flex justify-center mb-10px">员工入场码</div>
                 <!-- 组件地址 https://ext.dcloud.net.cn/plugin?id=39 -->
-                <tki-qrcode ref="qrcode" :val="info.qr_code" :size="200" unit="px" :background="'#ffffff'" :foreground="'#000000'"
-                    :onval="true" :loadMake="true" :showLoading="true" />
+                <tki-qrcode ref="qrcode" :val="info.qr_code" :size="200" unit="px" :background="'#ffffff'"
+                    :foreground="'#000000'" :onval="true" :loadMake="true" :showLoading="true" />
             </div>
         </u-popup>
     </div>
@@ -101,6 +102,7 @@ export default {
             this.waitLogin().then(() => {
                 this.request("staff.home.index", { cinema_id: options.cinema_id, staff_id: options.staff_id }).then(res => {
                     this.info = res.staff;
+                    uni.setStorageSync('StaffUserInfo', JSON.stringify(this.info));
                 })
             })
         } else {

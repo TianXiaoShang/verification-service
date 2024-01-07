@@ -84,7 +84,8 @@
                                                 <div v-if="item.realname && tabIndex !== 2"
                                                     style="width: calc(100vw - 220px);text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"
                                                     class="font-normal text-12px text-gray-600 mt-5px">
-                                                    {{ item.realname || '-' }}: {{ item.mobile || '-' }}
+                                                    {{ item.realname || '-' }}{{ isStaffUser ? '' : ':' }} {{ isStaffUser ? ''
+                                                        : (item.mobile || '-') }}
                                                 </div>
                                             </div>
                                         </div>
@@ -101,7 +102,7 @@
                                             </div>
                                         </div>
                                         <!-- 未售 并且 只能是未开始或者检票中， 才会展示 锁座/解锁 按钮 -->
-                                        <div v-if="(tabIndex == 2 && (info.state == 1 || info.state == 2))"
+                                        <div v-if="(tabIndex == 2 && (info.state == 1 || info.state == 2) && !isStaffUser)"
                                             @click="changeLock(item)"
                                             class="w-52px text-white text-14px h-24px flex justify-center items-center rounded-15px"
                                             :style="{ background: item.status == 1 ? '#FF545C' : '#2ACB95' }">
@@ -156,7 +157,8 @@
             <div class="w-full">
                 <div class="text-16px text-gray-333 py-6px" style="border-bottom: 1px solid #eee;">
                     <div class="flex items-center">
-                        <span class="font-semibold">{{ affrimData.ticket.seat_name }}</span>
+                        <span class="font-semibold" v-if="affrimData.tickets && affrimData.tickets[0]">{{ affrimData.tickets[0].seat_name }}</span>
+                        <span class="font-semibold" v-else>{{ affrimData.ticket.seat_name }}</span>
                         <span class="text-14px text-gray-666 ml-5px">
                             （{{ affrimData.realname }}: {{ affrimData.mobile }}）
                         </span>
@@ -244,11 +246,20 @@ export default {
             affrimData: {},
             showTicketConfirmModal: false,
             options: {},
+            staffUserInfo: {},
+            isStaffUser: false,
         }
     },
     onLoad(options) {
         this.id = options.id;
         this.options = options;
+        const staffUserInfo = uni.getStorageSync('StaffUserInfo');
+        if (staffUserInfo) {
+            this.staffUserInfo = JSON.parse(staffUserInfo);
+            if (this.staffUserInfo.type === '1' && options.fromRecord === 'true') {
+                this.isStaffUser = true;
+            }
+        }
         // 确保已经登录完成
         this.waitLogin().then(() => {
             this.getData();
@@ -340,7 +351,7 @@ export default {
         getStatistics() {
             this.request("staff.seat.statistics", { row_id: this.id, cinema_id: this.options.cinema_id, staff_id: this.options.staff_id }).then(res => {
                 this.total = res.sale.total.data;  // 总票数
-                this.buyTotal = res.sale.sold.data / res.sale.total.data * 100;   // 售出百分比
+                this.buyTotal = (res.sale.sold.data / res.sale.total.data * 100).toFixed(2);   // 售出百分比
                 this.isBuy = res.sale.sold.data;  // 已售出
                 this.noBuy = res.sale.unsold.data;  // 未售出
                 this.tabList = [
@@ -366,7 +377,7 @@ export default {
             } else {
                 this.request("staff.seat.lock", { row_id: this.id, cinema_id: this.options.cinema_id, staff_id: this.options.staff_id, page: this.myCurrentPage, keyword: this.keyword }).then(res => {
                     const { total, data } = res;
-                    this.seatList = [...this.seatList, ...(data || [])].map(el => ({...el, seat_name: el.name}));
+                    this.seatList = [...this.seatList, ...(data || [])].map(el => ({ ...el, seat_name: el.name }));
                     this.myCurrentPage++;
                     this.pageFinish = this.seatList.length >= Number(total);
                 }, () => {
@@ -382,12 +393,13 @@ export default {
                 onlyFromCamera: false,
                 // scanType: ['qrCode', 'barCode', 'datamatrix', 'pdf417'],
                 success: async (result) => {
+                    console.log(result, 'resultresult')
                     this.code = result.result;
                     const res = await this.affirm();
                     console.log(res, 'resresres')
                     this.affrimData = res || {};
                     // 如果扫码是取票码，且大于一张
-                    if (res.type === 'ticket') {
+                    if (res.type === 'tickets') {
                         if (!this.affrimData.tickets || !this.affrimData.tickets.length) {
                             this.myMessage('无门票信息')
                         }
@@ -405,6 +417,7 @@ export default {
                     }
                 },
                 fail: (error) => {
+                    console.log(error, 'errorerror')
                     this.myMessage(error.errMsg || '扫描失败')
                 }
             });
@@ -416,11 +429,12 @@ export default {
             if (this.isQuickMode) {
                 this.showConfirmModal = true;
                 await this.scan()
+                this.myMessage('核销成功')
                 this.getData();
                 setTimeout(() => {
                     this.showConfirmModal = false;
                     this.onScan()
-                }, 800)
+                }, 1000)
             } else {
                 // 20231115改，非连扫，不弹出确认框，直接自动确认，进行核销
                 this.handleConfirm();
@@ -449,7 +463,7 @@ export default {
             this.affrimData = res || {};
             this.showModal = false;
             // 如果扫码是取票码，且大于一张
-            if (res.type === 'ticket') {
+            if (res.type === 'tickets') {
                 if (!this.affrimData.tickets || !this.affrimData.tickets.length) {
                     this.myMessage('无门票信息')
                     return;
@@ -510,7 +524,7 @@ export default {
         },
 
         scan() {
-            return this.request("staff.verify.push", { row_id: this.id, dynamic: this.code, _showToast: true, cinema_id: this.options.cinema_id, staff_id: this.options.staff_id }, 'POST')
+            return this.request("staff.verify.push", { row_id: this.id, dynamic: this.code, cinema_id: this.options.cinema_id, staff_id: this.options.staff_id }, 'POST')
         }
     },
 };

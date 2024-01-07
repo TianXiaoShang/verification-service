@@ -14,6 +14,7 @@
                                 <div class="flex items-center justify-between">
                                     <div class="flex-1 mx-5px -mt-2px">
                                         <div class="font-semibold text-gray-333">{{ item.cinema_title }}</div>
+                                        <div class="text-gray-999">员工：{{ item.realname }} ({{ item.type === '0' ? '管理员' : '检票员' }})</div>
                                     </div>
                                     <u-icon name="arrow-right" class="ml-4px" size="18px" color="#999"></u-icon>
                                 </div>

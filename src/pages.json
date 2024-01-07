@@ -139,7 +139,7 @@
         {
           "path": "store/index",
           "style": {
-            "navigationBarTitleText": "选择影院"
+            "navigationBarTitleText": "选择商户"
           }
         },
         {

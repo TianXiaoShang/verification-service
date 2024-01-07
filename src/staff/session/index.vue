@@ -38,7 +38,7 @@
                                     <div class="text-gray-333 text-16px font-semibold mb-10px leading-5">
                                         {{ item.ext.film_title }}
                                     </div>
-                                    <div>{{ item.ext.type_title || '-' }}</div>
+                                    <div>{{ item.ext.type_title }}</div>
                                     <div class="mt-5px leading-5">{{ item.scan }}</div>
                                 </div>
                                 <div :class="{ 'text-green': item.state == 2 }" style="min-width: 3em">
