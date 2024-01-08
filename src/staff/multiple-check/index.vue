@@ -41,7 +41,8 @@
             <div class="w-full">
                 <div class="text-16px text-gray-333 py-6px" style="border-bottom: 1px solid #eee;">
                     <div class="flex items-center">
-                        <span class="font-semibold">{{ affrimData.seat_name }}</span>
+                        <span class="font-semibold" v-if="affrimData.tickets && affrimData.tickets[0]">{{ affrimData.tickets[0].seat_name }}</span>
+                        <span class="font-semibold" v-else>{{ affrimData.ticket.seat_name }}</span>
                         <span class="text-14px text-gray-666 ml-5px">
                             （{{ affrimData.realname }}: {{ affrimData.mobile }}）
                         </span>
@@ -153,7 +154,7 @@ export default {
                         res = await this.affirm(this.code);
                         this.affrimData = res || {};
                         // 如果扫码是取票码，且大于一张
-                        if (res.type === 'ticket') {
+                        if (res.type === 'tickets') {
                             if (!this.affrimData.tickets || !this.affrimData.tickets.length) {
                                 this.myMessage('无门票信息')
                                 return;
@@ -191,7 +192,7 @@ export default {
                 setTimeout(() => {
                     this.showConfirmModal = false;
                     this.onScan()
-                }, 800)
+                }, 1000)
             } else {
                 // 20231115改，非连扫，不弹出确认框，直接自动确认，进行核销
                 this.handleConfirm();
@@ -208,7 +209,7 @@ export default {
             const res = await this.affirm(this.code);
             this.affrimData = res || {};
             // 如果扫码是取票码，且大于一张
-            if (res.type === 'ticket') {
+            if (res.type === 'tickets') {
                 if (!this.affrimData.tickets || !this.affrimData.tickets.length) {
                     this.myMessage('无门票信息')
                 }
