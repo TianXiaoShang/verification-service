@@ -9,7 +9,7 @@
                         order.status == 4 || order.status == 11 ? '#CCCCCC' : '',
         }" class="p-30px flex flex-col justify-center items-center text-white relative">
             <div class="text-16 font-semibold">
-                订单{{ orderStatus(order.status, order.pre_create) }}
+                {{ orderStatus(order.status, order.pre_create) }}
                 <span v-if="order.status == 1 && order.pre_create == 1"
                     class="ml-8px absolute right-10px bottom-10px text-12px underline underline-offset-2"
                     @click="getData">刷新状态</span>
