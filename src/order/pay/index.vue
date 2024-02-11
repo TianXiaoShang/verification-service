@@ -10,7 +10,7 @@
         <div class="p-20px pb-80px box-border" v-if="order.id">
             <div class="flex items-center bg-white p-20px rounded-10px">
                 <div class="w-80px h-80px mr-10px rounded-10px"
-                    :style="{ 'background-image': `url(${'http://mallsaasphoto.djlcom.com/images/1/sonCinema/id_1/fRf7zr4Cxaqs5FFZ5N5RdzrrSSsNKF.jpg'})`, backgroundSize: 'cover' }">
+                    :style="{ 'background-image': `url(${film.logo})`, backgroundSize: 'cover' }">
                 </div>
                 <div class="flex-1">
                     <div class="text-20px font-semibold text-black">{{ order.ext.film_title }}</div>
@@ -343,6 +343,7 @@ export default {
             pay: {},
             _diyFormData: {},
             cinema_id: '',
+            film: {},
         }
     },
     onUnload() {
@@ -402,6 +403,7 @@ export default {
                 this.rule = res.rule;
                 this.mySetting = res.setting;
                 this.diyform = res.diy_form;
+                this.film = res.film || {};
                 this.maxSelectIdcard = Number(res.order.number) || 0;
                 // 服务条款
                 if (this.mySetting.buy_text) {
