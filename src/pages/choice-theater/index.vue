@@ -59,17 +59,12 @@
 								<div @click="choiseSession(item)" :class="{
 									active: curSession.id === item.id,
 									'mr-10px': index !== sessionList.length - 1,
-									disabled: !curSessionResidue,
 								}" style="background-color: #F8F8F8; border-color: #ddd"
-									:style="{ 'padding-right': !curSessionResidue ? '33px' : '20px' }"
+									:style="{ 'padding-right': '20px' }"
 									class="mb-10px pl-20px h-40px rounded-5px relative overflow-hidden border border-solid bg-bg inline-flex items-center">
 									<span class="text-14px text-999">
 										{{ item.date_title }}
 									</span>
-									<div v-if='!curSessionResidue'
-										class="absolute right-0 flex items-center top-0 text-white text-10px w-32px rounded-bl-5px h-18px justify-center bg-gray-444">
-										售罄
-									</div>
 								</div>
 							</div>
 						</div>
@@ -120,10 +115,8 @@
 				<div class="text-12px">
 					<span class="text-gray-333">数量</span>
 					<span class="text-gray-999 ml-4px">
-						{{ ' (余票:' + ((curPart.residue || curPart.residue === 0) ?
-							curPart.residue :
-							(curSessionResidue || curSessionResidue === 0) ? curSessionResidue
-								: '-') + ')' }}
+						{{ ' (余票:' + ((curPart.residue || (curPart.residue === 0)) ?
+							curPart.residue : '-') + ')' }}
 					</span>
 				</div>
 				<div style="background: #F4F4F4;" class="h-32px rounded-16px px-3px flex items-center">
@@ -146,10 +139,8 @@
 								'未选择场次'
 							}}
 							{{ curPart.name ? ' | ' + curPart.name : '' }}
-							{{ ' | 余票:' + ((curPart.residue || curPart.residue === 0) ?
-								curPart.residue :
-								(curSessionResidue || curSessionResidue === 0) ? curSessionResidue
-									: '-') }}
+							{{ ' | 余票:' + ((curPart.residue || (curPart.residue === 0)) ?
+								curPart.residue : '-') }}
 						</span>
 					</div>
 				</div>
@@ -180,7 +171,6 @@ export default {
 			is_timing: 0,
 			sell_timing: 0,
 			scrollLeft: 0, // 控制日期行的滚动距离
-			curSessionResidue: 1,  // 默认一张余票
 			order_id: '',
 			is_selection: null,
 		}
@@ -188,7 +178,7 @@ export default {
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
-		// options = { account_id: '7287482799568652299', order_id: '1019404595856667295' };
+		// options = { account_id: '7152359296628426765', order_id: '1020698462339228420' };
 		if (!options.order_id) {
 			uni.showModal({
               title: "提示",
@@ -253,7 +243,6 @@ export default {
 				// 根据场次获取分区数据
 				this.request("partition.index", { cinema_id: this.orderData.cinema_id, film_id: this.orderData.film_id, row_id: this.curSession.id, part_id: this.orderData.part_id }, 'GET').then(res => {
 					// 场次余票
-					this.curSessionResidue = res.row.residue;
 					this.is_timing = res.row.is_timing;
 					this.sell_timing = res.row.sell_timing;
 					this.is_selection = res.row.is_selection;
@@ -293,9 +282,17 @@ export default {
 				this.myMessage('未开抢');
 				return;
 			}
+			if (!this.curPart || !this.curPart.part_id) {
+				this.myMessage('请选择票档');
+				return;
+			}
 			// 没有curPart的情况下，再检查是否场次没余票
-			if ((this.curPart.part_id && !this.curPart.residue) || !this.curSessionResidue) {
+			if (this.curPart.part_id && !this.curPart.residue) {
 				this.myMessage('暂无余票');
+				return;
+			}
+			if(this.seatNum > this.curPart.residue) {
+				this.myMessage('余票不足');
 				return;
 			}
 			this.disabledBtn = true;
