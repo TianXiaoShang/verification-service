@@ -107,11 +107,11 @@
                 <div class="text-gray-999 flex justify-between items-center text-14">联系人</div>
                 <div class="mt-10px flex items-center flex-1" v-if="rule.ticket_rule.ticket_mode != '1'">
                     <div class="text-14px font-semibold text-gray-333 w-5em">姓名<span class="text-red">*</span></div>
-                    <!-- <div class="flex-1 relative">
+                    <div class="flex-1 relative">
                         <u--input :customStyle="inputCustomStyle" @change="onCustomChange(user, 'name', $event)"
                             placeholder="请输入姓名" border="surround" class="flex-1" :value="user.name"></u--input>
-                    </div> -->
-                    <div class="relative h-40px flex-1">
+                    </div>
+                    <!-- <div class="relative h-40px flex-1">
                         <div class="w-full h-full text-14px box-border flex items-center px-20px py-8px rounded"
                             :style="{ background: '#F2F3F5' }"
                             :class="{ 'text-black': user.name, 'text-gray-999': !user.name }">
@@ -119,12 +119,12 @@
                         </div>
                         <reservation class="w-full h-full opacity-0 absolute left-0 right-0 top-0 bottom-0" :maxCount="1"
                             :zIndex="9999" @getreservationlist="getReservationList" @error="onReservationError" />
-                    </div>
+                    </div> -->
                 </div>
                 <!-- 手机号 -->
                 <div class="mt-10px flex items-center">
                     <div class="text-14px font-semibold text-gray-333 w-5em">手机号<span class="text-red">*</span></div>
-                    <div class="relative h-40px flex-1">
+                    <!-- <div class="relative h-40px flex-1">
                         <div class="w-full h-full text-14px box-border flex items-center px-20px py-8px rounded"
                             :style="{ background: '#F2F3F5' }"
                             :class="{ 'text-black': user.phone, 'text-gray-999': !user.phone }">
@@ -132,6 +132,14 @@
                         </div>
                         <reservation class="w-full h-full opacity-0 absolute left-0 right-0 top-0 bottom-0" :maxCount="1"
                             :zIndex="9999" @getreservationlist="getReservationList" @error="onReservationError" />
+                    </div> -->
+                    <div class="relative h-40px flex-1">
+                        <div class="w-full h-full text-14px box-border flex items-center px-20px py-8px rounded"
+                            :style="{ background: '#F2F3F5' }"
+                            :class="{ 'text-black': user.phone, 'text-gray-999': !user.phone }">
+                            {{ user.phone || '点击获取手机号' }}
+                        </div>
+                        <my-phone-button v-model="user.phone"></my-phone-button>
                     </div>
                 </div>
 
