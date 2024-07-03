@@ -274,7 +274,7 @@
                         <u-icon class="mr-4px relative top-2px" size="18px" color="#3eaf7c"
                             name="checkmark-circle"></u-icon>
                         <div>
-                            时间：{{ moment(order.create_time * 1000).format('YYYY-MM-DD HH:mm') }}
+                            时间：{{ order.entrance_at }}
                         </div>
                     </div>
                     <div class="text-gray-333 py-6px flex mb-4px">
