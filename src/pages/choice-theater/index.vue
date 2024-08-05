@@ -114,7 +114,7 @@
 			<div class="flex px-20px justify-between items-center h-60px" v-if="is_timing != 1">
 				<div class="text-12px">
 					<span class="text-gray-333">数量</span>
-					<span class="text-gray-999 ml-4px">
+					<span class="text-gray-999 ml-4px" v-if="setting.is_residue == '1'">
 						{{ ' (余票:' + ((curPart.residue || (curPart.residue === 0)) ?
 							curPart.residue : '-') + ')' }}
 					</span>
@@ -139,8 +139,8 @@
 								'未选择场次'
 							}}
 							{{ curPart.name ? ' | ' + curPart.name : '' }}
-							{{ ' | 余票:' + ((curPart.residue || (curPart.residue === 0)) ?
-								curPart.residue : '-') }}
+							{{ setting.is_residue != '1' ? '' :  (' | 余票:' + ((curPart.residue || (curPart.residue === 0)) ?
+								curPart.residue : '-')) }}
 						</span>
 					</div>
 				</div>
@@ -173,12 +173,13 @@ export default {
 			scrollLeft: 0, // 控制日期行的滚动距离
 			order_id: '',
 			is_selection: null,
+			setting: {},
 		}
 	},
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
-		// options = { account_id: '7152359296628426765', order_id: '1022032024307547295' };
+		// options = { account_id: '7382583594872489999', order_id: '1066038309749468420' };
 		if (!options.order_id) {
 			uni.showModal({
               title: "提示",
@@ -198,6 +199,7 @@ export default {
 				this.request('row.index', { cinema_id: res.cinema_id, film_id: res.film_id }).then(res => {
 					// 影片标题等信息
 					this.filmData = res.film;
+					this.setting = res.setting;
 					this.dateList = res.rows && Object.keys(res.rows).length ? Object.keys(res.rows).map(key => {
 						return {
 							...res.rows[key],
