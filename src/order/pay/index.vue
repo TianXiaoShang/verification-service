@@ -412,7 +412,7 @@ export default {
                 this.mySetting = res.setting;
                 this.diyform = res.diy_form;
                 this.film = res.film || {};
-                this.maxSelectIdcard = Number(res.order.number) || 0;
+                this.maxSelectIdcard = Number(res.order.real_number) || 0;
                 // 服务条款
                 if (this.mySetting.buy_text) {
                     this.mySetting.buy_text = this.mySetting ? parseRichText(this.mySetting.buy_text) : '';

@@ -115,12 +115,13 @@
 				<div class="text-12px">
 					<span class="text-gray-333">数量</span>
 					<span class="text-gray-999 ml-4px" v-if="setting.is_residue == '1'">
-						{{ ' (余票:' + ((curPart.residue || (curPart.residue === 0)) ?
+						{{ ` (余${curPart.type == 1 ? '量' : '票'}:` + ((curPart.residue || (curPart.residue === 0)) ?
 							curPart.residue : '-') + ')' }}
 					</span>
 				</div>
 				<div style="background: #F4F4F4;" class="h-32px rounded-16px px-3px flex items-center">
-					<div class="text-333 font-semibold text-14px mx-12px">{{ seatNum }}张</div>
+					<div class="text-333 font-semibold text-14px mx-12px" v-if="curPart.type != 1">{{ seatNum }}张</div>
+					<div class="text-333 font-semibold text-14px mx-12px" v-if="curPart.type == 1">{{ seatNum }}套 <span class="text-gray-999 ml-3px">/{{curPart.people * seatNum}}张</span></div>
 				</div>
 			</div>
 			<div v-else
@@ -139,7 +140,7 @@
 								'未选择场次'
 							}}
 							{{ curPart.name ? ' | ' + curPart.name : '' }}
-							{{ setting.is_residue != '1' ? '' :  (' | 余票:' + ((curPart.residue || (curPart.residue === 0)) ?
+							{{ setting.is_residue != '1' ? '' :  (` | 余${curPart.type == 1 ? '量' : '票'}:` + ((curPart.residue || (curPart.residue === 0)) ?
 								curPart.residue : '-')) }}
 						</span>
 					</div>
@@ -179,7 +180,7 @@ export default {
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---options');
-		// options = { account_id: '7382583594872489999', order_id: '1066038309749468420' };
+		// options = { account_id: '7088535754162309161', order_id: '1071752561701788420' };
 		if (!options.order_id) {
 			uni.showModal({
               title: "提示",
