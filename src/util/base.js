@@ -25,6 +25,7 @@ const login = (onlyGetCode = false) => {
         }
         request("login.index", { code: loginRes.code }, "POST").then(
           (loginRes) => {
+            console.log('login.index:success:', loginRes)
             setToken(loginRes.token_tik);
             request("member.index").then((res) => {
               setInfo({...res.member});
@@ -32,7 +33,8 @@ const login = (onlyGetCode = false) => {
               resolve(loginRes);
             });
           },
-          () => {
+          (err) => {
+            console.log('login.index:err:', err)
             reject();
             store.commit("LOGIN", false);
           }

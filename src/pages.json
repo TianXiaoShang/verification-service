@@ -35,7 +35,33 @@
       }
     },
     {
+      "path": "pages/coupon-list/index",
+      "style": {
+        "navigationBarTitleText": "优惠券列表"
+      }
+    },
+    {
+      "path": "pages/coupon-films/index",
+      "style": {
+        "navigationBarTitleText": "项目列表"
+      }
+    },
+    {
       "path": "pages/choice-theater/index",
+      "style": {
+        "navigationBarTitleText": "选票",
+        "mp-weixin": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        },
+        "mp-toutiao": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        }
+      }
+    },
+    {
+      "path": "pages/coupon-choice-theater/index",
       "style": {
         "navigationBarTitleText": "选票",
         "mp-weixin": {
@@ -70,7 +96,7 @@
         {
           "path": "pay/index",
           "style": {
-            "navigationBarTitleText": "订单预约",
+            "navigationBarTitleText": "下单",
             "mp-toutiao": {
               "usingComponents": {
                 "reservation": "ext://industry/reservation"

@@ -22,7 +22,7 @@
                             <div class="text-12px text-gray-999 my-10px font-normal flex justify-between items-center">
                                 <div style="max-width: calc(100% - 40px);" class="truncate">{{ item.ext.cinema_title }} | {{
                                     item.ext.hall_title }}</div>
-                                <span>{{ orderStatus(item.status, item.pre_create) || '-' }}</span>
+                                <span>{{ orderStatus(item.status, item.pre_create, item.channel == 10) || '-' }}</span>
                             </div>
                             <div class="text-14 font-normal flex justify-between items-center">
                                 <span class="text-gray-333">{{ item.ext.seats.map(el => el.name).join('、') }}</span>
@@ -51,13 +51,13 @@ export default {
             tabIndex: 0,
             statusList: [
                 { name: '全部' },
-                { name: '待预约' },
+                { name: '待下单' },
                 { name: '等待商家确认' },
-                { name: '预约成功' },
+                { name: '成功' },
                 { name: '订单取消中' },
                 { name: '订单已取消' },
-                { name: '预约失败' },
-                { name: '预约已取消' },
+                { name: '失败' },
+                { name: '已取消' },
             ],
         }
     },

@@ -5,12 +5,12 @@
             <div class="image-filter translate-y-25vw transform scale-130 flex flex-col justify-center items-center">
                 <image class="w-full" src="@/static/common/nav-tickets-sel.png"></image>
                 <!-- 比下面的字大一些 -->
-                <div class="text-48px text-gray-111 font-extrabold mt-60px">预约小工具</div>
+                <div class="text-48px text-gray-111 font-extrabold mt-60px">核销小工具</div>
             </div>
             <div
                 class="w-full absolute left-1/2 top-18vh transform -translate-x-1/2 flex flex-col justify-center items-center">
                 <image class="w-120px h-120px" src="@/static/common/nav-tickets-sel.png"></image>
-                <div class="text-28px text-gray-111 font-extrabold mt-20px">预约小工具</div>
+                <div class="text-28px text-gray-111 font-extrabold mt-20px">核销小工具</div>
             </div>
         </div>
         <div class="fixed bottom-10vh w-full flex flex-col items-center justify-center">

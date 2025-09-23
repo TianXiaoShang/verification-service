@@ -36,7 +36,7 @@ export default {
               store.commit("HIDE_LOADING");
             },
           },
-          myLoginLoading: false,
+          // myLoginLoading: false,
           mixNavBarHeight: 0,
           mixinStatusBarHeight: 0,
           showNavTitle: true, // 控制全屏（无状态栏）在滑动时候的展示
@@ -151,15 +151,15 @@ export default {
             if (this.loginStatus) {
               resolve();
             } else {
-              if (!this.myLoginLoading) {
-                this.myLoginLoading = true;
-                login().then(
-                  () => {
-                    this.myLoginLoading = false;
-                  },
-                  () => reject()
-                );
-              }
+              // if (!this.myLoginLoading) {
+              //   this.myLoginLoading = true;
+              //   login().then(
+              //     () => {
+              //       this.myLoginLoading = false;
+              //     },
+              //     () => reject()
+              //   );
+              // }
               uni.$on("onLogin", (value) => {
                 if (value) {
                   resolve();

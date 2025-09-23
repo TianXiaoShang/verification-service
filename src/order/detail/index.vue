@@ -9,8 +9,8 @@
                         order.status == 4 || order.status == 11 ? '#CCCCCC' : '',
         }" class="p-30px flex flex-col justify-center items-center text-white relative">
             <div class="text-16 font-semibold">
-                {{ orderStatus(order.status, order.pre_create) }}
-                <span v-if="order.status == 1 && order.pre_create == 1"
+                {{ orderStatus(order.status, order.pre_create, isCouponMode) }}
+                <span v-if="order.status == 1 && order.pre_create == 1 && !isCouponMode"
                     class="ml-8px absolute right-10px bottom-10px text-12px underline underline-offset-2"
                     @click="getData">刷新状态</span>
             </div>
@@ -179,15 +179,15 @@
         </div>
 
         <!-- 底部按钮 -->
-        <div v-if="order.status == 1 && order.pre_create == 0"
+        <div v-if="order.status == 1 && (isCouponMode ? true : order.pre_create == 0)"
             class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', marginRight: '8px', border: '1px solid #FF545C', color: '#FF545C' }"
-                color="#fff" text="取消预约" :disabled="btnLoading" @click="cancelOrder">
+                color="#fff" :text="isCouponMode ? '取消订单' : '取消预约'" :disabled="btnLoading" @click="cancelOrder">
             </u-button>
             <u-button shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }"
-                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="去预约" @click="toPay">
+                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" :text="isCouponMode ? '去支付' : '去预约'" @click="toPay">
             </u-button>
         </div>
 
@@ -243,11 +243,12 @@ export default {
             phoneList: [],
             first: false,
             loadBooking: true,
+            isCouponMode: false,
         }
     },
     onLoad(options) {
-        this.order_id = options.order_id;
-        this.cinema_id = options.cinema_id;
+        this.order_id = options.order_id || '5523670';
+        this.cinema_id = options.cinema_id || '348';
         console.log(options, 'order_idorder_idorder_idorder_id')
         // 确保已经登录完成
         this.waitLogin().then(() => {
@@ -281,6 +282,10 @@ export default {
         },
         checkStatus() {
             return new Promise((resolve, reject) => {
+                if(this.isCouponMode){
+                    resolve();
+                    return;
+                }
                 this.getData().then(() => {
                     if (this.order.status == 1 && this.order.pre_create == 0) {
                         resolve();
@@ -333,6 +338,7 @@ export default {
             }).then(res => {
                 this.phoneList = res.consumer_hotline || []
                 this.order = res.order;
+                this.isCouponMode = this.order.channel == 10;
                 this.refund = res.refund;
                 const time = res.order.expire_time;
                 if (time && this.order.status == 1) {
@@ -344,7 +350,7 @@ export default {
                 } else {
                     this.timer && clearInterval(this.timer)
                 }
-                if (this.order.status == 1 && this.order.pre_create == 1) {
+                if (!this.isCouponMode && this.order.status == 1 && this.order.pre_create == 1) {
                     this.request('booking.index' + '&cinema_id=' + this.cinema_id, { order_id: this.order_id, _showErrorToast: false }, 'POST').then(payRes => {
                         console.log(payRes, 'payRes');
                         if (!this.first) {

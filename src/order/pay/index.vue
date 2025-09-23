@@ -4,11 +4,12 @@
         <!-- 倒计时区域 -->
         <div style="background: linear-gradient(180deg, #FF545C 0%, #FF545C 100%);"
             class="p-30px flex flex-col justify-center items-center text-white relative">
-            <div class="text-16 font-semibold">剩余确认预约时间 {{ expire_time }}</div>
+            <div class="text-16 font-semibold" v-if="!isCouponMode">剩余确认预约时间 {{ expire_time }}</div>
+            <div class="text-16 font-semibold" v-else>剩余支付时间 {{ expire_time }}</div>
             <div class="absolute bg-red w-20px h-20px right-0 top-0"></div>
         </div>
         <div class="p-20px pb-80px box-border" v-if="order.id">
-            <div class="flex items-center bg-white p-20px rounded-10px">
+            <div class="flex items-center bg-white p-15px rounded-10px">
                 <div class="w-80px h-80px mr-10px rounded-10px"
                     :style="{ 'background-image': `url(${film.logo})`, backgroundSize: 'cover' }">
                 </div>
@@ -19,7 +20,7 @@
                 </div>
             </div>
             <!-- 订单信息 -->
-            <div class="bg-white p-20px rounded-10px mt-10px">
+            <div class="bg-white p-15px rounded-10px mt-10px">
                 <!-- <div class="font-semibold text-gray-333 text-16">{{ order.order_no }}</div> -->
                 <div class="flex items-center mt-10px font-normal text-gray-999 text-14 flex items-center">
                     <u-icon size="18px" class="mr-4px" color="#aaa" name="clock"></u-icon>
@@ -47,7 +48,7 @@
             </div>
 
             <!-- 观演人 -->
-            <div class="bg-white mt-10px p-20px rounded-10px" v-if="order.is_autonym == 1">
+            <div class="bg-white mt-10px p-15px rounded-10px" v-if="order.is_autonym == 1">
                 <div class="text-gray-999 flex justify-between items-center text-14px">实名观演人</div>
                 <div class="text-red flex justify-between items-center text-12px mt-10px">
                     仅需选择{{ maxSelectIdcard }}位，入场需携带对应身份证</div>
@@ -67,8 +68,18 @@
                 </div>
             </div>
 
+            <!-- 优惠券 -->
+            <div class="bg-white mt-10px p-15px rounded-10px" v-if="isCouponMode">
+                <div class="text-gray-999 flex justify-between items-center text-14">{{ calculateData.coupon_name }}</div>
+                <div class="flex items-center">
+                    <span class="mt-10px text-12px">抵扣：</span>
+                    <span class="mt-10px text-red font-semibold text-16px">¥{{ calculateData.coupon_price }}</span>
+                </div>
+                <!-- <div class="text-12px mt-6px leading-4">{{ calculateData.coupon_name }}</div> -->
+            </div>
+
             <!-- 配送方式 -->
-            <div class="bg-white mt-10px p-20px rounded-10px">
+            <div class="bg-white mt-10px p-15px rounded-10px">
                 <div class="text-gray-999 flex justify-between items-center text-14">配送方式</div>
                 <template v-if="rule.ticket_rule.ticket_mode == 1">
                     <div class="mt-10px">{{ rule.ticket_explain.title }}</div>
@@ -102,7 +113,7 @@
             </div>
 
             <!-- 联系人 -->
-            <div class="bg-white mt-10px p-20px rounded-10px is-input">
+            <div class="bg-white mt-10px p-15px rounded-10px is-input">
                 <!-- 姓名 -->
                 <div class="text-gray-999 flex justify-between items-center text-14">联系人</div>
                 <div class="mt-10px flex items-center flex-1" v-if="rule.ticket_rule.ticket_mode != '1'">
@@ -166,6 +177,31 @@
                     </div>
                 </template>
             </div>
+
+            <!-- 支付方式 -->
+            <div class="bg-white mt-10px p-15px rounded-10px is-input" v-if="isCouponMode">
+                <div class="text-gray-999 flex justify-between items-center text-14">支付方式</div>
+                <div class="mt-10px">
+                    <u-radio-group v-model="payType">
+                        <div class="w-full">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <image src="../static/toutiao@2x.png" class="w-22px h-22px" alt="" />
+                                    <image src="../static/wechat@2x.png" class="w-22px h-22px ml-3px" alt="" />
+                                    <image src="../static/alipay.png" class="w-22px h-22px ml-3px" alt="" />
+                                    <div class="ml-10px flex items-center">
+                                        <span class="text-gray-333 font-semibold">立即支付</span>
+                                        <span class="text-red font-semibold ml-10px">¥{{calculateData.total}}</span>
+                                    </div>
+                                </div>
+                                <div class="w-22px h-22px">
+                                    <u-radio size="22px" activeColor="#FF545C" :label="' '" name="tiktok"></u-radio>
+                                </div>
+                            </div>
+                        </div>
+                    </u-radio-group>
+                </div>
+            </div>
         </div>
         <!-- 骨架屏 -->
         <div v-else class="p-20px pb-80px box-border">
@@ -191,18 +227,30 @@
         <div
             class="fixed flex px-20px justify-between items-center z-998 bottom-0 h-70px left-0 w-full box-border bg-white">
             <!-- 《服务条款》 -->
-            <div class="text-14px box-border flex items-center">
-                <image v-if="read" @click="onRead(false)" src="@/static/common/agree-sel@2x.png" class="w-15px h-15px">
-                </image>
-                <div v-if="!read" @click="showReadPopup = true"
-                    class="box-border rounded-full w-15px h-15px border border-solid border-red">
-                </div>
-                <span class="ml-4px text-gray-333">同意<span class="text-blue"
-                        @click="showReadPopup = true">《服务条款》</span></span>
+             <div>
+                <div class="text-14px box-border flex items-center">
+                    <image v-if="read" @click="onRead(false)" src="@/static/common/agree-sel@2x.png" class="w-15px h-15px">
+                    </image>
+                    <div v-if="!read" @click="showReadPopup = true"
+                        class="box-border rounded-full w-15px h-15px border border-solid border-red">
+                    </div>
+                    <span class="ml-4px text-gray-333">同意<span class="text-blue"
+                            @click="showReadPopup = true">《服务条款》</span></span>
+                </div>           
             </div>
-            <u-button :disabled="!pageLoad || paying" shape="circle" size="normal"
+            
+            <u-button v-if="!isCouponMode" :disabled="!pageLoad || paying" shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: '160px', margin: 0 }"
-                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="立即预约" @click="toPay">
+                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" :text="'立即预约'" @click="toPay">
+            </u-button>
+            <u-button v-if="isCouponMode" :disabled="!pageLoad || paying" shape="circle" size="normal"
+                :customStyle="{ height: '44px', width: '160px', margin: 0 }"
+                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" @click="toPay">
+                立即支付
+                <span>
+                    <span class="text-12px ml-10px">¥</span>
+                    <span class="text-16px">{{ calculateData.total }}</span>
+                </span>
             </u-button>
         </div>
 
@@ -352,6 +400,9 @@ export default {
             _diyFormData: {},
             cinema_id: '',
             film: {},
+            isCouponMode: false,
+            payType: 'tiktok',
+            calculateData: {}
         }
     },
     onUnload() {
@@ -363,23 +414,23 @@ export default {
         this.waitLogin().then(() => {
             this.getData();
         });
-        // this.user.name = uni.getStorageSync('payName') || '';
+        this.user.name = uni.getStorageSync('payName') || '';
     },
     methods: {
-        getReservationList(res) {
-            const data = res.detail.reservationList[0] || {};
-            this.user.name = data.name;
-            this.user.phone = data.phoneNumber;
-            console.log(res, data, 'res-res-res-res');
-        },
-        onReservationError(err) {
-            console.log(err, 'err-err-err-err');
-            if (err.detail.errNo === 159303) {
-                this.myMessage('取消授权');
-                return;
-            }
-            this.myMessage('获取生活服务用户信息失败:' + err.detail.errMsg);
-        },
+        // getReservationList(res) {
+        //     const data = res.detail.reservationList[0] || {};
+        //     this.user.name = data.name;
+        //     this.user.phone = data.phoneNumber;
+        //     console.log(res, data, 'res-res-res-res');
+        // },
+        // onReservationError(err) {
+        //     console.log(err, 'err-err-err-err');
+        //     if (err.detail.errNo === 159303) {
+        //         this.myMessage('取消授权');
+        //         return;
+        //     }
+        //     this.myMessage('获取生活服务用户信息失败:' + err.detail.errMsg);
+        // },
         onShowIdcardPopup() {
             this.curIdacrds = [...this.curIdacrds]
             this.showIdcardPopup = true;
@@ -406,6 +457,7 @@ export default {
             this.request('pay.index', { order_id: this.order_id, cinema_id: this.cinema_id }).then(res => {
                 this.pageLoad = true;
                 this.order = res.order;
+                this.isCouponMode = this.order.channel == 10;
                 this.pay = res.pay;
                 this.navigation = res.navigation;
                 this.rule = res.rule;
@@ -417,6 +469,15 @@ export default {
                 if (this.mySetting.buy_text) {
                     this.mySetting.buy_text = this.mySetting ? parseRichText(this.mySetting.buy_text) : '';
                 }
+                // 计算价格
+                this.request('pay.calculate', {cinema_id: this.cinema_id, order_id: this.order_id}, 'POST').then(res => {
+                    this.calculateData = res;
+                })
+                if (this.rule.ticket_rule.ticket_mode == 1) {
+                    this.request('address.defaults', { cinema_id: this.cinema_id }, 'GET').then(res => {
+                        this.curAddress = res.address;
+                    })
+                }
                 if (this.timePassed) {
                     return; // 时间过了就不倒计时了
                 }
@@ -427,11 +488,6 @@ export default {
                 this.timer = setInterval(() => {
                     this.getExpireTime(time);
                 }, 1000);
-                if (this.rule.ticket_rule.ticket_mode == 1) {
-                    this.request('address.defaults', { cinema_id: this.cinema_id }, 'GET').then(res => {
-                        this.curAddress = res.address;
-                    })
-                }
             }, err => {
                 uni.showModal({
                     title: '错误',
@@ -515,7 +571,15 @@ export default {
                 }
             }
             this.paying = true;
-            this.showConfirmBookModal = true;
+            if(this.isCouponMode){
+                this.handlTTPay();
+            }else{
+                this.showConfirmBookModal = true;
+            }
+        },
+
+        handlTTPay(){
+            this.handleConfirmBook();
         },
 
         cancelConfirmBook() {
@@ -531,6 +595,9 @@ export default {
                 address_id: '',
                 diydata: encodeURIComponent(JSON.stringify(this._diyFormData)),
             }
+            if(this.isCouponMode){
+                params.pay_price = this.calculateData.total;
+            }
             if (this.rule.ticket_rule.ticket_mode == 1) {
                 params.address_id = this.curAddress.id;
                 params.realname = this.curAddress.realname;
@@ -543,6 +610,28 @@ export default {
             }
             uni.setStorageSync('payName', this.user.name);
             this.request('pay.payment' + '&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
+                console.log('pay.payment:', res)
+                if(this.isCouponMode){
+                    if (this.order.tiktoksop_order_id) {
+                        this.continueToPay(this.order.order_no);
+                        return;
+                    }
+                    tt.createOrder({
+                        skuList: res.skuList,
+                        payment: res.payment,
+                        callbackData: res.callbackData,
+                        success: res => {
+                            console.log(res, 'createOrder-success');
+                            this.handlePayDone();
+                        },
+                        fail: res => {
+                            console.log('createOrder-fail', res);
+                            this.handlePayDone();
+                            uni.showToast({ title: res.errMsg || '支付失败', icon: 'none' })
+                        },
+                    });
+                    return;
+                }
                 this.showConfirmBookModal = false;
                 store.commit("SHOW_LOADING", "");
                 tt.booking({
@@ -564,22 +653,35 @@ export default {
                 })
             })
         },
+        handlePayDone(){
+            this.paying = false;
+            store.commit("HIDE_LOADING", "");
+            setTimeout(() => {
+                uni.redirectTo({
+                    url: `/order/detail/index?order_id=${this.order_id}&cinema_id=${this.cinema_id}`,
+                });
+            }, 600);
+        },
+        continueToPay(outOrderNo) {
+            tt.continueToPay({
+                outOrderNo: outOrderNo,
+                success: res => {
+                    console.log('continueToPay-success', res)
+                    if (res.orderId) {
+                        this.handlePayDone();
+                    }
+                },
+                fail: res => {
+                    console.log('continueToPay-fail', res)
+                    this.handlePayDone();
+                },
+            });
+        },
         confirmVerification() {
             uni.redirectTo({
                 url: '/order/detail/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id,
             });
             this.paying = false;
-        },
-        handlerPaySuccess() {
-            this.toOrderDetail();
-        },
-        toOrderDetail() {
-            this.paying = false;
-            setTimeout(() => {
-                uni.redirectTo({
-                    url: '/order/detail/index?order_id=' + this.order_id + '&cinema_id=' + this.cinema_id,
-                });
-            }, 1000);
         },
         onRead(val) {
             this.read = val;

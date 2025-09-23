@@ -24,7 +24,7 @@
                             <div class="flex-1 flex justify-between pl-20px items-center">
                                 <div>
                                     <div class="text-gray-333 text-16px font-semibold mb-15px leading-5">
-                                        {{ item.ext.film_title }}
+                                        {{ item.film_title }}
                                     </div>
                                     <div>{{ item.ext.type_title || '-' }}</div>
                                 </div>
