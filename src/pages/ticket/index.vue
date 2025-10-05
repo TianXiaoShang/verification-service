@@ -78,22 +78,23 @@ export default {
 		},
 	},
 	onShow() {
-		if (store.state.canFetchTicket) {
 			// 确保已经登录完成
 			this.waitLogin().then(() => {
 				this.myCurrentPage = 1;
 				this.ticketList = new Array(8).fill({});
 				this.getData();
 			});
-		}
 	},
-	onLoad: function () {
-		// 确保已经登录完成
-		this.waitLogin().then(() => {
-			this.myCurrentPage = 1;
-			this.ticketList = new Array(8).fill({});
-			this.getData();
-		});
-	},
+	// onLoad: function () {
+	// 	// 确保已经登录完成
+	// 	this.waitLogin().then(() => {
+	// 		this.myCurrentPage = 1;
+	// 		this.ticketList = new Array(8).fill({});
+	// 		this.getData();
+	// 		setTimeout(() => {
+	// 			this.loginFlag = true;
+	// 		}, 800)
+	// 	});
+	// },
 };
 </script>

@@ -28,8 +28,8 @@ export default {
 	},
 	onLoad: function (options) {
 		console.log(options, 'optionsoptions')
-		// this.account_id = options.account_id || '7262974717651404835';
-		// this.order_id = options.order_id || '1088546204688347295';
+		// this.account_id = options.account_id || '7548746367523407881';
+		// this.order_id = options.order_id || '1088724442944027295';
 
 		this.account_id = options.account_id;
 		this.order_id = options.order_id;

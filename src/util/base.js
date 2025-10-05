@@ -51,6 +51,7 @@ const login = (onlyGetCode = false) => {
 
 const getPhoneNumber = (res, hideToast = false) => {
   return new Promise((resolve, reject) => {
+    console.log(res, '手机号授权失败');
     if (res.detail.errMsg.includes("fail")) {
       uni.showToast({
         title: "授权失败", // 大概率是拒绝授权，用户油盐不进，实在没办法

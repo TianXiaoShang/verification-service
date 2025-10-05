@@ -113,7 +113,7 @@ export default {
 	},
 	components: { NavBar },
 	onShow() {
-		store.commit("SET_CAN_FETCH_TICKET", true);
+		// store.commit("SET_CAN_FETCH_TICKET", true);
 	},
 	onLoad(options) {
 		console.log(options, 'options');

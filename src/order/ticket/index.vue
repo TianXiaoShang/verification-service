@@ -238,7 +238,7 @@ export default {
     },
     components: { tkiQrcode },
     onLoad(options) {
-        store.commit("SET_CAN_FETCH_TICKET", false);
+        // store.commit("SET_CAN_FETCH_TICKET", false);
         this.order_id = options.order_id;
         this.cinema_id = options.cinema_id;
         // 确保已经登录完成
