@@ -108,6 +108,17 @@
           "path": "detail/index",
           "style": {
             "navigationBarTitleText": "订单状态"
+            // "mp-toutiao": {
+            //   "usingComponents": {
+            //     "pay-button-sdk": "tta5a3d31e3aecfb9b11://pay-button"
+            //   }
+            // }
+          }
+        },
+        {
+          "path": "refund/index",
+          "style": {
+            "navigationBarTitleText": "申请退款"
           }
         },
         {

@@ -26,9 +26,7 @@
 
         <!-- 中间内容 -->
         <div class="p-20px box-border" :class="{
-            'pb-90px': order.status == 1,
-            'pb-90px': is_comment == 1 && !isWx && order.is_evaluate == 0,
-            'pb-20px': order.status != 1 && !(is_comment == 1 && !isWx && order.is_evaluate == 0)
+            'pb-90px': (order.status == 1 && (isCouponMode ? true : order.pre_create == 0)) || is_refund == 1,
         }" v-if="order.order_no && !loadBooking">
             <!-- 待支付-订单信息 -->
             <div class="bg-white p-20px mb-20px rounded-10px" v-if="order.status == 1">
@@ -191,6 +189,27 @@
             </u-button>
         </div>
 
+        <div v-if="is_refund == 1" class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-center px-20px left-0 w-full box-border">
+            <div class="mr-15px relative overflow-hidden">
+                <!-- 这个按钮用于决定样式，点击的是pay-button-sdk -->
+                <u-button shape="circle" size="normal"
+                    :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', border: '1px solid #FF545C', color: '#FF545C' }"
+                    color="#fff" :text="'申请退款'" @click="toPath('/order/refund/index?id=' + order.id)">
+                </u-button>
+                <!-- https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/industry-plugin/life-service-plugin/service-components/pay-button -->
+                <!-- <pay-button-sdk
+                    style="height: 100%; width: 100%; border-radius: 0; display: block; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; opacity: 0; z-index: 999;"
+                    :mode="1"
+                    :order-status="refund.status"
+                    :refund-id="refund.refund_no"
+                    :order-id="order.order_no"
+                    @refund="handleRefund"
+                    @error="handleRefundError"
+                    :apply-refund-params="{ mz_order_no: order.order_no, mz_cinema_id: cinema_id, attach: '1:2', itemOrderList: item_order_detail }"
+                /> -->
+            </div>
+        </div>
+
         <!-- 电话列表 -->
         <u-popup :show="showPhone" :round="20" @cloe="showPhone = false">
             <div class="bg-gray-50 w-full p-15px box-border" style="border-radius: 20px 20px 0 0 ;">
@@ -244,12 +263,14 @@ export default {
             first: false,
             loadBooking: true,
             isCouponMode: false,
+            is_refund: 0,
+            // item_order_detail: []
         }
     },
     onLoad(options) {
-        this.order_id = options.order_id || '5523670';
-        this.cinema_id = options.cinema_id || '348';
-        console.log(options, 'order_idorder_idorder_idorder_id')
+        this.order_id = options.order_id;
+        this.cinema_id = options.cinema_id;
+        console.log(options, 'order_id+cinema_id')
         // 确保已经登录完成
         this.waitLogin().then(() => {
             this.getData();
@@ -267,6 +288,13 @@ export default {
         }
     },
     methods: {
+        // handleRefundError(e) {
+        //     console.log(e, 'handleRefundError：')
+        // },
+        // handleRefund(e) {
+        //     console.log(e, 'handleRefund')
+        //     this.getData();
+        // },
         onSendCall(tel) {
             this.showPhone = false;
             sendCall(tel);
@@ -340,6 +368,8 @@ export default {
                 this.order = res.order;
                 this.isCouponMode = this.order.channel == 10;
                 this.refund = res.refund;
+                this.is_refund = res.is_refund;
+                // this.item_order_detail = res.item_order_detail;
                 const time = res.order.expire_time;
                 if (time && this.order.status == 1) {
                     this.getExpireTime(time);
