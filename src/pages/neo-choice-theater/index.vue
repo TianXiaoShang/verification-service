@@ -1,0 +1,394 @@
+<template>
+	<div class="page-box bg-white box-border">
+		<loading />
+		<!-- 背景图 -->
+		<div class="relative" :style="{
+			paddingTop: mixinStatusBarHeight + mixNavBarHeight + 'px',
+			backgroundImage: `url(${filmData.logo})`,
+			backgroundSize: 'cover',
+			backgroundPosition: 'top center',
+			marginTop: isWx ? (0 - mixinStatusBarHeight - mixNavBarHeight + 'px') : 0,
+			backgroundColor: '#fff',
+		}">
+			<!-- 阴影 + title -->
+			<div class="w-full box-border px-20px pb-40px pt-10px"
+				:style="{ background: 'linear-gradient(360deg, #000000 15%, rgba(0,0,0,0) 100%)' }">
+				<div class="text-white text-18px font-semibold">{{ filmData.title || '-' }}</div>
+			</div>
+			<!-- 圆角 -->
+			<div class="bg-white absolute left-0 -bottom-2px w-full overflow-hidden rounded-t-24px h-26px"></div>
+		</div>
+		<!-- 骨架图 -->
+		<div v-if="!isLoad" class="px-20px">
+			<u-skeleton :loading="true" :animate="true" :title="true" :titleWidth="'80%'" :titleHeight="20"
+				:rows="3"></u-skeleton>
+			<div class="h-25px w-full"></div>
+			<u-skeleton :loading="true" :animate="true" :title="true" :titleWidth="'80%'" :titleHeight="20"
+				:rows="3"></u-skeleton>
+			<div class="h-25px w-full"></div>
+			<u-skeleton :loading="true" :animate="true" :title="true" :titleWidth="'80%'" :titleHeight="20"
+				:rows="3"></u-skeleton>
+		</div>
+		<!-- 内容区域 -->
+		<template v-else>
+			<template v-if='((dateList && dateList.length) || (sessionList && sessionList.length))'>
+				<!-- 选票信息 -->
+				<div class="bg-white overflow-hidden px-20px pt-10px box-border w-full pb-130px">
+					<!-- 日期 -->
+					<div class="text-12px mb-12px">
+						<span class="text-gray-333 font-semibold">日期</span>
+						<span class="ml-5px text-gray-999">场次时间均为演出当地时间</span>
+					</div>
+					<scroll-view scroll-x="true" :scroll-with-animation="true"
+						class="mb-20px text-gray-999 w-full box-border whitespace-nowrap">
+						<div v-for="(item, index) in dateList" :key="index" @click="choiseDate(item)"
+							:class="{ active: curDate.title === item.title, 'mr-10px': index !== dateList.length - 1 }"
+							style="background-color: #F8F8F8; border-color: #ddd"
+							class="w-105px mb-10px h-45px rounded-5px border border-solid bg-bg inline-flex flex-col items-center justify-center">
+							<span class="text-10px text-999">{{ item.week }}</span>
+							<span class="text-14px text-999 mt-3px">{{ item.title_y }}</span>
+						</div>
+					</scroll-view>
+					<!-- 场次 -->
+					<template v-if="sessionList && sessionList.length">
+						<div class="text-12px mb-12px">
+							<span class="text-gray-333 font-semibold">场次</span>
+						</div>
+						<div class="mb-20px text-gray-999">
+							<div v-for="(item, index) in sessionList" :key="index">
+								<div @click="choiseSession(item)" :class="{
+									active: curSession.id === item.id,
+									'mr-10px': index !== sessionList.length - 1,
+								}" style="background-color: #F8F8F8; border-color: #ddd" :style="{ 'padding-right': '20px' }"
+									class="mb-10px pl-20px h-40px rounded-5px relative overflow-hidden border border-solid bg-bg inline-flex items-center">
+									<span class="text-14px text-999">
+										{{ item.date_title }}
+									</span>
+								</div>
+							</div>
+						</div>
+					</template>
+					<template v-if="partList && partList.length">
+						<!-- 票档 -->
+						<div class="text-12px mb-12px flex justify-between">
+							<span class="text-gray-333 font-semibold">票档</span>
+						</div>
+						<div class="mb-20px text-gray-999 flex flex-wrap">
+							<div v-for="(item, index) in partList" :key="index" @click="choisePart(item)" :class="{
+								active: curPart.part_id === item.part_id,
+								'mr-10px': index !== partList.length - 1,
+								'pr-20px': item.residue,
+								'pr-38px': !item.residue,
+								disabled: !item.residue
+							}" :style="{ 'background': '#f8f8f8', 'border-color': '#ddd' }"
+								class="mb-10px pl-20px h-40px flex rounded-5px overflow-hidden border border-solid bg-bg inline-flex  items-center relative">
+								<!-- 名称 -->
+								<div class="">
+									<div class="flex items-center justify-start">
+										<span class="text-14px text-999">{{ item.name }}</span>
+										<span class="text-12px text-999 ml-10px">¥{{ item.price }}</span>
+									</div>
+								</div>
+								<!-- 标签 -->
+								<div v-if='!item.residue'
+									class="absolute right-0 flex items-center top-0 text-white text-10px w-32px rounded-bl-5px h-18px justify-center bg-gray-444">
+									售罄
+								</div>
+							</div>
+						</div>
+					</template>
+					<div class="tips text-14px text-gray-999 mt-20px flex items-start" v-if="curPart && curPart.tip">
+						<u-icon name="bell" size="14px" color="#999"></u-icon>
+						<span class="ml-5px leading-5 -mt-3px">{{ curPart.tip }}</span>
+					</div>
+				</div>
+			</template>
+			<!-- 无数据 -->
+			<u-empty v-else mode="data" text="暂无场次安排" icon="http://cdn.uviewui.com/uview/empty/data.png">
+			</u-empty>
+		</template>
+
+		<!-- 底部数量选择，按钮， 不选座模式 -->
+		<div class="fixed bottom-0 left-0 w-full box-border bg-white"
+			:style="{ height: is_timing == 1 ? '120px' : cantBuy ? '60px' : isSelectSeat ? '60px' : '120px' }"
+			style="box-shadow: 0px -2px 6px 0px rgba(51,51,51,0.05);">
+			<div class="flex px-20px justify-between items-center h-60px" v-if="!cantBuy && !isSelectSeat">
+				<div class="text-12px">
+					<span class="text-gray-333">数量</span>
+					<span class="text-gray-999 ml-4px" v-if="setting.is_residue == '1'">
+						{{ ` (余${curPart.type == 1 ? '量' : '票'}:` + ((curPart.residue || (curPart.residue === 0)) ?
+							curPart.residue : '-') + ')' }}
+					</span>
+				</div>
+				<div style="background: #F4F4F4;" class="h-32px rounded-16px px-3px flex items-center">
+					<image class="w-22px h-22px" src="@/static/detail/reduce.png" @click="reduce" />
+					<div class="text-333 font-semibold text-14px mx-12px" v-if="curPart.type != 1">{{ seatNum }}张</div>
+					<div class="text-333 font-semibold text-14px mx-12px" v-if="curPart.type == 1">{{ seatNum }}套 <span
+							class="text-gray-999 ml-3px">/{{ curPart.people * seatNum }}张</span></div>
+					<image class="w-22px h-22px" src="@/static/detail/add.png" @click="add" />
+				</div>
+			</div>
+			<div v-if="is_timing == 1"
+				class="h-60px flex justify-center items-center w-full box-border bg-white text-16px text-red font-semibold"
+				style="background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); border-radius: 15px 15px 0 0;">
+				{{ moment(sell_timing * 1000).format('MM月DD日 HH:mm:ss') }}开抢
+			</div>
+			<div
+				class="h-60px px-20px border-t border-b-0 pb-9px border-l-0 border-r-0 border-gray-100 border-solid justify-between flex items-center">
+				<div class="flex">
+					<div class="text-gray-666 text-12 flex items-center ml-5px">
+						<span>
+							{{ curDate.title ? curDate.title + ' |' : '' }}
+							{{
+								curSession.id ? moment(Number(curSession.entrance_time) * 1000).format('HH:mm') :
+									'未选择场次'
+							}}
+							{{ curPart.name ? ' | ' + curPart.name : '' }}
+							{{ setting.is_residue != '1' ? '' : (` | 余${curPart.type == 1 ? '量' : '票'}:` +
+								((curPart.residue ||
+									(curPart.residue === 0)) ?
+									curPart.residue : '-')) }}
+						</span>
+					</div>
+				</div>
+				<u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '140px', margin: 0 }"
+					:disabled="cantBuy" color="#FF545C" :text="getBtnStatusText" @click="toSelectFilm(true)">
+				</u-button>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+import NavBar from '@/components/nav-bar';
+export default {
+	data() {
+		return {
+			disabledBtn: false,
+			filmData: {},
+			isLoad: false,
+			curDate: {},
+			curSession: {},
+			curPart: {},
+			dateList: [],
+			sessionList: [],
+			seatNum: 1,
+			partList: [],
+			is_timing: 0,
+			sell_timing: 0,
+			order_id: '',
+			is_selection: null,
+			setting: {},
+
+			cinema_id: '',
+			film_id: '',
+			coupon_id: '',
+		}
+	},
+	components: { NavBar },
+	onLoad(options) {
+		console.log(options, 'optionsoptions---33333');
+		// options = { account_id: '7548746367523407881', order_id: '1095077231300827295' }
+		this.account_id = options.account_id;
+		this.order_id = options.order_id;
+		this.waitLogin().then(async () => {
+			let couponRes = null;
+			try {
+				couponRes = await this.request('schedule.index', {
+					order_id: this.order_id,
+					account_id: this.account_id,
+					_showErrorToast: false
+				}, 'POST');
+			} catch (err) {
+				console.log(err, 'errerrerr')
+				uni.showToast({
+					title: err && err.message ? err.message : '券详情获取失败',
+					icon: 'none'
+				});
+				setTimeout(() => {
+					this.goHome();
+				}, 800);
+				return;
+			}
+			const coupon = (couponRes.coupon_data || {});
+			if (!coupon) {
+				throw new Error('未找到可用抵扣券');
+			}
+			this.coupon_id = coupon.id;
+			this.cinema_id = couponRes.cinema_id;
+			this.film_id = couponRes.film_id;
+			
+			this.request('film.detail', { cinema_id: this.cinema_id, film_id: this.film_id, coupon_id: this.coupon_id }).then(res => {
+				// 影片标题等信息
+				this.filmData = res.film;
+			})
+			this.request('row.index', { cinema_id: this.cinema_id, film_id: this.film_id, coupon_id: this.coupon_id }).then(res => {
+				this.setting = res.setting;
+				this.dateList = res.rows && Object.keys(res.rows).length ? Object.keys(res.rows).map(key => {
+					return {
+						...res.rows[key],
+						title_y: key
+					}
+				}) : [];
+				this.dateList = this.dateList.filter(el => el.row && el.row.length);
+				this.curDate = this.dateList[0];
+				this.isLoad = true;
+			})
+		});
+	},
+	watch: {
+		curDate: {
+			handler() {
+				if (!this.curDate || !this.curDate.title) {
+					return;
+				};
+				this.sessionList = this.dateList.find(el => el.title === this.curDate.title).row || [];
+				this.curSession = this.sessionList[0] ? this.sessionList[0] : {};
+				this.partList = [];
+				this.curPart = {};
+			},
+			deep: true,
+		},
+		curSession: {
+			handler() {
+				if (!this.curSession.id) {
+					return;
+				}
+				this.partList = [];
+				this.curPart = {};
+				// 根据场次获取分区数据
+				this.request("partition.index", { cinema_id: this.cinema_id, film_id: this.film_id, row_id: this.curSession.id, coupon_id: this.coupon_id }, 'GET').then(res => {
+					// 场次余票
+					this.is_timing = res.row.is_timing;
+					this.sell_timing = res.row.sell_timing;
+					this.is_selection = res.row.is_selection;
+					// 票档
+					this.partList = res.partition || [];
+					const curIndex = this.partList.findIndex(el => el.residue);
+					this.curPart = this.partList[curIndex || 0] || {};
+					console.log('curPart', this.curPart)
+				});
+			},
+			deep: true
+		},
+	},
+	computed: {
+		cantBuy() {
+			return this.curSession.sell != 1 || this.is_timing == 1 || !this.curSession.id;
+		},
+		getBtnStatusText(){
+			if (!this.curSession.id) {
+				return '请选择场次';
+			}
+			if (this.is_timing == 1) {
+				return '即将开抢'
+			}
+			return this.curSession.sell == 1 ? !this.isSelectSeat ? '去下单' : '去选座' : '未开抢'
+		},
+		isSelectSeat(){
+			return this.curSession.seat_random == 0 && this.is_selection == 0;
+		}
+	},
+	methods: {
+		toSelectFilm() {
+			if (!this.isLoad || this.disabledBtn) {
+				return;
+			}
+			if (!this.curDate.title) {
+				this.myMessage('请选择日期');
+				return;
+			}
+			if (!this.curSession.id) {
+				this.myMessage('请选择场次');
+				return;
+			}
+			if (this.curSession.sell != 1) {
+				this.myMessage('未开抢');
+				return;
+			}
+			if (!this.curPart || !this.curPart.part_id) {
+				this.myMessage('请选择票档');
+				return;
+			}
+			// 没有curPart的情况下，再检查是否场次没余票
+			if (this.curPart.part_id && !this.curPart.residue) {
+				this.myMessage('暂无余票');
+				return;
+			}
+			if (this.seatNum > this.curPart.residue) {
+				this.myMessage('余票不足');
+				return;
+			}
+			this.disabledBtn = true;
+			if (this.isSelectSeat) {
+				this.toPath(`/pages/h5-seat/index?order_id=${this.order_id}&coupon_id=${this.coupon_id}&cinema_id=${this.cinema_id}&film_id=${this.film_id}&curDate=${this.curDate.title_y}&row_id=${this.curSession.id}&part_id=${this.curPart.part_id}`);
+				this.disabledBtn = false;
+			} else {
+				this.createOrder();
+			}
+		},
+		createOrder() {
+			this.request("create.other" + '&cinema_id=' + this.cinema_id, {
+				tiktok_order_id: this.order_id,
+				row_id: this.curSession.id,
+				coupon_id: this.coupon_id,
+				part_id: Number(this.curPart.part_id),
+				number: this.seatNum,
+			}, 'POST').then(res => {
+				this.disabledBtn = false;
+				if (res.order_id) {
+					uni.redirectTo({
+						url: '/order/pay/index?order_id=' + res.order_id + '&cinema_id=' + this.cinema_id,
+					})
+				} else {
+					uni.showToast({
+						title: '下单发生错误',
+						icon: 'none'
+					})
+					this.disabledBtn = false;
+				}
+			}, () => {
+				this.disabledBtn = false;
+			})
+		},
+		choiseDate(item) {
+			this.curDate = item;
+			if (this.curDate.row && this.curDate.row.length) {
+				this.curSession = this.curDate.row[0];
+			}
+		},
+		choiseSession(item) {
+			this.curSession = item;
+		},
+		choisePart(item) {
+			if (!item.residue) {
+				return;
+			}
+			this.curPart = item;
+		},
+		reduce() {
+			if (this.seatNum > 1) {
+				this.seatNum--;
+			}
+		},
+		add() {
+			this.seatNum++;
+		},
+	}
+};
+</script>
+
+
+<style lang="scss" scoped>
+.active {
+	background-color: rgb(251, 234, 236) !important;
+	border-color: #FF545C !important;
+	color: #FF545C !important;
+}
+
+.disabled {
+	color: #aaa !important;
+	border-color: #aaa !important;
+	background-color: #fff !important;
+}
+</style>

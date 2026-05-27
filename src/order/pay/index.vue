@@ -69,13 +69,18 @@
             </div>
 
             <!-- 优惠券 -->
-            <div class="bg-white mt-10px p-15px rounded-10px" v-if="isCouponMode">
-                <div class="text-gray-999 flex justify-between items-center text-14">{{ calculateData.coupon_name }}</div>
-                <div class="flex items-center">
-                    <span class="mt-10px text-12px">抵扣：</span>
-                    <span class="mt-10px text-red font-semibold text-16px">¥{{ calculateData.coupon_price }}</span>
+            <div class="bg-white mt-10px p-15px rounded-10px" v-if="isCouponMode" @click="onShowCouponPopup">
+                <div class="text-gray-999 flex justify-between items-center text-14">
+                    <span>抵扣券</span>
+                    <u-icon color="#999" name="arrow-right"></u-icon>
                 </div>
-                <!-- <div class="text-12px mt-6px leading-4">{{ calculateData.coupon_name }}</div> -->
+                <div class="flex items-center mt-10px">
+                    <span class="text-12px">{{ selectedCouponText }}</span>
+                </div>
+                <div class="flex items-center mt-8px" v-if="isCouponCalculated && calculateData.coupon_price">
+                    <span class="text-12px">抵扣：</span>
+                    <span class="text-red font-semibold text-16px">¥{{ calculateData.coupon_price }}</span>
+                </div>
             </div>
 
             <!-- 配送方式 -->
@@ -191,7 +196,7 @@
                                     <image src="../static/alipay.png" class="w-22px h-22px ml-3px" alt="" />
                                     <div class="ml-10px flex items-center">
                                         <span class="text-gray-333 font-semibold">立即支付</span>
-                                        <span class="text-red font-semibold ml-10px">¥{{calculateData.total}}</span>
+                                        <span class="text-red font-semibold ml-10px" v-if="isCouponCalculated && (calculateData.total || calculateData.total === 0)">¥{{calculateData.total}}</span>
                                     </div>
                                 </div>
                                 <div class="w-22px h-22px">
@@ -312,6 +317,42 @@
             </div>
         </u-popup>
 
+        <!-- 优惠券选择 -->
+        <u-popup :show="showCouponPopup" :round="20" @close="onCloseCouponPopup" :key="'showCouponPopup'"
+            :safeAreaInsetBottom="false">
+            <div class="w-full">
+                <div
+                    class="text-gray-333 px-20px pt-20px pb-10px flex justify-between items-center border-l-0 border-t-0 border-r-0 border-b-1px border-gray-100 border-solid text-16 font-semibold ">
+                    <span> 选择抵扣券 </span>
+                    <span>
+                        <u-icon name="close" size="18px" @click="onCloseCouponPopup"></u-icon>
+                    </span>
+                </div>
+                <div class="px-20px pt-10px text-12px text-gray-999">最多可选{{ couponMaxCount }}张</div>
+                <scroll-view scroll-y="true" class="max-h-60vh px-20px box-border py-15px">
+                    <div v-for="(item, index) in couponList" :key="index"
+                        class="bg-white rounded-10px p-15px mb-10px border border-solid border-gray-100 flex justify-between items-center"
+                        @click="onSelectCoupon(item)">
+                        <div class="flex-1 pr-10px">
+                            <div class="text-gray-333 text-14px font-semibold">{{ item.name }}</div>
+                            <div class="text-gray-999 text-12px mt-8px">{{ item.subtract }}</div>
+                            <div class="text-gray-999 text-10px mt-4px">{{ item.strtime }}</div>
+                        </div>
+                        <div class="rounded-full px-10px h-28px flex items-center justify-center text-12px"
+                            :class="draftSelectedCouponIds.includes(String(item.id)) ? 'bg-red text-white' : 'bg-gray-100 text-gray-666'">
+                            {{ draftSelectedCouponIds.includes(String(item.id)) ? '已选' : '选择' }}
+                        </div>
+                    </div>
+                    <div v-if="!couponList.length" class="text-center text-12px text-gray-999 py-20px">暂无可用抵扣券</div>
+                </scroll-view>
+                <div class="px-20px pb-20px">
+                    <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '100%', margin: 0 }"
+                        color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="确认" @click="onConfirmCoupons">
+                    </u-button>
+                </div>
+            </div>
+        </u-popup>
+
 
         <!-- 确认预约 -->
         <u-modal :show="showConfirmBookModal" width="580rpx" :title="'确认预约'" :confirmColor="'#FF545C'">
@@ -402,7 +443,23 @@ export default {
             film: {},
             isCouponMode: false,
             payType: 'tiktok',
-            calculateData: {}
+            calculateData: {},
+            showCouponPopup: false,
+            couponList: [],
+            selectedCouponIds: [],
+            draftSelectedCouponIds: [],
+            isCouponCalculated: false,
+        }
+    },
+    computed: {
+        couponMaxCount() {
+            return this.order && this.order.seats ? this.order.seats.length : 0;
+        },
+        selectedCouponText() {
+            if (!this.selectedCouponIds.length) {
+                return '点击选择抵扣券';
+            }
+            return `已选${this.selectedCouponIds.length}张`;
         }
     },
     onUnload() {
@@ -453,6 +510,75 @@ export default {
         showAddressComp() {
             this.showAddressPopup = true;
         },
+        onShowCouponPopup() {
+            this.showCouponPopup = true;
+            this.draftSelectedCouponIds = [...this.selectedCouponIds];
+            if (this.couponList.length) {
+                return;
+            }
+            this.request('pay.coupons', { cinema_id: this.cinema_id, order_id: this.order_id }, 'POST').then(res => {
+                this.couponList = res.list || [];
+            });
+        },
+        initDefaultCoupons() {
+            this.request('pay.coupons', { cinema_id: this.cinema_id, order_id: this.order_id }, 'POST').then(res => {
+                const list = res.list || [];
+                this.couponList = list;
+                if (!list.length) {
+                    return;
+                }
+                const defaultCoupons = list.slice(0, this.couponMaxCount);
+                this.selectedCouponIds = defaultCoupons.map(item => String(item.id));
+                this.draftSelectedCouponIds = [...this.selectedCouponIds];
+                this.request('pay.calculate', {
+                    cinema_id: this.cinema_id,
+                    order_id: this.order_id,
+                    coupon_ids: this.selectedCouponIds.join(',')
+                }, 'POST').then(res => {
+                    this.calculateData = res;
+                    this.isCouponCalculated = true;
+                });
+            });
+        },
+        onCloseCouponPopup() {
+            this.showCouponPopup = false;
+            this.draftSelectedCouponIds = [...this.selectedCouponIds];
+        },
+        onSelectCoupon(item) {
+            const id = String(item.id);
+            const index = this.draftSelectedCouponIds.findIndex(el => el === id);
+            if (index !== -1) {
+                this.draftSelectedCouponIds.splice(index, 1);
+                return;
+            }
+            if (this.draftSelectedCouponIds.length >= this.couponMaxCount) {
+                uni.showToast({
+                    title: `最多可选${this.couponMaxCount}张`,
+                    icon: 'none'
+                });
+                return;
+            }
+            this.draftSelectedCouponIds.push(id);
+        },
+        onConfirmCoupons() {
+            if (!this.draftSelectedCouponIds.length) {
+                uni.showToast({
+                    title: '至少选择1张抵扣券',
+                    icon: 'none'
+                });
+                return;
+            }
+            this.selectedCouponIds = [...this.draftSelectedCouponIds];
+            this.showCouponPopup = false;
+            this.request('pay.calculate', {
+                cinema_id: this.cinema_id,
+                order_id: this.order_id,
+                coupon_ids: this.selectedCouponIds.join(',')
+            }, 'POST').then(res => {
+                this.calculateData = res;
+                this.isCouponCalculated = true;
+            });
+        },
         async getData() {
             this.request('pay.index', { order_id: this.order_id, cinema_id: this.cinema_id }).then(res => {
                 this.pageLoad = true;
@@ -469,10 +595,14 @@ export default {
                 if (this.mySetting.buy_text) {
                     this.mySetting.buy_text = this.mySetting ? parseRichText(this.mySetting.buy_text) : '';
                 }
-                // 计算价格
-                this.request('pay.calculate', {cinema_id: this.cinema_id, order_id: this.order_id}, 'POST').then(res => {
-                    this.calculateData = res;
-                })
+                this.calculateData = {};
+                this.couponList = [];
+                this.selectedCouponIds = [];
+                this.draftSelectedCouponIds = [];
+                this.isCouponCalculated = false;
+                if (this.isCouponMode) {
+                    this.initDefaultCoupons();
+                }
                 if (this.rule.ticket_rule.ticket_mode == 1) {
                     this.request('address.defaults', { cinema_id: this.cinema_id }, 'GET').then(res => {
                         this.curAddress = res.address;
@@ -549,6 +679,20 @@ export default {
                 uni.showToast({ title: "操作频繁，请稍后重试", icon: 'none' })
                 return;
             }
+            if (this.isCouponMode) {
+                if (this.selectedCouponIds.length < 1) {
+                    uni.showToast({ title: "至少选择1张抵扣券", icon: 'none' })
+                    return;
+                }
+                if (this.selectedCouponIds.length > this.couponMaxCount) {
+                    uni.showToast({ title: `抵扣券不能超过${this.couponMaxCount}张`, icon: 'none' })
+                    return;
+                }
+                if (!this.isCouponCalculated) {
+                    uni.showToast({ title: "请选择抵扣券", icon: 'none' })
+                    return;
+                }
+            }
             if (this.diyform.diyform_set && this.diyform.fields && this.diyform.fields.length) {
                 // 检查自定义表单必填
                 for (let index = 0; index < this.diyform.fields.length; index++) {
@@ -597,6 +741,7 @@ export default {
             }
             if(this.isCouponMode){
                 params.pay_price = this.calculateData.total;
+                params.coupon_ids = this.selectedCouponIds.join(',');
             }
             if (this.rule.ticket_rule.ticket_mode == 1) {
                 params.address_id = this.curAddress.id;
@@ -651,6 +796,13 @@ export default {
                         this.showConfirmBookModal = false;
                     }
                 })
+            }, (err) => {
+                this.paying = false;
+                this.showConfirmBookModal = false;
+                uni.showToast({
+                    title: err.message || '下单失败',
+                    icon: 'none'
+                });
             })
         },
         handlePayDone(){
@@ -674,6 +826,7 @@ export default {
                 fail: res => {
                     console.log('continueToPay-fail', res)
                     this.handlePayDone();
+                    uni.showToast({ title: res.errMsg || '支付失败', icon: 'none' })
                 },
             });
         },

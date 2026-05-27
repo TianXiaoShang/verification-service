@@ -75,6 +75,20 @@
       }
     },
     {
+      "path": "pages/neo-choice-theater/index",
+      "style": {
+        "navigationBarTitleText": "选择票档",
+        "mp-weixin": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        },
+        "mp-toutiao": {
+          "navigationStyle": "custom",
+          "backgroundColor": "#F9F9F9"
+        }
+      }
+    },
+    {
       "path": "pages/h5-seat/index",
       "style": {
         "navigationBarTitleText": "选择座位",
