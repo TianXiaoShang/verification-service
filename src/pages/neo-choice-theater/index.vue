@@ -188,7 +188,7 @@ export default {
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---33333');
-		// options = { account_id: '7548746367523407881', order_id: '1095077231300827295' }
+		// options = { account_id: '7548746367523407881', order_id: '1111247712945947295' }
 		this.account_id = options.account_id;
 		this.order_id = options.order_id;
 		this.waitLogin().then(async () => {

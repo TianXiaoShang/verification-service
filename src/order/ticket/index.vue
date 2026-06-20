@@ -29,89 +29,135 @@
                         :activeStyle="{ color: '#333', fontWeight: 'bold', transform: 'scale(1.05)' }"
                         :inactiveStyle="{ color: '#999999', transform: 'scale(1)' }"></u-tabs>
                 </div>
-                <!-- 取票 -->
-                <div class="" v-if="global.show_ticketscode != 1 && tabIndex === 0">
-                    <div class="py-20px relative" style="border-top: 1px solid #eee">
-                        <div class="flex justify-center items-center relative">
-                            <!-- is_ticket是整体的取票状态，status是单个的扫码入场状态 -->
-                            <div :style="{ opacity: order.take_ticket_status == 0 ? '1' : '0.07' }">
-                                <!-- 组件地址 https://ext.dcloud.net.cn/plugin?id=39 -->
-                                <tki-qrcode ref="qrcode" :cid="order.dynamic" :val="order.dynamic" :size="150" unit="px"
-                                    :background="'#ffffff'" :foreground="'#000000'" :onval="true" :loadMake="true"
-                                    :showLoading="true" />
-                            </div>
-                            <div v-if="order.take_ticket_status != 0"
-                                class="absolute flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                <image class="w-55px h-55px" :src="`../static/${statusOrder[order.take_ticket_status]}.png`" />
-                                <div class="mt-8px text-16px font-semibold" style="color: #63c899">
-                                    {{ statusOrderText[order.take_ticket_status] }}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col justify-center items-center text-14px mt-10px">
-                        <div class="text-gray-999">{{ ticket.length }}张票</div>
-                        <div class="flex items-center text-gray-333 font-normal mt-10px">
-                            <span
-                                :style="{ 'text-decoration': order.take_ticket_status == 1 ? 'line-through;' : 'none' }">票码：{{
-                                    order.dynamic
-                                }}</span>
-                            <span @click="onCopy(order.dynamic)"
-                                class="px-10px h-26px flex items-center justify-center rounded-25px ml-20px border border-solid border-color-333">复制</span>
-                        </div>
-                        <div class="flex justify-center text-13px font-semibold text-red mt-12px">
-                            二维码与票码为入场凭证，请勿泄露
-                        </div>
-                    </div>
-                </div>
-                <!-- 扫码入场 -->
-                <div class=""
-                    v-if="global.show_ticketscode != 1 ? tabIndex === 1 : tabIndex === 0 && order.ticket_mode != 1">
-                    <div class="py-20px relative" style="border-top: 1px solid #eee">
-                        <swiper v-if="ticket.length" :circular="false" :indicator-dots="false" :current="ticketCurrent"
-                            @animationfinish="changeFinish" :autoplay="false" :duration="500">
-                            <swiper-item v-for="(item, index) in ticket" :key="index">
-                                <div class="flex justify-center items-center relative">
-                                    <div :style="{ opacity: item.status <= 1 ? '1' : '0.07' }">
-                                        <!-- 组件地址 https://ext.dcloud.net.cn/plugin?id=39 -->
-                                        <tki-qrcode ref="qrcode" :cid="item.id" :val="item.dynamic" :size="150" unit="px"
-                                            :background="'#ffffff'" :foreground="'#000000'" :onval="true" :loadMake="true"
-                                            :showLoading="true" />
-                                    </div>
-                                    <div
-                                        class="absolute flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                        <image class="w-55px h-55px" :src="`../static/${statusSign[item.status]}.png`" />
-                                        <div class="mt-8px text-16px font-semibold" style="color: #63c899">
-                                            {{ statusSignText[item.status] }}</div>
-                                    </div>
+                <template v-if="global.is_ticket_real_name != 1">
+                    <!-- 取票 -->
+                    <div class="" v-if="global.show_ticketscode != 1 && tabIndex === 0">
+                        <div class="py-20px relative" style="border-top: 1px solid #eee">
+                            <div class="flex justify-center items-center relative">
+                                <!-- is_ticket是整体的取票状态，status是单个的扫码入场状态 -->
+                                <div :style="{ opacity: order.take_ticket_status == 0 ? '1' : '0.07' }">
+                                    <!-- 组件地址 https://ext.dcloud.net.cn/plugin?id=39 -->
+                                    <tki-qrcode ref="qrcode" :cid="order.dynamic" :val="order.dynamic" :size="150" unit="px"
+                                        :background="'#ffffff'" :foreground="'#000000'" :onval="true" :loadMake="true"
+                                        :showLoading="true" />
                                 </div>
-                            </swiper-item>
-                        </swiper>
-                        <div v-if="(ticket.length > 1)"
-                            class="absolute left-0 top-1/2 transform -translate-y-1/2 w-25px h-25px" @click="onPrev">
-                            <image class="w-full h-full" src="../static/previous-dis@2x.png" />
+                                <div v-if="order.take_ticket_status != 0"
+                                    class="absolute flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <image class="w-55px h-55px" :src="`../static/${statusOrder[order.take_ticket_status]}.png`" />
+                                    <div class="mt-8px text-16px font-semibold" style="color: #63c899">
+                                        {{ statusOrderText[order.take_ticket_status] }}</div>
+                                </div>
+                            </div>
                         </div>
-                        <div v-if="(ticket.length > 1)"
-                            class="absolute right-0 top-1/2 transform -translate-y-1/2 w-25px h-25px" @click="onNext">
-                            <image class="w-full h-full" src="../static/previous-nor@2x.png" />
+                        <div class="flex flex-col justify-center items-center text-14px mt-10px">
+                            <div class="text-gray-999">{{ ticket.length }}张票</div>
+                            <div class="flex items-center text-gray-333 font-normal mt-10px">
+                                <span
+                                    :style="{ 'text-decoration': order.take_ticket_status == 1 ? 'line-through;' : 'none' }">票码：{{
+                                        order.dynamic
+                                    }}</span>
+                                <span @click="onCopy(order.dynamic)"
+                                    class="px-10px h-26px flex items-center justify-center rounded-25px ml-20px border border-solid border-color-333">复制</span>
+                            </div>
+                            <div class="flex justify-center text-13px font-semibold text-red mt-12px">
+                                二维码与票码为入场凭证，请勿泄露
+                            </div>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-center items-center text-14px">
-                        <div class="mb-8px text-gray-999 text-14px"
-                            v-if="ticket[ticketCurrent] && ticket[ticketCurrent].usable_times > 1">
-                            <span>共计{{ ticket[ticketCurrent].usable_times }}次</span>
-                            <span class="ml-8px">剩余<span class="text-red">{{ ticket[ticketCurrent].remaining_times
-                            }}</span>次</span>
+                    <!-- 扫码入场 -->
+                    <div class=""
+                        v-if="global.show_ticketscode != 1 ? tabIndex === 1 : tabIndex === 0 && order.ticket_mode != 1">
+                        <div class="py-20px relative" style="border-top: 1px solid #eee">
+                            <swiper v-if="ticket.length" :circular="false" :indicator-dots="false" :current="ticketCurrent"
+                                @animationfinish="changeFinish" :autoplay="false" :duration="500">
+                                <swiper-item v-for="(item, index) in ticket" :key="index">
+                                    <div class="flex justify-center items-center relative">
+                                        <div :style="{ opacity: item.status <= 1 ? '1' : '0.07' }">
+                                            <!-- 组件地址 https://ext.dcloud.net.cn/plugin?id=39 -->
+                                            <tki-qrcode ref="qrcode" :cid="item.id" :val="item.dynamic" :size="150" unit="px"
+                                                :background="'#ffffff'" :foreground="'#000000'" :onval="true" :loadMake="true"
+                                                :showLoading="true" />
+                                        </div>
+                                        <div
+                                            class="absolute flex flex-col justify-center items-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <image class="w-55px h-55px" :src="`../static/${statusSign[item.status]}.png`" />
+                                            <div class="mt-8px text-16px font-semibold" style="color: #63c899">
+                                                {{ statusSignText[item.status] }}</div>
+                                        </div>
+                                    </div>
+                                </swiper-item>
+                            </swiper>
+                            <div v-if="(ticket.length > 1)"
+                                class="absolute left-0 top-1/2 transform -translate-y-1/2 w-25px h-25px" @click="onPrev">
+                                <image class="w-full h-full" src="../static/previous-dis@2x.png" />
+                            </div>
+                            <div v-if="(ticket.length > 1)"
+                                class="absolute right-0 top-1/2 transform -translate-y-1/2 w-25px h-25px" @click="onNext">
+                                <image class="w-full h-full" src="../static/previous-nor@2x.png" />
+                            </div>
                         </div>
-                        <div class="text-gray-999">
-                            <span class="font-semibold text-[#222] text-16px mr-5px">{{ ticket[ticketCurrent].seat_name }}</span>({{ ticketCurrent + 1 + '/' + ticket.length }})
+                        <div class="flex flex-col justify-center items-center text-14px">
+                            <div class="mb-8px text-gray-999 text-14px"
+                                v-if="ticket[ticketCurrent] && ticket[ticketCurrent].usable_times > 1">
+                                <span>共计{{ ticket[ticketCurrent].usable_times }}次</span>
+                                <span class="ml-8px">剩余<span class="text-red">{{ ticket[ticketCurrent].remaining_times
+                                }}</span>次</span>
+                            </div>
+                            <div class="text-gray-999">
+                                <span class="font-semibold text-[#222] text-16px mr-5px">{{ ticket[ticketCurrent].seat_name }}</span>({{ ticketCurrent + 1 + '/' + ticket.length }})
+                            </div>
+                            <div class="flex items-center text-gray-333 font-normal mt-10px">
+                                <span>票码：{{ ticket[ticketCurrent].dynamic }}</span>
+                                <span @click="onCopy(ticket[ticketCurrent].dynamic)"
+                                    class="px-10px h-26px flex items-center justify-center rounded-25px ml-20px border border-solid border-color-333">复制</span>
+                            </div>
+                            <div class="flex justify-center text-13px font-semibold text-red mt-12px">
+                                二维码与票码为入场凭证，请勿泄露
+                            </div>
                         </div>
-                        <div class="flex items-center text-gray-333 font-normal mt-10px">
-                            <span>票码：{{ ticket[ticketCurrent].dynamic }}</span>
-                            <span @click="onCopy(ticket[ticketCurrent].dynamic)"
-                                class="px-10px h-26px flex items-center justify-center rounded-25px ml-20px border border-solid border-color-333">复制</span>
+                    </div>
+                </template>
+                <!-- 身份证入场 -->
+                <div v-if="global.is_ticket_real_name == 1">
+                    <div class="pt-10px">
+                        <div class="flex flex-col justify-center items-center mb-10px">
+                            <div class="text-black text-18px">凭本人有效身份证件原件入场</div>
+                            <div class="text-fonts-light text-14px mt-6px">请勿截图转发给陌生人</div>
                         </div>
-                        <div class="flex justify-center text-13px font-semibold text-red mt-12px">
-                            二维码与票码为入场凭证，请勿泄露
+                        <div class="relative w-full">
+                            <swiper class="h-180px" v-if="ticket.length" :circular="false" :indicator-dots="false" :current="ticketCurrent"
+                                @animationfinish="changeFinish" :autoplay="false" :duration="500" style="height: 244px !important;">
+                                <swiper-item v-for="(item, index) in ticket" :key="index">
+                                    <div class="flex flex-col justify-center items-center relative py-10px bg-gray-bg rounded-10px overflow-hidden">
+                                        <div class="text-0px w-195px h-122px overflow-hidden">
+                                            <img src="../static/idcard.png" class="w-219px h-137px" mode="widthFix" alt="" />
+                                        </div>
+                                        <div class="text-fonts text-14px mt-10px">
+                                            <div class="mt-0px"><span class="text-fonts-light">证件类型：</span>{{ item.idcard_type }}</div>
+                                            <div class="mt-5px"><span class="text-fonts-light">姓名：</span>{{ item.realname }}</div>
+                                            <div class="mt-5px"><span class="text-fonts-light">证件号：</span>{{ item.idcard }}</div>
+                                        </div>
+                                        <div class="text-12px mt-8px text-fonts-sec" v-if="extras.is_part_name == 1 && item.part_name">
+                                            <div>票档：{{ item.part_name }}</div>
+                                        </div>
+                                        <div class="text-12px mt-8px text-fonts-sec" v-if="extras.is_seat_name == 1 && item.seat_name">
+                                            <div>座位：{{ item.seat_name }}</div>
+                                        </div>
+                                        <div v-if="item.status === 2 || item.status === 3 || item.status === 4 || item.status === 5"
+                                            class="absolute flex flex-col justify-center items-center right-10px bottom-10px">
+                                            <image class="w-74px h-74px" :src="`../static/${statusSign[item.status]}.png`" />
+                                        </div>
+                                    </div>
+                                </swiper-item>
+                            </swiper>
+                            <div v-if="(ticket.length > 1)"
+                                class="absolute left-10px top-1/2 transform -translate-y-1/2 w-25px h-25px" @click="onPrev">
+                                <image class="w-full h-full" src="../static/previous-dis@2x.png" />
+                            </div>
+                            <div v-if="(ticket.length > 1)"
+                                class="absolute right-10px top-1/2 transform -translate-y-1/2 w-25px h-25px" @click="onNext">
+                                <image class="w-full h-full" src="../static/previous-nor@2x.png" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -290,6 +336,9 @@ export default {
                 };
                 if (this.global.show_entrycode != 1 && this.order.ticket_mode != 1) {
                     this.tabsDataList.push({ name: '扫码入场' })
+                };
+                if (this.global.is_ticket_real_name == 1) {
+                    this.tabsDataList = [{ name: '实名制入场' }];
                 };
             });
         },
