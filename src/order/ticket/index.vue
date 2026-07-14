@@ -121,33 +121,59 @@
                 <div v-if="global.is_ticket_real_name == 1">
                     <div class="pt-10px">
                         <div class="flex flex-col justify-center items-center mb-10px">
-                            <div class="text-black text-18px">凭本人有效身份证件原件入场</div>
-                            <div class="text-fonts-light text-14px mt-6px">请勿截图转发给陌生人</div>
+                            <div class="text-black text-18px">{{ isBundleChildTicket(currentRealNameTicket) ? '请出示二维码扫码入场' : '凭本人有效身份证件原件入场' }}</div>
+                            <div class="text-fonts-light text-14px mt-6px">{{ isBundleChildTicket(currentRealNameTicket) ? '二维码为入场凭证，请勿泄露' : '请勿截图转发给陌生人' }}</div>
                         </div>
                         <div class="relative w-full">
                             <swiper class="h-180px" v-if="ticket.length" :circular="false" :indicator-dots="false" :current="ticketCurrent"
                                 @animationfinish="changeFinish" :autoplay="false" :duration="500" style="height: 244px !important;">
                                 <swiper-item v-for="(item, index) in ticket" :key="index">
-                                    <div class="flex flex-col justify-center items-center relative py-10px bg-gray-bg rounded-10px overflow-hidden">
-                                        <div class="text-0px w-195px h-122px overflow-hidden">
-                                            <img src="../static/idcard.png" class="w-219px h-137px" mode="widthFix" alt="" />
+                                    <template v-if="isBundleChildTicket(item)">
+                                        <div class="flex flex-col justify-center items-center relative py-10px bg-gray-bg rounded-10px overflow-hidden">
+                                            <div
+                                                :style="{ opacity: item.status === 2 || item.status === 3 || item.status === 4 || item.status === 5 ? '0.07' : '1' }">
+                                                <image :src="item.qrcode_image" alt="" mode="widthFix" class="w-155px h-155px" />
+                                            </div>
+                                            <div class="mb-8px text-fonts-light text-14px"
+                                                v-if="item.usable_times > 1">
+                                                <span>共计{{ item.usable_times }}次</span>
+                                                <span class="ml-8px">剩余<span class="text-red">{{ item.remaining_times
+                                                        }}</span>次</span>
+                                            </div>
+                                            <div class="text-12px mt-8px text-fonts-sec" v-if="item.part_name">
+                                                <div>票档：{{ item.part_name }}</div>
+                                            </div>
+                                            <div class="text-12px mt-8px text-fonts-sec" v-if="item.seat_name">
+                                                <div>座位：{{ item.seat_name }}</div>
+                                            </div>
+                                            <div v-if="item.status === 2 || item.status === 3 || item.status === 4 || item.status === 5"
+                                                class="absolute flex flex-col justify-center items-center right-10px bottom-10px">
+                                                <image class="w-74px h-74px" :src="`../static/${statusSign[item.status]}.png`" />
+                                            </div>
                                         </div>
-                                        <div class="text-fonts text-14px mt-10px">
-                                            <div class="mt-0px"><span class="text-fonts-light">证件类型：</span>{{ item.idcard_type }}</div>
-                                            <div class="mt-5px"><span class="text-fonts-light">姓名：</span>{{ item.realname }}</div>
-                                            <div class="mt-5px"><span class="text-fonts-light">证件号：</span>{{ item.idcard }}</div>
+                                    </template>
+                                    <template v-else>
+                                        <div class="flex flex-col justify-center items-center relative py-10px bg-gray-bg rounded-10px overflow-hidden">
+                                            <div class="text-0px w-195px h-122px overflow-hidden">
+                                                <img src="../static/idcard.png" class="w-219px h-137px" mode="widthFix" alt="" />
+                                            </div>
+                                            <div class="text-fonts text-14px mt-10px">
+                                                <div class="mt-0px"><span class="text-fonts-light">证件类型：</span>{{ item.idcard_type }}</div>
+                                                <div class="mt-5px"><span class="text-fonts-light">姓名：</span>{{ item.realname }}</div>
+                                                <div class="mt-5px"><span class="text-fonts-light">证件号：</span>{{ item.idcard }}</div>
+                                            </div>
+                                            <div class="text-12px mt-8px text-fonts-sec" v-if="item.part_name">
+                                                <div>票档：{{ item.part_name }}</div>
+                                            </div>
+                                            <div class="text-12px mt-8px text-fonts-sec" v-if="item.seat_name">
+                                                <div>座位：{{ item.seat_name }}</div>
+                                            </div>
+                                            <div v-if="item.status === 2 || item.status === 3 || item.status === 4 || item.status === 5"
+                                                class="absolute flex flex-col justify-center items-center right-10px bottom-10px">
+                                                <image class="w-74px h-74px" :src="`../static/${statusSign[item.status]}.png`" />
+                                            </div>
                                         </div>
-                                        <div class="text-12px mt-8px text-fonts-sec" v-if="extras.is_part_name == 1 && item.part_name">
-                                            <div>票档：{{ item.part_name }}</div>
-                                        </div>
-                                        <div class="text-12px mt-8px text-fonts-sec" v-if="extras.is_seat_name == 1 && item.seat_name">
-                                            <div>座位：{{ item.seat_name }}</div>
-                                        </div>
-                                        <div v-if="item.status === 2 || item.status === 3 || item.status === 4 || item.status === 5"
-                                            class="absolute flex flex-col justify-center items-center right-10px bottom-10px">
-                                            <image class="w-74px h-74px" :src="`../static/${statusSign[item.status]}.png`" />
-                                        </div>
-                                    </div>
+                                    </template>
                                 </swiper-item>
                             </swiper>
                             <div v-if="(ticket.length > 1)"
@@ -282,6 +308,11 @@ export default {
             phoneList: [],
         }
     },
+    computed: {
+        currentRealNameTicket() {
+            return this.ticket[this.ticketCurrent] || null;
+        }
+    },
     components: { tkiQrcode },
     onLoad(options) {
         // store.commit("SET_CAN_FETCH_TICKET", false);
@@ -293,6 +324,9 @@ export default {
         });
     },
     methods: {
+        isBundleChildTicket(item) {
+            return !!item && this.global.is_real_ticket_bundle == '0' && item.parent_id != '0';
+        },
         changeFinish(e) {
             this.canAnimationFlag = true;
             this.ticketCurrent = e.detail.current;
