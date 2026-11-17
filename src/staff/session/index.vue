@@ -2,7 +2,7 @@
     <div class="page-box bg-gray-bg p-20px pt-0 box-border">
         <loading />
         <!-- tabs -->
-        <u-tabs :current="tabIndex" :list="dateList" @click="changeTab" lineColor="#FF545C"
+        <u-tabs :current="tabIndex" :list="dateList" @click="changeTab" lineColor="#FF214C"
             :itemStyle="{ height: '42px' }"
             :activeStyle="{ color: '#333', fontWeight: 'bold', transform: 'scale(1.05)' }"
             :inactiveStyle="{ color: '#999999', transform: 'scale(1)' }"></u-tabs>

@@ -59,8 +59,8 @@ export default defineConfig({
           DEFAULT: "#33ABF4",
         },
         red: {
-          DEFAULT: "#FF545C",
-          555: "#FF555D",
+          DEFAULT: "#FF214C",
+          555: "#FF214C",
         },
         yellow: {
           DEFAULT: "#FF8F1F",

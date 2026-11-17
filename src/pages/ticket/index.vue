@@ -46,7 +46,7 @@ export default {
 		return {
 			ticketList: new Array(8).fill({}),
 			statusSign: ['', '待观看', '已取票', '已结束', '已退款'],
-			statusBgColor: ['', '#FF545C', '#EEEEEE', '#EEEEEE', '#EEEEEE'],
+			statusBgColor: ['', '#FF214C', '#EEEEEE', '#EEEEEE', '#EEEEEE'],
 			statusTextColor: ['', '#fff', '#333', '#333', '#333'],
 		}
 	},

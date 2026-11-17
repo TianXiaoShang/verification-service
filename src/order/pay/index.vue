@@ -2,7 +2,7 @@
     <div class="page-box bg-gray-bg box-border">
         <loading />
         <!-- 倒计时区域 -->
-        <div style="background: linear-gradient(180deg, #FF545C 0%, #FF545C 100%);"
+        <div style="background: linear-gradient(180deg, #FF214C 0%, #FF214C 100%);"
             class="p-30px flex flex-col justify-center items-center text-white relative">
             <div class="text-16 font-semibold" v-if="!isCouponMode">剩余确认预约时间 {{ expire_time }}</div>
             <div class="text-16 font-semibold" v-else>剩余支付时间 {{ expire_time }}</div>
@@ -48,9 +48,9 @@
             </div>
 
             <!-- 观演人 -->
-            <div class="bg-white mt-10px p-15px rounded-10px" v-if="order.is_autonym == 1">
+            <div class="bg-white mt-10px p-15px pb-0px rounded-10px" v-if="order.is_autonym == 1">
                 <idcard-select :maxSelect="maxSelectIdcard" :curSelect="curIdacrds" :cinema_id="cinema_id"
-                    @onChange="onChangeIdcards"></idcard-select>
+                    @onChange="onChangeIdcards" @onOpenPopup="onIdcardPopupChange"></idcard-select>
             </div>
 
             <!-- 优惠券 -->
@@ -89,7 +89,7 @@
                     </div>
                     <div class="flex justify-between items-center mt-10px" v-else @click="showAddressComp">
                         <div class="text-14px text-red">点击选择地址</div>
-                        <u-icon color="#FF545C" name="arrow-right"></u-icon>
+                        <u-icon color="#FF214C" name="arrow-right"></u-icon>
                     </div>
                     <!-- <div class="mt-15px flex justify-between items-center">
                         <div class=text-gray-333>运费</div>
@@ -107,7 +107,7 @@
                 <!-- 姓名 -->
                 <div class="text-gray-999 flex justify-between items-center text-14">联系人</div>
                 <div class="mt-10px flex items-center flex-1" v-if="rule.ticket_rule.ticket_mode != '1'">
-                    <div class="text-14px font-semibold text-gray-333 w-5em">姓名<span class="text-red">*</span></div>
+                    <div class="text-14px font-semibold text-gray-333 w-5em">姓名</div>
                     <div class="flex-1 relative">
                         <u--input :customStyle="inputCustomStyle" @change="onCustomChange(user, 'name', $event)"
                             placeholder="请输入姓名" border="surround" class="flex-1" :value="user.name"></u--input>
@@ -185,7 +185,7 @@
                                     </div>
                                 </div>
                                 <div class="w-22px h-22px">
-                                    <u-radio size="22px" activeColor="#FF545C" :label="' '" name="tiktok"></u-radio>
+                                    <u-radio size="22px" activeColor="#FF214C" :label="' '" name="tiktok"></u-radio>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +214,7 @@
 
 
         <!-- 底部已选展示，购买 -->
-        <div
+        <div v-show="!idcardPopupOpen"
             class="fixed flex px-20px justify-between items-center z-998 bottom-0 h-70px left-0 w-full box-border bg-white">
             <!-- 《服务条款》 -->
              <div>
@@ -231,11 +231,11 @@
             
             <u-button v-if="!isCouponMode" :disabled="!pageLoad || paying" shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: '160px', margin: 0 }"
-                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" :text="'立即预约'" @click="toPay">
+                color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" :text="'立即预约'" @click="toPay">
             </u-button>
             <u-button v-if="isCouponMode" :disabled="!pageLoad || paying" shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: '160px', margin: 0 }"
-                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" @click="toPay">
+                color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" @click="toPay">
                 立即支付
                 <span>
                     <span class="text-12px ml-10px">¥</span>
@@ -260,7 +260,7 @@
                 </scroll-view>
                 <div class="py-10px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '200px' }"
-                        color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="确定" @click="onRead(true)">
+                        color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" text="确定" @click="onRead(true)">
                     </u-button>
                 </div>
             </div>
@@ -314,7 +314,7 @@
                 </scroll-view>
                 <div class="px-20px pb-20px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '100%', margin: 0 }"
-                        color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="确认" @click="onConfirmCoupons">
+                        color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" text="确认" @click="onConfirmCoupons">
                     </u-button>
                 </div>
             </div>
@@ -322,7 +322,7 @@
 
 
         <!-- 确认预约 -->
-        <u-modal :show="showConfirmBookModal" width="580rpx" :title="'确认预约'" :confirmColor="'#FF545C'">
+        <u-modal :show="showConfirmBookModal" width="580rpx" :title="'确认预约'" :confirmColor="'#FF214C'">
             <div class="flex flex-col w-full">
                 <div class="text-red text-12px flex justify-center mb-5px">出票后不可修改</div>
                 <div class="w-full max-h-60vh overflow-y-auto">
@@ -340,13 +340,11 @@
                             座位：{{ order.seats ? order.seats.map(el => el.name).join('、') : '-' }}
                         </div>
                     </div>
-                    <div class="text-gray-333 py-6px flex mb-4px">
+                    <div v-if="confirmName" class="text-gray-333 py-6px flex mb-4px">
                         <u-icon class="mr-4px relative top-2px" size="18px" color="#3eaf7c"
                             name="checkmark-circle"></u-icon>
                         <div>
-                            姓名：{{ (curIdacrds && curIdacrds.length ? curIdacrds.map(el =>
-                                el.realname).join('、') :
-                                user.name) }}
+                            姓名：{{ confirmName }}
                         </div>
                     </div>
                     <div class="text-gray-333 py-6px flex">
@@ -363,7 +361,7 @@
                     color="#999" text="再想想" @click="cancelConfirmBook">
                 </u-button>
                 <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '28vw', margin: 0 }"
-                    color="#FF545C" text="确认预约" @click="handleConfirmBook">
+                    color="#FF214C" text="确认预约" @click="handleConfirmBook">
                 </u-button>
             </div>
         </u-modal>
@@ -383,6 +381,7 @@ export default {
         return {
             showConfirmBookModal: false,
             curIdacrds: [],
+            idcardPopupOpen: false,
             user: {
                 name: '',
                 phone: ''
@@ -418,6 +417,12 @@ export default {
         }
     },
     computed: {
+        confirmName() {
+            if (this.curIdacrds.length) {
+                return this.curIdacrds.map(el => el.realname).join('、');
+            }
+            return this.user.name;
+        },
         couponMaxCount() {
             return this.order && this.order.seats ? this.order.seats.length : 0;
         },
@@ -456,6 +461,9 @@ export default {
         // },
         onChangeIdcards(e) {
             this.curIdacrds = e || [];
+        },
+        onIdcardPopupChange(val) {
+            this.idcardPopupOpen = val;
         },
         onChangeAddress(e) {
             this.curAddress = e;
@@ -619,11 +627,6 @@ export default {
             }
             if (this.order.is_autonym == 1 && this.curIdacrds.length != this.maxSelectIdcard) {
                 uni.showToast({ title: `请选择${this.maxSelectIdcard}位观演人`, icon: 'none' })
-                return;
-            }
-            // 快递模式不需要姓名
-            if (this.rule.ticket_rule.ticket_mode == '0' && !this.user.name) {
-                uni.showToast({ title: "请填写姓名", icon: 'none' })
                 return;
             }
             // 没手机号（快递模式也要，以免地址电话是错得）

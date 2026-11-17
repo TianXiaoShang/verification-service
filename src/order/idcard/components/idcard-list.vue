@@ -4,7 +4,7 @@
         <!-- tab内容 -->
         <div class="w-full h-full box-border">
             <div class="px-20px pb-10px" @click="onAdd" v-if="canSelect">
-                <div class="text-14px rounded-8px text-red flex justify-center p-8px" style="border: 1px dashed #FF545C;">
+                <div class="text-14px rounded-8px text-red flex justify-center p-8px" style="border: 1px dashed #FF214C;">
                     新增观演人</div>
             </div>
             <div v-if="!listData || !listData.length" class="mt-10px">
@@ -21,9 +21,9 @@
                             <div v-if="canSelect" @click="onCheck(item)">
                                 <div v-if="curSelectIdcards.find(e => e.id === item.id)"
                                     class="h-21px w-21px rounded-full box-bobrder flex justify-center">
-                                    <u-icon size="22px" name="checkmark-circle-fill" color="#FF545C"></u-icon>
+                                    <u-icon size="22px" name="checkmark-circle-fill" color="#FF214C"></u-icon>
                                 </div>
-                                <div v-else class="h-21px w-21px rounded-full box-border" style="border: 1px solid #FF545C">
+                                <div v-else class="h-21px w-21px rounded-full box-border" style="border: 1px solid #FF214C">
                                 </div>
                             </div>
                             <div class="mx-10px flex-1" @click="onCheck(item)">
@@ -36,10 +36,11 @@
                                         {{ item.idcard }}
                                     </span>
                                 </div>
+                                <div v-if="item.country_name" class="mt-4px text-12px text-gray-400 leading-5">国家/地区：{{ item.country_name }}</div>
                             </div>
                             <!-- 切换的时候不能删除 -->
                             <div class="ml-6px">
-                                <u-icon size="22px" name="trash" @click="onDelete(item)" color="#FF545C"></u-icon>
+                                <u-icon size="22px" name="trash" @click="onDelete(item)" color="#FF214C"></u-icon>
                             </div>
                         </template>
                         <u-skeleton v-else rows="2" title :avatar="false" loading></u-skeleton>
@@ -161,7 +162,7 @@ export default {
             this.getData(false);
         },
         toEdit(item) {
-            this.toPath('/order/idcard/add?isEdit=true&id=' + item.id)
+            this.toPath('/order/idcard/add?isEdit=true&id=' + item.id + '&cinema_id=' + this.cinema_id)
         },
         onDelete(item) {
             uni.showModal({

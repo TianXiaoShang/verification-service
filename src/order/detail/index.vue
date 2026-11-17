@@ -4,7 +4,7 @@
         <!-- 倒计时区域 -->
         <div v-if="order.id && !loadBooking" :style="{
             background: order.status == 2 ? '#2ACB95' :
-                order.status == 1 ? '#FF545C' :
+                order.status == 1 ? '#FF214C' :
                     order.status == 3 ? '#FF9933' :
                         order.status == 4 || order.status == 11 ? '#CCCCCC' : '',
         }" class="p-30px flex flex-col justify-center items-center text-white relative">
@@ -180,12 +180,12 @@
         <div v-if="order.status == 1 && (isCouponMode ? true : order.pre_create == 0)"
             class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal"
-                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', marginRight: '8px', border: '1px solid #FF545C', color: '#FF545C' }"
+                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', marginRight: '8px', border: '1px solid #FF214C', color: '#FF214C' }"
                 color="#fff" :text="isCouponMode ? '取消订单' : '取消预约'" :disabled="btnLoading" @click="cancelOrder">
             </u-button>
             <u-button shape="circle" size="normal"
                 :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }"
-                color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" :text="isCouponMode ? '去支付' : '去预约'" @click="toPay">
+                color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" :text="isCouponMode ? '去支付' : '去预约'" @click="toPay">
             </u-button>
         </div>
 
@@ -193,7 +193,7 @@
             <div class="mr-15px relative overflow-hidden">
                 <!-- 这个按钮用于决定样式，点击的是pay-button-sdk -->
                 <u-button shape="circle" size="normal"
-                    :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', border: '1px solid #FF545C', color: '#FF545C' }"
+                    :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', border: '1px solid #FF214C', color: '#FF214C' }"
                     color="#fff" :text="'申请退款'" @click="toPath('/order/refund/index?id=' + order.id)">
                 </u-button>
                 <!-- https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/industry-plugin/life-service-plugin/service-components/pay-button -->

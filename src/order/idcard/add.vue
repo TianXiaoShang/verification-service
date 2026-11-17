@@ -6,7 +6,7 @@
                 <div class="mt-15px font-semibold text-[#3D3D3D] text-16px">姓名<span class="text-red">*</span></div>
                 <u-form-item prop="realname" borderBottom>
                     <u--input v-model="formData.realname" border="none" placeholder="请输入姓名"></u--input>
-                    <u-icon slot="right" name="account-fill" color="#FF545C"></u-icon>
+                    <u-icon slot="right" name="account-fill" color="#FF214C"></u-icon>
                 </u-form-item>
                 <div class="mt-15px font-semibold text-[#3D3D3D] text-16px">证件类型<span class="text-red">*</span></div>
                 <u-form-item prop="type" borderBottom @click="show = true; hideKeyboard()">
@@ -16,8 +16,18 @@
                 </u-form-item>
                 <div class="mt-15px font-semibold text-[#3D3D3D] text-16px">证件号码<span class="text-red">*</span></div>
                 <u-form-item prop="idcard" borderBottom>
-                    <u--input v-model="formData.idcard" border="none" type="idcard" placeholder="请输入证件号码"></u--input>
+                    <u--input v-model="formData.idcard" border="none" :type="needsCountry ? 'text' : 'idcard'" placeholder="请输入证件号码"></u--input>
                 </u-form-item>
+                <template v-if="needsCountry">
+                    <div class="mt-15px font-semibold text-[#3D3D3D] text-16px">国家/地区<span class="text-red">*</span></div>
+                    <u-form-item prop="country_code" borderBottom>
+                        <div class="flex w-full min-w-0 items-center justify-between" @click="openCountryPicker">
+                            <span v-if="countryName" class="min-w-0 flex-1 text-14px text-gray-333 leading-5">{{ countryName }}</span>
+                            <span v-else class="flex-1 text-14px text-[#c0c4cc]">请选择国家/地区</span>
+                            <u-icon name="arrow-right" class="ml-10px"></u-icon>
+                        </div>
+                    </u-form-item>
+                </template>
             </u--form>
             <div class="flex mt-30px justify-start items-center text-14 text-gray-333 box-border">
                 <image v-if="read" @click="onRead(false)" src="@/static/common/agree-sel@2x.png" class="w-15px h-15px">
@@ -25,13 +35,13 @@
                 <div v-if="!read" @click="showPopup = true"
                     class="box-border rounded-full w-15px h-15px border border-solid border-[#999999]">
                 </div>
-                <span class="ml-4px text-[#3D3D3D]">我已阅读并同意<span class="text-[#F65C66]"
+                <span class="ml-4px text-[#3D3D3D]">我已阅读并同意<span class="text-[#FF214C]"
                         @click="showPopup = true">《实名须知》</span></span>
             </div>
         </div>
         <div class="fixed z-998 bottom-20px h-44px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '80vw', margin: 0 }"
-                color="#FF545C" text="保存" @click="onSubmit">
+                color="#FF214C" text="保存" @click="onSubmit">
             </u-button>
         </div>
 
@@ -52,7 +62,7 @@
                 </scroll-view>
                 <div class="py-10px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '200px' }"
-                        color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="确定"
+                        color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" text="确定"
                         @click.native.stop="onRead(true)">
                     </u-button>
                 </div>
@@ -61,14 +71,20 @@
 
         <!-- 类型选择 -->
         <u-picker :show="show" ref="uPicker" :title="'请选择'" :cancelText="'取消'" :confirmText="'确认'" :cancelColor="'#999999'"
-            :confirmColor="'#FF545C'" :showToolbar="true" :immediateChange="true" :columns="columns" :defaultIndex="defaultIndex"
+            :confirmColor="'#FF214C'" :showToolbar="true" :immediateChange="true" :columns="columns" :defaultIndex="defaultIndex"
             @cancel="show = false" @confirm="confirm"></u-picker>
+        <country-picker :show="showCountry" :value="formData.country_code" :cinema_id="cinema_id"
+            @select="selectCountry" @close="showCountry = false"></country-picker>
     </div>
 </template>
 
 <script>
 import { parseRichText } from '@/util';
+import CountryPicker from './components/country-picker.vue';
+import countryMixin from './country-mixin.js';
 export default {
+    components: { CountryPicker },
+    mixins: [countryMixin],
     data() {
         return {
             read: false,
@@ -79,6 +95,7 @@ export default {
                 realname: '',
                 idcard: '',
                 type: "0",
+                country_code: '',
             },
             autonym_explain: '',
             defaultIndex: [0],
@@ -122,9 +139,10 @@ export default {
                     this.formData = {
                         realname: data.realname,
                         idcard: data.idcard,
-                        type: data.type,
-                        id: this.id,
+                        type: String(data.type),
+                        country_code: data.country_code,
                     }
+                    this.countryName = data.country_name;
                     this.defaultIndex = [Number(data.type)];
                     this.curType = this.columns[0][Number(data.type)];
                 })
@@ -152,8 +170,13 @@ export default {
                         this.myMessage('请填写完整后提交');
                         return;
                     }
-                    const params = { ...this.formData };
+                    if (this.needsCountry && !this.formData.country_code) {
+                        this.myMessage('请选择国家/地区');
+                        return;
+                    }
+                    const params = this.getIdcardParams();
                     if (this.isEdit) {
+                        params.idcard_id = Number(this.id);
                         this.request('idcard.update&cinema_id=' + this.cinema_id, params, 'POST').then(res => {
                             this.myMessage('修改身份信息成功');
                             uni.$emit('refreshIdcardPopupData');

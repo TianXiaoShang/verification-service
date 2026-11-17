@@ -4,12 +4,12 @@
         <!-- title -->
         <div class="p-20px bg-white flex items-center text-white w-100vw box-border justify-around">
             <div class="flex flex-col items-center justify-center" @click="changeType('code')">
-                <u-icon name="edit-pen" size="30px" :color="curType === 'code' ? '#FF545C' : '#aaa'"></u-icon>
-                <span class="mt-6px text-14px" :style="{ color: curType === 'code' ? '#FF545C' : '#aaa' }">输入码</span>
+                <u-icon name="edit-pen" size="30px" :color="curType === 'code' ? '#FF214C' : '#aaa'"></u-icon>
+                <span class="mt-6px text-14px" :style="{ color: curType === 'code' ? '#FF214C' : '#aaa' }">输入码</span>
             </div>
             <div class="flex flex-col items-center justify-center" @click="changeType('scan')">
-                <u-icon name="scan" size="30px" :color="curType === 'scan' ? '#FF545C' : '#aaa'"></u-icon>
-                <span class="mt-6px text-14px" :style="{ color: curType === 'scan' ? '#FF545C' : '#aaa' }">扫一扫</span>
+                <u-icon name="scan" size="30px" :color="curType === 'scan' ? '#FF214C' : '#aaa'"></u-icon>
+                <span class="mt-6px text-14px" :style="{ color: curType === 'scan' ? '#FF214C' : '#aaa' }">扫一扫</span>
             </div>
         </div>
         <!-- 输入码 -->
@@ -22,7 +22,7 @@
         <div style="height: calc(100vh - 90px);" class="flex flex-col items-center justify-center w-full box-border"
             v-if="curType === 'scan'">
             <div class="box-border bg-white flex flex-col justify-center items-center box-border" @click="onScan">
-                <u-icon name="fingerprint" size="70px" color="#FF545C"></u-icon>
+                <u-icon name="fingerprint" size="70px" color="#FF214C"></u-icon>
                 <span class="mt-5px text-14px text-gray-600">点击扫码</span>
             </div>
         </div>
@@ -31,13 +31,13 @@
         <div v-if="curType === 'code'"
             class="fixed z-998 bottom-20px h-44px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '80vw', margin: 0 }"
-                color="#FF545C" text="查询票码" @click="onInputCode">
+                color="#FF214C" text="查询票码" @click="onInputCode">
             </u-button>
         </div>
 
         <!-- 确认核销弹窗 -->
         <u-modal :show="showConfirmModal" width="580rpx" :title="(isQuickMode && curType === 'scan') ? '核销完成' : '确认核销'"
-            :confirmColor="'#FF545C'">
+            :confirmColor="'#FF214C'">
             <div class="w-full">
                 <div class="text-16px text-gray-333 py-6px" style="border-bottom: 1px solid #eee;">
                     <div class="flex items-center">
@@ -65,7 +65,7 @@
                         color="#999" text="取消" @click="(showConfirmModal = false)">
                     </u-button>
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '30vw', margin: 0 }"
-                        color="#FF545C" text="确认" @click="handleConfirm">
+                        color="#FF214C" text="确认" @click="handleConfirm">
                     </u-button>
                 </template>
             </div>
@@ -73,7 +73,7 @@
 
 
         <!-- 门票-确认核销弹窗 -->
-        <u-modal :show="showTicketConfirmModal" width="580rpx" :title="'确认核销'" :confirmColor="'#FF545C'">
+        <u-modal :show="showTicketConfirmModal" width="580rpx" :title="'确认核销'" :confirmColor="'#FF214C'">
             <div class="w-full max-h-60vh overflow-y-auto">
                 <div class="text-gray-333 py-6px" style="border-bottom: 1px solid #eee;">
                     <div class="flex items-center justify-between mb-10px" v-for="(item, index) in affrimData.tickets"

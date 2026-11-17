@@ -6,7 +6,7 @@
                 <div class="mt-15px font-semibold text-[#3D3D3D] text-16px">姓名<span class="text-red">*</span></div>
                 <u-form-item prop="realname" borderBottom>
                     <u--input v-model="formData.realname" border="none" placeholder="请输入姓名"></u--input>
-                    <u-icon slot="right" name="account-fill" color="#FF545C"></u-icon>
+                    <u-icon slot="right" name="account-fill" color="#FF214C"></u-icon>
                 </u-form-item>
                 <div class="mt-15px font-semibold text-[#3D3D3D] text-16px">手机号<span class="text-red">*</span></div>
                 <u-form-item prop="mobile" borderBottom>
@@ -31,7 +31,7 @@
         </div>
         <div class="fixed z-90 bottom-20px h-44px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '80vw', margin: 0 }"
-                color="#FF545C" :text="orderId ? '确认修改' : '保存'" @click="onSubmit">
+                color="#FF214C" :text="orderId ? '确认修改' : '保存'" @click="onSubmit">
             </u-button>
         </div>
     </div>

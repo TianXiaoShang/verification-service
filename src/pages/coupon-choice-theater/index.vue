@@ -1,5 +1,5 @@
 <template>
-	<div class="page-box bg-white box-border">
+	<div class="page-box bg-[#F7F8FC] box-border">
 		<loading />
 		<!-- 背景图 -->
 		<div class="relative" :style="{
@@ -16,10 +16,10 @@
 				<div class="text-white text-18px font-semibold">{{ filmData.title || '-' }}</div>
 			</div>
 			<!-- 圆角 -->
-			<div class="bg-white absolute left-0 -bottom-2px w-full overflow-hidden rounded-t-24px h-26px"></div>
+			<div class="bg-[#F7F8FC] absolute left-0 -bottom-2px w-full overflow-hidden rounded-t-24px h-26px"></div>
 		</div>
 		<!-- 骨架图 -->
-		<div v-if="!isLoad" class="px-20px">
+		<div v-if="!isLoad" class="px-16px">
 			<u-skeleton :loading="true" :animate="true" :title="true" :titleWidth="'80%'" :titleHeight="20"
 				:rows="3"></u-skeleton>
 			<div class="h-25px w-full"></div>
@@ -33,35 +33,35 @@
 		<template v-else>
 			<template v-if='((dateList && dateList.length) || (sessionList && sessionList.length))'>
 				<!-- 选票信息 -->
-				<div class="bg-white overflow-hidden px-20px pt-10px box-border w-full pb-130px">
+				<div class="overflow-hidden px-16px pt-10px box-border w-full"
+					:style="{ paddingBottom: `calc(${76 + (!cantBuy && !isSelectSeat ? 56 : 0) + (is_timing == 1 ? 60 : 0)}px + env(safe-area-inset-bottom))` }">
 					<!-- 日期 -->
-					<div class="text-12px mb-12px">
-						<span class="text-gray-333 font-semibold">日期</span>
+					<div class="text-12px leading-17px">
+						<span class="text-gray-333">日期</span>
 						<span class="ml-5px text-gray-999">场次时间均为演出当地时间</span>
 					</div>
 					<scroll-view scroll-x="true" :scroll-with-animation="true"
-						class="mb-20px text-gray-999 w-full box-border whitespace-nowrap">
+						class="mb-6px text-gray-333 w-full box-border whitespace-nowrap">
 						<div v-for="(item, index) in dateList" :key="index" @click="choiseDate(item)"
-							:class="{ active: curDate.title === item.title, 'mr-10px': index !== dateList.length - 1 }"
-							style="background-color: #F8F8F8; border-color: #ddd"
-							class="w-105px mb-10px h-45px rounded-5px border border-solid bg-bg inline-flex flex-col items-center justify-center">
-							<span class="text-10px text-999">{{ item.week }}</span>
-							<span class="text-14px text-999 mt-3px">{{ item.title_y }}</span>
+							:class="{ active: curDate.title === item.title, 'mr-8px': index !== dateList.length - 1 }"
+							style="background-color: #F7F8FC; border-color: #C8CAD5"
+							class="w-80px my-10px h-40px rounded-8px border border-solid box-border inline-flex flex-col items-center justify-center">
+							<span class="text-12px leading-17px">{{ item.week }}</span>
+							<span class="text-12px leading-14px">{{ item.title_y }}</span>
 						</div>
 					</scroll-view>
 					<!-- 场次 -->
 					<template v-if="sessionList && sessionList.length">
-						<div class="text-12px mb-12px">
-							<span class="text-gray-333 font-semibold">场次</span>
+						<div class="text-12px leading-17px mb-10px">
+							<span class="text-gray-333">场次</span>
 						</div>
-						<div class="mb-20px text-gray-999">
-							<div v-for="(item, index) in sessionList" :key="index">
+						<div class="mb-8px text-gray-333 flex flex-wrap gap-x-8px">
+							<div v-for="(item, index) in sessionList" :key="index" class="max-w-full">
 								<div @click="choiseSession(item)" :class="{
 									active: curSession.id === item.id,
-									'mr-10px': index !== sessionList.length - 1,
-								}" style="background-color: #F8F8F8; border-color: #ddd" :style="{ 'padding-right': '20px' }"
-									class="mb-10px pl-20px h-40px rounded-5px relative overflow-hidden border border-solid bg-bg inline-flex items-center">
-									<span class="text-14px text-999">
+								}" style="background-color: #F7F8FC; border-color: #C8CAD5"
+									class="mb-8px px-8px min-h-40px max-w-full rounded-8px relative overflow-hidden border border-solid box-border inline-flex items-center">
+									<span class="text-13px leading-18px min-w-0 break-words py-6px">
 										{{ item.date_title }}
 									</span>
 								</div>
@@ -70,34 +70,31 @@
 					</template>
 					<template v-if="partList && partList.length">
 						<!-- 票档 -->
-						<div class="text-12px mb-12px flex justify-between">
-							<span class="text-gray-333 font-semibold">票档</span>
+						<div class="text-12px leading-17px mb-10px flex justify-between">
+							<span class="text-gray-333">票档</span>
 						</div>
-						<div class="mb-20px text-gray-999 flex flex-wrap">
+						<div class="mb-8px text-gray-333 flex flex-wrap gap-x-8px">
 							<div v-for="(item, index) in partList" :key="index" @click="choisePart(item)" :class="{
 								active: curPart.part_id === item.part_id,
-								'mr-10px': index !== partList.length - 1,
-								'pr-20px': item.residue,
-								'pr-38px': !item.residue,
 								disabled: !item.residue
-							}" :style="{ 'background': '#f8f8f8', 'border-color': '#ddd' }"
-								class="mb-10px pl-20px h-40px flex rounded-5px overflow-hidden border border-solid bg-bg inline-flex  items-center relative">
+							}" style="background-color: #F7F8FC; border-color: #C8CAD5;"
+								class="mb-8px px-8px min-h-40px min-w-68px max-w-full box-border rounded-8px border border-solid inline-flex items-center relative">
 								<!-- 名称 -->
-								<div class="">
-									<div class="flex items-center justify-start">
-										<span class="text-14px text-999">{{ item.name }}</span>
-										<span class="text-12px text-999 ml-10px">¥{{ item.price }}</span>
+								<div class="min-w-0">
+									<div class="flex items-center justify-start flex-wrap py-6px">
+										<span class="text-13px leading-18px min-w-0 break-words">{{ item.name }}</span>
+										<span class="text-13px leading-18px text-red ml-3px whitespace-nowrap">¥{{ item.price }}</span>
 									</div>
 								</div>
 								<!-- 标签 -->
 								<div v-if='!item.residue'
-									class="absolute right-0 flex items-center top-0 text-white text-10px w-32px rounded-bl-5px h-18px justify-center bg-gray-444">
+									class="inline-flex flex-none items-center ml-4px my-2px px-3px h-16px rounded-4px text-10px leading-14px font-medium whitespace-nowrap text-gray-666 bg-[#e6e6e6]">
 									售罄
 								</div>
 							</div>
 						</div>
 					</template>
-					<div class="tips text-14px text-gray-999 mt-20px flex items-start" v-if="curPart && curPart.tip">
+					<div class="tips text-14px text-gray-999 mt-20px pb-20px flex items-start" v-if="curPart && curPart.tip">
 						<u-icon name="bell" size="14px" color="#999"></u-icon>
 						<span class="ml-5px leading-5 -mt-3px">{{ curPart.tip }}</span>
 					</div>
@@ -109,35 +106,33 @@
 		</template>
 
 		<!-- 底部数量选择，按钮， 不选座模式 -->
-		<div class="fixed bottom-0 left-0 w-full box-border bg-white"
-			:style="{ height: is_timing == 1 ? '120px' : cantBuy ? '60px' : isSelectSeat ? '60px' : '120px' }"
-			style="box-shadow: 0px -2px 6px 0px rgba(51,51,51,0.05);">
-			<div class="flex px-20px justify-between items-center h-60px" v-if="!cantBuy && !isSelectSeat">
-				<div class="text-12px">
+		<div class="schedule-footer fixed bottom-0 left-0 z-10 w-full box-border bg-[#F7F8FC]">
+			<div class="flex px-16px justify-between items-center h-56px" v-if="!cantBuy && !isSelectSeat">
+				<div class="text-12px leading-17px min-w-0 flex-1">
 					<span class="text-gray-333">数量</span>
 					<span class="text-gray-999 ml-4px" v-if="setting.is_residue == '1'">
 						{{ ` (余${curPart.type == 1 ? '量' : '票'}:` + ((curPart.residue || (curPart.residue === 0)) ?
 							curPart.residue : '-') + ')' }}
 					</span>
 				</div>
-				<div style="background: #F4F4F4;" class="h-32px rounded-16px px-3px flex items-center">
+				<div style="background: #F8F8F8;" class="h-40px min-w-110px box-border rounded-full px-9px ml-8px flex-none flex items-center justify-between">
 					<image class="w-22px h-22px" src="@/static/detail/reduce.png" @click="reduce" />
-					<div class="text-333 font-semibold text-14px mx-12px" v-if="curPart.type != 1">{{ seatNum }}张</div>
-					<div class="text-333 font-semibold text-14px mx-12px" v-if="curPart.type == 1">{{ seatNum }}套 <span
+					<div class="text-gray-333 font-medium text-14px mx-12px" v-if="curPart.type != 1">{{ seatNum }}张</div>
+					<div class="text-gray-333 font-medium text-14px mx-12px" v-if="curPart.type == 1">{{ seatNum }}套 <span
 							class="text-gray-999 ml-3px">/{{ curPart.people * seatNum }}张</span></div>
 					<image class="w-22px h-22px" src="@/static/detail/add.png" @click="add" />
 				</div>
 			</div>
 			<div v-if="is_timing == 1"
-				class="h-60px flex justify-center items-center w-full box-border bg-white text-16px text-red font-semibold"
+				class="h-60px flex justify-center items-center w-full box-border text-16px text-red font-semibold"
 				style="background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); border-radius: 15px 15px 0 0;">
 				{{ moment(sell_timing * 1000).format('MM月DD日 HH:mm:ss') }}开抢
 			</div>
 			<div
-				class="h-60px px-20px border-t border-b-0 pb-9px border-l-0 border-r-0 border-gray-100 border-solid justify-between flex items-center">
-				<div class="flex">
-					<div class="text-gray-666 text-12 flex items-center ml-5px">
-						<span>
+				class="h-60px box-border px-16px border-t border-b-0 border-l-0 border-r-0 border-gray-100 border-solid justify-between flex items-center">
+				<div class="flex min-w-0 flex-1 mr-8px">
+					<div class="text-gray-666 text-12px min-w-0 flex items-center ml-5px">
+						<span class="break-words leading-18px">
 							{{ curDate.title ? curDate.title + ' |' : '' }}
 							{{
 								curSession.id ? moment(Number(curSession.entrance_time) * 1000).format('HH:mm') :
@@ -151,8 +146,8 @@
 						</span>
 					</div>
 				</div>
-				<u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '140px', margin: 0 }"
-					:disabled="cantBuy" color="#FF545C" :text="getBtnStatusText" @click="toSelectFilm(true)">
+				<u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '108px', maxWidth: '28vw', margin: 0, flexShrink: 0, fontSize: '15px', fontWeight: 500 }"
+					:disabled="cantBuy" color="#FF214C" :text="getBtnStatusText" @click="toSelectFilm(true)">
 				</u-button>
 			</div>
 		</div>
@@ -356,14 +351,23 @@ export default {
 
 <style lang="scss" scoped>
 .active {
-	background-color: rgb(251, 234, 236) !important;
-	border-color: #FF545C !important;
-	color: #FF545C !important;
+	background-color: #F7F8FC !important;
+	border-color: #FF214C !important;
+	color: #FF214C !important;
+	font-weight: 500;
 }
 
 .disabled {
-	color: #aaa !important;
-	border-color: #aaa !important;
-	background-color: #fff !important;
+	color: #BFC0C7 !important;
+	border-color: #E5E5EB !important;
+	background-color: #F7F8FC !important;
+
+	span {
+		color: #BFC0C7 !important;
+	}
+}
+
+.schedule-footer {
+	padding-bottom: env(safe-area-inset-bottom);
 }
 </style>

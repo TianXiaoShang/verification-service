@@ -29,12 +29,12 @@
         <!-- 底部按钮 -->
         <div class="fixed z-998 bottom-20px h-44px flex items-center justify-center px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal" :disabled="saveing"
-                :customStyle="{ height: '44px', width: '160px', margin: 0 }" color="#FF3F54" text="提交申请"
+                :customStyle="{ height: '44px', width: '160px', margin: 0 }" color="#FF214C" text="提交申请"
                 @click="confirm">
             </u-button>
         </div>
         <u-picker :show="show" ref="uPicker" :title="'请选择'" :cancelText="'取消'" :confirmText="'确认'"
-            :cancelColor="'#999999'" :confirmColor="'#FF3F54'" :showToolbar="true" :immediateChange="true"
+            :cancelColor="'#999999'" :confirmColor="'#FF214C'" :showToolbar="true" :immediateChange="true"
             :columns="columns" @confirm="bindPickerConfirm"></u-picker>
         <!-- 退款确认弹窗 -->
         <u-modal :show="showTip" :title="'提示'" showCancelButton @confirm="confirmRefund" @cancel="cancelRefund">

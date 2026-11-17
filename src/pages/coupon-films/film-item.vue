@@ -51,7 +51,7 @@
             </div>
             <!-- 购票按钮 -->
             <div class="height-full min-w-52px flex items-center ml-15px">
-                <u-button class="min-w-52px" shape="circle" size="small" :color="'#FF545C'" :text="'购票'"
+                <u-button class="min-w-52px" shape="circle" size="small" :color="'#FF214C'" :text="'购票'"
                     @click.native.stop="toSelectFilm">
                 </u-button>
             </div>

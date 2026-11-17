@@ -28,7 +28,7 @@
             </div>
             <div class="flex justify-between items-center mt-15px">
                 <div class="flex-1">
-                    <u-line-progress :percentage="buyTotal" activeColor="#FF545C"></u-line-progress>
+                    <u-line-progress :percentage="buyTotal" activeColor="#FF214C"></u-line-progress>
                 </div>
                 <div class="ml-10px">
                     已售{{ isBuy }}
@@ -47,7 +47,7 @@
             </div>
             <!-- tabs -->
             <div class="px-10px">
-                <u-tabs :current="tabIndex" :list="tabList" @click="changeTab" lineColor="#FF545C"
+                <u-tabs :current="tabIndex" :list="tabList" @click="changeTab" lineColor="#FF214C"
                     :itemStyle="{ height: '42px' }"
                     :activeStyle="{ color: '#333', fontWeight: 'bold', transform: 'scale(1.05)' }"
                     :inactiveStyle="{ color: '#999999', transform: 'scale(1)' }"></u-tabs>
@@ -105,7 +105,7 @@
                                         <div v-if="(tabIndex == 2 && (info.state == 1 || info.state == 2) && !isStaffUser)"
                                             @click="changeLock(item)"
                                             class="w-52px text-white text-14px h-24px flex justify-center items-center rounded-15px"
-                                            :style="{ background: item.status == 1 ? '#FF545C' : '#2ACB95' }">
+                                            :style="{ background: item.status == 1 ? '#FF214C' : '#2ACB95' }">
                                             {{ item.status == 1 ? '锁座' : '解锁' }}
                                         </div>
                                     </div>
@@ -125,18 +125,18 @@
         <!-- 底部按钮 -->
         <div class="fixed z-998 pb-20px bottom-0 h-70px flex items-center justify-between px-20px left-0 w-full box-border">
             <u-button shape="circle" size="normal" @click="onScan"
-                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }" color="#FF5991"
+                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }" color="#FF214C"
                 text="扫码检票">
             </u-button>
             <u-button shape="circle" size="normal" @click="onShowCheckModal"
-                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }" color="#FF545C"
+                :customStyle="{ height: '44px', width: 'calc((100vw - 40px) / 2 - 8px)', margin: 0 }" color="#FF214C"
                 text="手动检票">
             </u-button>
         </div>
 
 
         <!-- 核销弹窗 -->
-        <u-modal :show="showModal" width="580rpx" :title="'手动检票'" showCancelButton :confirmColor="'#FF545C'">
+        <u-modal :show="showModal" width="580rpx" :title="'手动检票'" showCancelButton :confirmColor="'#FF214C'">
             <view class="py-10px w-full flex items-center justify-between" style="border-bottom: 1px solid #eee">
                 <input class="flex-1" placeholder-style="color: #999; font-size: 14px;" placeholder="请输入票码" type="number"
                     v-model="code" @input="inputCode" />
@@ -146,14 +146,14 @@
                     color="#999" text="取消" @click="(showModal = false)">
                 </u-button>
                 <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '30vw', margin: 0 }"
-                    color="#FF545C" text="确认" @click="onInputCode">
+                    color="#FF214C" text="确认" @click="onInputCode">
                 </u-button>
             </div>
         </u-modal>
 
         <!-- 确认核销弹窗 -->
         <u-modal :show="showConfirmModal" width="580rpx" :title="(isQuickMode && isScan) ? '核销完成' : '确认核销'"
-            :confirmColor="'#FF545C'">
+            :confirmColor="'#FF214C'">
             <div class="w-full">
                 <div class="text-16px text-gray-333 py-6px" style="border-bottom: 1px solid #eee;">
                     <div class="flex items-center">
@@ -180,14 +180,14 @@
                         color="#999" text="取消" @click="(showConfirmModal = false)">
                     </u-button>
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '30vw', margin: 0 }"
-                        color="#FF545C" text="确认" @click="handleConfirm">
+                        color="#FF214C" text="确认" @click="handleConfirm">
                     </u-button>
                 </template>
             </div>
         </u-modal>
 
         <!-- 门票-确认核销弹窗 -->
-        <u-modal :show="showTicketConfirmModal" width="580rpx" :title="'确认核销'" :confirmColor="'#FF545C'">
+        <u-modal :show="showTicketConfirmModal" width="580rpx" :title="'确认核销'" :confirmColor="'#FF214C'">
             <div class="w-full max-h-60vh overflow-y-auto">
                 <div class="text-gray-333 py-6px" style="border-bottom: 1px solid #eee;">
                     <div class="flex items-center justify-between mb-10px" v-for="(item, index) in affrimData.tickets"

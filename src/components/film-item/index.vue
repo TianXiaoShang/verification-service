@@ -46,7 +46,7 @@
                     style="white-space: nowrap">
                     <div class="inline-block mr-5px" v-if="detail.type_name">
                         <div class="px-5px h-16px flex items-center rounded-4px text-red text-11px bg-white box-border"
-                            style="border: 1px solid #FF545C; white-space: nowrap:">
+                            style="border: 1px solid #FF214C; white-space: nowrap:">
                             {{ detail.type_name }}
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="tags mt-4px h-16px overflow-x-auto text-0px" style="white-space: nowrap">
                         <div class="inline-block mr-5px" v-if="detail.type_name">
                             <div class="px-5px h-16px flex items-center rounded-4px text-red text-11px bg-white box-border"
-                                style="border: 1px solid #FF545C; white-space: nowrap;">
+                                style="border: 1px solid #FF214C; white-space: nowrap;">
                                 {{ detail.type_name }}
                             </div>
                         </div>
@@ -101,12 +101,12 @@
             </div>
             <!-- 购票按钮 -->
             <div class="height-full min-w-52px flex items-center ml-10px" v-if="showRightBtn">
-                <u-button class="min-w-52px" shape="circle" size="small" color="#FF545C" text="去兑换">
+                <u-button class="min-w-52px" shape="circle" size="small" color="#FF214C" text="去兑换">
                 </u-button>
             </div>
             <div v-else-if="showBuy" class="height-full min-w-52px flex items-center ml-10px">
                 <u-button class="min-w-52px" shape="circle" size="small"
-                    :color="detail.presell == 1 ? '#66A3f7' : '#FF545C'" :text="detail.presell == 1 ? '预售' : '购票'" @click.native.stop="toSelectFilm">
+                    :color="detail.presell == 1 ? '#66A3f7' : '#FF214C'" :text="detail.presell == 1 ? '预售' : '购票'" @click.native.stop="toSelectFilm">
                 </u-button>
             </div>
         </view>

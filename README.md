@@ -38,7 +38,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 2: methods中添加toJSON空方法，否则会报错；
 ### 3: 在使用组件时，需要手动传入一些值，默认值不会生效(title、cancelText、confirmText、cancelColor、confirmColor、showToolbar)
 ``` <u-picker :show="show" ref="uPicker" :title="'请选择'" :cancelText="'取消'" :confirmText="'确认'" :cancelColor="'#999999'"
-        :confirmColor="'#FF545C'" :showToolbar="true" :immediateChange="true" :columns="columns" :defaultIndex="defaultIndex"
+        :confirmColor="'#FF214C'" :showToolbar="true" :immediateChange="true" :columns="columns" :defaultIndex="defaultIndex"
         @cancel="show = false" @confirm="confirm"></u-picker> 
 ```
 

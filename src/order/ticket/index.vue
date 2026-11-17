@@ -24,7 +24,7 @@
             <!-- 二维码 -->
             <div class="mt-10px p-20px pt-10px rounded bg-white" v-if="tabsDataList && tabsDataList.length">
                 <div class="flex is-code justify-center">
-                    <u-tabs :current="tabIndex" :list="tabsDataList" @click="changeTab" lineColor="#FF545C"
+                    <u-tabs :current="tabIndex" :list="tabsDataList" @click="changeTab" lineColor="#FF214C"
                         :itemStyle="{ height: '42px' }"
                         :activeStyle="{ color: '#333', fontWeight: 'bold', transform: 'scale(1.05)' }"
                         :inactiveStyle="{ color: '#999999', transform: 'scale(1)' }"></u-tabs>
@@ -395,7 +395,7 @@ export default {
     top: 0;
     width: 100%;
     height: 120px;
-    background: linear-gradient(180deg, #FF545C 0%, #fff 100%);
+    background: linear-gradient(180deg, #FF214C 0%, #fff 100%);
 }
 
 .is-code {

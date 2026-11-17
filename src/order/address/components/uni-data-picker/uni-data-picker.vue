@@ -302,7 +302,7 @@
   }
 
   .error-text {
-    color: #DD524D;
+    color: #FF214C;
   }
 
   .input-value {

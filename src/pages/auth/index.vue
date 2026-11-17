@@ -15,11 +15,11 @@
         <div class="fixed bottom-10vh w-full">
             <div class="flex w-full flex-col items-center justify-center">
                 <div class="w-3/5">
-                    <u-button shape="circle" class='w-full' @click="onSubmit" color="#FF545C" type="primary"
+                    <u-button shape="circle" class='w-full' @click="onSubmit" color="#FF214C" type="primary"
                         text="授权登录"></u-button>
                 </div>
                 <div class="mt-15px w-3/5">
-                    <u-button shape="circle" color="#FF545C" class='w-full' @click="back" :plain="true" text="取消登录">
+                    <u-button shape="circle" color="#FF214C" class='w-full' @click="back" :plain="true" text="取消登录">
                     </u-button>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 </scroll-view>
                 <div class="py-10px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '200px' }"
-                        color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="确定"
+                        color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" text="确定"
                         @click.native.stop="onRead(true)">
                     </u-button>
                 </div>

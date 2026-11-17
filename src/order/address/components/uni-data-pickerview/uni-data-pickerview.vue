@@ -173,7 +173,7 @@
 </script>
 
 <style lang="scss">
-	$uni-primary: #FF545C !default;
+	$uni-primary: #FF214C !default;
 
 	.uni-data-pickerview {
 		flex: 1;
@@ -186,7 +186,7 @@
 	}
 
   .error-text {
-    color: #DD524D;
+    color: #FF214C;
   }
 
   .loading-cover {

@@ -12,7 +12,7 @@
                     <div class="text-gray-999 text-10px">{{ conpupData.strtime }}</div>
                 </div>
                 <div class="height-full min-w-52px flex items-center ml-10px">
-                    <u-button class="min-w-52px" @click="toDetail" shape="circle" size="small" :color="'#FF545C'"
+                    <u-button class="min-w-52px" @click="toDetail" shape="circle" size="small" :color="'#FF214C'"
                         :text="'去使用'">
                     </u-button>
                 </div>

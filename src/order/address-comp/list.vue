@@ -7,7 +7,7 @@
         </div>
         <div class="h-44px flex items-center justify-center px-20px w-full box-border mt-20px bottom-15px">
             <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '80vw', margin: 0 }"
-                color="#FF545C" text="新增地址" @click="onAdd">
+                color="#FF214C" text="新增地址" @click="onAdd">
             </u-button>
         </div>
     </div>

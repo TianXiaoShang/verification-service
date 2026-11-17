@@ -118,21 +118,21 @@ export default {
 @keyframes before {
     0% {
         width: 0.5em;
-        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+        box-shadow: 1em -0.5em rgba(255, 33, 76, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
     }
 
     35% {
         width: 2.5em;
-        box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+        box-shadow: 0 -0.5em rgba(255, 33, 76, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
     }
 
     70% {
         width: 0.5em;
-        box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+        box-shadow: -1em -0.5em rgba(255, 33, 76, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
     }
 
     100% {
-        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+        box-shadow: 1em -0.5em rgba(255, 33, 76, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
     }
 }
 

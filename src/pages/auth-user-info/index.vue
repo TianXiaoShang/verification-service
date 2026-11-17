@@ -53,7 +53,7 @@
             <div class="flex w-full flex-col items-center justify-center">
                 <div class="w-3/5">
                     <u-button shape="circle" :disabled="(!loginStatus || disabled)" class='w-full' @click="onSubmit"
-                        color="#FF545C" type="primary" text="完成授权"></u-button>
+                        color="#FF214C" type="primary" text="完成授权"></u-button>
                 </div>
             </div>
             <div class="flex mt-25px justify-center items-center text-14 text-gray-333">
@@ -91,7 +91,7 @@
                 </scroll-view>
                 <div class="py-10px">
                     <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '200px' }"
-                        color="linear-gradient(180deg, #FF545C 0%, #FF545C 100%);" text="确定"
+                        color="linear-gradient(180deg, #FF214C 0%, #FF214C 100%);" text="确定"
                         @click.native.stop="onRead(true)">
                     </u-button>
                 </div>

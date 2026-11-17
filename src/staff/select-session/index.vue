@@ -58,7 +58,7 @@
                     <div
                         class="fixed z-998 bottom-20px h-44px flex items-center justify-center px-20px left-0 w-full box-border">
                         <u-button shape="circle" size="normal" :customStyle="{ height: '44px', width: '80vw', margin: 0 }"
-                            color="#FF545C" text="下一步" @click="onNext">
+                            color="#FF214C" text="下一步" @click="onNext">
                         </u-button>
                     </div>
                 </template>

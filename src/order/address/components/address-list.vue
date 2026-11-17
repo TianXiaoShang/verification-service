@@ -16,14 +16,14 @@
                         <template v-if="item.id">
                             <div @click="onSetDefault($event, item, 'get')">
                                 <u-icon size="22px" name="checkmark-circle-fill"
-                                    :color="curSelect && item.id == curSelect.id ? '#FF545C' : '#ccc'"></u-icon>
+                                    :color="curSelect && item.id == curSelect.id ? '#FF214C' : '#ccc'"></u-icon>
                             </div>
                             <div class="mx-10px flex-1" @click="onSetDefault($event, item, 'get')">
                                 <div class="text-14px text-gray-333">
                                     {{ item.realname + ' ' }} {{ item.mobile }}
                                     <span v-if="item.is_default == 1"
-                                        class="text-[#FF545C] px-5px ml-10px text-11px rounded-4px"
-                                        style="border: 1px solid #FF545C;">默认</span>
+                                        class="text-[#FF214C] px-5px ml-10px text-11px rounded-4px"
+                                        style="border: 1px solid #FF214C;">默认</span>
                                     <span v-else @click.stop="onSetDefault($event, item, 'setDefault')" class="text-[#FF8F1F] px-5px ml-10px text-11px rounded-4px"
                                         style="border: 1px solid #FF8F1F;">设为默认</span>
                                 </div>
@@ -37,7 +37,7 @@
                                 <u-icon @click="toEdit(item)" name="edit-pen" size="22px" color="#999999"></u-icon>
                                 <!-- 切换的时候不能删除 -->
                                 <div class="ml-6px">
-                                    <u-icon size="22px" name="trash" @click="onDelete(item)" color="#FF545C"></u-icon>
+                                    <u-icon size="22px" name="trash" @click="onDelete(item)" color="#FF214C"></u-icon>
                                 </div>
                             </div>
                         </template>
