@@ -58,7 +58,10 @@ export default {
         getWebViewFullUrl() {
             this.webViewUrl = '';
             // 加上携带参数
-            const query = `?token=${encodeURIComponent(getToken())}&order_id=${this.orderData.order_id}&coupon_id=${this.orderData.coupon_id}&isCouponMode=${this.orderData.isCouponMode}&cinema_id=${this.orderData.cinema_id}&film_id=${this.orderData.film_id}&curDate=${this.orderData.curDate}&row_id=${this.orderData.row_id}&part_id=${this.orderData.part_id}&seatNum=${this.orderData.seatNum}&domain=${encodeURIComponent(this.domain)}&basePath=${encodeURIComponent('/' + this.h5ReqBasePath)}`;
+            let query = `?token=${encodeURIComponent(getToken())}&order_id=${this.orderData.order_id}&coupon_id=${this.orderData.coupon_id}&isCouponMode=${this.orderData.isCouponMode}&cinema_id=${this.orderData.cinema_id}&film_id=${this.orderData.film_id}&curDate=${this.orderData.curDate}&row_id=${this.orderData.row_id}&part_id=${this.orderData.part_id}&seatNum=${this.orderData.seatNum}&domain=${encodeURIComponent(this.domain)}&basePath=${encodeURIComponent('/' + this.h5ReqBasePath)}`;
+            if (this.orderData.redeem_all == 1) {
+                query += `&redeem_all=1&minSeats=${this.orderData.minSeats}`;
+            }
             setTimeout(() => {
                 // 打开webview
                 this.webViewUrl = this.baseHttpUrl + query;

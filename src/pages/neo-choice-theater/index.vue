@@ -116,7 +116,7 @@
 					</span>
 				</div>
 				<div style="background: #F8F8F8;" class="h-40px min-w-110px box-border rounded-full px-9px ml-8px flex-none flex items-center justify-between">
-					<image class="w-22px h-22px" src="@/static/detail/reduce.png" @click="reduce" />
+					<image class="w-22px h-22px" :class="{ 'opacity-40': seatNum <= quantity }" src="@/static/detail/reduce.png" @click="reduce" />
 					<div class="text-gray-333 font-medium text-14px mx-12px" v-if="curPart.type != 1">{{ seatNum }}张</div>
 					<div class="text-gray-333 font-medium text-14px mx-12px" v-if="curPart.type == 1">{{ seatNum }}套 <span
 							class="text-gray-999 ml-3px">/{{ curPart.people * seatNum }}张</span></div>
@@ -168,6 +168,9 @@ export default {
 			dateList: [],
 			sessionList: [],
 			seatNum: 1,
+			quantity: 0,
+			hasConfirmedExtra: false,
+			confirmingExtra: false,
 			partList: [],
 			is_timing: 0,
 			sell_timing: 0,
@@ -183,6 +186,12 @@ export default {
 	components: { NavBar },
 	onLoad(options) {
 		console.log(options, 'optionsoptions---33333');
+		// options = { account_id: '7672275903212161059', order_id: '1118193510321017295' }
+		// 2+1
+		// options = { account_id: '7672275903212161059', order_id: '1117604146467577295' }
+		// 2+1（2次测试）
+		// options = { account_id: '7672275903212161059', order_id: '1117604054815737295' }
+		// options = { account_id: '7672275903212161059', order_id: '1117953335064057295' }
 		// options = { account_id: '7672275903212161059', order_id: '1117370301943417295' }
 		this.account_id = options.account_id;
 		this.order_id = options.order_id;
@@ -192,10 +201,15 @@ export default {
 				couponRes = await this.request('schedule.index', {
 					order_id: this.order_id,
 					account_id: this.account_id,
+					redeem_all: 1,
 					_showErrorToast: false
 				}, 'POST');
 			} catch (err) {
 				console.log(err, 'errerrerr')
+				if (err.code === 409) {
+					uni.redirectTo({ url: `/pages/coupon-unavailable/index?cinema_id=${encodeURIComponent(err.message)}` });
+					return;
+				}
 				uni.showToast({
 					title: err && err.message ? err.message : '券详情获取失败',
 					icon: 'none'
@@ -212,6 +226,8 @@ export default {
 			this.coupon_id = coupon.id;
 			this.cinema_id = couponRes.cinema_id;
 			this.film_id = couponRes.film_id;
+			this.quantity = couponRes.quantity;
+			this.seatNum = couponRes.quantity;
 			
 			this.request('film.detail', { cinema_id: this.cinema_id, film_id: this.film_id, coupon_id: this.coupon_id }).then(res => {
 				// 影片标题等信息
@@ -316,7 +332,8 @@ export default {
 			}
 			this.disabledBtn = true;
 			if (this.isSelectSeat) {
-				this.toPath(`/pages/h5-seat/index?order_id=${this.order_id}&coupon_id=${this.coupon_id}&cinema_id=${this.cinema_id}&film_id=${this.film_id}&curDate=${this.curDate.title_y}&row_id=${this.curSession.id}&part_id=${this.curPart.part_id}`);
+				const minSeats = this.curPart.type == 1 ? this.quantity * this.curPart.people : this.quantity;
+				this.toPath(`/pages/h5-seat/index?order_id=${this.order_id}&coupon_id=${this.coupon_id}&cinema_id=${this.cinema_id}&film_id=${this.film_id}&curDate=${this.curDate.title_y}&row_id=${this.curSession.id}&part_id=${this.curPart.part_id}&redeem_all=1&minSeats=${minSeats}`);
 				this.disabledBtn = false;
 			} else {
 				this.createOrder();
@@ -327,6 +344,7 @@ export default {
 				tiktok_order_id: this.order_id,
 				row_id: this.curSession.id,
 				coupon_id: this.coupon_id,
+				redeem_all: 1,
 				part_id: Number(this.curPart.part_id),
 				number: this.seatNum,
 			}, 'POST').then(res => {
@@ -362,11 +380,33 @@ export default {
 			this.curPart = item;
 		},
 		reduce() {
-			if (this.seatNum > 1) {
+			if (!this.confirmingExtra && this.seatNum > this.quantity) {
 				this.seatNum--;
 			}
 		},
 		add() {
+			if (!this.isLoad || this.confirmingExtra) {
+				return;
+			}
+			if (!this.hasConfirmedExtra && this.seatNum === this.quantity) {
+				this.confirmingExtra = true;
+				uni.showModal({
+					title: '提示',
+					content: '您选择的兑换数量超过了您的团购券，继续增加，需按原价购买，确认增加吗？',
+					cancelText: '取消',
+					confirmText: '确认',
+					success: (res) => {
+						if (res.confirm) {
+							this.seatNum++;
+							this.hasConfirmedExtra = true;
+						}
+					},
+					complete: () => {
+						this.confirmingExtra = false;
+					}
+				});
+				return;
+			}
 			this.seatNum++;
 		},
 	}

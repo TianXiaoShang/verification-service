@@ -89,6 +89,13 @@
       }
     },
     {
+      "path": "pages/coupon-unavailable/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "disableScroll": true
+      }
+    },
+    {
       "path": "pages/h5-seat/index",
       "style": {
         "navigationBarTitleText": "选择座位",

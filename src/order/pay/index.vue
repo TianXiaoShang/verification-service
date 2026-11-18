@@ -290,20 +290,27 @@
             <div class="w-full">
                 <div
                     class="text-gray-333 px-20px pt-20px pb-10px flex justify-between items-center border-l-0 border-t-0 border-r-0 border-b-1px border-gray-100 border-solid text-16 font-semibold ">
-                    <span> 选择抵扣券 </span>
+                    <span>{{ isRedeemAll ? '本单抵扣券' : '选择抵扣券' }}</span>
                     <span>
                         <u-icon name="close" size="18px" @click="onCloseCouponPopup"></u-icon>
                     </span>
                 </div>
-                <div class="px-20px pt-10px text-12px text-gray-999">最多可选{{ couponMaxCount }}张</div>
+                <div v-if="isRedeemAll" class="px-20px pt-10px text-12px text-gray-999">已选{{ couponList.length }}张，不支持修改</div>
+                <div v-else class="px-20px pt-10px text-12px text-gray-999">最多可选{{ couponMaxCount }}张</div>
                 <scroll-view scroll-y="true" class="max-h-60vh px-20px box-border py-15px">
                     <div v-for="(item, index) in couponList" :key="index"
                         class="bg-white rounded-10px p-15px mb-10px border border-solid border-gray-100 flex justify-between items-center"
                         @click="onSelectCoupon(item)">
                         <div class="flex-1 pr-10px">
                             <div class="text-gray-333 text-14px font-semibold">{{ item.name }}</div>
-                            <div class="text-gray-999 text-12px mt-8px">{{ item.subtract }}</div>
-                            <div class="text-gray-999 text-10px mt-4px">{{ item.strtime }}</div>
+                            <template v-if="isRedeemAll">
+                                <div class="text-gray-999 text-12px mt-8px">抵扣：¥{{ item.deduct }}</div>
+                                <div class="text-gray-999 text-10px mt-4px">{{ item.timestr }}</div>
+                            </template>
+                            <template v-else>
+                                <div class="text-gray-999 text-12px mt-8px">{{ item.subtract }}</div>
+                                <div class="text-gray-999 text-10px mt-4px">{{ item.strtime }}</div>
+                            </template>
                         </div>
                         <div class="rounded-full px-10px h-28px flex items-center justify-center text-12px"
                             :class="draftSelectedCouponIds.includes(String(item.id)) ? 'bg-red text-white' : 'bg-gray-100 text-gray-666'">
@@ -417,6 +424,9 @@ export default {
         }
     },
     computed: {
+        isRedeemAll() {
+            return this.isCouponMode && this.order.tiktok_redeem_mode == 1;
+        },
         confirmName() {
             if (this.curIdacrds.length) {
                 return this.curIdacrds.map(el => el.realname).join('、');
@@ -477,11 +487,23 @@ export default {
         onShowCouponPopup() {
             this.showCouponPopup = true;
             this.draftSelectedCouponIds = [...this.selectedCouponIds];
-            if (this.couponList.length) {
+            if (this.isRedeemAll || this.couponList.length) {
                 return;
             }
             this.request('pay.coupons', { cinema_id: this.cinema_id, order_id: this.order_id }, 'POST').then(res => {
                 this.couponList = res.list || [];
+            });
+        },
+        calculateOrder() {
+            return this.request('pay.calculate', {
+                cinema_id: this.cinema_id,
+                order_id: this.order_id
+            }, 'POST').then(res => {
+                this.calculateData = res;
+                this.couponList = res.coupons;
+                this.selectedCouponIds = res.coupons.map(item => String(item.id));
+                this.draftSelectedCouponIds = [...this.selectedCouponIds];
+                this.isCouponCalculated = true;
             });
         },
         initDefaultCoupons() {
@@ -509,6 +531,9 @@ export default {
             this.draftSelectedCouponIds = [...this.selectedCouponIds];
         },
         onSelectCoupon(item) {
+            if (this.isRedeemAll) {
+                return;
+            }
             const id = String(item.id);
             const index = this.draftSelectedCouponIds.findIndex(el => el === id);
             if (index !== -1) {
@@ -525,6 +550,10 @@ export default {
             this.draftSelectedCouponIds.push(id);
         },
         onConfirmCoupons() {
+            if (this.isRedeemAll) {
+                this.onCloseCouponPopup();
+                return;
+            }
             if (!this.draftSelectedCouponIds.length) {
                 uni.showToast({
                     title: '至少选择1张抵扣券',
@@ -565,7 +594,11 @@ export default {
                 this.draftSelectedCouponIds = [];
                 this.isCouponCalculated = false;
                 if (this.isCouponMode) {
-                    this.initDefaultCoupons();
+                    if (this.isRedeemAll) {
+                        this.calculateOrder();
+                    } else {
+                        this.initDefaultCoupons();
+                    }
                 }
                 if (this.rule.ticket_rule.ticket_mode == 1) {
                     this.request('address.defaults', { cinema_id: this.cinema_id }, 'GET').then(res => {
@@ -639,16 +672,16 @@ export default {
                 return;
             }
             if (this.isCouponMode) {
-                if (this.selectedCouponIds.length < 1) {
+                if (!this.isRedeemAll && this.selectedCouponIds.length < 1) {
                     uni.showToast({ title: "至少选择1张抵扣券", icon: 'none' })
                     return;
                 }
-                if (this.selectedCouponIds.length > this.couponMaxCount) {
+                if (!this.isRedeemAll && this.selectedCouponIds.length > this.couponMaxCount) {
                     uni.showToast({ title: `抵扣券不能超过${this.couponMaxCount}张`, icon: 'none' })
                     return;
                 }
                 if (!this.isCouponCalculated) {
-                    uni.showToast({ title: "请选择抵扣券", icon: 'none' })
+                    uni.showToast({ title: this.isRedeemAll ? '应付金额尚未计算完成' : '请选择抵扣券', icon: 'none' })
                     return;
                 }
             }
@@ -700,7 +733,9 @@ export default {
             }
             if(this.isCouponMode){
                 params.pay_price = this.calculateData.total;
-                params.coupon_ids = this.selectedCouponIds.join(',');
+                if (!this.isRedeemAll) {
+                    params.coupon_ids = this.selectedCouponIds.join(',');
+                }
             }
             if (this.rule.ticket_rule.ticket_mode == 1) {
                 params.address_id = this.curAddress.id;

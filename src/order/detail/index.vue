@@ -155,7 +155,7 @@
 
                 <div class="flex justify-between items-center">
                     <div class="h-26px mt-15px w-100px inline-block text-white rounded-13px text-14px flex justify-center items-center px-10px relative"
-                        v-if="order.tiktoksop_order_id" style="border: 1px solid #7e5e49; color: #7e5e49;">
+                        v-if="phoneList.length && order.tiktoksop_order_id" style="border: 1px solid #7e5e49; color: #7e5e49;">
                         IM客服
                         <button class="z-9 absolute left-0 right-0 top-0 bottom-0 opacity-0" open-type="im" @im="imCallback"
                             data-im-type="order" @error="onimError" data-biz-line="1" :data-im-id="setting.service_order"
