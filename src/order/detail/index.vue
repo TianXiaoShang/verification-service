@@ -153,7 +153,7 @@
                         1000).format('YYYY-MM-DD HH:mm:ss')
                 }}</div>
 
-                <div class="flex justify-between items-center">
+                <!-- <div class="flex justify-between items-center">
                     <div class="h-26px mt-15px w-100px inline-block text-white rounded-13px text-14px flex justify-center items-center px-10px relative"
                         v-if="phoneList.length && order.tiktoksop_order_id" style="border: 1px solid #7e5e49; color: #7e5e49;">
                         IM客服
@@ -162,7 +162,7 @@
                             :data-order-id="order.tiktoksop_order_id">
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
